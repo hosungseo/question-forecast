@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "outputDirectory": "docs",
+  "buildCommand": "python3 scripts/render_dashboard.py && python3 scripts/render_issue_pages.py && python3 scripts/export_issue_memos.py && python3 scripts/export_daily_digest.py"
+}

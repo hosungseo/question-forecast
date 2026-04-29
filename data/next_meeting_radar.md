@@ -1,6 +1,6 @@
 # Next Cabinet Meeting Radar v2
 
-- generated_at: 2026-04-29T21:41:56.673108
+- generated_at: 2026-04-29T21:44:41.761259
 - purpose: 최근 뉴스 기반 대통령 예상 질문 후보 패킷
 - warning: 실제 의중 예측이 아니라 회의 전 검토용 이슈 레이더
 - algorithm: canonical issue grouping + noise filter + signal/recency/volume priority
@@ -36,9 +36,9 @@
 - 2026-04-29 · score 38 · ‘수학여행 위축’ 교원단체 공방 이어져…쟁점은 ‘교사 면책’ 어디까...
 
 ## 2. 행정안전부 — disaster_safety
-- priority: 323 / recent articles: 31
+- priority: 324 / recent articles: 32
 - signal hits: 산불, 재난, 안전, 화재, 침수, 지하차도, 오송, 행안부
-- key terms: 재난, 지하차도, 안전, 침수, 실시간, 대응, 산불, 화재, 내비게이션, 소방
+- key terms: 재난, 지하차도, 침수, 실시간, 대응, 안전, 화재, 소방, 산불, 인근
 
 ### 종합 판단
 재난·안전 대응 이슈은 '사후 수습은 반복되지만 사전 통제가 늦어지는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 ground_truth입니다.
@@ -213,9 +213,9 @@
 - 2026-04-29 · score 14 · 이재명 시대 달라진 부동산 패러다임 보니
 
 ## 8. 보건복지부 — medical
-- priority: 121 / recent articles: 18
+- priority: 122 / recent articles: 19
 - signal hits: 의료, 전공의, 의대, 비상진료, 병원
-- key terms: 비상방역체계, 감염병, 용인특례시, 위한, 경우, 하절기, 보건소, 여름철, 구토, 증상이
+- key terms: 비상방역체계, 감염병, 용인특례시, 위한, 경우, 의료기관을, 하절기, 보건소, 방문해, 여름철
 
 ### 종합 판단
 의료 공백·전공의·비상진료 문제은 '비상진료가 장기화되며 지역·필수의료 공백이 굳어지는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 public_outcome입니다.

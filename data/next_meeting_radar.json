@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T21:41:56.667856",
+  "generated_at": "2026-04-29T21:44:41.755976",
   "since": "2026-04-22",
   "packets": [
     {
@@ -503,7 +503,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -26,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -525,8 +525,8 @@
     {
       "issue_id": "disaster_safety",
       "ministry": "행정안전부",
-      "priority": 323,
-      "count": 31,
+      "priority": 324,
+      "count": 32,
       "signals": [
         "산불",
         "재난",
@@ -540,14 +540,14 @@
       "terms": [
         "재난",
         "지하차도",
-        "안전",
         "침수",
         "실시간",
         "대응",
-        "산불",
+        "안전",
         "화재",
-        "내비게이션",
-        "소방"
+        "소방",
+        "산불",
+        "인근"
       ],
       "items": [
         {
@@ -735,11 +735,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 86.2,
+        "score": 86.8,
         "band": "cabinet_high",
         "drivers": {
-          "priority": 323.0,
-          "article_count": 31.0,
+          "priority": 324.0,
+          "article_count": 32.0,
           "signal_count": 8,
           "work_signal_hits": 5,
           "question_move_hits": 3
@@ -961,7 +961,7 @@
         }
       ],
       "oral_brief": {
-        "thirty_second": "행정안전부 소관 disaster_safety는 질문 가능성 86.2점입니다. 핵심은 재난안전, 지방행정와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 화재 발생/재난 피해 통계로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "행정안전부 소관 disaster_safety는 질문 가능성 86.8점입니다. 핵심은 재난안전, 지방행정와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 화재 발생/재난 피해 통계로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -1002,7 +1002,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": 1,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -1521,7 +1521,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 15,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -3553,8 +3553,8 @@
     {
       "issue_id": "medical",
       "ministry": "보건복지부",
-      "priority": 121,
-      "count": 18,
+      "priority": 122,
+      "count": 19,
       "signals": [
         "의료",
         "전공의",
@@ -3568,11 +3568,11 @@
         "용인특례시",
         "위한",
         "경우",
+        "의료기관을",
         "하절기",
         "보건소",
-        "여름철",
-        "구토",
-        "증상이"
+        "방문해",
+        "여름철"
       ],
       "items": [
         {
@@ -3742,11 +3742,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 60.6,
+        "score": 61.1,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 121.0,
-          "article_count": 18.0,
+          "priority": 122.0,
+          "article_count": 19.0,
           "signal_count": 5,
           "work_signal_hits": 4,
           "question_move_hits": 3
@@ -3968,7 +3968,7 @@
         }
       ],
       "oral_brief": {
-        "thirty_second": "보건복지부 소관 medical는 질문 가능성 60.6점입니다. 핵심은 응급·비상진료와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 의료기관/의사/전공의/응급의료 지표로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "보건복지부 소관 medical는 질문 가능성 61.1점입니다. 핵심은 응급·비상진료와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 의료기관/의사/전공의/응급의료 지표로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -4009,7 +4009,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": 1,
         "rank_change": 0,
         "move_change": {
           "from": [

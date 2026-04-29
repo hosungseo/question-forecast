@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Question Forecast</title>
+  <style>
+    :root { color-scheme: light; --ink:#111827; --muted:#6b7280; --line:#e5e7eb; --bg:#fafafa; --card:#fff; --accent:#1d4ed8; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+    main { max-width:980px; margin:0 auto; padding:48px 20px 80px; }
+    .eyebrow { color:var(--accent); font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:13px; }
+    h1 { font-size:44px; line-height:1.08; margin:10px 0 14px; }
+    .lead { font-size:19px; color:#374151; max-width:760px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin:32px 0; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:20px; box-shadow:0 1px 2px rgba(0,0,0,.03); }
+    .card h2 { margin:0 0 8px; font-size:18px; }
+    .card p { margin:0 0 14px; color:var(--muted); font-size:14px; }
+    a { color:var(--accent); text-decoration:none; font-weight:650; }
+    a:hover { text-decoration:underline; }
+    .section { margin-top:42px; }
+    .pill { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:5px 10px; margin:3px; background:#fff; color:#374151; font-size:13px; }
+    code { background:#eef2ff; padding:2px 5px; border-radius:6px; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Cabinet intelligence prototype</div>
+  <h1>Question Forecast</h1>
+  <p class="lead">회의 전 뉴스와 과거 국무회의록을 연결해, 다음 국무회의에서 나올 수 있는 대통령 질문 후보를 만드는 공개형 분석 실험입니다.</p>
+
+  <div class="grid">
+    <div class="card"><h2>Next briefing</h2><p>최근 7일 뉴스 기반 Top 5 예상 질문 브리핑.</p><a href="briefing.md">Open briefing →</a></div>
+    <div class="card"><h2>Issue radar</h2><p>부처·이슈별 뉴스 패킷과 예상 질문 전체 목록.</p><a href="radar.md">Open radar →</a></div>
+    <div class="card"><h2>Gold v1</h2><p>과거 회의록과 뉴스 매칭에서 보수적으로 고정한 학습셋.</p><a href="gold-v1.md">Open gold set →</a></div>
+    <div class="card"><h2>Thresholds</h2><p>초기 점수 기준과 precision/recall 점검.</p><a href="threshold.md">Open calibration →</a></div>
+  </div>
+
+  <div class="section">
+    <h2>What it does</h2>
+    <p>Question Forecast는 네이버 뉴스 API로 회의 전 이슈를 모으고, 과거 국무회의 대통령 발언 DB에서 관찰한 질문 패턴을 이용해 장관이 준비해야 할 질문 패킷을 생성합니다.</p>
+    <span class="pill">news relevance scoring</span><span class="pill">issue grouping</span><span class="pill">cabinet remarks DB</span><span class="pill">review-first forecasting</span>
+  </div>
+
+  <div class="section">
+    <h2>Repository</h2>
+    <p>Source and generated reports are on GitHub: <a href="https://github.com/hosungseo/question-forecast">hosungseo/question-forecast</a>.</p>
+    <p><strong>Note:</strong> This is a decision-support radar, not a claim about actual presidential intent.</p>
+  </div>
+</main>
+</body>
+</html>

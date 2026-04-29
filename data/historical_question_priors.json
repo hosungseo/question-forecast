@@ -1,0 +1,95 @@
+{
+  "source": "/Users/seohoseong/Documents/codex/question-forecast/data/cabinet_question_radar.sqlite",
+  "total_candidates": 1460,
+  "question_type_counts": {
+    "현황 질문": 992,
+    "대안 요구": 169,
+    "예산/재정 확인": 151,
+    "검토결과 확인": 69,
+    "부처협의 확인": 45,
+    "관리 지시": 34
+  },
+  "global_move_prior": {
+    "ground_truth": 0.4035,
+    "public_outcome": 0.1771,
+    "instruction": 0.1606,
+    "bottleneck": 0.0879,
+    "causal_split": 0.0843,
+    "coordination": 0.0514,
+    "field_burden": 0.0352
+  },
+  "ministry_move_prior": {
+    "고용노동부": {
+      "ground_truth": 0.2674,
+      "public_outcome": 0.2326,
+      "instruction": 0.1703,
+      "bottleneck": 0.1337,
+      "causal_split": 0.0824,
+      "field_burden": 0.0714,
+      "coordination": 0.0421
+    },
+    "교육부": {
+      "public_outcome": 0.2892,
+      "instruction": 0.2206,
+      "ground_truth": 0.1667,
+      "bottleneck": 0.1029,
+      "causal_split": 0.0882,
+      "coordination": 0.0784,
+      "field_burden": 0.0539
+    },
+    "국토교통부": {
+      "ground_truth": 0.2755,
+      "public_outcome": 0.2224,
+      "instruction": 0.1865,
+      "bottleneck": 0.1019,
+      "causal_split": 0.1019,
+      "coordination": 0.056,
+      "field_burden": 0.056
+    },
+    "금융위원회": {
+      "public_outcome": 0.2712,
+      "ground_truth": 0.2147,
+      "instruction": 0.1977,
+      "bottleneck": 0.1243,
+      "causal_split": 0.0706,
+      "field_burden": 0.0621,
+      "coordination": 0.0593
+    },
+    "기획재정부": {
+      "public_outcome": 0.3713,
+      "bottleneck": 0.2913,
+      "instruction": 0.1182,
+      "ground_truth": 0.0807,
+      "causal_split": 0.0541,
+      "field_burden": 0.0476,
+      "coordination": 0.0368
+    },
+    "법무부": {
+      "ground_truth": 0.3249,
+      "public_outcome": 0.1868,
+      "instruction": 0.1595,
+      "causal_split": 0.1167,
+      "bottleneck": 0.1051,
+      "coordination": 0.0545,
+      "field_burden": 0.0525
+    },
+    "보건복지부": {
+      "public_outcome": 0.2692,
+      "ground_truth": 0.1923,
+      "instruction": 0.1683,
+      "bottleneck": 0.1587,
+      "coordination": 0.0817,
+      "causal_split": 0.0721,
+      "field_burden": 0.0577
+    },
+    "행정안전부": {
+      "public_outcome": 0.2354,
+      "ground_truth": 0.1926,
+      "instruction": 0.1892,
+      "bottleneck": 0.125,
+      "field_burden": 0.089,
+      "causal_split": 0.0873,
+      "coordination": 0.0813
+    }
+  }
+}

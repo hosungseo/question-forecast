@@ -47,7 +47,7 @@ def write_memo(p: dict, rank: int, generated: str) -> Path:
         '## 대통령 예상 질문',
     ]
     for q in questions[:4]:
-        lines.append(f"- **{q.get('move')}**: {q.get('question')}")
+        lines.append(f"- **{q.get('move_label', q.get('move'))}**: {q.get('question')}")
     lines += ['', '## 답변 골격', bullets(oral.get('answer_skeleton') or []), '', '## 장관 준비 체크리스트', bullets(prep)]
     lines += ['', '## 답변에 써야 할 통계 근거']
     if stat.get('answer_frame'):

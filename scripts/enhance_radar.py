@@ -182,11 +182,11 @@ def question_flow(packet: dict, align: dict, like: dict) -> list[dict]:
         prep.append('관련 통계 최신값과 전월·전년 대비 변화')
     prep.append('즉시 조치/법령개정/예산소요를 구분한 답변')
     return [
-        {'stage': 'opening', 'question': first},
-        {'stage': 'pressure_followup', 'question': second},
-        {'stage': 'bottleneck_followup', 'question': third},
-        {'stage': 'instruction_turn', 'question': synth.get('follow_up') or '이번 주 안에 보완해 다시 보고할 항목은 무엇입니까?'},
-        {'stage': 'minister_prep', 'items': prep[:5], 'likelihood_band': like['band']},
+        {'stage': '첫 질문', 'question': first},
+        {'stage': '후속 압박', 'question': second},
+        {'stage': '병목 확인', 'question': third},
+        {'stage': '지시 전환', 'question': synth.get('follow_up') or '이번 주 안에 보완해 다시 보고할 항목은 무엇입니까?'},
+        {'stage': '장관 준비', 'items': prep[:5], 'likelihood_band': like['band']},
     ]
 
 

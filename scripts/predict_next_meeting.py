@@ -152,7 +152,7 @@ def main():
     lines=['# Next Cabinet Meeting Radar v2','',f'- generated_at: {dt.datetime.now().isoformat()}','- purpose: 최근 뉴스 기반 대통령 예상 질문 후보 패킷','- warning: 실제 의중 예측이 아니라 회의 전 검토용 이슈 레이더','- algorithm: canonical issue grouping + noise filter + signal/recency/volume priority','']
     for i,p in enumerate(packets[:10],1):
         lines += [f"## {i}. {p['ministry']} — {p['issue_id']}",f"- priority: {p['priority']} / recent articles: {p['count']}",f"- signal hits: {', '.join(p['signals'])}",f"- key terms: {', '.join(p['terms'])}",'',f"### 종합 판단",p.get('question_synthesis',{}).get('diagnosis',''),'','### 예상 질문']
-        for q in p.get('question_synthesis',{}).get('questions',[]): lines.append(f"- **{q['move']}**: {q['question']}")
+        for q in p.get('question_synthesis',{}).get('questions',[]): lines.append(f"- **{q.get('move_label', q.get('move'))}**: {q['question']}")
         lines += ['','### 후속 지시 후보',f"- {p.get('question_synthesis',{}).get('follow_up','')}",'','### 이슈별 보조 질문']
         for q in p['questions']: lines.append(f'- {q}')
         lines += ['','### 대표 기사']

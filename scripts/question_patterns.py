@@ -225,6 +225,27 @@ def _sentence(move: str, f: dict, signals: list[str] | None) -> str:
     return f"{subject}에 대해 추가 검토가 필요한 쟁점은 무엇입니까?"
 
 
+MOVE_KO = {
+    'ground_truth': '실제 현황 확인',
+    'causal_split': '원인 분해',
+    'coordination': '부처 간 조정',
+    'bottleneck': '병목 해소',
+    'field_burden': '현장 부담 완화',
+    'public_outcome': '국민 체감 성과',
+    'instruction': '후속 조치 지시',
+}
+
+MOVE_DIAGNOSIS = {
+    'ground_truth': '먼저 실제 현황과 추세를 분명히 확인해야 합니다',
+    'causal_split': '원인을 제도·현장·이해관계자 부담으로 나누어 설명해야 합니다',
+    'coordination': '관계 부처와 기관의 역할 분담을 명확히 해야 합니다',
+    'bottleneck': '예산·인력·법령·집행절차 중 무엇이 막고 있는지 밝혀야 합니다',
+    'field_burden': '현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다',
+    'public_outcome': '국민이 체감할 변화를 중심으로 답변을 준비해야 합니다',
+    'instruction': '단기 점검과 후속 보고 일정을 분명히 해야 합니다',
+}
+
+
 def synthesize_questions(issue_id: str, signals: list[str] | None = None, *, priority: int | float = 0, count: int = 0) -> dict:
     """Return a compact, weighted question packet.
 
@@ -232,13 +253,15 @@ def synthesize_questions(issue_id: str, signals: list[str] | None = None, *, pri
     """
     f = _focus(issue_id)
     moves, scores = _score_moves(issue_id, signals, priority, count)
-    questions = [{'move': m, 'question': _sentence(m, f, signals), 'score': scores.get(m)} for m in moves]
+    questions = [{'move': m, 'move_label': MOVE_KO.get(m, m), 'question': _sentence(m, f, signals), 'score': scores.get(m)} for m in moves]
     top_move = moves[0] if moves else 'ground_truth'
-    diagnosis = f"{f['subject']}은 '{f['risk']}'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 {top_move}입니다."
+    diagnosis = f"{f['subject']}의 핵심 리스크는 {f['risk']}입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, {MOVE_DIAGNOSIS.get(top_move, '핵심 쟁점을 정리해야 합니다')} ."
+    diagnosis = diagnosis.replace(' .', '.')
     follow_up = _sentence('instruction', f, signals)
     return {
         'diagnosis': diagnosis,
         'moves': moves,
+        'move_labels': [MOVE_KO.get(m, m) for m in moves],
         'move_scores': scores,
         'questions': questions,
         'follow_up': follow_up,

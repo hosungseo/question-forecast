@@ -71,8 +71,9 @@ def render_packet(p: dict, rank: int) -> str:
     articles = p.get('items') or []
     lead_article = articles[0].get('title','') if articles else ''
     prep = ''.join(f'<li>{esc(x)}</li>' for x in prep_items(p))
+    search_blob = ' '.join([str(p.get('ministry')), str(p.get('issue_id')), q, domains, evidence(p), lead_article])
     return f'''
-    <article class="issue {esc(band)}" data-ministry="{esc(p.get('ministry'))}">
+    <article class="issue {esc(band)}" data-ministry="{esc(p.get('ministry'))}" data-score="{esc(score)}" data-search="{esc(search_blob).lower()}">
       <div class="rank">{rank}</div>
       <div class="issue-main">
         <div class="meta"><span>{esc(p.get('ministry'))}</span><span>{esc(p.get('issue_id'))}</span><span>{esc(band)}</span>{badge_for_delta(p)}</div>
@@ -143,6 +144,9 @@ def main() -> int:
     .focus ul {{ list-style:none; padding:0; margin:0; display:grid; gap:10px; }}
     .focus li {{ background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); padding:12px 14px; border-radius:16px; }}
     .focus span {{ float:right; color:#93c5fd; font-weight:800; }}
+    .controls {{ display:grid; grid-template-columns:1fr 190px auto auto; gap:10px; margin:0 0 14px; }}
+    .controls input,.controls select,.controls button {{ border:1px solid var(--line); border-radius:14px; padding:11px 12px; background:white; font:inherit; font-weight:650; }}
+    .controls button {{ cursor:pointer; color:#111827; }}
     .filters {{ display:flex; gap:8px; flex-wrap:wrap; margin:0 0 24px; }}
     .filters button {{ border:1px solid var(--line); background:white; border-radius:999px; padding:9px 12px; font-weight:700; color:#374151; cursor:pointer; }}
     .filters button.active {{ background:#111827; color:white; border-color:#111827; }}
@@ -198,7 +202,7 @@ def main() -> int:
     .facts span {{ font-size:13px; background:#f8fafc; border:1px solid var(--line); padding:6px 9px; border-radius:10px; color:#374151; }}
     .evidence, .delta, .article-title {{ margin:7px 0 0; color:var(--muted); font-size:14px; }}
     .note {{ margin-top:34px; color:var(--muted); font-size:14px; border-top:1px solid var(--line); padding-top:22px; }}
-    @media (max-width:760px) {{ .top,.focus {{ grid-template-columns:1fr; }} .stamp {{ text-align:left; }} .stats {{ justify-content:flex-start; }} h1 {{ font-size:42px; }} .issue,.issue-head,.quick-row {{ grid-template-columns:1fr; }} .score {{ text-align:left; border-left:0; padding-left:0; }} }}
+    @media (max-width:760px) {{ .top,.focus,.controls {{ grid-template-columns:1fr; }} .stamp {{ text-align:left; }} .stats {{ justify-content:flex-start; }} h1 {{ font-size:42px; }} .issue,.issue-head,.quick-row {{ grid-template-columns:1fr; }} .score {{ text-align:left; border-left:0; padding-left:0; }} }}
   </style>
 </head>
 <body>
@@ -226,22 +230,46 @@ def main() -> int:
     <a href="threshold.md">Calibration</a>
     <a href="https://github.com/hosungseo/question-forecast">GitHub</a>
   </nav>
+  <section class="controls">
+    <input id="search" type="search" placeholder="이슈, 부처, 질문, 답변근거 검색" />
+    <select id="sort"><option value="rank">기본 순위</option><option value="score">질문 가능성 높은 순</option></select>
+    <button id="expand">모두 펼치기</button>
+    <button id="collapse">모두 접기</button>
+  </section>
   <div class="filters">{filters}</div>
-  <section class="issues">
+  <section class="issues" id="issues">
     {issues_html}
   </section>
   <p class="note">Note: This is a decision-support radar, not a claim about actual presidential intent. Statistics are answer evidence, not literal presidential questions.</p>
 </main>
 <script>
   const buttons = document.querySelectorAll('.filters button');
-  const cards = document.querySelectorAll('.issue');
+  const cards = Array.from(document.querySelectorAll('.issue'));
+  const issues = document.getElementById('issues');
+  const search = document.getElementById('search');
+  const sort = document.getElementById('sort');
+  let activeFilter = '전체';
+  function apply() {{
+    const q = (search.value || '').trim().toLowerCase();
+    cards.forEach(card => {{
+      const okFilter = activeFilter === '전체' || card.dataset.ministry === activeFilter;
+      const okSearch = !q || (card.dataset.search || '').includes(q);
+      card.style.display = (okFilter && okSearch) ? 'grid' : 'none';
+    }});
+    const ordered = cards.slice().sort((a,b) => sort.value === 'score' ? (Number(b.dataset.score||0)-Number(a.dataset.score||0)) : 0);
+    ordered.forEach(card => issues.appendChild(card));
+  }}
   buttons[0]?.classList.add('active');
   buttons.forEach(btn => btn.addEventListener('click', () => {{
     buttons.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const f = btn.dataset.filter;
-    cards.forEach(card => {{ card.style.display = (f === '전체' || card.dataset.ministry === f) ? 'grid' : 'none'; }});
+    activeFilter = btn.dataset.filter;
+    apply();
   }}));
+  search.addEventListener('input', apply);
+  sort.addEventListener('change', apply);
+  document.getElementById('expand').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = true));
+  document.getElementById('collapse').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = false));
 </script>
 </body>
 </html>'''

@@ -89,7 +89,7 @@ def render_packet(p: dict, rank: int) -> str:
           <span>{esc(domains)}</span>
           <span>{esc(delta.get('interpretation','전일 비교 없음'))}</span>
         </div>
-        <div class="actions"><a href="{issue_page_href(p, rank)}">상세 브리핑 열기 →</a><a class="ghost" href="memo-{rank}-{str(p.get('issue_id') or 'issue')}.md">메모</a></div>
+        <div class="actions"><a href="{issue_page_href(p, rank)}">상세 브리핑 열기 →</a><a class="ghost" href="memo-{rank}-{str(p.get('issue_id') or 'issue')}.md">메모</a><button class="pick" data-title="{esc(p.get('ministry'))} · {esc(p.get('issue_id'))}" data-score="{esc(score)}" data-question="{esc(q)}">검토 바구니</button></div>
         <details>
           <summary>질문·답변 준비 펼치기</summary>
           <section class="qa question-block">
@@ -182,10 +182,17 @@ def main() -> int:
     .quick-row {{ display:grid; grid-template-columns:90px 1fr 1fr; gap:8px; margin:13px 0 6px; }}
     .quick-row span {{ background:#f8fafc; border:1px solid var(--line); border-radius:12px; padding:8px 10px; color:#475569; font-size:13px; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }}
     .actions {{ margin:10px 0 4px; }}
-    .actions a {{ display:inline-block; background:#111827; color:white; border-radius:999px; padding:8px 12px; font-size:13px; margin-right:6px; }}
-    .actions a.ghost {{ background:white; color:#111827; border:1px solid var(--line); }}
-    .actions a:hover {{ text-decoration:none; background:#1f2937; }}
-    .actions a.ghost:hover {{ background:#f8fafc; }}
+    .actions a,.actions button {{ display:inline-block; background:#111827; color:white; border-radius:999px; padding:8px 12px; font-size:13px; margin-right:6px; border:0; font-weight:800; cursor:pointer; }}
+    .actions a.ghost,.actions button.pick {{ background:white; color:#111827; border:1px solid var(--line); }}
+    .actions a:hover,.actions button:hover {{ text-decoration:none; background:#1f2937; color:white; }}
+    .actions a.ghost:hover,.actions button.pick:hover {{ background:#f8fafc; color:#111827; }}
+    .tray {{ position:fixed; right:18px; bottom:18px; width:min(420px,calc(100vw - 36px)); background:#111827; color:white; border-radius:24px; padding:16px; box-shadow:0 24px 80px rgba(15,23,42,.28); z-index:20; display:none; }}
+    .tray.open {{ display:block; }}
+    .tray h2 {{ font-size:16px; margin:0 0 8px; }}
+    .tray ul {{ margin:0; padding-left:18px; max-height:220px; overflow:auto; }}
+    .tray li {{ margin:8px 0; color:#dbeafe; }}
+    .tray-actions {{ display:flex; gap:8px; margin-top:12px; }}
+    .tray button {{ border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.08); color:white; border-radius:999px; padding:8px 11px; cursor:pointer; font-weight:800; }}
     details {{ margin-top:10px; }}
     summary {{ cursor:pointer; color:#1d4ed8; font-weight:800; font-size:14px; list-style:none; }}
     summary::-webkit-details-marker {{ display:none; }}
@@ -242,6 +249,11 @@ def main() -> int:
   </section>
   <p class="note">Note: This is a decision-support radar, not a claim about actual presidential intent. Statistics are answer evidence, not literal presidential questions.</p>
 </main>
+<aside class="tray" id="tray">
+  <h2>검토 바구니</h2>
+  <ul id="trayList"></ul>
+  <div class="tray-actions"><button id="copyTray">복사</button><button id="clearTray">비우기</button></div>
+</aside>
 <script>
   const buttons = document.querySelectorAll('.filters button');
   const cards = Array.from(document.querySelectorAll('.issue'));
@@ -270,6 +282,28 @@ def main() -> int:
   sort.addEventListener('change', apply);
   document.getElementById('expand').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = true));
   document.getElementById('collapse').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = false));
+  const tray = document.getElementById('tray');
+  const trayList = document.getElementById('trayList');
+  const picks = [];
+  function renderTray() {{
+    tray.classList.toggle('open', picks.length > 0);
+    trayList.innerHTML = picks.map(p => `<li><b>${{p.title}}</b> (${{p.score}})<br>${{p.question}}</li>`).join('');
+  }}
+  document.querySelectorAll('.pick').forEach(btn => btn.addEventListener('click', () => {{
+    const item = {{ title: btn.dataset.title, score: btn.dataset.score, question: btn.dataset.question }};
+    if (!picks.some(p => p.title === item.title)) picks.push(item);
+    renderTray();
+  }}));
+  document.getElementById('clearTray').addEventListener('click', () => {{ picks.length = 0; renderTray(); }});
+  document.getElementById('copyTray').addEventListener('click', async () => {{
+    const text = picks.map((p,i) => `${{i+1}}. ${{p.title}} (${{p.score}})\n- ${{p.question}}`).join('\n\n');
+    try {{ await navigator.clipboard.writeText(text); document.getElementById('copyTray').textContent = '복사됨'; setTimeout(()=>document.getElementById('copyTray').textContent='복사',1200); }} catch(e) {{ alert(text); }}
+  }});
+  window.addEventListener('keydown', e => {{
+    if (e.key === '/' && document.activeElement !== search) {{ e.preventDefault(); search.focus(); }}
+    if (e.key.toLowerCase() === 'e') document.getElementById('expand').click();
+    if (e.key.toLowerCase() === 'c') document.getElementById('collapse').click();
+  }});
 </script>
 </body>
 </html>'''

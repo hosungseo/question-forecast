@@ -54,10 +54,17 @@
     .quick-row { display:grid; grid-template-columns:90px 1fr 1fr; gap:8px; margin:13px 0 6px; }
     .quick-row span { background:#f8fafc; border:1px solid var(--line); border-radius:12px; padding:8px 10px; color:#475569; font-size:13px; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .actions { margin:10px 0 4px; }
-    .actions a { display:inline-block; background:#111827; color:white; border-radius:999px; padding:8px 12px; font-size:13px; margin-right:6px; }
-    .actions a.ghost { background:white; color:#111827; border:1px solid var(--line); }
-    .actions a:hover { text-decoration:none; background:#1f2937; }
-    .actions a.ghost:hover { background:#f8fafc; }
+    .actions a,.actions button { display:inline-block; background:#111827; color:white; border-radius:999px; padding:8px 12px; font-size:13px; margin-right:6px; border:0; font-weight:800; cursor:pointer; }
+    .actions a.ghost,.actions button.pick { background:white; color:#111827; border:1px solid var(--line); }
+    .actions a:hover,.actions button:hover { text-decoration:none; background:#1f2937; color:white; }
+    .actions a.ghost:hover,.actions button.pick:hover { background:#f8fafc; color:#111827; }
+    .tray { position:fixed; right:18px; bottom:18px; width:min(420px,calc(100vw - 36px)); background:#111827; color:white; border-radius:24px; padding:16px; box-shadow:0 24px 80px rgba(15,23,42,.28); z-index:20; display:none; }
+    .tray.open { display:block; }
+    .tray h2 { font-size:16px; margin:0 0 8px; }
+    .tray ul { margin:0; padding-left:18px; max-height:220px; overflow:auto; }
+    .tray li { margin:8px 0; color:#dbeafe; }
+    .tray-actions { display:flex; gap:8px; margin-top:12px; }
+    .tray button { border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.08); color:white; border-radius:999px; padding:8px 11px; cursor:pointer; font-weight:800; }
     details { margin-top:10px; }
     summary { cursor:pointer; color:#1d4ed8; font-weight:800; font-size:14px; list-style:none; }
     summary::-webkit-details-marker { display:none; }
@@ -127,7 +134,7 @@
           <span>학교안전, 교권보호</span>
           <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <div class="actions"><a href="issue-1-school_field_trip.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-1-school_field_trip.md">메모</a></div>
+        <div class="actions"><a href="issue-1-school_field_trip.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-1-school_field_trip.md">메모</a><button class="pick" data-title="교육부 · school_field_trip" data-score="87.5" data-question="현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?">검토 바구니</button></div>
         <details>
           <summary>질문·답변 준비 펼치기</summary>
           <section class="qa question-block">
@@ -163,7 +170,7 @@
           <span>재난안전, 지방행정</span>
           <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <div class="actions"><a href="issue-2-disaster_safety.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-2-disaster_safety.md">메모</a></div>
+        <div class="actions"><a href="issue-2-disaster_safety.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-2-disaster_safety.md">메모</a><button class="pick" data-title="행정안전부 · disaster_safety" data-score="86.8" data-question="재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?">검토 바구니</button></div>
         <details>
           <summary>질문·답변 준비 펼치기</summary>
           <section class="qa question-block">
@@ -199,7 +206,7 @@
           <span>예산, 물가</span>
           <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <div class="actions"><a href="issue-3-prices_livelihood.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-3-prices_livelihood.md">메모</a></div>
+        <div class="actions"><a href="issue-3-prices_livelihood.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-3-prices_livelihood.md">메모</a><button class="pick" data-title="기획재정부 · prices_livelihood" data-score="77.6" data-question="해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?">검토 바구니</button></div>
         <details>
           <summary>질문·답변 준비 펼치기</summary>
           <section class="qa question-block">
@@ -235,7 +242,7 @@
           <span>검찰</span>
           <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <div class="actions"><a href="issue-4-justice_reform.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-4-justice_reform.md">메모</a></div>
+        <div class="actions"><a href="issue-4-justice_reform.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-4-justice_reform.md">메모</a><button class="pick" data-title="법무부 · justice_reform" data-score="71.5" data-question="법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?">검토 바구니</button></div>
         <details>
           <summary>질문·답변 준비 펼치기</summary>
           <section class="qa question-block">
@@ -271,7 +278,7 @@
           <span>서민금융</span>
           <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <div class="actions"><a href="issue-5-finance_rates.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-5-finance_rates.md">메모</a></div>
+        <div class="actions"><a href="issue-5-finance_rates.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-5-finance_rates.md">메모</a><button class="pick" data-title="금융위원회 · finance_rates" data-score="76.0" data-question="결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?">검토 바구니</button></div>
         <details>
           <summary>질문·답변 준비 펼치기</summary>
           <section class="qa question-block">
@@ -293,6 +300,11 @@
   </section>
   <p class="note">Note: This is a decision-support radar, not a claim about actual presidential intent. Statistics are answer evidence, not literal presidential questions.</p>
 </main>
+<aside class="tray" id="tray">
+  <h2>검토 바구니</h2>
+  <ul id="trayList"></ul>
+  <div class="tray-actions"><button id="copyTray">복사</button><button id="clearTray">비우기</button></div>
+</aside>
 <script>
   const buttons = document.querySelectorAll('.filters button');
   const cards = Array.from(document.querySelectorAll('.issue'));
@@ -321,6 +333,31 @@
   sort.addEventListener('change', apply);
   document.getElementById('expand').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = true));
   document.getElementById('collapse').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = false));
+  const tray = document.getElementById('tray');
+  const trayList = document.getElementById('trayList');
+  const picks = [];
+  function renderTray() {
+    tray.classList.toggle('open', picks.length > 0);
+    trayList.innerHTML = picks.map(p => `<li><b>${p.title}</b> (${p.score})<br>${p.question}</li>`).join('');
+  }
+  document.querySelectorAll('.pick').forEach(btn => btn.addEventListener('click', () => {
+    const item = { title: btn.dataset.title, score: btn.dataset.score, question: btn.dataset.question };
+    if (!picks.some(p => p.title === item.title)) picks.push(item);
+    renderTray();
+  }));
+  document.getElementById('clearTray').addEventListener('click', () => { picks.length = 0; renderTray(); });
+  document.getElementById('copyTray').addEventListener('click', async () => {
+    const text = picks.map((p,i) => `${i+1}. ${p.title} (${p.score})
+- ${p.question}`).join('
+
+');
+    try { await navigator.clipboard.writeText(text); document.getElementById('copyTray').textContent = '복사됨'; setTimeout(()=>document.getElementById('copyTray').textContent='복사',1200); } catch(e) { alert(text); }
+  });
+  window.addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== search) { e.preventDefault(); search.focus(); }
+    if (e.key.toLowerCase() === 'e') document.getElementById('expand').click();
+    if (e.key.toLowerCase() === 'c') document.getElementById('collapse').click();
+  });
 </script>
 </body>
 </html>

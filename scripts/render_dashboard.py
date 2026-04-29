@@ -30,6 +30,35 @@ def first_question(packet: dict) -> str:
     return qs[0].get('question', '') if qs else ''
 
 
+def clean_title(text: str, limit: int = 92) -> str:
+    text = ' '.join(str(text or '').replace('&quot;', '"').split())
+    if len(text) <= limit:
+        return text
+    return text[:limit - 1].rstrip() + '…'
+
+
+def recent_issue(packet: dict) -> dict:
+    items = packet.get('items') or []
+    lead = items[0] if items else {}
+    title = clean_title(lead.get('title') or packet.get('issue_id'))
+    desc = clean_title(lead.get('desc') or '', 150)
+    signals = packet.get('signals') or []
+    dates = sorted({it.get('pub_date') for it in items if it.get('pub_date')}, reverse=True)
+    signal_text = ', '.join(signals[:5])
+    summary = title
+    if desc:
+        summary = f"{title} — {desc}"
+    return {
+        'title': title,
+        'summary': summary,
+        'date': dates[0] if dates else '',
+        'count': packet.get('count'),
+        'signals': signal_text,
+        'query': lead.get('query',''),
+        'link': lead.get('link') or lead.get('originallink') or '',
+    }
+
+
 def evidence(packet: dict) -> str:
     cards = ((packet.get('statistical_evidence') or {}).get('answer_evidence_cards') or [])
     return ' · '.join(c.get('stat', '') for c in cards[:2]) or '답변 근거 통계 후보 없음'
@@ -80,19 +109,26 @@ def render_packet(p: dict, rank: int) -> str:
     domains = ', '.join((align.get('function_domains') or [])[:3])
     q = first_question(p)
     diagnosis = (p.get('question_synthesis') or {}).get('diagnosis', '')
+    issue = recent_issue(p)
     articles = p.get('items') or []
-    lead_article = articles[0].get('title', '') if articles else ''
+    lead_article = issue['title']
     prep = ''.join(f'<li>{esc(x)}</li>' for x in prep_items(p))
-    search_blob = ' '.join([str(p.get('ministry')), str(p.get('issue_id')), q, domains, evidence(p), case_line(p), lead_article])
+    search_blob = ' '.join([str(p.get('ministry')), str(p.get('issue_id')), q, domains, evidence(p), case_line(p), issue['summary'], issue['signals']])
     return f'''
     <article class="issue {esc(band)}" data-ministry="{esc(p.get('ministry'))}" data-score="{esc(score)}" data-search="{esc(search_blob).lower()}">
       <div class="rank"><span>{rank}</span></div>
       <div class="issue-main">
         <div class="meta"><span>{esc(p.get('ministry'))}</span><span>{esc(p.get('issue_id'))}</span><span>{esc(band)}</span>{badge_for_delta(p)}</div>
         <div class="issue-head">
-          <h3>{esc(diagnosis)}</h3>
+          <div>
+            <div class="recent-label">최근 이슈</div>
+            <h3 class="issue-title">{esc(issue['title'])}</h3>
+          </div>
           <div class="score"><b>{esc(score)}</b><small>질문 가능성</small></div>
         </div>
+        <p class="issue-summary">{esc(issue['summary'])}</p>
+        <div class="signal-strip"><span>{esc(issue['date'])}</span><span>기사 {esc(issue['count'])}건</span><span>{esc(issue['signals'])}</span></div>
+        <div class="forecast-note"><b>질문 프레임</b><span>{esc(diagnosis)}</span></div>
         <p class="first-q">{esc(q)}</p>
         <div class="brief-grid">
           <div><small>업무 연결</small><b>{esc(domains or '소관 업무 검토')}</b></div>
@@ -119,6 +155,7 @@ def main() -> int:
     issues_html = '\n'.join(render_packet(p, i + 1) for i, p in enumerate(packets))
     top = packets[0] if packets else {}
     top_q = first_question(top)
+    top_issue = recent_issue(top) if top else {'title':'','summary':'','signals':'','date':'','count':'','link':''}
     focus_items = ''.join(
         f'<li><span>{i+1}</span><b>{esc(p.get("ministry"))}</b><em>{esc(p.get("issue_id"))}</em><strong>{esc((p.get("cabinet_question_likelihood") or {}).get("score"))}</strong></li>'
         for i, p in enumerate(packets[:5])
@@ -146,8 +183,11 @@ def main() -> int:
     .lead {{ margin:24px 0 0; max-width:620px; font-size:21px; color:#3d3329; }}
     .hero-panel {{ border-left:1px solid var(--line); padding:28px; background:linear-gradient(135deg,#1f2a24,#101713); color:#f7f0df; display:flex; flex-direction:column; justify-content:space-between; }}
     .hero-panel small {{ display:block; color:#ccbfa9; font:800 12px/1.2 ui-sans-serif,system-ui; text-transform:uppercase; letter-spacing:.1em; }}
-    .hero-panel h2 {{ margin:12px 0 16px; font-size:28px; line-height:1.15; letter-spacing:-.03em; }}
-    .hero-question {{ padding:18px; border:1px solid rgba(255,255,255,.18); border-radius:22px; background:rgba(255,255,255,.07); font-size:18px; }}
+    .hero-panel h2 {{ margin:12px 0 12px; font-size:28px; line-height:1.15; letter-spacing:-.03em; }}
+    .hero-issue {{ padding:15px 16px; border:1px solid rgba(255,255,255,.18); border-radius:20px; background:rgba(255,255,255,.07); font-size:16px; color:#fff8e8; }}
+    .hero-signals {{ margin:10px 0 16px; color:#ccbfa9; font:800 12px/1.45 ui-sans-serif,system-ui; }}
+    .question-kicker {{ margin-top:4px; }}
+    .hero-question {{ padding:16px 18px; border-left:4px solid #d29a62; background:rgba(255,255,255,.05); font-size:17px; }}
     .hero-stats {{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:24px; }}
     .hero-stats div {{ border-top:1px solid rgba(255,255,255,.22); padding-top:12px; }}
     .hero-stats b {{ display:block; font:800 28px/1 ui-sans-serif,system-ui; }}
@@ -186,7 +226,15 @@ def main() -> int:
     .cabinet_high .meta span:nth-child(3) {{ color:var(--green); background:#edf8ef; border-color:#bfdcc7; }} .cabinet_review .meta span:nth-child(3) {{ color:var(--amber); background:#fff5df; border-color:#ead29d; }}
     .badge.new {{ color:#234d8f; background:#edf3ff; }} .badge.up {{ color:#9d1c1c; background:#fff0ed; }} .badge.shift {{ color:#8f3f23; background:#fff2e8; }}
     .issue-head {{ display:grid; grid-template-columns:1fr 94px; gap:18px; }}
+    .recent-label {{ font:900 11px/1.2 ui-sans-serif,system-ui; color:var(--accent); letter-spacing:.09em; text-transform:uppercase; margin-bottom:5px; }}
     h3 {{ margin:0; font-size:22px; line-height:1.28; letter-spacing:-.025em; }}
+    .issue-title {{ font-size:25px; }}
+    .issue-summary {{ margin:10px 0 10px; color:#3d3329; font-size:16px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }}
+    .signal-strip {{ display:flex; flex-wrap:wrap; gap:7px; margin:0 0 12px; }}
+    .signal-strip span {{ font:850 12px/1.2 ui-sans-serif,system-ui; color:#5d5144; background:#f6efe2; border:1px solid var(--line); border-radius:999px; padding:7px 9px; }}
+    .forecast-note {{ display:grid; grid-template-columns:92px 1fr; gap:10px; align-items:start; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:10px 0; margin:12px 0; }}
+    .forecast-note b {{ font:900 12px/1.4 ui-sans-serif,system-ui; color:var(--blue); }}
+    .forecast-note span {{ color:var(--muted); font-size:14px; }}
     .score {{ text-align:right; border-left:1px solid var(--line); padding-left:14px; font-family:ui-sans-serif,system-ui; }}
     .score b {{ display:block; font-size:32px; letter-spacing:-.05em; }} .score small {{ color:var(--muted); font-weight:900; font-size:11px; text-transform:uppercase; }}
     .first-q {{ margin:12px 0 14px; padding-left:14px; border-left:4px solid var(--accent); font-size:18px; font-weight:700; color:#221b13; }}
@@ -211,7 +259,7 @@ def main() -> int:
     <div class="kicker"><span>Cabinet intelligence prototype</span><span>Generated · {esc(generated)}</span></div>
     <div class="hero">
       <div class="hero-copy"><h1>Question Forecast</h1><p class="lead">매일 보도를 부처 업무, 과거 국무회의 질문 패턴, 답변 근거 통계에 연결해 장관용 예상 질의 브리핑을 만듭니다.</p></div>
-      <aside class="hero-panel"><div><small>Today’s first question</small><h2>{esc(top.get('ministry'))} · {esc(top.get('issue_id'))}</h2><div class="hero-question">{esc(top_q)}</div></div><div class="hero-stats"><div><b>{len(packets)}</b><span>packets</span></div><div><b>{high}</b><span>high</span></div><div><b>{avg}</b><span>avg score</span></div></div></aside>
+      <aside class="hero-panel"><div><small>오늘의 최근 이슈</small><h2>{esc(top_issue['title'])}</h2><div class="hero-issue">{esc(top_issue['summary'])}</div><div class="hero-signals">{esc(top_issue['date'])} · 기사 {esc(top_issue['count'])}건 · {esc(top_issue['signals'])}</div><small class="question-kicker">Today’s first question</small><div class="hero-question">{esc(top_q)}</div></div><div class="hero-stats"><div><b>{len(packets)}</b><span>packets</span></div><div><b>{high}</b><span>high</span></div><div><b>{avg}</b><span>avg score</span></div></div></aside>
     </div>
   </section>
   <nav class="links"><a href="daily-digest.md">Daily digest</a><a href="briefing.md">Full briefing</a><a href="radar.md">Radar markdown</a><a href="gold-v1.md">Gold v1</a><a href="threshold.md">Calibration</a><a href="https://github.com/hosungseo/question-forecast">GitHub</a></nav>

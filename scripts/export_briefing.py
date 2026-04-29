@@ -2,13 +2,17 @@
 from __future__ import annotations
 import json
 from pathlib import Path
-SRC=Path('/Users/seohoseong/Documents/codex/cabinet-question-radar/data/next_meeting_radar.json')
-OUT=Path('/Users/seohoseong/Documents/codex/cabinet-question-radar/data/next_meeting_briefing.md')
+ROOT=Path(__file__).resolve().parents[1]
+SRC=ROOT/'data'/'next_meeting_radar.json'
+OUT=ROOT/'data'/'next_meeting_briefing.md'
 data=json.loads(SRC.read_text())
 packets=data['packets'][:5]
 lines=['# 다음 국무회의 예상 질문 브리핑','',f"_생성: {data['generated_at']} / 기준일: 최근 7일 뉴스_",'', '> 실제 의중 예측이 아니라, 국무회의 전 장관 답변 준비용 이슈 레이더입니다.','']
 for i,p in enumerate(packets,1):
-    lines += [f"## {i}. {p['ministry']} — {p['issue_id']}", '', f"**왜 올라왔나**: 기사 {p['count']}건, 핵심 신호 `{', '.join(p['signals'][:8])}`", '', '**대통령 예상 질문**']
+    lines += [f"## {i}. {p['ministry']} — {p['issue_id']}", '', f"**왜 올라왔나**: 기사 {p['count']}건, 핵심 신호 `{', '.join(p['signals'][:8])}`", '', '**대통령 예상 질문: 과거 국무회의 패턴 기반**']
+    for q in p.get('pattern_questions', []):
+        lines.append(f"- **{q['pattern']}**: {q['question']}")
+    lines += ['', '**이슈별 보조 질문**']
     for q in p['questions']:
         lines.append(f'- {q}')
     lines += ['', '**장관이 바로 준비할 답변 포인트**']

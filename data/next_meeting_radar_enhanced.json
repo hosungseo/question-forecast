@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T22:46:56.447256",
+  "generated_at": "2026-04-29T22:47:37.636068",
   "since": "2026-04-22",
   "packets": [
     {
@@ -488,23 +488,23 @@
       },
       "question_flow": [
         {
-          "stage": "opening",
+          "stage": "첫 질문",
           "question": "현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?"
         },
         {
-          "stage": "pressure_followup",
+          "stage": "후속 압박",
           "question": "이 사안을 단순 사건으로 볼 것인지 구조 문제로 볼 것인지 먼저 갈라야 합니다. 원인을 제도·현장 관행·이해관계자 부담으로 나누면 무엇이 핵심입니까?"
         },
         {
-          "stage": "bottleneck_followup",
+          "stage": "병목 확인",
           "question": "해결을 막는 병목이 교사 형사책임, 안전요원, 보험·공제, 법령상 면책 범위 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?"
         },
         {
-          "stage": "instruction_turn",
+          "stage": "지시 전환",
           "question": "현장 회피가 교육기회 축소로 굳어지는 것을 막기 위해 교육부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "minister_prep",
+          "stage": "장관 준비",
           "items": [
             "교육부 직접 사무인지 교육청 집행 사무인지 구분",
             "법령·예산·지침 중 실제 조치수단 확인",
@@ -517,7 +517,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 2,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -1000,23 +1000,23 @@
       },
       "question_flow": [
         {
-          "stage": "opening",
+          "stage": "첫 질문",
           "question": "재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?"
         },
         {
-          "stage": "pressure_followup",
+          "stage": "후속 압박",
           "question": "사후 수습은 반복되지만 사전 통제가 늦어지는 것을 막기 위해 행안부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "bottleneck_followup",
+          "stage": "병목 확인",
           "question": "행안부·지자체·경찰·소방·도로관리청가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?"
         },
         {
-          "stage": "instruction_turn",
+          "stage": "지시 전환",
           "question": "사후 수습은 반복되지만 사전 통제가 늦어지는 것을 막기 위해 행안부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "minister_prep",
+          "stage": "장관 준비",
           "items": [
             "중앙-지방 역할분담 확인",
             "현장 통제와 국민안내 책임기관 확인",
@@ -1029,7 +1029,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -1,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -1533,23 +1533,23 @@
       },
       "question_flow": [
         {
-          "stage": "opening",
+          "stage": "첫 질문",
           "question": "해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?"
         },
         {
-          "stage": "pressure_followup",
+          "stage": "후속 압박",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 취약계층과 자영업자의 체감 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?"
         },
         {
-          "stage": "bottleneck_followup",
+          "stage": "병목 확인",
           "question": "지원은 나가지만 체감 물가가 내려가지 않는 것을 막기 위해 기재부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "instruction_turn",
+          "stage": "지시 전환",
           "question": "지원은 나가지만 체감 물가가 내려가지 않는 것을 막기 위해 기재부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "minister_prep",
+          "stage": "장관 준비",
           "items": [
             "지원수단별 효과와 재정소요 비교",
             "집행속도와 대상선별 기준 확인",
@@ -1562,7 +1562,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 7,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -2039,23 +2039,23 @@
       },
       "question_flow": [
         {
-          "stage": "opening",
+          "stage": "첫 질문",
           "question": "법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?"
         },
         {
-          "stage": "pressure_followup",
+          "stage": "후속 압박",
           "question": "범죄 대응·수사·검찰개혁 이슈은 기사상 신호(검찰, 개혁, 범죄, 수사)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?"
         },
         {
-          "stage": "bottleneck_followup",
+          "stage": "병목 확인",
           "question": "해결을 막는 병목이 증거보전, 수사권 조정, 국제공조, 재판 가능성 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?"
         },
         {
-          "stage": "instruction_turn",
+          "stage": "지시 전환",
           "question": "기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것을 막기 위해 법무부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "minister_prep",
+          "stage": "장관 준비",
           "items": [
             "피해자 보호와 재판가능성 확인",
             "법무부-검찰-경찰-외교부 역할분담 확인",
@@ -2565,23 +2565,23 @@
       },
       "question_flow": [
         {
-          "stage": "opening",
+          "stage": "첫 질문",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?"
         },
         {
-          "stage": "pressure_followup",
+          "stage": "후속 압박",
           "question": "금리·대출 부담은 기사상 신호(금융, 대출, 금리, 은행)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?"
         },
         {
-          "stage": "bottleneck_followup",
+          "stage": "병목 확인",
           "question": "해결을 막는 병목이 중금리대출 공급, 리스크 관리, 취약차주 지원 재원 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?"
         },
         {
-          "stage": "instruction_turn",
+          "stage": "지시 전환",
           "question": "정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것을 막기 위해 금융위가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "minister_prep",
+          "stage": "장관 준비",
           "items": [
             "정책금융 대상 적합성 확인",
             "취약차주 지원과 금융건전성 균형 확인",
@@ -2594,7 +2594,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 2,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -3080,23 +3080,23 @@
       },
       "question_flow": [
         {
-          "stage": "opening",
+          "stage": "첫 질문",
           "question": "현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?"
         },
         {
-          "stage": "pressure_followup",
+          "stage": "후속 압박",
           "question": "이 사안을 단순 사건으로 볼 것인지 구조 문제로 볼 것인지 먼저 갈라야 합니다. 원인을 제도·현장 관행·이해관계자 부담으로 나누면 무엇이 핵심입니까?"
         },
         {
-          "stage": "bottleneck_followup",
+          "stage": "병목 확인",
           "question": "책임 소재가 하청·현장 노동자에게만 내려가는 것을 막기 위해 고용노동부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "instruction_turn",
+          "stage": "지시 전환",
           "question": "책임 소재가 하청·현장 노동자에게만 내려가는 것을 막기 위해 고용노동부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "minister_prep",
+          "stage": "장관 준비",
           "items": [
             "원청-하청 책임구조 확인",
             "감독·처벌·예방수단의 실효성 확인",
@@ -3109,7 +3109,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -2,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -3599,23 +3599,23 @@
       },
       "question_flow": [
         {
-          "stage": "opening",
+          "stage": "첫 질문",
           "question": "부동산 공급·전월세 불안은 기사상 신호(부동산, 주택, 전세, 월세)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?"
         },
         {
-          "stage": "pressure_followup",
+          "stage": "후속 압박",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 실수요자 주거비 부담과 입주 가능 물량을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?"
         },
         {
-          "stage": "bottleneck_followup",
+          "stage": "병목 확인",
           "question": "해결을 막는 병목이 인허가, 착공·입주 시차, 금융, 정비사업 절차 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?"
         },
         {
-          "stage": "instruction_turn",
+          "stage": "지시 전환",
           "question": "공급 발표와 실제 입주 사이의 시차가 시장 불안으로 이어지는 것을 막기 위해 국토부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "minister_prep",
+          "stage": "장관 준비",
           "items": [
             "발표 물량과 실제 입주 물량 구분",
             "인허가·착공·입주 병목 확인",
@@ -3628,7 +3628,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 5,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -4091,23 +4091,23 @@
       },
       "question_flow": [
         {
-          "stage": "opening",
+          "stage": "첫 질문",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 환자 불편과 지역 의료 접근성을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?"
         },
         {
-          "stage": "pressure_followup",
+          "stage": "후속 압박",
           "question": "의료 공백·전공의·비상진료 문제은 기사상 신호(의료, 전공의, 의대, 비상진료)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?"
         },
         {
-          "stage": "bottleneck_followup",
+          "stage": "병목 확인",
           "question": "복지부·병원·전공의·지자체·교육부가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?"
         },
         {
-          "stage": "instruction_turn",
+          "stage": "지시 전환",
           "question": "비상진료가 장기화되며 지역·필수의료 공백이 굳어지는 것을 막기 위해 복지부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
         },
         {
-          "stage": "minister_prep",
+          "stage": "장관 준비",
           "items": [
             "환자 불편 지표 확인",
             "의료인력·재정·수련 병목 구분",

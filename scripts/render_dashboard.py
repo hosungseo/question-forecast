@@ -31,7 +31,7 @@ def evidence(packet: dict) -> str:
 
 def prep_items(packet: dict) -> list[str]:
     flow = packet.get('question_flow') or []
-    minister = next((f for f in flow if f.get('stage') == 'minister_prep'), {})
+    minister = next((f for f in flow if f.get('stage') in ('장관 준비', 'minister_prep')), {})
     items = minister.get('items') or []
     if items:
         return items[:4]
@@ -156,7 +156,17 @@ def main() -> int:
     .stamp {{ text-align:right; color:var(--muted); font-size:14px; }}
     .stats {{ display:flex; gap:10px; justify-content:flex-end; margin-top:12px; flex-wrap:wrap; }}
     .stat {{ background:#fff; border:1px solid var(--line); border-radius:999px; padding:7px 11px; font-size:13px; }}
-    .links {{ display:flex; gap:12px; flex-wrap:wrap; margin:22px 0 34px; }}
+    .links {{ display:flex; gap:12px; flex-wrap:wrap; margin:22px 0 18px; }}
+    .api-panel {{ display:grid; grid-template-columns:1fr auto; gap:14px; align-items:center; background:white; border:1px solid var(--line); border-radius:22px; padding:16px 18px; margin:0 0 28px; box-shadow:0 10px 30px rgba(15,23,42,.035); }}
+    .api-panel h2 {{ margin:0; font-size:17px; letter-spacing:-.02em; }}
+    .api-panel p {{ margin:4px 0 0; color:var(--muted); font-size:14px; }}
+    .api-status {{ display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }}
+    .pill {{ border:1px solid var(--line); border-radius:999px; padding:7px 10px; font-size:12px; font-weight:800; background:#f8fafc; color:#475569; }}
+    .pill.ok {{ color:#047857; background:#ecfdf5; border-color:#bbf7d0; }}
+    .pill.bad {{ color:#b91c1c; background:#fef2f2; border-color:#fecaca; }}
+    .api-actions {{ margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }}
+    .api-actions button,.api-actions a {{ border:1px solid var(--line); background:white; border-radius:999px; padding:8px 11px; font-size:13px; font-weight:800; color:#111827; cursor:pointer; }}
+    .api-actions button:hover,.api-actions a:hover {{ background:#f8fafc; text-decoration:none; }}
     a {{ color:var(--blue); text-decoration:none; font-weight:700; }}
     a:hover {{ text-decoration:underline; }}
     .links a {{ background:white; border:1px solid var(--line); padding:10px 13px; border-radius:999px; }}
@@ -209,7 +219,7 @@ def main() -> int:
     .facts span {{ font-size:13px; background:#f8fafc; border:1px solid var(--line); padding:6px 9px; border-radius:10px; color:#374151; }}
     .evidence, .delta, .article-title {{ margin:7px 0 0; color:var(--muted); font-size:14px; }}
     .note {{ margin-top:34px; color:var(--muted); font-size:14px; border-top:1px solid var(--line); padding-top:22px; }}
-    @media (max-width:760px) {{ .top,.focus,.controls {{ grid-template-columns:1fr; }} .stamp {{ text-align:left; }} .stats {{ justify-content:flex-start; }} h1 {{ font-size:42px; }} .issue,.issue-head,.quick-row {{ grid-template-columns:1fr; }} .score {{ text-align:left; border-left:0; padding-left:0; }} }}
+    @media (max-width:760px) {{ .top,.focus,.controls,.api-panel {{ grid-template-columns:1fr; }} .api-status {{ justify-content:flex-start; }} .stamp {{ text-align:left; }} .stats {{ justify-content:flex-start; }} h1 {{ font-size:42px; }} .issue,.issue-head,.quick-row {{ grid-template-columns:1fr; }} .score {{ text-align:left; border-left:0; padding-left:0; }} }}
   </style>
 </head>
 <body>
@@ -237,6 +247,14 @@ def main() -> int:
     <a href="threshold.md">Calibration</a>
     <a href="https://github.com/hosungseo/question-forecast">GitHub</a>
   </nav>
+  <section class="api-panel" aria-label="데이터 상태">
+    <div>
+      <h2>데이터 상태</h2>
+      <p id="apiSummary">Vercel API에서 최신 레이더를 확인합니다.</p>
+      <div class="api-actions"><button id="refreshApi">API 재확인</button><button id="copyApi">API 링크 복사</button><a href="/api/latest">/api/latest</a><a href="/api/issues">/api/issues</a></div>
+    </div>
+    <div class="api-status"><span class="pill" id="apiLive">확인 전</span><span class="pill" id="apiGenerated">generated: -</span><span class="pill" id="apiCount">packets: -</span></div>
+  </section>
   <section class="controls">
     <input id="search" type="search" placeholder="이슈, 부처, 질문, 답변근거 검색" />
     <select id="sort"><option value="rank">기본 순위</option><option value="score">질문 가능성 높은 순</option></select>
@@ -261,6 +279,26 @@ def main() -> int:
   const search = document.getElementById('search');
   const sort = document.getElementById('sort');
   let activeFilter = '전체';
+  async function checkApi() {{
+    const live = document.getElementById('apiLive');
+    const generated = document.getElementById('apiGenerated');
+    const count = document.getElementById('apiCount');
+    const summary = document.getElementById('apiSummary');
+    live.textContent = '확인 중'; live.className = 'pill';
+    try {{
+      const res = await fetch('/api/latest', {{ cache: 'no-store' }});
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      const packets = data.packets || [];
+      live.textContent = 'API 정상'; live.className = 'pill ok';
+      generated.textContent = 'generated: ' + (data.generated_at || '-');
+      count.textContent = 'packets: ' + packets.length;
+      summary.textContent = '최신 JSON API가 응답했습니다. 화면 산출물과 API 산출물을 함께 사용할 수 있습니다.';
+    }} catch (err) {{
+      live.textContent = 'API 점검 필요'; live.className = 'pill bad';
+      summary.textContent = 'API 확인에 실패했습니다. 정적 대시보드는 계속 볼 수 있습니다.';
+    }}
+  }}
   function apply() {{
     const q = (search.value || '').trim().toLowerCase();
     cards.forEach(card => {{
@@ -280,6 +318,12 @@ def main() -> int:
   }}));
   search.addEventListener('input', apply);
   sort.addEventListener('change', apply);
+  document.getElementById('refreshApi').addEventListener('click', checkApi);
+  document.getElementById('copyApi').addEventListener('click', async () => {{
+    const text = `${{location.origin}}/api/latest\n${{location.origin}}/api/issues`;
+    try {{ await navigator.clipboard.writeText(text); document.getElementById('copyApi').textContent = '복사됨'; setTimeout(()=>document.getElementById('copyApi').textContent='API 링크 복사',1200); }} catch(e) {{ alert(text); }}
+  }});
+  checkApi();
   document.getElementById('expand').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = true));
   document.getElementById('collapse').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = false));
   const tray = document.getElementById('tray');

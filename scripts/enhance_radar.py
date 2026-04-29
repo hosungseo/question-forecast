@@ -1,0 +1,180 @@
+#!/usr/bin/env python3
+"""Enhance Question Forecast radar packets.
+
+Adds:
+- ministry work dictionary alignment
+- cabinet-question likelihood score
+- similar historical cases
+- question flow / follow-up scenario
+- daily delta vs previous radar snapshot
+"""
+from __future__ import annotations
+
+import json
+import math
+import re
+import sqlite3
+from collections import Counter
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / 'data'
+RADAR = DATA / 'next_meeting_radar.json'
+PREV = DATA / 'previous_next_meeting_radar.json'
+DB = DATA / 'cabinet_question_radar.sqlite'
+DICT = DATA / 'ministry_work_dictionary.json'
+OUT = DATA / 'next_meeting_radar_enhanced.json'
+
+
+def toks(text: str) -> set[str]:
+    stop = set('관련 대한 하는 되는 있는 없는 정부 대통령 장관 기자 오늘 이번 뉴스 종합 단독 그리고 그러나 이를 통해 우리'.split())
+    return {t for t in re.findall(r'[가-힣A-Za-z0-9]{2,}', text or '') if t not in stop}
+
+
+def load_json(path: Path, default):
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text())
+    except Exception:
+        return default
+
+
+def work_alignment(packet: dict, dictionary: dict) -> dict:
+    ministry = packet.get('ministry')
+    info = (dictionary.get('ministries') or {}).get(ministry, {})
+    text = ' '.join(packet.get('signals', []) + packet.get('terms', []))
+    domains = []
+    for d in info.get('function_domains', []):
+        if any(part and part in text for part in re.findall(r'[가-힣A-Za-z0-9]+', d)):
+            domains.append(d)
+    if not domains:
+        # fallback: choose first two domains as likely work anchors for this issue.
+        domains = info.get('function_domains', [])[:2]
+    matched_signals = [s for s in info.get('work_signals', []) if s in text]
+    return {
+        'function_domains': domains,
+        'matched_work_signals': matched_signals,
+        'accountability_questions': info.get('accountability_questions', []),
+        'source_hooks': info.get('org_decree_queries', []),
+    }
+
+
+def likelihood(packet: dict, align: dict) -> dict:
+    priority = float(packet.get('priority') or 0)
+    count = float(packet.get('count') or 0)
+    signal_count = len(packet.get('signals') or [])
+    work_hits = len(align.get('matched_work_signals') or [])
+    synthesis = packet.get('question_synthesis') or {}
+    moves = synthesis.get('moves') or []
+    high_value_moves = {'bottleneck', 'coordination', 'field_burden', 'public_outcome', 'instruction'}
+    move_score = sum(1 for m in moves if m in high_value_moves)
+    raw = 0
+    raw += min(priority / 420, 1) * 30
+    raw += min(count / 35, 1) * 16
+    raw += min(signal_count / 8, 1) * 14
+    raw += min(work_hits / 4, 1) * 15
+    raw += min(move_score / 4, 1) * 20
+    raw += 5 if align.get('function_domains') else 0
+    score = round(min(100, raw), 1)
+    if score >= 78: band = 'cabinet_high'
+    elif score >= 60: band = 'cabinet_review'
+    elif score >= 42: band = 'monitor'
+    else: band = 'low'
+    return {'score': score, 'band': band, 'drivers': {'priority': priority, 'article_count': count, 'signal_count': signal_count, 'work_signal_hits': work_hits, 'question_move_hits': move_score}}
+
+
+def similar_cases(packet: dict, limit: int = 3) -> list[dict]:
+    if not DB.exists():
+        return []
+    query_terms = toks(' '.join(packet.get('signals', []) + packet.get('terms', [])))
+    if not query_terms:
+        return []
+    con = sqlite3.connect(DB)
+    con.row_factory = sqlite3.Row
+    rows = con.execute('''
+        select m.meeting_date as meeting_date, q.question_type as question_type, q.text as text
+        from presidential_question_candidates q
+        left join meetings m on m.meeting_code = q.meeting_code
+    ''').fetchall()
+    scored = []
+    for r in rows:
+        rt = toks(r['text'] or '')
+        inter = len(query_terms & rt)
+        if inter == 0:
+            continue
+        j = inter / math.sqrt(len(query_terms) * max(len(rt), 1))
+        if j > 0.035:
+            scored.append((j, r))
+    scored.sort(key=lambda x: x[0], reverse=True)
+    out = []
+    for score, r in scored[:limit]:
+        text = re.sub(r'\s+', ' ', r['text'] or '').strip()
+        out.append({'score': round(score, 4), 'meeting_date': r['meeting_date'], 'question_type': r['question_type'], 'excerpt': text[:260]})
+    return out
+
+
+def question_flow(packet: dict, align: dict, like: dict) -> list[dict]:
+    synth = packet.get('question_synthesis') or {}
+    qs = synth.get('questions') or []
+    first = qs[0]['question'] if qs else f"{packet.get('issue_id')}의 실제 현황은 무엇입니까?"
+    second = qs[1]['question'] if len(qs) > 1 else '원인과 책임 소재를 어떻게 구분했습니까?'
+    third = qs[2]['question'] if len(qs) > 2 else '예산·인력·법령 중 병목은 무엇입니까?'
+    prep = []
+    prep.extend(align.get('accountability_questions') or [])
+    prep.append('최근 7일 기사량·대표기사·부처 소관 근거')
+    prep.append('즉시 조치/법령개정/예산소요를 구분한 답변')
+    return [
+        {'stage': 'opening', 'question': first},
+        {'stage': 'pressure_followup', 'question': second},
+        {'stage': 'bottleneck_followup', 'question': third},
+        {'stage': 'instruction_turn', 'question': synth.get('follow_up') or '이번 주 안에 보완해 다시 보고할 항목은 무엇입니까?'},
+        {'stage': 'minister_prep', 'items': prep[:5], 'likelihood_band': like['band']},
+    ]
+
+
+def delta(packet: dict, prev_by_issue: dict) -> dict:
+    prev = prev_by_issue.get(packet.get('issue_id'))
+    if not prev:
+        return {'status': 'new_or_unseen', 'priority_change': None, 'rank_change': None, 'interpretation': '이전 스냅샷에 없던 이슈이거나 비교 기준이 없습니다.'}
+    pc = (packet.get('priority') or 0) - (prev.get('priority') or 0)
+    rc = (packet.get('rank') or 0) - (prev.get('rank') or 0)
+    old_moves = set(((prev.get('question_synthesis') or {}).get('moves')) or [])
+    new_moves = set(((packet.get('question_synthesis') or {}).get('moves')) or [])
+    if pc > 30: interp = '기사 신호와 정책 관련성이 빠르게 커졌습니다.'
+    elif pc < -30: interp = '이슈 강도가 낮아지고 있습니다.'
+    elif old_moves != new_moves: interp = '순위보다 질문 프레임이 바뀐 이슈입니다.'
+    else: interp = '전일 대비 큰 변화는 없습니다.'
+    return {'status': 'compared', 'priority_change': pc, 'rank_change': rc, 'move_change': {'from': sorted(old_moves), 'to': sorted(new_moves)}, 'interpretation': interp}
+
+
+def main() -> int:
+    radar = load_json(RADAR, {})
+    dictionary = load_json(DICT, {'ministries': {}})
+    prev = load_json(PREV, {})
+    prev_packets = prev.get('packets') or []
+    prev_by_issue = {p.get('issue_id'): {**p, 'rank': i + 1} for i, p in enumerate(prev_packets)}
+    packets = radar.get('packets') or []
+    enhanced = []
+    for i, p in enumerate(packets, 1):
+        p = dict(p)
+        p['rank'] = i
+        align = work_alignment(p, dictionary)
+        like = likelihood(p, align)
+        p['ministry_work_alignment'] = align
+        p['cabinet_question_likelihood'] = like
+        p['similar_historical_cases'] = similar_cases(p)
+        p['question_flow'] = question_flow(p, align, like)
+        p['daily_delta'] = delta(p, prev_by_issue)
+        enhanced.append(p)
+    radar['packets'] = enhanced
+    radar['enhancement_note'] = 'v3: ministry work dictionary + cabinet likelihood + similar cases + question flow + daily delta'
+    OUT.write_text(json.dumps(radar, ensure_ascii=False, indent=2))
+    # Also replace base JSON so docs/briefing can use enhanced fields if desired.
+    RADAR.write_text(json.dumps(radar, ensure_ascii=False, indent=2))
+    print(OUT)
+    return 0
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

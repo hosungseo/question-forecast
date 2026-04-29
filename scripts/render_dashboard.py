@@ -59,6 +59,31 @@ def recent_issue(packet: dict) -> dict:
     }
 
 
+def trend_articles(packet: dict, limit: int = 3) -> list[dict]:
+    """Pick diverse recent articles that explain the issue trend."""
+    items = packet.get('items') or []
+    out = []
+    seen = set()
+    for it in sorted(items, key=lambda x: (x.get('pub_date') or '', x.get('relevance_score') or 0), reverse=True):
+        title = clean_title(it.get('title'), 86)
+        if not title or title in seen:
+            continue
+        seen.add(title)
+        hits = it.get('signal_hits') or []
+        out.append({
+            'date': it.get('pub_date',''),
+            'title': title,
+            'desc': clean_title(it.get('desc'), 120),
+            'query': it.get('query',''),
+            'score': it.get('relevance_score',''),
+            'signals': ', '.join(hits[:4]),
+            'link': it.get('link') or it.get('originallink') or '',
+        })
+        if len(out) >= limit:
+            break
+    return out
+
+
 def evidence(packet: dict) -> str:
     cards = ((packet.get('statistical_evidence') or {}).get('answer_evidence_cards') or [])
     return ' · '.join(c.get('stat', '') for c in cards[:2]) or '답변 근거 통계 후보 없음'
@@ -100,6 +125,22 @@ def case_line(packet: dict) -> str:
     return f"{c.get('meeting_date','')} · {c.get('question_type','')} · {c.get('excerpt','')[:110]}"
 
 
+def render_trend_articles(p: dict) -> str:
+    articles = trend_articles(p, 3)
+    if not articles:
+        return '<div class="trend-empty">트렌드 기사 없음</div>'
+    rows = []
+    for a in articles:
+        href = esc(a.get('link'))
+        title = esc(a.get('title'))
+        title_html = f'<a href="{href}">{title}</a>' if href else title
+        rows.append(f'''<li>
+          <div class="trend-date">{esc(a.get('date'))}<span>{esc(a.get('score'))}점</span></div>
+          <div class="trend-copy"><b>{title_html}</b><p>{esc(a.get('desc'))}</p><em>{esc(a.get('signals') or a.get('query'))}</em></div>
+        </li>''')
+    return '<ol class="trend-list">' + ''.join(rows) + '</ol>'
+
+
 def render_packet(p: dict, rank: int) -> str:
     like = p.get('cabinet_question_likelihood') or {}
     align = p.get('ministry_work_alignment') or {}
@@ -110,8 +151,8 @@ def render_packet(p: dict, rank: int) -> str:
     q = first_question(p)
     diagnosis = (p.get('question_synthesis') or {}).get('diagnosis', '')
     issue = recent_issue(p)
-    articles = p.get('items') or []
     lead_article = issue['title']
+    trend_html = render_trend_articles(p)
     prep = ''.join(f'<li>{esc(x)}</li>' for x in prep_items(p))
     search_blob = ' '.join([str(p.get('ministry')), str(p.get('issue_id')), q, domains, evidence(p), case_line(p), issue['summary'], issue['signals']])
     return f'''
@@ -128,6 +169,7 @@ def render_packet(p: dict, rank: int) -> str:
         </div>
         <p class="issue-summary">{esc(issue['summary'])}</p>
         <div class="signal-strip"><span>{esc(issue['date'])}</span><span>기사 {esc(issue['count'])}건</span><span>{esc(issue['signals'])}</span></div>
+        <section class="trend-box"><div class="trend-head"><b>최근 트렌드 기사</b><span>최신성·관련도 기준 대표 흐름</span></div>{trend_html}</section>
         <div class="forecast-note"><b>질문 프레임</b><span>{esc(diagnosis)}</span></div>
         <p class="first-q">{esc(q)}</p>
         <div class="brief-grid">
@@ -232,6 +274,19 @@ def main() -> int:
     .issue-summary {{ margin:10px 0 10px; color:#3d3329; font-size:16px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }}
     .signal-strip {{ display:flex; flex-wrap:wrap; gap:7px; margin:0 0 12px; }}
     .signal-strip span {{ font:850 12px/1.2 ui-sans-serif,system-ui; color:#5d5144; background:#f6efe2; border:1px solid var(--line); border-radius:999px; padding:7px 9px; }}
+    .trend-box {{ border:1px solid var(--line); border-radius:22px; background:#fffaf0; padding:13px 14px; margin:12px 0; }}
+    .trend-head {{ display:flex; justify-content:space-between; gap:10px; align-items:baseline; margin-bottom:8px; }}
+    .trend-head b {{ font:900 13px/1.2 ui-sans-serif,system-ui; color:var(--accent); letter-spacing:.05em; text-transform:uppercase; }}
+    .trend-head span {{ color:var(--muted); font:800 12px/1.2 ui-sans-serif,system-ui; }}
+    .trend-list {{ list-style:none; margin:0; padding:0; display:grid; gap:9px; }}
+    .trend-list li {{ display:grid; grid-template-columns:92px 1fr; gap:10px; padding-top:9px; border-top:1px solid #eadfca; }}
+    .trend-list li:first-child {{ border-top:0; padding-top:0; }}
+    .trend-date {{ color:var(--muted); font:900 12px/1.25 ui-sans-serif,system-ui; }}
+    .trend-date span {{ display:block; color:var(--blue); margin-top:4px; }}
+    .trend-copy b {{ display:block; font-size:15px; line-height:1.35; }}
+    .trend-copy p {{ margin:4px 0; color:#4b4033; font-size:13px; line-height:1.45; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }}
+    .trend-copy em {{ color:var(--muted); font:800 11px/1.2 ui-sans-serif,system-ui; font-style:normal; }}
+    .trend-empty {{ color:var(--muted); font-size:13px; }}
     .forecast-note {{ display:grid; grid-template-columns:92px 1fr; gap:10px; align-items:start; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:10px 0; margin:12px 0; }}
     .forecast-note b {{ font:900 12px/1.4 ui-sans-serif,system-ui; color:var(--blue); }}
     .forecast-note span {{ color:var(--muted); font-size:14px; }}

@@ -81,6 +81,7 @@ def main() -> int:
         return 2
 
     before_top = top_issues()
+    run([sys.executable, 'scripts/derive_historical_priors.py'])
     run([sys.executable, 'scripts/predict_next_meeting.py'])
     run([sys.executable, 'scripts/export_briefing.py'])
     copy_docs()
@@ -90,7 +91,7 @@ def main() -> int:
     commit_hash = None
     pushed = False
     if changed:
-        run(['git', 'add', 'data/next_meeting_radar.json', 'data/next_meeting_radar.md', 'data/next_meeting_briefing.md', 'docs/briefing.md', 'docs/radar.md'])
+        run(['git', 'add', 'data/historical_question_priors.json', 'data/next_meeting_radar.json', 'data/next_meeting_radar.md', 'data/next_meeting_briefing.md', 'docs/briefing.md', 'docs/radar.md'])
         stamp = dt.datetime.now().strftime('%Y-%m-%d %H:%M KST')
         run(['git', 'commit', '-m', f'Daily forecast update ({stamp})'])
         run(['git', 'push'])

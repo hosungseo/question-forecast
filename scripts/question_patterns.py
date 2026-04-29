@@ -16,6 +16,12 @@ signals so each packet is compact and cabinet-like rather than a checklist.
 """
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+PRIORS_PATH = ROOT / 'data' / 'historical_question_priors.json'
+
 ISSUE_FOCUS = {
     'school_field_trip': {
         'subject': '현장체험학습·소풍 축소 문제',
@@ -24,6 +30,7 @@ ISSUE_FOCUS = {
         'public': '학생의 교육기회 격차와 학부모 불안',
         'risk': '현장 회피가 교육기회 축소로 굳어지는 것',
         'owner': '교육부',
+        'ministry': '교육부',
     },
     'disaster_safety': {
         'subject': '재난·안전 대응 이슈',
@@ -32,6 +39,7 @@ ISSUE_FOCUS = {
         'public': '위험지역 회피와 재난정보 체감도',
         'risk': '사후 수습은 반복되지만 사전 통제가 늦어지는 것',
         'owner': '행안부',
+        'ministry': '행정안전부',
     },
     'real_estate': {
         'subject': '부동산 공급·전월세 불안',
@@ -40,6 +48,7 @@ ISSUE_FOCUS = {
         'public': '실수요자 주거비 부담과 입주 가능 물량',
         'risk': '공급 발표와 실제 입주 사이의 시차가 시장 불안으로 이어지는 것',
         'owner': '국토부',
+        'ministry': '국토교통부',
     },
     'prices_livelihood': {
         'subject': '물가·민생 부담',
@@ -48,6 +57,7 @@ ISSUE_FOCUS = {
         'public': '취약계층과 자영업자의 체감 부담',
         'risk': '지원은 나가지만 체감 물가가 내려가지 않는 것',
         'owner': '기재부',
+        'ministry': '기획재정부',
     },
     'finance_rates': {
         'subject': '금리·대출 부담',
@@ -56,6 +66,7 @@ ISSUE_FOCUS = {
         'public': '실수요자·취약차주의 상환 부담',
         'risk': '정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것',
         'owner': '금융위',
+        'ministry': '금융위원회',
     },
     'labor_jobs': {
         'subject': '일자리·산재·임금체불 문제',
@@ -64,6 +75,7 @@ ISSUE_FOCUS = {
         'public': '노동자 안전과 임금 지급 체감도',
         'risk': '책임 소재가 하청·현장 노동자에게만 내려가는 것',
         'owner': '고용노동부',
+        'ministry': '고용노동부',
     },
     'justice_reform': {
         'subject': '범죄 대응·수사·검찰개혁 이슈',
@@ -72,6 +84,7 @@ ISSUE_FOCUS = {
         'public': '피해자 보호와 형사사법 신뢰',
         'risk': '기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것',
         'owner': '법무부',
+        'ministry': '법무부',
     },
     'medical': {
         'subject': '의료 공백·전공의·비상진료 문제',
@@ -80,6 +93,7 @@ ISSUE_FOCUS = {
         'public': '환자 불편과 지역 의료 접근성',
         'risk': '비상진료가 장기화되며 지역·필수의료 공백이 굳어지는 것',
         'owner': '복지부',
+        'ministry': '보건복지부',
     },
 }
 
@@ -129,6 +143,15 @@ ISSUE_PRIOR_MOVES = {
 }
 
 
+def _load_priors() -> dict:
+    if not PRIORS_PATH.exists():
+        return {}
+    try:
+        return json.loads(PRIORS_PATH.read_text())
+    except Exception:
+        return {}
+
+
 def _focus(issue_id: str) -> dict:
     return ISSUE_FOCUS.get(issue_id, {
         'subject': '해당 이슈',
@@ -140,22 +163,46 @@ def _focus(issue_id: str) -> dict:
     })
 
 
-def _score_moves(issue_id: str, signals: list[str] | None, priority: int | float = 0, count: int = 0) -> list[str]:
+def _score_moves(issue_id: str, signals: list[str] | None, priority: int | float = 0, count: int = 0) -> tuple[list[str], dict[str, float]]:
+    f = _focus(issue_id)
     scores = {k: v for k, v in MOVE_WEIGHTS.items()}
+    components = {k: 0.0 for k in MOVE_WEIGHTS}
+
+    # 1) Issue prior: what this policy field normally asks.
     for i, move in enumerate(ISSUE_PRIOR_MOVES.get(issue_id, [])):
-        scores[move] = scores.get(move, 0) + 1.2 - i * 0.12
+        boost = 1.2 - i * 0.12
+        scores[move] = scores.get(move, 0) + boost
+        components[move] = components.get(move, 0) + boost
+
+    # 2) Current signal prior: what today's article terms imply.
     for sig in signals or []:
         for move in SIGNAL_TO_MOVES.get(sig, []):
             scores[move] = scores.get(move, 0) + 0.7
+            components[move] = components.get(move, 0) + 0.7
+
+    # 3) Historical prior: learned from extracted presidential question candidates.
+    priors = _load_priors()
+    ministry = f.get('ministry')
+    hist = (priors.get('ministry_move_prior', {}) or {}).get(ministry) or priors.get('global_move_prior', {}) or {}
+    for move, weight in hist.items():
+        if move in scores:
+            boost = float(weight) * 2.2
+            scores[move] += boost
+            components[move] = components.get(move, 0) + boost
+
+    # 4) Salience: urgent/high-volume issues more often turn into instruction/coordination.
     if priority >= 300 or count >= 25:
         scores['instruction'] += 0.5
         scores['coordination'] += 0.3
+        components['instruction'] += 0.5
+        components['coordination'] += 0.3
+
     ordered = sorted(scores, key=lambda m: scores[m], reverse=True)
     # Cabinet-style packets should be compact. Keep strongest 4 moves, always include public outcome.
     keep = ordered[:4]
     if 'public_outcome' not in keep:
         keep[-1] = 'public_outcome'
-    return keep
+    return keep, {k: round(scores[k], 3) for k in ordered}
 
 
 def _sentence(move: str, f: dict, signals: list[str] | None) -> str:
@@ -184,13 +231,15 @@ def synthesize_questions(issue_id: str, signals: list[str] | None = None, *, pri
     Output fields are intentionally report-friendly and JSON-stable.
     """
     f = _focus(issue_id)
-    moves = _score_moves(issue_id, signals, priority, count)
-    questions = [{'move': m, 'question': _sentence(m, f, signals)} for m in moves]
-    diagnosis = f"{f['subject']}은 '{f['risk']}'이 핵심 리스크입니다. 따라서 질문은 사실확인보다 책임·병목·체감성과를 함께 묶어야 합니다."
+    moves, scores = _score_moves(issue_id, signals, priority, count)
+    questions = [{'move': m, 'question': _sentence(m, f, signals), 'score': scores.get(m)} for m in moves]
+    top_move = moves[0] if moves else 'ground_truth'
+    diagnosis = f"{f['subject']}은 '{f['risk']}'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 {top_move}입니다."
     follow_up = _sentence('instruction', f, signals)
     return {
         'diagnosis': diagnosis,
         'moves': moves,
+        'move_scores': scores,
         'questions': questions,
         'follow_up': follow_up,
     }

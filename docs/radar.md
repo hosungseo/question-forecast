@@ -1,6 +1,6 @@
 # Next Cabinet Meeting Radar v2
 
-- generated_at: 2026-04-29T21:44:41.761259
+- generated_at: 2026-04-29T21:51:36.282829
 - purpose: 최근 뉴스 기반 대통령 예상 질문 후보 패킷
 - warning: 실제 의중 예측이 아니라 회의 전 검토용 이슈 레이더
 - algorithm: canonical issue grouping + noise filter + signal/recency/volume priority
@@ -38,7 +38,7 @@
 ## 2. 행정안전부 — disaster_safety
 - priority: 324 / recent articles: 32
 - signal hits: 산불, 재난, 안전, 화재, 침수, 지하차도, 오송, 행안부
-- key terms: 재난, 지하차도, 침수, 실시간, 대응, 안전, 화재, 소방, 산불, 인근
+- key terms: 재난, 지하차도, 침수, 실시간, 산불, 안전, 화재, 대응, 단열재, 소방
 
 ### 종합 판단
 재난·안전 대응 이슈은 '사후 수습은 반복되지만 사전 통제가 늦어지는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 ground_truth입니다.

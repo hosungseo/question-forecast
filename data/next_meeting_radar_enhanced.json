@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T21:44:41.755976",
+  "generated_at": "2026-04-29T21:51:36.277899",
   "since": "2026-04-22",
   "packets": [
     {
@@ -542,12 +542,12 @@
         "지하차도",
         "침수",
         "실시간",
-        "대응",
+        "산불",
         "안전",
         "화재",
-        "소방",
-        "산불",
-        "인근"
+        "대응",
+        "단열재",
+        "소방"
       ],
       "items": [
         {
@@ -1002,7 +1002,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 1,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -4009,7 +4009,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 1,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [

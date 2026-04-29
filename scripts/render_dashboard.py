@@ -55,6 +55,11 @@ def badge_for_delta(packet: dict) -> str:
     return '<span class="badge stable">STABLE</span>'
 
 
+def issue_page_href(p: dict, rank: int) -> str:
+    issue = ''.join(ch if ch.isalnum() or ch in '_-' else '-' for ch in str(p.get('issue_id') or 'issue')).strip('-')
+    return f'issue-{rank}-{issue}.html'
+
+
 def render_packet(p: dict, rank: int) -> str:
     like = p.get('cabinet_question_likelihood') or {}
     align = p.get('ministry_work_alignment') or {}
@@ -83,6 +88,7 @@ def render_packet(p: dict, rank: int) -> str:
           <span>{esc(domains)}</span>
           <span>{esc(delta.get('interpretation','전일 비교 없음'))}</span>
         </div>
+        <div class="actions"><a href="{issue_page_href(p, rank)}">상세 브리핑 열기 →</a></div>
         <details>
           <summary>질문·답변 준비 펼치기</summary>
           <section class="qa question-block">
@@ -171,6 +177,9 @@ def main() -> int:
     .one-line {{ margin:0; color:#111827; font-size:16px; font-weight:650; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }}
     .quick-row {{ display:grid; grid-template-columns:90px 1fr 1fr; gap:8px; margin:13px 0 6px; }}
     .quick-row span {{ background:#f8fafc; border:1px solid var(--line); border-radius:12px; padding:8px 10px; color:#475569; font-size:13px; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }}
+    .actions {{ margin:10px 0 4px; }}
+    .actions a {{ display:inline-block; background:#111827; color:white; border-radius:999px; padding:8px 12px; font-size:13px; }}
+    .actions a:hover {{ text-decoration:none; background:#1f2937; }}
     details {{ margin-top:10px; }}
     summary {{ cursor:pointer; color:#1d4ed8; font-weight:800; font-size:14px; list-style:none; }}
     summary::-webkit-details-marker {{ display:none; }}

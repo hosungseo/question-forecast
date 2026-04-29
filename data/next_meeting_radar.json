@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-29T21:51:36.277899",
+  "generated_at": "2026-04-29T22:46:56.447256",
   "since": "2026-04-22",
   "packets": [
     {
       "issue_id": "school_field_trip",
       "ministry": "교육부",
-      "priority": 386,
-      "count": 24,
+      "priority": 388,
+      "count": 25,
       "signals": [
         "소풍",
         "수학여행",
@@ -19,15 +19,15 @@
       ],
       "terms": [
         "교사",
-        "소풍",
         "수학여행",
+        "소풍",
         "책임",
         "교사의",
         "체험학습",
-        "현장체험학습",
         "학교",
-        "교육부",
-        "이재명"
+        "현장체험학습",
+        "대통령은",
+        "교육부"
       ],
       "items": [
         {
@@ -139,12 +139,18 @@
         "소풍·수학여행을 가는 학교와 못 가는 학교 사이 교육 기회 격차를 어떻게 줄일 것인가?"
       ],
       "question_synthesis": {
-        "diagnosis": "현장체험학습·소풍 축소 문제은 '현장 회피가 교육기회 축소로 굳어지는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 field_burden입니다.",
+        "diagnosis": "현장체험학습·소풍 축소 문제의 핵심 리스크는 현장 회피가 교육기회 축소로 굳어지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다.",
         "moves": [
           "field_burden",
           "causal_split",
           "bottleneck",
           "public_outcome"
+        ],
+        "move_labels": [
+          "현장 부담 완화",
+          "원인 분해",
+          "병목 해소",
+          "국민 체감 성과"
         ],
         "move_scores": {
           "field_burden": 3.399,
@@ -158,21 +164,25 @@
         "questions": [
           {
             "move": "field_burden",
+            "move_label": "현장 부담 완화",
             "question": "현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?",
             "score": 3.399
           },
           {
             "move": "causal_split",
+            "move_label": "원인 분해",
             "question": "이 사안을 단순 사건으로 볼 것인지 구조 문제로 볼 것인지 먼저 갈라야 합니다. 원인을 제도·현장 관행·이해관계자 부담으로 나누면 무엇이 핵심입니까?",
             "score": 3.094
           },
           {
             "move": "bottleneck",
+            "move_label": "병목 해소",
             "question": "해결을 막는 병목이 교사 형사책임, 안전요원, 보험·공제, 법령상 면책 범위 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
             "score": 2.786
           },
           {
             "move": "public_outcome",
+            "move_label": "국민 체감 성과",
             "question": "결국 국민이 체감할 변화가 있어야 합니다. 학생의 교육기회 격차와 학부모 불안을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
             "score": 2.376
           }
@@ -182,21 +192,25 @@
       "pattern_questions": [
         {
           "move": "field_burden",
+          "move_label": "현장 부담 완화",
           "question": "현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?",
           "score": 3.399
         },
         {
           "move": "causal_split",
+          "move_label": "원인 분해",
           "question": "이 사안을 단순 사건으로 볼 것인지 구조 문제로 볼 것인지 먼저 갈라야 합니다. 원인을 제도·현장 관행·이해관계자 부담으로 나누면 무엇이 핵심입니까?",
           "score": 3.094
         },
         {
           "move": "bottleneck",
+          "move_label": "병목 해소",
           "question": "해결을 막는 병목이 교사 형사책임, 안전요원, 보험·공제, 법령상 면책 범위 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
           "score": 2.786
         },
         {
           "move": "public_outcome",
+          "move_label": "국민 체감 성과",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 학생의 교육기회 격차와 학부모 불안을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
           "score": 2.376
         }
@@ -223,11 +237,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 87.5,
+        "score": 88.1,
         "band": "cabinet_high",
         "drivers": {
-          "priority": 386.0,
-          "article_count": 24.0,
+          "priority": 388.0,
+          "article_count": 25.0,
           "signal_count": 8,
           "work_signal_hits": 4,
           "question_move_hits": 3
@@ -462,7 +476,7 @@
         }
       ],
       "oral_brief": {
-        "thirty_second": "교육부 소관 school_field_trip는 질문 가능성 87.5점입니다. 핵심은 학교안전, 교권보호와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 지역별 학교 수/학생 수/교원 수, 학교 안전사고/교육활동 침해 관련 통계로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "교육부 소관 school_field_trip는 질문 가능성 88.1점입니다. 핵심은 학교안전, 교권보호와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 지역별 학교 수/학생 수/교원 수, 학교 안전사고/교육활동 침해 관련 통계로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -503,7 +517,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": 2,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -525,8 +539,8 @@
     {
       "issue_id": "disaster_safety",
       "ministry": "행정안전부",
-      "priority": 324,
-      "count": 32,
+      "priority": 323,
+      "count": 31,
       "signals": [
         "산불",
         "재난",
@@ -542,12 +556,12 @@
         "지하차도",
         "침수",
         "실시간",
-        "산불",
-        "안전",
         "화재",
+        "산불",
         "대응",
-        "단열재",
-        "소방"
+        "안전",
+        "내비게이션",
+        "위해"
       ],
       "items": [
         {
@@ -650,12 +664,18 @@
         "이번 주 바로 점검해야 할 취약 지점과 국민 안내 체계는 무엇인가?"
       ],
       "question_synthesis": {
-        "diagnosis": "재난·안전 대응 이슈은 '사후 수습은 반복되지만 사전 통제가 늦어지는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 ground_truth입니다.",
+        "diagnosis": "재난·안전 대응 이슈의 핵심 리스크는 사후 수습은 반복되지만 사전 통제가 늦어지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 먼저 실제 현황과 추세를 분명히 확인해야 합니다.",
         "moves": [
           "ground_truth",
           "instruction",
           "coordination",
           "public_outcome"
+        ],
+        "move_labels": [
+          "실제 현황 확인",
+          "후속 조치 지시",
+          "부처 간 조정",
+          "국민 체감 성과"
         ],
         "move_scores": {
           "ground_truth": 5.424,
@@ -669,21 +689,25 @@
         "questions": [
           {
             "move": "ground_truth",
+            "move_label": "실제 현황 확인",
             "question": "재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
             "score": 5.424
           },
           {
             "move": "instruction",
+            "move_label": "후속 조치 지시",
             "question": "사후 수습은 반복되지만 사전 통제가 늦어지는 것을 막기 위해 행안부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?",
             "score": 4.676
           },
           {
             "move": "coordination",
+            "move_label": "부처 간 조정",
             "question": "행안부·지자체·경찰·소방·도로관리청가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?",
             "score": 4.459
           },
           {
             "move": "public_outcome",
+            "move_label": "국민 체감 성과",
             "question": "결국 국민이 체감할 변화가 있어야 합니다. 위험지역 회피와 재난정보 체감도을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
             "score": 2.258
           }
@@ -693,21 +717,25 @@
       "pattern_questions": [
         {
           "move": "ground_truth",
+          "move_label": "실제 현황 확인",
           "question": "재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
           "score": 5.424
         },
         {
           "move": "instruction",
+          "move_label": "후속 조치 지시",
           "question": "사후 수습은 반복되지만 사전 통제가 늦어지는 것을 막기 위해 행안부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?",
           "score": 4.676
         },
         {
           "move": "coordination",
+          "move_label": "부처 간 조정",
           "question": "행안부·지자체·경찰·소방·도로관리청가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?",
           "score": 4.459
         },
         {
           "move": "public_outcome",
+          "move_label": "국민 체감 성과",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 위험지역 회피와 재난정보 체감도을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
           "score": 2.258
         }
@@ -721,7 +749,6 @@
         "matched_work_signals": [
           "재난",
           "안전",
-          "소방",
           "침수",
           "산불"
         ],
@@ -735,13 +762,13 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 86.8,
+        "score": 86.2,
         "band": "cabinet_high",
         "drivers": {
-          "priority": 324.0,
-          "article_count": 32.0,
+          "priority": 323.0,
+          "article_count": 31.0,
           "signal_count": 8,
-          "work_signal_hits": 5,
+          "work_signal_hits": 4,
           "question_move_hits": 3
         }
       },
@@ -942,12 +969,6 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.1291,
-          "meeting_date": "2025-07-15",
-          "question_type": "예산/재정 확인",
-          "excerpt": "소방 관련 RD 예산은 얼마나 되는지?"
-        },
-        {
           "score": 0.1179,
           "meeting_date": "2026-01-20",
           "question_type": "현황 질문",
@@ -958,10 +979,16 @@
           "meeting_date": "2025-06-10",
           "question_type": "검토결과 확인",
           "excerpt": "우리도 대응 조치를 해야 하는 것은 아닌지, 법무부에서 이에 대한 검토를 해보셨는지?"
+        },
+        {
+          "score": 0.0801,
+          "meeting_date": "2025-08-12",
+          "question_type": "현황 질문",
+          "excerpt": "몇 대를 준비하고 있고? 또 내년 봄에 산불 날 때 군대에서 동원할 수 있는 헬기 최대 숫자가 얼마 정도인지?"
         }
       ],
       "oral_brief": {
-        "thirty_second": "행정안전부 소관 disaster_safety는 질문 가능성 86.8점입니다. 핵심은 재난안전, 지방행정와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 화재 발생/재난 피해 통계로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "행정안전부 소관 disaster_safety는 질문 가능성 86.2점입니다. 핵심은 재난안전, 지방행정와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 화재 발생/재난 피해 통계로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -1002,7 +1029,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": -1,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -1024,8 +1051,8 @@
     {
       "issue_id": "prices_livelihood",
       "ministry": "기획재정부",
-      "priority": 253,
-      "count": 23,
+      "priority": 260,
+      "count": 24,
       "signals": [
         "물가",
         "민생",
@@ -1039,11 +1066,11 @@
       "terms": [
         "고유가",
         "물가",
+        "민생",
         "위한",
         "수산물",
-        "민생",
-        "위해",
         "추경",
+        "위해",
         "피해지원금",
         "1분기",
         "소비"
@@ -1082,6 +1109,22 @@
             "지원",
             "고유가",
             "부담"
+          ]
+        },
+        {
+          "query": "고유가 지원금 물가",
+          "title": "광양시, 추경 원안 통과... '고유가 지원금' 신속 집행",
+          "desc": "이번 추경은 고유가 피해지원금 지급을 차질 없이 추진하는 데 초점을 맞춘 원포인트성 예산이다. 전체... 여파로 유가와 생활물가 상승에 어려움을 겪는 시민들에게 가뭄의 단비 같은 지원금이 되길 바란다\"고 밝혔다.",
+          "pub_date": "2026-04-29",
+          "link": "http://www.newsworker.co.kr/news/articleView.html?idxno=424477",
+          "originallink": "http://www.newsworker.co.kr/news/articleView.html?idxno=424477",
+          "relevance_score": 28,
+          "signal_hits": [
+            "물가",
+            "지원",
+            "고유가",
+            "추경",
+            "예산"
           ]
         },
         {
@@ -1132,22 +1175,6 @@
             "추경",
             "예산"
           ]
-        },
-        {
-          "query": "물가 민생 지원",
-          "title": "경북도, 민생·산업·복지 전방위 대응 가속화…실행 중심 정책 드라이...",
-          "desc": "우선 민생 분야에서는 고유가와 고물가로 인한 도민 부담 완화에 초점이 맞춰졌다. 도는 '고유가 피해지원금'의 신속한 지급을 위해 행정 체계를 정비하고, 시군과 연계한 '찾아가는 신청 서비스'를 운영해 신청 편의성을...",
-          "pub_date": "2026-04-29",
-          "link": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4071518",
-          "originallink": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4071518",
-          "relevance_score": 24,
-          "signal_hits": [
-            "물가",
-            "민생",
-            "지원",
-            "고유가",
-            "부담"
-          ]
         }
       ],
       "questions": [
@@ -1156,12 +1183,18 @@
         "추가 재정 소요와 정책 효과를 비교해 설명할 수 있는가?"
       ],
       "question_synthesis": {
-        "diagnosis": "물가·민생 부담은 '지원은 나가지만 체감 물가가 내려가지 않는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 bottleneck입니다.",
+        "diagnosis": "물가·민생 부담의 핵심 리스크는 지원은 나가지만 체감 물가가 내려가지 않는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 예산·인력·법령·집행절차 중 무엇이 막고 있는지 밝혀야 합니다.",
         "moves": [
           "bottleneck",
           "public_outcome",
           "instruction",
           "ground_truth"
+        ],
+        "move_labels": [
+          "병목 해소",
+          "국민 체감 성과",
+          "후속 조치 지시",
+          "실제 현황 확인"
         ],
         "move_scores": {
           "bottleneck": 4.721,
@@ -1175,21 +1208,25 @@
         "questions": [
           {
             "move": "bottleneck",
+            "move_label": "병목 해소",
             "question": "해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
             "score": 4.721
           },
           {
             "move": "public_outcome",
+            "move_label": "국민 체감 성과",
             "question": "결국 국민이 체감할 변화가 있어야 합니다. 취약계층과 자영업자의 체감 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
             "score": 4.077
           },
           {
             "move": "instruction",
+            "move_label": "후속 조치 지시",
             "question": "지원은 나가지만 체감 물가가 내려가지 않는 것을 막기 위해 기재부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?",
             "score": 2.5
           },
           {
             "move": "ground_truth",
+            "move_label": "실제 현황 확인",
             "question": "물가·민생 부담은 기사상 신호(물가, 민생, 지원, 고유가)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
             "score": 2.378
           }
@@ -1199,21 +1236,25 @@
       "pattern_questions": [
         {
           "move": "bottleneck",
+          "move_label": "병목 해소",
           "question": "해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
           "score": 4.721
         },
         {
           "move": "public_outcome",
+          "move_label": "국민 체감 성과",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 취약계층과 자영업자의 체감 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
           "score": 4.077
         },
         {
           "move": "instruction",
+          "move_label": "후속 조치 지시",
           "question": "지원은 나가지만 체감 물가가 내려가지 않는 것을 막기 위해 기재부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?",
           "score": 2.5
         },
         {
           "move": "ground_truth",
+          "move_label": "실제 현황 확인",
           "question": "물가·민생 부담은 기사상 신호(물가, 민생, 지원, 고유가)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
           "score": 2.378
         }
@@ -1241,11 +1282,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 77.6,
-        "band": "cabinet_review",
+        "score": 78.5,
+        "band": "cabinet_high",
         "drivers": {
-          "priority": 253.0,
-          "article_count": 23.0,
+          "priority": 260.0,
+          "article_count": 24.0,
           "signal_count": 8,
           "work_signal_hits": 5,
           "question_move_hits": 3
@@ -1480,7 +1521,7 @@
         }
       ],
       "oral_brief": {
-        "thirty_second": "기획재정부 소관 prices_livelihood는 질문 가능성 77.6점입니다. 핵심은 예산, 물가와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 소비자물가지수/생활물가 관련 지표, 가계동향/소득분위별 지출로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "기획재정부 소관 prices_livelihood는 질문 가능성 78.5점입니다. 핵심은 예산, 물가와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 소비자물가지수/생활물가 관련 지표, 가계동향/소득분위별 지출로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -1516,12 +1557,12 @@
             "관련 통계 최신값과 전월·전년 대비 변화",
             "즉시 조치/법령개정/예산소요를 구분한 답변"
           ],
-          "likelihood_band": "cabinet_review"
+          "likelihood_band": "cabinet_high"
         }
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": 7,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -1662,12 +1703,18 @@
         "부처 간 수사·외교·행정 협업 체계는 명확한가?"
       ],
       "question_synthesis": {
-        "diagnosis": "범죄 대응·수사·검찰개혁 이슈은 '기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 coordination입니다.",
+        "diagnosis": "범죄 대응·수사·검찰개혁 이슈의 핵심 리스크는 기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 관계 부처와 기관의 역할 분담을 명확히 해야 합니다.",
         "moves": [
           "coordination",
           "ground_truth",
           "bottleneck",
           "public_outcome"
+        ],
+        "move_labels": [
+          "부처 간 조정",
+          "실제 현황 확인",
+          "병목 해소",
+          "국민 체감 성과"
         ],
         "move_scores": {
           "coordination": 3.52,
@@ -1681,21 +1728,25 @@
         "questions": [
           {
             "move": "coordination",
+            "move_label": "부처 간 조정",
             "question": "법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?",
             "score": 3.52
           },
           {
             "move": "ground_truth",
+            "move_label": "실제 현황 확인",
             "question": "범죄 대응·수사·검찰개혁 이슈은 기사상 신호(검찰, 개혁, 범죄, 수사)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
             "score": 3.375
           },
           {
             "move": "bottleneck",
+            "move_label": "병목 해소",
             "question": "해결을 막는 병목이 증거보전, 수사권 조정, 국제공조, 재판 가능성 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
             "score": 2.911
           },
           {
             "move": "public_outcome",
+            "move_label": "국민 체감 성과",
             "question": "결국 국민이 체감할 변화가 있어야 합니다. 피해자 보호와 형사사법 신뢰을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
             "score": 2.151
           }
@@ -1705,21 +1756,25 @@
       "pattern_questions": [
         {
           "move": "coordination",
+          "move_label": "부처 간 조정",
           "question": "법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?",
           "score": 3.52
         },
         {
           "move": "ground_truth",
+          "move_label": "실제 현황 확인",
           "question": "범죄 대응·수사·검찰개혁 이슈은 기사상 신호(검찰, 개혁, 범죄, 수사)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
           "score": 3.375
         },
         {
           "move": "bottleneck",
+          "move_label": "병목 해소",
           "question": "해결을 막는 병목이 증거보전, 수사권 조정, 국제공조, 재판 가능성 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
           "score": 2.911
         },
         {
           "move": "public_outcome",
+          "move_label": "국민 체감 성과",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 피해자 보호와 형사사법 신뢰을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
           "score": 2.151
         }
@@ -2035,7 +2090,7 @@
     {
       "issue_id": "finance_rates",
       "ministry": "금융위원회",
-      "priority": 217,
+      "priority": 219,
       "count": 29,
       "signals": [
         "금융",
@@ -2056,7 +2111,7 @@
         "포용금융",
         "자금은",
         "확대와",
-        "낮은"
+        "저신용"
       ],
       "items": [
         {
@@ -2088,6 +2143,23 @@
             "대출",
             "금리",
             "은행",
+            "취약계층"
+          ]
+        },
+        {
+          "query": "중금리대출 확대",
+          "title": "[브리프] 삼성화재 국민카드 신한카드 하나카드 현대카드 페퍼저축은행",
+          "desc": "조달된 자금은 중·저신용 고객을 위한 중금리 대출 확대와 금융 접근성이 낮은 취약계층 지원 등 포용금융 프로그램에 활용될 예정이다. KB국민카드 관계자는 \"글로벌 시장 변동성이 높은 상황에서도 경쟁력 있는...",
+          "pub_date": "2026-04-29",
+          "link": "http://www.biztribune.co.kr/news/articleView.html?idxno=353338",
+          "originallink": "http://www.biztribune.co.kr/news/articleView.html?idxno=353338",
+          "relevance_score": 22,
+          "signal_hits": [
+            "금융",
+            "대출",
+            "금리",
+            "은행",
+            "중금리",
             "취약계층"
           ]
         },
@@ -2137,22 +2209,6 @@
             "은행",
             "취약계층"
           ]
-        },
-        {
-          "query": "중금리대출 확대",
-          "title": "웰컴저축은행發 3000억 대출사기…저축은행 ‘구조적 리스크’ 터졌다",
-          "desc": "특히 웰컴저축은행은 웰컴금융그룹 산하 핵심 계열사로, 중금리 대출과 기업금융을 동시에 확대해온 대표적인 ‘공격형’ 저축은행으로 평가된다. 업계에서는 이번 사고가 단순 손실을 넘어 향후 사업 전략에도 영향을...",
-          "pub_date": "2026-04-29",
-          "link": "https://wemakenews.co.kr/news/view.php?no=25173",
-          "originallink": "https://wemakenews.co.kr/news/view.php?no=25173",
-          "relevance_score": 20,
-          "signal_hits": [
-            "금융",
-            "대출",
-            "금리",
-            "은행",
-            "중금리"
-          ]
         }
       ],
       "questions": [
@@ -2160,12 +2216,18 @@
         "금융 지원이 투기 수요가 아니라 생산적·민생 분야로 흐르도록 장치를 뒀는가?"
       ],
       "question_synthesis": {
-        "diagnosis": "금리·대출 부담은 '정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 public_outcome입니다.",
+        "diagnosis": "금리·대출 부담의 핵심 리스크는 정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 국민이 체감할 변화를 중심으로 답변을 준비해야 합니다.",
         "moves": [
           "public_outcome",
           "ground_truth",
           "bottleneck",
           "instruction"
+        ],
+        "move_labels": [
+          "국민 체감 성과",
+          "실제 현황 확인",
+          "병목 해소",
+          "후속 조치 지시"
         ],
         "move_scores": {
           "public_outcome": 3.857,
@@ -2179,21 +2241,25 @@
         "questions": [
           {
             "move": "public_outcome",
+            "move_label": "국민 체감 성과",
             "question": "결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
             "score": 3.857
           },
           {
             "move": "ground_truth",
+            "move_label": "실제 현황 확인",
             "question": "금리·대출 부담은 기사상 신호(금융, 대출, 금리, 은행)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
             "score": 3.372
           },
           {
             "move": "bottleneck",
+            "move_label": "병목 해소",
             "question": "해결을 막는 병목이 중금리대출 공급, 리스크 관리, 취약차주 지원 재원 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
             "score": 2.953
           },
           {
             "move": "instruction",
+            "move_label": "후속 조치 지시",
             "question": "정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것을 막기 위해 금융위가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?",
             "score": 1.635
           }
@@ -2203,21 +2269,25 @@
       "pattern_questions": [
         {
           "move": "public_outcome",
+          "move_label": "국민 체감 성과",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
           "score": 3.857
         },
         {
           "move": "ground_truth",
+          "move_label": "실제 현황 확인",
           "question": "금리·대출 부담은 기사상 신호(금융, 대출, 금리, 은행)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
           "score": 3.372
         },
         {
           "move": "bottleneck",
+          "move_label": "병목 해소",
           "question": "해결을 막는 병목이 중금리대출 공급, 리스크 관리, 취약차주 지원 재원 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
           "score": 2.953
         },
         {
           "move": "instruction",
+          "move_label": "후속 조치 지시",
           "question": "정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것을 막기 위해 금융위가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?",
           "score": 1.635
         }
@@ -2244,10 +2314,10 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 76.0,
+        "score": 76.2,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 217.0,
+          "priority": 219.0,
           "article_count": 29.0,
           "signal_count": 7,
           "work_signal_hits": 6,
@@ -2483,7 +2553,7 @@
         }
       ],
       "oral_brief": {
-        "thirty_second": "금융위원회 소관 finance_rates는 질문 가능성 76.0점입니다. 핵심은 서민금융와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 가계부채/대출금리, 서민금융/취약차주 지표로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "금융위원회 소관 finance_rates는 질문 가능성 76.2점입니다. 핵심은 서민금융와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 가계부채/대출금리, 서민금융/취약차주 지표로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -2524,7 +2594,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": 2,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -2546,8 +2616,8 @@
     {
       "issue_id": "labor_jobs",
       "ministry": "고용노동부",
-      "priority": 202,
-      "count": 22,
+      "priority": 200,
+      "count": 21,
       "signals": [
         "일자리",
         "청년",
@@ -2566,8 +2636,8 @@
         "산재",
         "체불",
         "지난해",
-        "현장",
-        "부산"
+        "지역",
+        "현장"
       ],
       "items": [
         {
@@ -2641,17 +2711,16 @@
           ]
         },
         {
-          "query": "청년 일자리",
-          "title": "인제대-김해고용복지플러스센터, 청년고용정책 홍보 서포터즈 협약 체결",
-          "desc": "청년고용정책 홍보 서포터즈 협약식. / 인제대 인제대 대학일자리플러스센터는 29일 고용노동부 양산지청 김해고용복지플러스센터와 '2026년 청년고용정책 홍보 강화를 위한 서포터즈 연계 협약'을 체결했다. 이번 협약은...",
+          "query": "산재 원청 책임",
+          "title": "정부 중재 극적 타결에도 남은 과제...BGF리테일 '실질 지배력' 쟁점 떠...",
+          "desc": "통상 산업재해 사망 사고는 산재보험 보상 외에 회사 차원의 위로금과 별도 합의금이 더해지는 구조를... 속에서 원청이 실질적 권한을 행사하면서도 법적 책임을 회피해 온 '위험의 외주화'를 이번 참사의 본질로 보고...",
           "pub_date": "2026-04-29",
-          "link": "http://www.gimhaenews.co.kr/news/articleView.html?idxno=53283",
-          "originallink": "http://www.gimhaenews.co.kr/news/articleView.html?idxno=53283",
+          "link": "http://www.popcornnews.net/news/articleView.html?idxno=119843",
+          "originallink": "http://www.popcornnews.net/news/articleView.html?idxno=119843",
           "relevance_score": 18,
           "signal_hits": [
-            "일자리",
-            "청년",
-            "노동"
+            "산재",
+            "원청"
           ]
         }
       ],
@@ -2660,12 +2729,18 @@
         "산재·임금체불·하도급 문제에서 원청 책임을 어떻게 실효화할 것인가?"
       ],
       "question_synthesis": {
-        "diagnosis": "일자리·산재·임금체불 문제은 '책임 소재가 하청·현장 노동자에게만 내려가는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 field_burden입니다.",
+        "diagnosis": "일자리·산재·임금체불 문제의 핵심 리스크는 책임 소재가 하청·현장 노동자에게만 내려가는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다.",
         "moves": [
           "field_burden",
           "causal_split",
           "instruction",
           "public_outcome"
+        ],
+        "move_labels": [
+          "현장 부담 완화",
+          "원인 분해",
+          "후속 조치 지시",
+          "국민 체감 성과"
         ],
         "move_scores": {
           "field_burden": 4.257,
@@ -2679,21 +2754,25 @@
         "questions": [
           {
             "move": "field_burden",
+            "move_label": "현장 부담 완화",
             "question": "현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?",
             "score": 4.257
           },
           {
             "move": "causal_split",
+            "move_label": "원인 분해",
             "question": "이 사안을 단순 사건으로 볼 것인지 구조 문제로 볼 것인지 먼저 갈라야 합니다. 원인을 제도·현장 관행·이해관계자 부담으로 나누면 무엇이 핵심입니까?",
             "score": 2.961
           },
           {
             "move": "instruction",
+            "move_label": "후속 조치 지시",
             "question": "책임 소재가 하청·현장 노동자에게만 내려가는 것을 막기 위해 고용노동부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?",
             "score": 2.615
           },
           {
             "move": "public_outcome",
+            "move_label": "국민 체감 성과",
             "question": "결국 국민이 체감할 변화가 있어야 합니다. 노동자 안전과 임금 지급 체감도을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
             "score": 1.412
           }
@@ -2703,21 +2782,25 @@
       "pattern_questions": [
         {
           "move": "field_burden",
+          "move_label": "현장 부담 완화",
           "question": "현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?",
           "score": 4.257
         },
         {
           "move": "causal_split",
+          "move_label": "원인 분해",
           "question": "이 사안을 단순 사건으로 볼 것인지 구조 문제로 볼 것인지 먼저 갈라야 합니다. 원인을 제도·현장 관행·이해관계자 부담으로 나누면 무엇이 핵심입니까?",
           "score": 2.961
         },
         {
           "move": "instruction",
+          "move_label": "후속 조치 지시",
           "question": "책임 소재가 하청·현장 노동자에게만 내려가는 것을 막기 위해 고용노동부가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?",
           "score": 2.615
         },
         {
           "move": "public_outcome",
+          "move_label": "국민 체감 성과",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 노동자 안전과 임금 지급 체감도을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
           "score": 1.412
         }
@@ -2746,11 +2829,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 71.7,
+        "score": 71.1,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 202.0,
-          "article_count": 22.0,
+          "priority": 200.0,
+          "article_count": 21.0,
           "signal_count": 7,
           "work_signal_hits": 6,
           "question_move_hits": 3
@@ -2972,20 +3055,20 @@
           "excerpt": "규정 개정을 한번 검토해 보시기 바람. 그다음에 하도급의 부실 공사, 산재, 임금체불 등 모든 문제는 원청 아닌지?"
         },
         {
+          "score": 0.138,
+          "meeting_date": "2026-01-20",
+          "question_type": "현황 질문",
+          "excerpt": "고용노동부는 “청년의 구직활동과 지역 일자리 기회 확대”, 구직 촉진 수당을 구직하기 전에 준다는 것인지?"
+        },
+        {
           "score": 0.1333,
           "meeting_date": "2025-08-12",
           "question_type": "검토결과 확인",
           "excerpt": "너무 오래 검토하고 있으면 안 됨. 원청 책임 강화라는 내용이 있어야 한다는 얘기임. 다음 준비된 것 있으면 보고 바람."
-        },
-        {
-          "score": 0.1291,
-          "meeting_date": "2026-01-27",
-          "question_type": "예산/재정 확인",
-          "excerpt": "일자리 사업 예산이 있는지?"
         }
       ],
       "oral_brief": {
-        "thirty_second": "고용노동부 소관 labor_jobs는 질문 가능성 71.7점입니다. 핵심은 임금체불, 하도급·원청책임와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 고용률/실업률/청년고용률, 산업재해/임금체불 행정통계로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "고용노동부 소관 labor_jobs는 질문 가능성 71.1점입니다. 핵심은 임금체불, 하도급·원청책임와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 고용률/실업률/청년고용률, 산업재해/임금체불 행정통계로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -3026,7 +3109,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": -2,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -3048,8 +3131,8 @@
     {
       "issue_id": "real_estate",
       "ministry": "국토교통부",
-      "priority": 171,
-      "count": 27,
+      "priority": 176,
+      "count": 28,
       "signals": [
         "부동산",
         "주택",
@@ -3062,14 +3145,14 @@
       "terms": [
         "부동산",
         "공급",
-        "전월세",
         "주택",
-        "서울",
         "시장",
+        "전월세",
+        "서울",
+        "있다",
         "오세훈",
         "정원오",
-        "전세",
-        "있다"
+        "이재명"
       ],
       "items": [
         {
@@ -3095,6 +3178,20 @@
           "link": "https://www.pennmike.com/news/articleView.html?idxno=119642",
           "originallink": "https://www.pennmike.com/news/articleView.html?idxno=119642",
           "relevance_score": 18,
+          "signal_hits": [
+            "부동산",
+            "전세",
+            "공급"
+          ]
+        },
+        {
+          "query": "부동산 공급 전세",
+          "title": "김부겸 \"대구, 31년 만의 변화\" 호소...\"시민들에게 행정의 효능감 느끼...",
+          "desc": "홍준표 전 시장 '공급억제' 안통해. 대책은? 김부겸: 리츠(부동산투자회사(REITs). 회사 등 전문 금융기관들이... 8.대구 전세사기 피해 잇따라. 역대 최대 200억 피해. MZ 피해 집중. 예방 비롯한 대책은? 김부겸: 법률적, 행정적...",
+          "pub_date": "2026-04-29",
+          "link": "https://www.pn.or.kr/news/articleView.html?idxno=33573",
+          "originallink": "https://www.pn.or.kr/news/articleView.html?idxno=33573",
+          "relevance_score": 16,
           "signal_hits": [
             "부동산",
             "전세",
@@ -3144,20 +3241,6 @@
             "월세",
             "공급"
           ]
-        },
-        {
-          "query": "부동산 공급 전세",
-          "title": "이재명 시대 달라진 부동산 패러다임 보니",
-          "desc": "남혁우 우리은행 부동산연구원은 “서울은 입주 물량 자체가 부족한 데다 갭투자를 통해 공급되던 전세 물건까지 감소하고 있다”며 “대출 규제 등 정책 요인으로 전세자금 마련 문턱이 높아진 점도 영향을 미쳤다”...",
-          "pub_date": "2026-04-29",
-          "link": "https://n.news.naver.com/mnews/article/024/0000105210?sid=101",
-          "originallink": "https://www.mk.co.kr/article/12026339",
-          "relevance_score": 14,
-          "signal_hits": [
-            "부동산",
-            "전세",
-            "공급"
-          ]
         }
       ],
       "questions": [
@@ -3166,12 +3249,18 @@
         "수도권과 지방에서 정책 효과가 다르게 나타나는 부분은 무엇인가?"
       ],
       "question_synthesis": {
-        "diagnosis": "부동산 공급·전월세 불안은 '공급 발표와 실제 입주 사이의 시차가 시장 불안으로 이어지는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 ground_truth입니다.",
+        "diagnosis": "부동산 공급·전월세 불안의 핵심 리스크는 공급 발표와 실제 입주 사이의 시차가 시장 불안으로 이어지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 먼저 실제 현황과 추세를 분명히 확인해야 합니다.",
         "moves": [
           "ground_truth",
           "public_outcome",
           "bottleneck",
           "coordination"
+        ],
+        "move_labels": [
+          "실제 현황 확인",
+          "국민 체감 성과",
+          "병목 해소",
+          "부처 간 조정"
         ],
         "move_scores": {
           "ground_truth": 4.206,
@@ -3185,21 +3274,25 @@
         "questions": [
           {
             "move": "ground_truth",
+            "move_label": "실제 현황 확인",
             "question": "부동산 공급·전월세 불안은 기사상 신호(부동산, 주택, 전세, 월세)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
             "score": 4.206
           },
           {
             "move": "public_outcome",
+            "move_label": "국민 체감 성과",
             "question": "결국 국민이 체감할 변화가 있어야 합니다. 실수요자 주거비 부담과 입주 가능 물량을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
             "score": 3.749
           },
           {
             "move": "bottleneck",
+            "move_label": "병목 해소",
             "question": "해결을 막는 병목이 인허가, 착공·입주 시차, 금융, 정비사업 절차 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
             "score": 2.904
           },
           {
             "move": "coordination",
+            "move_label": "부처 간 조정",
             "question": "국토부·지자체·LH·금융당국가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?",
             "score": 2.063
           }
@@ -3209,21 +3302,25 @@
       "pattern_questions": [
         {
           "move": "ground_truth",
+          "move_label": "실제 현황 확인",
           "question": "부동산 공급·전월세 불안은 기사상 신호(부동산, 주택, 전세, 월세)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
           "score": 4.206
         },
         {
           "move": "public_outcome",
+          "move_label": "국민 체감 성과",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 실수요자 주거비 부담과 입주 가능 물량을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
           "score": 3.749
         },
         {
           "move": "bottleneck",
+          "move_label": "병목 해소",
           "question": "해결을 막는 병목이 인허가, 착공·입주 시차, 금융, 정비사업 절차 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
           "score": 2.904
         },
         {
           "move": "coordination",
+          "move_label": "부처 간 조정",
           "question": "국토부·지자체·LH·금융당국가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?",
           "score": 2.063
         }
@@ -3251,11 +3348,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 71.8,
+        "score": 72.6,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 171.0,
-          "article_count": 27.0,
+          "priority": 176.0,
+          "article_count": 28.0,
           "signal_count": 7,
           "work_signal_hits": 6,
           "question_move_hits": 3
@@ -3471,26 +3568,26 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.124,
+          "score": 0.1195,
           "meeting_date": "2025-07-15",
           "question_type": "예산/재정 확인",
           "excerpt": "산림 정비사업 1년 예산은 얼마인지?"
         },
         {
-          "score": 0.1048,
+          "score": 0.101,
           "meeting_date": "2025-09-02",
           "question_type": "현황 질문",
           "excerpt": "역직구 시장 넓히는 것은 어느 부처가 담당하는지?"
         },
         {
-          "score": 0.1048,
+          "score": 0.101,
           "meeting_date": "2025-07-15",
           "question_type": "현황 질문",
           "excerpt": "독거노인이나 이런 데는 공급 사업을 하고 있는지?"
         }
       ],
       "oral_brief": {
-        "thirty_second": "국토교통부 소관 real_estate는 질문 가능성 71.8점입니다. 핵심은 전월세와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 주택보급/가구/인구 관련 지표, 전월세/주택가격 지표로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "국토교통부 소관 real_estate는 질문 가능성 72.6점입니다. 핵심은 전월세와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 주택보급/가구/인구 관련 지표, 전월세/주택가격 지표로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -3531,7 +3628,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": 5,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -3659,12 +3756,18 @@
         "국민이 체감할 수 있는 단기 대책과 구조개혁 과제를 구분해 보고할 수 있는가?"
       ],
       "question_synthesis": {
-        "diagnosis": "의료 공백·전공의·비상진료 문제은 '비상진료가 장기화되며 지역·필수의료 공백이 굳어지는 것'이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 public_outcome입니다.",
+        "diagnosis": "의료 공백·전공의·비상진료 문제의 핵심 리스크는 비상진료가 장기화되며 지역·필수의료 공백이 굳어지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 국민이 체감할 변화를 중심으로 답변을 준비해야 합니다.",
         "moves": [
           "public_outcome",
           "ground_truth",
           "coordination",
           "bottleneck"
+        ],
+        "move_labels": [
+          "국민 체감 성과",
+          "실제 현황 확인",
+          "부처 간 조정",
+          "병목 해소"
         ],
         "move_scores": {
           "public_outcome": 3.852,
@@ -3678,21 +3781,25 @@
         "questions": [
           {
             "move": "public_outcome",
+            "move_label": "국민 체감 성과",
             "question": "결국 국민이 체감할 변화가 있어야 합니다. 환자 불편과 지역 의료 접근성을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
             "score": 3.852
           },
           {
             "move": "ground_truth",
+            "move_label": "실제 현황 확인",
             "question": "의료 공백·전공의·비상진료 문제은 기사상 신호(의료, 전공의, 의대, 비상진료)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
             "score": 3.323
           },
           {
             "move": "coordination",
+            "move_label": "부처 간 조정",
             "question": "복지부·병원·전공의·지자체·교육부가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?",
             "score": 2.76
           },
           {
             "move": "bottleneck",
+            "move_label": "병목 해소",
             "question": "해결을 막는 병목이 의료인력, 병원 재정, 교육·수련, 비상진료 체계 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
             "score": 2.089
           }
@@ -3702,21 +3809,25 @@
       "pattern_questions": [
         {
           "move": "public_outcome",
+          "move_label": "국민 체감 성과",
           "question": "결국 국민이 체감할 변화가 있어야 합니다. 환자 불편과 지역 의료 접근성을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?",
           "score": 3.852
         },
         {
           "move": "ground_truth",
+          "move_label": "실제 현황 확인",
           "question": "의료 공백·전공의·비상진료 문제은 기사상 신호(의료, 전공의, 의대, 비상진료)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?",
           "score": 3.323
         },
         {
           "move": "coordination",
+          "move_label": "부처 간 조정",
           "question": "복지부·병원·전공의·지자체·교육부가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?",
           "score": 2.76
         },
         {
           "move": "bottleneck",
+          "move_label": "병목 해소",
           "question": "해결을 막는 병목이 의료인력, 병원 재정, 교육·수련, 비상진료 체계 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?",
           "score": 2.089
         }

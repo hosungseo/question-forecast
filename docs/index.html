@@ -30,7 +30,8 @@
     a:hover { text-decoration:underline; }
     .links a { background:white; border:1px solid var(--line); padding:10px 13px; border-radius:999px; }
     .issues { display:grid; gap:14px; }
-    .issue { display:grid; grid-template-columns:54px 1fr; gap:16px; background:var(--card); border:1px solid var(--line); border-radius:24px; padding:20px; box-shadow:0 10px 30px rgba(15,23,42,.04); }
+    .issue { display:grid; grid-template-columns:54px 1fr; gap:16px; background:var(--card); border:1px solid var(--line); border-radius:24px; padding:18px 20px; box-shadow:0 10px 30px rgba(15,23,42,.04); }
+    .issue:hover { border-color:#cbd5e1; box-shadow:0 18px 42px rgba(15,23,42,.07); }
     .issue-head { display:grid; grid-template-columns:1fr 108px; gap:18px; align-items:start; }
     .score { text-align:right; border-left:1px solid var(--line); padding-left:16px; }
     .score b { display:block; font-size:30px; letter-spacing:-.04em; }
@@ -45,7 +46,15 @@
     .meta span { font-size:12px; color:#374151; background:#f3f4f6; border:1px solid #e5e7eb; padding:4px 8px; border-radius:999px; }
     .cabinet_high .meta span:last-child { color:var(--green); background:#ecfdf5; border-color:#bbf7d0; }
     .cabinet_review .meta span:last-child { color:var(--amber); background:#fffbeb; border-color:#fde68a; }
-    h3 { font-size:21px; line-height:1.35; letter-spacing:-.02em; margin:0 0 10px; }
+    h3 { font-size:20px; line-height:1.35; letter-spacing:-.02em; margin:0 0 8px; }
+    .one-line { margin:0; color:#111827; font-size:16px; font-weight:650; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+    .quick-row { display:grid; grid-template-columns:90px 1fr 1fr; gap:8px; margin:13px 0 6px; }
+    .quick-row span { background:#f8fafc; border:1px solid var(--line); border-radius:12px; padding:8px 10px; color:#475569; font-size:13px; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    details { margin-top:10px; }
+    summary { cursor:pointer; color:#1d4ed8; font-weight:800; font-size:14px; list-style:none; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:'+'; display:inline-grid; place-items:center; margin-left:8px; width:20px; height:20px; border-radius:999px; background:#eff6ff; }
+    details[open] summary::after { content:'−'; }
     .qa { border-radius:18px; padding:15px 16px; margin:12px 0; }
     .qa .label { font-size:12px; font-weight:900; letter-spacing:.06em; text-transform:uppercase; margin-bottom:8px; }
     .question-block { background:#f8fafc; border:1px solid #e2e8f0; }
@@ -57,7 +66,7 @@
     .facts span { font-size:13px; background:#f8fafc; border:1px solid var(--line); padding:6px 9px; border-radius:10px; color:#374151; }
     .evidence, .delta, .article-title { margin:7px 0 0; color:var(--muted); font-size:14px; }
     .note { margin-top:34px; color:var(--muted); font-size:14px; border-top:1px solid var(--line); padding-top:22px; }
-    @media (max-width:760px) { .top,.focus { grid-template-columns:1fr; } .stamp { text-align:left; } .stats { justify-content:flex-start; } h1 { font-size:42px; } .issue,.issue-head { grid-template-columns:1fr; } .score { text-align:left; border-left:0; padding-left:0; } }
+    @media (max-width:760px) { .top,.focus { grid-template-columns:1fr; } .stamp { text-align:left; } .stats { justify-content:flex-start; } h1 { font-size:42px; } .issue,.issue-head,.quick-row { grid-template-columns:1fr; } .score { text-align:left; border-left:0; padding-left:0; } }
   </style>
 </head>
 <body>
@@ -92,24 +101,33 @@
       <div class="issue-main">
         <div class="meta"><span>교육부</span><span>school_field_trip</span><span>cabinet_high</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <h3>현장체험학습·소풍 축소 문제은 &#x27;현장 회피가 교육기회 축소로 굳어지는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 field_burden입니다.</h3>
+          <div>
+            <h3>현장체험학습·소풍 축소 문제은 &#x27;현장 회피가 교육기회 축소로 굳어지는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 field_burden입니다.</h3>
+            <p class="one-line">현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?</p>
+          </div>
           <div class="score"><b>90.8</b><small>question likelihood</small></div>
         </div>
-        <section class="qa question-block">
-          <div class="label">대통령 예상 질문</div>
-          <p>현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?</p>
-        </section>
-        <section class="qa answer-block">
-          <div class="label">장관 답변 준비</div>
-          <ul><li>교육부 직접 사무인지 교육청 집행 사무인지 구분</li><li>법령·예산·지침 중 실제 조치수단 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-        </section>
-        <div class="facts">
+        <div class="quick-row">
           <span>기사 27건</span>
-          <span>업무: 학교안전, 교권보호</span>
-          <span>답변근거: 지역별 학교 수/학생 수/교원 수 · 학교 안전사고/교육활동 침해 관련 통계</span>
+          <span>학교안전, 교권보호</span>
+          <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <p class="delta">전일 대비 큰 변화는 없습니다.</p>
-        <p class="article-title">대표 기사: 현장체험학습 위축에…교육부 “교사 면책권 강화” 스승의 날 전후 발...</p>
+        <details>
+          <summary>질문·답변 준비 펼치기</summary>
+          <section class="qa question-block">
+            <div class="label">대통령 예상 질문</div>
+            <p>현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?</p>
+          </section>
+          <section class="qa answer-block">
+            <div class="label">장관 답변 준비</div>
+            <ul><li>교육부 직접 사무인지 교육청 집행 사무인지 구분</li><li>법령·예산·지침 중 실제 조치수단 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
+          </section>
+          <div class="facts">
+            <span>업무: 학교안전, 교권보호</span>
+            <span>답변근거: 지역별 학교 수/학생 수/교원 수 · 학교 안전사고/교육활동 침해 관련 통계</span>
+          </div>
+          <p class="article-title">대표 기사: 현장체험학습 위축에…교육부 “교사 면책권 강화” 스승의 날 전후 발...</p>
+        </details>
       </div>
     </article>
 
@@ -118,24 +136,33 @@
       <div class="issue-main">
         <div class="meta"><span>행정안전부</span><span>disaster_safety</span><span>cabinet_high</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <h3>재난·안전 대응 이슈은 &#x27;사후 수습은 반복되지만 사전 통제가 늦어지는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 ground_truth입니다.</h3>
+          <div>
+            <h3>재난·안전 대응 이슈은 &#x27;사후 수습은 반복되지만 사전 통제가 늦어지는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 ground_truth입니다.</h3>
+            <p class="one-line">재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?</p>
+          </div>
           <div class="score"><b>87.1</b><small>question likelihood</small></div>
         </div>
-        <section class="qa question-block">
-          <div class="label">대통령 예상 질문</div>
-          <p>재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?</p>
-        </section>
-        <section class="qa answer-block">
-          <div class="label">장관 답변 준비</div>
-          <ul><li>중앙-지방 역할분담 확인</li><li>현장 통제와 국민안내 책임기관 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-        </section>
-        <div class="facts">
+        <div class="quick-row">
           <span>기사 33건</span>
-          <span>업무: 재난안전, 지방행정</span>
-          <span>답변근거: 화재 발생/재난 피해 통계</span>
+          <span>재난안전, 지방행정</span>
+          <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <p class="delta">전일 대비 큰 변화는 없습니다.</p>
-        <p class="article-title">대표 기사: 지하차도 침수 통제, 5월부터 지도·내비 앱에서 안내한다</p>
+        <details>
+          <summary>질문·답변 준비 펼치기</summary>
+          <section class="qa question-block">
+            <div class="label">대통령 예상 질문</div>
+            <p>재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?</p>
+          </section>
+          <section class="qa answer-block">
+            <div class="label">장관 답변 준비</div>
+            <ul><li>중앙-지방 역할분담 확인</li><li>현장 통제와 국민안내 책임기관 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
+          </section>
+          <div class="facts">
+            <span>업무: 재난안전, 지방행정</span>
+            <span>답변근거: 화재 발생/재난 피해 통계</span>
+          </div>
+          <p class="article-title">대표 기사: 지하차도 침수 통제, 5월부터 지도·내비 앱에서 안내한다</p>
+        </details>
       </div>
     </article>
 
@@ -144,24 +171,33 @@
       <div class="issue-main">
         <div class="meta"><span>기획재정부</span><span>prices_livelihood</span><span>cabinet_review</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <h3>물가·민생 부담은 &#x27;지원은 나가지만 체감 물가가 내려가지 않는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 bottleneck입니다.</h3>
+          <div>
+            <h3>물가·민생 부담은 &#x27;지원은 나가지만 체감 물가가 내려가지 않는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 bottleneck입니다.</h3>
+            <p class="one-line">해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?</p>
+          </div>
           <div class="score"><b>76.1</b><small>question likelihood</small></div>
         </div>
-        <section class="qa question-block">
-          <div class="label">대통령 예상 질문</div>
-          <p>해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?</p>
-        </section>
-        <section class="qa answer-block">
-          <div class="label">장관 답변 준비</div>
-          <ul><li>지원수단별 효과와 재정소요 비교</li><li>집행속도와 대상선별 기준 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-        </section>
-        <div class="facts">
+        <div class="quick-row">
           <span>기사 22건</span>
-          <span>업무: 예산, 물가</span>
-          <span>답변근거: 소비자물가지수/생활물가 관련 지표 · 가계동향/소득분위별 지출</span>
+          <span>예산, 물가</span>
+          <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <p class="delta">전일 대비 큰 변화는 없습니다.</p>
-        <p class="article-title">대표 기사: 한국에 사는 이주민들 &quot;고유가 지원금, 왜 우린 안 주냐&quot;</p>
+        <details>
+          <summary>질문·답변 준비 펼치기</summary>
+          <section class="qa question-block">
+            <div class="label">대통령 예상 질문</div>
+            <p>해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?</p>
+          </section>
+          <section class="qa answer-block">
+            <div class="label">장관 답변 준비</div>
+            <ul><li>지원수단별 효과와 재정소요 비교</li><li>집행속도와 대상선별 기준 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
+          </section>
+          <div class="facts">
+            <span>업무: 예산, 물가</span>
+            <span>답변근거: 소비자물가지수/생활물가 관련 지표 · 가계동향/소득분위별 지출</span>
+          </div>
+          <p class="article-title">대표 기사: 한국에 사는 이주민들 &quot;고유가 지원금, 왜 우린 안 주냐&quot;</p>
+        </details>
       </div>
     </article>
 
@@ -170,24 +206,33 @@
       <div class="issue-main">
         <div class="meta"><span>법무부</span><span>justice_reform</span><span>cabinet_review</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <h3>범죄 대응·수사·검찰개혁 이슈은 &#x27;기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 coordination입니다.</h3>
+          <div>
+            <h3>범죄 대응·수사·검찰개혁 이슈은 &#x27;기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 coordination입니다.</h3>
+            <p class="one-line">법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?</p>
+          </div>
           <div class="score"><b>71.9</b><small>question likelihood</small></div>
         </div>
-        <section class="qa question-block">
-          <div class="label">대통령 예상 질문</div>
-          <p>법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?</p>
-        </section>
-        <section class="qa answer-block">
-          <div class="label">장관 답변 준비</div>
-          <ul><li>피해자 보호와 재판가능성 확인</li><li>법무부-검찰-경찰-외교부 역할분담 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-        </section>
-        <div class="facts">
+        <div class="quick-row">
           <span>기사 22건</span>
-          <span>업무: 검찰</span>
-          <span>답변근거: 범죄 발생/검거/재판 관련 통계</span>
+          <span>검찰</span>
+          <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <p class="delta">전일 대비 큰 변화는 없습니다.</p>
-        <p class="article-title">대표 기사: 검찰 떠나는 &#x27;대가&#x27;(大家) 검사들… 국가 수사력도 흔들</p>
+        <details>
+          <summary>질문·답변 준비 펼치기</summary>
+          <section class="qa question-block">
+            <div class="label">대통령 예상 질문</div>
+            <p>법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?</p>
+          </section>
+          <section class="qa answer-block">
+            <div class="label">장관 답변 준비</div>
+            <ul><li>피해자 보호와 재판가능성 확인</li><li>법무부-검찰-경찰-외교부 역할분담 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
+          </section>
+          <div class="facts">
+            <span>업무: 검찰</span>
+            <span>답변근거: 범죄 발생/검거/재판 관련 통계</span>
+          </div>
+          <p class="article-title">대표 기사: 검찰 떠나는 &#x27;대가&#x27;(大家) 검사들… 국가 수사력도 흔들</p>
+        </details>
       </div>
     </article>
 
@@ -196,24 +241,33 @@
       <div class="issue-main">
         <div class="meta"><span>금융위원회</span><span>finance_rates</span><span>cabinet_review</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <h3>금리·대출 부담은 &#x27;정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 public_outcome입니다.</h3>
+          <div>
+            <h3>금리·대출 부담은 &#x27;정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것&#x27;이 핵심 리스크입니다. 오늘 신호와 과거 질문 성향을 합치면 우선 압박점은 public_outcome입니다.</h3>
+            <p class="one-line">결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?</p>
+          </div>
           <div class="score"><b>76.0</b><small>question likelihood</small></div>
         </div>
-        <section class="qa question-block">
-          <div class="label">대통령 예상 질문</div>
-          <p>결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?</p>
-        </section>
-        <section class="qa answer-block">
-          <div class="label">장관 답변 준비</div>
-          <ul><li>정책금융 대상 적합성 확인</li><li>취약차주 지원과 금융건전성 균형 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-        </section>
-        <div class="facts">
+        <div class="quick-row">
           <span>기사 29건</span>
-          <span>업무: 서민금융</span>
-          <span>답변근거: 가계부채/대출금리 · 서민금융/취약차주 지표</span>
+          <span>서민금융</span>
+          <span>전일 대비 큰 변화는 없습니다.</span>
         </div>
-        <p class="delta">전일 대비 큰 변화는 없습니다.</p>
-        <p class="article-title">대표 기사: [초점] 중금리 대출 숨통 트였는데···저축은행 &#x27;신중모드&#x27;, 왜?</p>
+        <details>
+          <summary>질문·답변 준비 펼치기</summary>
+          <section class="qa question-block">
+            <div class="label">대통령 예상 질문</div>
+            <p>결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?</p>
+          </section>
+          <section class="qa answer-block">
+            <div class="label">장관 답변 준비</div>
+            <ul><li>정책금융 대상 적합성 확인</li><li>취약차주 지원과 금융건전성 균형 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
+          </section>
+          <div class="facts">
+            <span>업무: 서민금융</span>
+            <span>답변근거: 가계부채/대출금리 · 서민금융/취약차주 지표</span>
+          </div>
+          <p class="article-title">대표 기사: [초점] 중금리 대출 숨통 트였는데···저축은행 &#x27;신중모드&#x27;, 왜?</p>
+        </details>
       </div>
     </article>
   </section>

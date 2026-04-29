@@ -121,29 +121,29 @@ def stat_evidence(packet: dict, stats_dict: dict) -> dict:
     smoke = stats_dict.get('kosis_live_smoke') or []
     live_ok = [s for s in smoke if s.get('ok')]
     live_errors = [s.get('error') for s in smoke if not s.get('ok') and s.get('error')]
-    stat_questions = []
+    evidence_cards = []
     for c in candidates[:3]:
-        label = c.get('label','관련 통계')
-        why = c.get('why','실제 추세 확인')
-        stat_questions.append({
-            'stat': label,
-            'question': f"{label}의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
-            'answer_need': why,
+        evidence_cards.append({
+            'stat': c.get('label','관련 통계'),
+            'use_in_answer': c.get('why','실제 추세 확인'),
+            'how_to_phrase': '통계명 자체를 질문에 넣지 말고, 답변에서 규모·추세·비교 근거로 사용',
             'query_hint': c.get('query_hint',''),
         })
+    answer_frame = '최신 통계로 규모·추세·대상집단을 확인한 뒤, 즉시 조치와 제도 개선을 구분해 답변해야 합니다.'
     if issue_id == 'prices_livelihood':
-        stat_questions.insert(0, {'stat':'소비자물가지수·생활물가지수','question':'소비자물가지수와 생활물가지수의 최근 3개월 흐름이 서로 다릅니까? 체감물가 부담은 어느 품목에서 커졌습니까?','answer_need':'물가 부담의 체감 원인 분해','query_hint':'소비자물가지수 생활물가지수 품목별'})
+        answer_frame = '물가 부담은 체감 품목과 취약계층을 통계로 확인해, 지원 필요성과 재정수단 선택의 근거로 써야 합니다.'
     elif issue_id == 'school_field_trip':
-        stat_questions.insert(0, {'stat':'학교 수·학생 수·교원 수·학교안전사고','question':'현장체험학습 축소가 영향을 주는 학교·학생 규모는 어느 정도이고, 안전사고 통계와 교사 책임 부담은 같은 방향으로 움직입니까?','answer_need':'정책 대상 규모와 책임부담 실증','query_hint':'초등학교 학생수 교원수 학교안전사고'})
+        answer_frame = '체험학습 축소의 정책 대상 규모와 안전사고·교권 부담 근거를 통계로 받쳐, 면책·보험·안전요원 설계를 설명해야 합니다.'
     elif issue_id == 'disaster_safety':
-        stat_questions.insert(0, {'stat':'화재·침수·재난피해 통계','question':'최근 재난안전 보도가 실제 발생 건수·피해액 증가와 연결됩니까, 아니면 특정 사고 이후 제도보완 국면입니까?','answer_need':'위험 추세와 제도 대응 필요성 구분','query_hint':'화재 발생 침수 자연재해 피해'})
+        answer_frame = '재난 보도가 실제 위험 증가인지 제도보완 국면인지 통계로 구분해, 현장 통제와 국민 안내 대책의 필요성을 설명해야 합니다.'
     return {
         'candidates': candidates,
-        'stat_questions': stat_questions[:4],
+        'answer_evidence_cards': evidence_cards[:4],
+        'answer_frame': answer_frame,
         'live_reference_cards': live_ok[:2],
         'live_status': 'ok' if live_ok else 'blocked_or_unavailable',
         'live_errors': sorted(set(live_errors))[:3],
-        'ground_truth_prompt': '아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다.' if candidates else '연결된 통계 후보가 아직 없습니다.',
+        'ground_truth_prompt': '통계는 대통령 질문 문구가 아니라 장관 답변의 근거로 사용합니다.' if candidates else '연결된 통계 후보가 아직 없습니다.',
     }
 
 

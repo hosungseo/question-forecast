@@ -24,13 +24,13 @@ for i,p in enumerate(packets,1):
     for q in p['questions']:
         lines.append(f'- {q}')
     if stat.get('candidates'):
-        lines += ['', '**통계로 확인할 질문**']
-        for q in stat.get('stat_questions',[])[:4]:
-            lines.append(f"- **{q.get('stat','통계')}**: {q.get('question','')} / 준비값: {q.get('answer_need','')}")
+        lines += ['', '**답변에 써야 할 통계 근거**', f"- 답변 프레임: {stat.get('answer_frame','통계는 질문 문구가 아니라 답변 근거로 사용')}"]
+        for c in stat.get('answer_evidence_cards',[])[:4]:
+            lines.append(f"- **{c.get('stat','통계')}**: {c.get('use_in_answer','')} / 사용법: {c.get('how_to_phrase','')}")
         if stat.get('live_status') != 'ok' and stat.get('live_errors'):
             lines.append(f"- KOSIS live status: {stat.get('live_status')} ({'; '.join(stat.get('live_errors',[])[:2])})")
         for live in stat.get('live_reference_cards',[])[:1]:
-            lines.append(f"- KOSIS live check · {live.get('label')} · latest={live.get('latest_value')} previous={live.get('previous_value')}")
+            lines.append(f"- 참고 live 값 · {live.get('label')} · latest={live.get('latest_value')} previous={live.get('previous_value')}")
     if p.get('similar_historical_cases'):
         lines += ['', '**과거 유사 질문 사례**']
         for c in p['similar_historical_cases'][:2]:

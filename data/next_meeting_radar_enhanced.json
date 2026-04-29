@@ -457,22 +457,49 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.0801,
-          "meeting_date": "2026-03-17",
-          "question_type": "현황 질문",
-          "excerpt": "학교 같은 교육시설과 동네에서 먹고 놀 수 있는 문화 인프라가 중요한데, 이것은 공공에서 투자해 줘야 할 것 아닌지?"
+          "score": 0.2496,
+          "components": {
+            "lexical": 0.0184,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-07-15",
+          "meeting_code": "250715",
+          "question_type": "예산/재정 확인",
+          "inferred_ministry": "교육부",
+          "excerpt": "또 일주일 만에 이렇게 뵙게 되었음. 의대생들이 다행스럽게 학업에 복귀하기로 했다고 함. 늦었지만 참으로 다행스러운 일임. 교육 당국이 필요한 후속 조치를 신속하게 추진해 주기 바람. 그리고 의대생 여러분도 우리 국민들의 건강과 생명을 책임지는 예비 의료인으로서의 사회적 책임이 무엇인가에 대해서 좀 더 깊이 생각해 주시기를 당부드림. 관련 부서들은 공공재인 지역의료, 필수의료, 응급의료 공백을 면밀하게 점검하고 보완 대책을 서둘러서 마련해 주기 바람. 언제나 중요한데, 우리 사회에는 참으로 대화가 많이 부족함. 누구의 탓이라고 할 "
         },
         {
-          "score": 0.0801,
-          "meeting_date": "2025-08-12",
-          "question_type": "현황 질문",
-          "excerpt": "전시에 긴급한 필요를 고려하고 준비를 했는데, 그래도 최소한 책임 있는 사람이 봐야 되는 것은 아닌지?"
+          "score": 0.1878,
+          "components": {
+            "lexical": 0.0,
+            "fuzzy_chargram": 0.0326,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.06
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-06-10",
+          "meeting_code": "250610",
+          "question_type": "예산/재정 확인",
+          "inferred_ministry": "교육부",
+          "excerpt": "지금 교육부로 유보통합은 했는데, 교육비나 지원 금액이 여전히 차등이 있음. 그 문제를 해결하려면 예산이 많이 드는지?"
         },
         {
-          "score": 0.0745,
-          "meeting_date": "2025-08-12",
-          "question_type": "검토결과 확인",
-          "excerpt": "너무 오래 검토하고 있으면 안 됨. 원청 책임 강화라는 내용이 있어야 한다는 얘기임. 다음 준비된 것 있으면 보고 바람."
+          "score": 0.1853,
+          "components": {
+            "lexical": 0.0,
+            "fuzzy_chargram": 0.0219,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.06
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-11-04",
+          "meeting_code": "251104",
+          "question_type": "현황 질문",
+          "inferred_ministry": "교육부",
+          "excerpt": "교육부는 교원의 정치적 기본권, 유아 사교육비 경감 등 논의가 있는데, 현재 교원의 정치적 자유가 제한돼 있어서 이것을 해제하는 고민을 하고 있음. 그런데 국민 여론 조사로는 반대 의견이 높아서 이념 논쟁 되는 것이 부담스러운 고민이 있음."
         }
       ],
       "oral_brief": {
@@ -969,22 +996,49 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.1179,
-          "meeting_date": "2026-01-20",
-          "question_type": "현황 질문",
-          "excerpt": "화재 발생 건수는 훨씬 더 많지 않았는지?"
+          "score": 0.2832,
+          "components": {
+            "lexical": 0.1362,
+            "fuzzy_chargram": 0.0099,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.09
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-07-15",
+          "meeting_code": "250715",
+          "question_type": "부처협의 확인",
+          "inferred_ministry": "행정안전부",
+          "excerpt": "산불 조기 발견, 조기 대응이 핵심일 것 같음. 그러려면 국방부 자원을 잘 활용해서 헬기 대응 체제를 같이 하라고 했는데, 제가 국방부에도 별도로 얘기는 해놨으니 아예 장비를 미리 갖추고 일정 시기에는 일정 규모의 군 헬기를 아예 산불 진압용으로 대기시키고 즉시 출동해서 진압할 수 있게 훈련도 미리 좀 하는 시스템을 국무조정실에서 해야 할 것임. 이것을 어떻게 하면 될지, 뭐든 권한은 다 부여할 테니 필요한 시스템과 장비를 갖추도록 해서 산불 대책을 아예 종합적으로 만들어서 합동 회의를 한번 하도록 하겠음."
         },
         {
-          "score": 0.0913,
-          "meeting_date": "2025-06-10",
-          "question_type": "검토결과 확인",
-          "excerpt": "우리도 대응 조치를 해야 하는 것은 아닌지, 법무부에서 이에 대한 검토를 해보셨는지?"
+          "score": 0.2765,
+          "components": {
+            "lexical": 0.0665,
+            "fuzzy_chargram": 0.0081,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2026-03-17",
+          "meeting_code": "260317",
+          "question_type": "예산/재정 확인",
+          "inferred_ministry": "행정안전부",
+          "excerpt": "중동 상황으로 급등했던 기름값이 석유 최고가격제 시행 후에 다소 안정되고 있음. 국민들께서 최고가격제 시행 효과를 보다 충분히 체감하실 수 있도록 현장 점검 강화 등 가용 수단을 총동원해 주시기 바람. 중동 상황이 당초 예상을 뛰어넘는 방향으로 확대되고 있음. 현재와 같은 양상이라면 잠시 진정됐던 석유 가격이 다시 불안정해지고, 민생 전반에 가해질 충격도 커지게 될 것 같음. 이제는 상황 장기화를 전제로 최악의 시나리오까지 염두에 둔 대책을 마련해야 되겠음. 우선 UAE에서 추가 원유를 확보했던 것처럼 우리의 외교 역량과 자산을 총"
         },
         {
-          "score": 0.0801,
-          "meeting_date": "2025-08-12",
+          "score": 0.274,
+          "components": {
+            "lexical": 0.0592,
+            "fuzzy_chargram": 0.0132,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-06-05",
+          "meeting_code": "250605",
           "question_type": "현황 질문",
-          "excerpt": "몇 대를 준비하고 있고? 또 내년 봄에 산불 날 때 군대에서 동원할 수 있는 헬기 최대 숫자가 얼마 정도인지?"
+          "inferred_ministry": "행정안전부",
+          "excerpt": "산불이 갈수록 빈발하고 있고, 산불 때문에 마을이 불타는 등 그 피해가 대형화되고 있음. 그리고 올해는 산불이 서른 몇 군데가 동시에 일어나 피해가 아주 컸지만, 이에 대응하는 산림청과 소방청의 협력이 잘 안되었다고 생각함. 행안부나 관계 부처에서 그에 대한 대책들을 논의해 보셨는지?"
         }
       ],
       "oral_brief": {
@@ -1502,22 +1556,49 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.2182,
-          "meeting_date": "2025-10-21",
+          "score": 0.2861,
+          "components": {
+            "lexical": 0.0887,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-08-29",
+          "meeting_code": "250829",
           "question_type": "예산/재정 확인",
-          "excerpt": "군이 대표적인 예산 소비 집단 아닌지?"
+          "inferred_ministry": "기획재정부",
+          "excerpt": "국민 여러분의 아낌없는 조언이 큰 힘 되었음. 진심으로 감사드림. 팀코리아의 정신으로 현지에서 혼연일체로 함께 헌신해 주신 기업인 여러분 그리고 언론인 여러분께도 각별히 감사의 인사를 드림. 외교도 결국 사람이 하는 일이고 국익을 지키려면 마음을 얻어야 함. 이번 순방에서 형성된 따뜻한 신뢰 관계를 바탕으로 우리의 국익을 지키고 다른 주변 국가의 협력도 보다 확대해 나가도록 하겠음. 순방 성과를 이어가기 위해서는 초당적인 협력이 뒷받침되어야 함. 외교 문제나 국익에 관해서는 최소한 다른 목소리가 없었으면 좋겠음. 여야 지도부에게 순"
         },
         {
-          "score": 0.1793,
-          "meeting_date": "2025-09-09",
-          "question_type": "현황 질문",
-          "excerpt": "민생 부담 경감을 위한 43조 2,000억 원은 통상적인 금리가 될 텐데, 서민금융이라고 하는 햇살론 유스나 불법사금융 예방 대출, 이런 것은 이자가 얼마인지?"
+          "score": 0.2803,
+          "components": {
+            "lexical": 0.0776,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-09-02",
+          "meeting_code": "250902",
+          "question_type": "예산/재정 확인",
+          "inferred_ministry": "기획재정부",
+          "excerpt": "7월 산업생산‧소비‧설비투자가 나란히 증가세로 전환됐다고 함. 현장 민생과 직결된 소매 판매의 경우에는 소비쿠폰 지급에 힘입어서 29개월 만에 가장 큰 폭으로 증가했음. 적절한 재정 투입이 국민 경제 성장에 미치는 긍정적 효과가 현장에서 증명됐음. 하지만 1%대까지 추락한 잠재성장률을 다시 끌어올리지 않으면 어떤 정책도 결국은 반짝 효과에 그칠 것이 분명함. 그동안 정부가 바뀔 때마다 잠재성장률은 계속해서 떨어져 왔음. 대개 1개 정권당 1% 정도씩 추세적으로 떨어져 왔음. 우리 정부는 이런 하락 흐름을 반전시키는 첫 정부가 되어야"
         },
         {
-          "score": 0.1336,
-          "meeting_date": "2025-11-04",
+          "score": 0.2754,
+          "components": {
+            "lexical": 0.0681,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-12-09",
+          "meeting_code": "251209",
           "question_type": "예산/재정 확인",
-          "excerpt": "그다음 문화부는 예술강사 지원 예산 복원 문제를 고민해야 할 것 같은데, 현장의 수요가 꽤 많은데 예산을 얼마나 삭감했다는 것인지?"
+          "inferred_ministry": "기획재정부",
+          "excerpt": "정말 요란하고 일도 많았던 ‘25년이 저물어가고 있음. 앞으로 남은 3주 정도의 짧은 시간, 또 길지 않은 시간이지만 정부의 1시간은 5,200만 시간의 가치가 있다는 생각으로 다시 한번 신발 끈을 매주시기 바람. 11일 모레부터 300개에 가까운 정부의 전 부처, 산하 공공·유관 기관 등에 대한 업무보고가 진행될 것임. 이 업무보고를 통해서 민생 경제 회복, 또 국가 정상화에 속도를 내고 대한민국 대전환을 한 걸음이라도 더 앞당겨야 하겠음. 특히 국민의 알권리 존중, 또 투명한 국정운영 실현 원칙에 따라서 보안을 지켜야 할 사안을"
         }
       ],
       "oral_brief": {
@@ -2008,22 +2089,49 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.2928,
+          "score": 0.289,
+          "components": {
+            "lexical": 0.2673,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.03
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
           "meeting_date": "2026-02-10",
+          "meeting_code": "260210",
           "question_type": "현황 질문",
+          "inferred_ministry": "법무부",
           "excerpt": "검찰, 경찰, 관세청이 마약 단속과 관계된 부처인지?"
         },
         {
-          "score": 0.1252,
-          "meeting_date": "2025-11-04",
+          "score": 0.2552,
+          "components": {
+            "lexical": 0.1217,
+            "fuzzy_chargram": 0.0497,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.06
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-10-14",
+          "meeting_code": "251014",
           "question_type": "현황 질문",
-          "excerpt": "경찰 업무 중에 수사 업무와 일반 경찰 업무는 수준이 다름. 교통경찰 하다가 수사하고, 수사경찰 하다가 교통 정비하러 가기도 하는지?"
+          "inferred_ministry": "법무부",
+          "excerpt": "대한민국 국민 중에 캄보디아에 가서 이런 범죄 행위에 가담하고 있는 사람이 자의든, 타의든 대략 얼마쯤 되는지?"
         },
         {
-          "score": 0.1155,
-          "meeting_date": "2025-07-29",
+          "score": 0.2378,
+          "components": {
+            "lexical": 0.1111,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.06
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-10-21",
+          "meeting_code": "251021",
           "question_type": "현황 질문",
-          "excerpt": "수사 전에 고용노동부에서 중대재해라고 하는지?"
+          "inferred_ministry": "법무부",
+          "excerpt": "열심히 하고 계신 것 같은데, 조금 더 새롭게 대응해야 할 것 같음. 이것은 국제범죄라서 국정원에 별도 지시를 해놓기는 했는데, 외교부, 경찰, 검찰 등 근본적으로 생각을 달리해야 할 것 같음. 국가 권력과도 관계가 있다는 이야기가 있을 정도니 쉽게 뿌리 뽑히지는 않을 것 같음. 인력, 조직 등 필요하면 최대한 확보해 드릴 테니, 새로운 시각으로 접근해 주시기 바람. 그리고 마약 문제도 한번 구조적으로 어떻게 할지 점검해 주시기 바람. 마약 문제는 어디에서 관리하고 있는지?"
         }
       ],
       "oral_brief": {
@@ -2534,22 +2642,49 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.1432,
-          "meeting_date": "2025-09-09",
+          "score": 0.2766,
+          "components": {
+            "lexical": 0.1281,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.09
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-08-12",
+          "meeting_code": "250812",
           "question_type": "현황 질문",
+          "inferred_ministry": "금융위원회",
+          "excerpt": "산업재해 예방을 위한 대책을 구체적으로 준비한 곳이 노동부하고 국토부 둘밖에 없는지? 지난번에 금융위원회에서 이런 회사들이 사고 내면 대출 이자에 불이익을 주거나 대출 규제를 한다든지, 국민연금 같은 곳에서는 그런 회사 주식은 아예 안 사준다든지, 이것이 진짜 실제 대책이 아닌지?"
+        },
+        {
+          "score": 0.2446,
+          "components": {
+            "lexical": 0.1549,
+            "fuzzy_chargram": 0.0584,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.03
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-09-09",
+          "meeting_code": "250909",
+          "question_type": "현황 질문",
+          "inferred_ministry": "금융위원회",
           "excerpt": "서민금융 1,145억은 명절 자금하고는 달리 서민들에게 금융 기회를 주는 것인데, 이건 이자가 훨씬 더 비싼 것인지?"
         },
         {
-          "score": 0.124,
-          "meeting_date": "2025-06-19",
-          "question_type": "대안 요구",
-          "excerpt": "지역화폐 지원 비율은 정리가 됐는지?"
-        },
-        {
-          "score": 0.1088,
-          "meeting_date": "2025-09-16",
-          "question_type": "대안 요구",
-          "excerpt": "지방 금융을 지원해서 활성화하고 성장시키는 방법, 지역 산업이나 기업들에게 금융상의 지원 혜택을 줄 수 있는 방법, 이런 것들도 금융 측면에서 안을 만들어 보시면 좋을 것 같음. 다른 의견 없으시면 의안심의로 넘어가겠음."
+          "score": 0.2394,
+          "components": {
+            "lexical": 0.1143,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.06
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2026-02-24",
+          "meeting_code": "260224",
+          "question_type": "검토결과 확인",
+          "inferred_ministry": "금융위원회",
+          "excerpt": "그리고 의무를 이행하지 않는 경우 이행강제금을 부과하게 되어 있는데, 어떤 문제가 있냐면, 이자와 가산 제도가 없는 것임. 시간이 지나도 더 내는 것이 없으니 위반해서 버티는 만큼 금융 이익이 발생한다는 것임. 금융 이익 이상의 가산금이 붙도록 해야 하는데, 그게 없으니 버티라고 권장하고 있는 것과 같음. 법제처에서 검토하시기 바람."
         }
       ],
       "oral_brief": {
@@ -3049,22 +3184,49 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.1936,
+          "score": 0.2843,
+          "components": {
+            "lexical": 0.2182,
+            "fuzzy_chargram": 0.087,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.03
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
           "meeting_date": "2025-09-02",
+          "meeting_code": "250902",
           "question_type": "검토결과 확인",
+          "inferred_ministry": "고용노동부",
           "excerpt": "규정 개정을 한번 검토해 보시기 바람. 그다음에 하도급의 부실 공사, 산재, 임금체불 등 모든 문제는 원청 아닌지?"
         },
         {
-          "score": 0.138,
-          "meeting_date": "2026-01-20",
-          "question_type": "현황 질문",
-          "excerpt": "고용노동부는 “청년의 구직활동과 지역 일자리 기회 확대”, 구직 촉진 수당을 구직하기 전에 준다는 것인지?"
+          "score": 0.2635,
+          "components": {
+            "lexical": 0.1029,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.09
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-08-12",
+          "meeting_code": "250812",
+          "question_type": "검토결과 확인",
+          "inferred_ministry": "고용노동부",
+          "excerpt": "너무 오래 검토하고 있으면 안 됨. 원청 책임 강화라는 내용이 있어야 한다는 얘기임. 다음 준비된 것 있으면 보고 바람."
         },
         {
-          "score": 0.1333,
+          "score": 0.2402,
+          "components": {
+            "lexical": 0.0976,
+            "fuzzy_chargram": 0.0394,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.06
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
           "meeting_date": "2025-08-12",
-          "question_type": "검토결과 확인",
-          "excerpt": "너무 오래 검토하고 있으면 안 됨. 원청 책임 강화라는 내용이 있어야 한다는 얘기임. 다음 준비된 것 있으면 보고 바람."
+          "meeting_code": "250812",
+          "question_type": "현황 질문",
+          "inferred_ministry": "고용노동부",
+          "excerpt": "원청의 책임을 어떻게 강화할 것인지?"
         }
       ],
       "oral_brief": {
@@ -3568,22 +3730,49 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.1195,
-          "meeting_date": "2025-07-15",
-          "question_type": "예산/재정 확인",
-          "excerpt": "산림 정비사업 1년 예산은 얼마인지?"
+          "score": 0.25,
+          "components": {
+            "lexical": 0.0685,
+            "fuzzy_chargram": 0.0184,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.09
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-07-01",
+          "meeting_code": "250701",
+          "question_type": "현황 질문",
+          "inferred_ministry": "국토교통부",
+          "excerpt": "우선 제가 이 말씀을 먼저 드려야 될 것 같음. 대한민국은 국민주권 국가임. 이 나라의 모든 권력은 국민으로부터 나오는 것임. 그 국민주권은 첫째로 직접 선출된 권력에 의해서 국민주권이 발현됨. 그리고 그 선출 권력으로부터 다시 임명 권력이 주어짐. 임명 권력의 정당성이 부여되는 것임. 대한민국의 선출 권력은 대통령, 국회의원 또는 자치단체장, 기초광역의원 이렇게 구성이 됨. 모든 권력은 국민으로부터 그리고 1차적으로는 선출 권력으로부터 국민주권이 실현됨. 아무리 우리가 외형적으로 높은 자리, 높은 권한을 가지고 있다고 할지라도 임"
         },
         {
-          "score": 0.101,
-          "meeting_date": "2025-09-02",
-          "question_type": "현황 질문",
-          "excerpt": "역직구 시장 넓히는 것은 어느 부처가 담당하는지?"
-        },
-        {
-          "score": 0.101,
+          "score": 0.232,
+          "components": {
+            "lexical": 0.1576,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.03
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
           "meeting_date": "2025-07-15",
+          "meeting_code": "250715",
           "question_type": "현황 질문",
+          "inferred_ministry": "국토교통부",
           "excerpt": "독거노인이나 이런 데는 공급 사업을 하고 있는지?"
+        },
+        {
+          "score": 0.2154,
+          "components": {
+            "lexical": 0.1257,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.03
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-09-09",
+          "meeting_code": "250909",
+          "question_type": "현황 질문",
+          "inferred_ministry": "국토교통부",
+          "excerpt": "그 전에 마스크 공급 시스템 만들라고 데이터 개방했더니, 5일 만에 다 만든 거 아닌지?"
         }
       ],
       "oral_brief": {
@@ -4060,22 +4249,49 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.0861,
+          "score": 0.1948,
+          "components": {
+            "lexical": 0.0861,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.03
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
           "meeting_date": "2025-11-04",
+          "meeting_code": "251104",
           "question_type": "현황 질문",
+          "inferred_ministry": "보건복지부",
           "excerpt": "알겠음. 다음 복지부는 의료 개혁 시스템을 어떻게 진행하고 있는지?"
         },
         {
-          "score": 0.0861,
-          "meeting_date": "2025-07-01",
-          "question_type": "현황 질문",
-          "excerpt": "유어선 사업도 육성할 필요가 있는데 그걸 위한 정책이 있는지?"
+          "score": 0.1581,
+          "components": {
+            "lexical": 0.0684,
+            "fuzzy_chargram": 0.0106,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.0
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2026-02-03",
+          "meeting_code": "260203",
+          "question_type": "대안 요구",
+          "inferred_ministry": "보건복지부",
+          "excerpt": "좋은 지적 같음. 아주 오래전에 제 선친께서도 돌아가시고 난 다음에 사체 검안서 떼느라고 엄청나게 고생했었음. 그런데 앞으로 똑같거나 오히려 더 엄격해질 가능성이 큰데, 법제처장 지적이 일리가 있음. 이 부분은 잘 챙겨봐 주시기 바람. 앞으로 회생 불능이고 치료한다고 개선되지도 않고, 고통만 심한 경우, 단순한 연명을 위한 행위를 본인이 더 이상 안 하겠다고 의사 표명하면 연명의료를 안 하거나 또 호흡기를 제거하는 등의 조치를 하도록 허용한다는 말인지?"
         },
         {
-          "score": 0.0778,
-          "meeting_date": "2025-06-19",
-          "question_type": "현황 질문",
-          "excerpt": "다른 나라의 우수 인재들을 데려오기 위한 프로그램을 정부 부처에서 하고 있는 것이 있는지?"
+          "score": 0.1544,
+          "components": {
+            "lexical": 0.0623,
+            "fuzzy_chargram": 0.0084,
+            "same_ministry_boost": 0.0,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-10-21",
+          "meeting_code": "251021",
+          "question_type": "부처협의 확인",
+          "inferred_ministry": "행정안전부",
+          "excerpt": "어제 코스피 지수가 사상 최초 3,800선을 넘어서고 오늘도 사상 최고가를 갱신하고 있는 것 같음. 주식 시장이 정상화 흐름을 타고 있음. 지금 특별한 엄청난 성과가 있어서라기보다는 당연히 있어야 할 자리로 되돌아가는 중이라는 생각이고, 여기에 더해서 이제 정책 효과가 더해지고 실질적인 성과가 나면 더 나은 결과가 생길 수 있을 것으로 보임. 비생산적인 분야에 집중됐던 과거의 투자 방식에서 벗어나 국민들의 자산 증식 수단이 차츰 다양화, 건실화되는 과정이라고 생각되며 아직도 가야 할 길은 멀었음. 생산적 금융으로 전환 추세가 더 굳"
         }
       ],
       "oral_brief": {
@@ -4140,5 +4356,5 @@
       }
     }
   ],
-  "enhancement_note": "v3: ministry work dictionary + cabinet likelihood + similar cases + question flow + daily delta"
+  "enhancement_note": "v4: ministry work dictionary + cabinet likelihood + hybrid historical retrieval + similar cases + question flow + daily delta"
 }

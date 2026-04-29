@@ -11,25 +11,18 @@ Adds:
 from __future__ import annotations
 
 import json
-import math
 import re
-import sqlite3
-from collections import Counter
 from pathlib import Path
+
+from historical_retrieval import similar_cases
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
 RADAR = DATA / 'next_meeting_radar.json'
 PREV = DATA / 'previous_next_meeting_radar.json'
-DB = DATA / 'cabinet_question_radar.sqlite'
 DICT = DATA / 'ministry_work_dictionary.json'
 STATS = DATA / 'issue_stat_dictionary.json'
 OUT = DATA / 'next_meeting_radar_enhanced.json'
-
-
-def toks(text: str) -> set[str]:
-    stop = set('관련 대한 하는 되는 있는 없는 정부 대통령 장관 기자 오늘 이번 뉴스 종합 단독 그리고 그러나 이를 통해 우리'.split())
-    return {t for t in re.findall(r'[가-힣A-Za-z0-9]{2,}', text or '') if t not in stop}
 
 
 def load_json(path: Path, default):
@@ -83,36 +76,6 @@ def likelihood(packet: dict, align: dict) -> dict:
     elif score >= 42: band = 'monitor'
     else: band = 'low'
     return {'score': score, 'band': band, 'drivers': {'priority': priority, 'article_count': count, 'signal_count': signal_count, 'work_signal_hits': work_hits, 'question_move_hits': move_score}}
-
-
-def similar_cases(packet: dict, limit: int = 3) -> list[dict]:
-    if not DB.exists():
-        return []
-    query_terms = toks(' '.join(packet.get('signals', []) + packet.get('terms', [])))
-    if not query_terms:
-        return []
-    con = sqlite3.connect(DB)
-    con.row_factory = sqlite3.Row
-    rows = con.execute('''
-        select m.meeting_date as meeting_date, q.question_type as question_type, q.text as text
-        from presidential_question_candidates q
-        left join meetings m on m.meeting_code = q.meeting_code
-    ''').fetchall()
-    scored = []
-    for r in rows:
-        rt = toks(r['text'] or '')
-        inter = len(query_terms & rt)
-        if inter == 0:
-            continue
-        j = inter / math.sqrt(len(query_terms) * max(len(rt), 1))
-        if j > 0.035:
-            scored.append((j, r))
-    scored.sort(key=lambda x: x[0], reverse=True)
-    out = []
-    for score, r in scored[:limit]:
-        text = re.sub(r'\s+', ' ', r['text'] or '').strip()
-        out.append({'score': round(score, 4), 'meeting_date': r['meeting_date'], 'question_type': r['question_type'], 'excerpt': text[:260]})
-    return out
 
 
 def stat_evidence(packet: dict, stats_dict: dict) -> dict:
@@ -228,7 +191,7 @@ def main() -> int:
         p['daily_delta'] = delta(p, prev_by_issue)
         enhanced.append(p)
     radar['packets'] = enhanced
-    radar['enhancement_note'] = 'v3: ministry work dictionary + cabinet likelihood + similar cases + question flow + daily delta'
+    radar['enhancement_note'] = 'v4: ministry work dictionary + cabinet likelihood + hybrid historical retrieval + similar cases + question flow + daily delta'
     OUT.write_text(json.dumps(radar, ensure_ascii=False, indent=2))
     # Also replace base JSON so docs/briefing can use enhanced fields if desired.
     RADAR.write_text(json.dumps(radar, ensure_ascii=False, indent=2))

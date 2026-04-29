@@ -5,324 +5,214 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Question Forecast</title>
   <style>
-    :root { --ink:#111827; --muted:#6b7280; --soft:#f6f7f9; --line:#e5e7eb; --card:#fff; --blue:#1d4ed8; --green:#047857; --amber:#b45309; }
+    :root { --paper:#f3efe7; --paper2:#fbf8f1; --ink:#17130d; --muted:#71685b; --line:#ded4c3; --deep:#1f2a24; --accent:#8f3f23; --blue:#234d8f; --green:#1f6b45; --amber:#9a5a12; --shadow:0 24px 80px rgba(52,39,22,.10); }
     * { box-sizing:border-box; }
-    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#f8fafc; line-height:1.55; }
-    main { max-width:1120px; margin:0 auto; padding:44px 20px 80px; }
-    .top { display:grid; grid-template-columns:1.3fr .7fr; gap:28px; align-items:end; border-bottom:1px solid var(--line); padding-bottom:28px; }
-    .focus { background:#0f172a; color:white; border-radius:28px; padding:24px; margin:26px 0 18px; display:grid; grid-template-columns:.8fr 1.2fr; gap:20px; }
-    .focus h2 { margin:0; font-size:23px; letter-spacing:-.03em; }
-    .focus p { margin:8px 0 0; color:#cbd5e1; }
-    .focus ul { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
-    .focus li { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); padding:12px 14px; border-radius:16px; }
-    .focus span { float:right; color:#93c5fd; font-weight:800; }
-    .controls { display:grid; grid-template-columns:1fr 190px auto auto; gap:10px; margin:0 0 14px; }
-    .controls input,.controls select,.controls button { border:1px solid var(--line); border-radius:14px; padding:11px 12px; background:white; font:inherit; font-weight:650; }
-    .controls button { cursor:pointer; color:#111827; }
-    .filters { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 24px; }
-    .filters button { border:1px solid var(--line); background:white; border-radius:999px; padding:9px 12px; font-weight:700; color:#374151; cursor:pointer; }
-    .filters button.active { background:#111827; color:white; border-color:#111827; }
-    .eyebrow { color:var(--blue); font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:12px; }
-    h1 { font-size:54px; letter-spacing:-.05em; line-height:.98; margin:10px 0 16px; }
-    .lead { font-size:19px; color:#374151; max-width:760px; margin:0; }
-    .stamp { text-align:right; color:var(--muted); font-size:14px; }
-    .stats { display:flex; gap:10px; justify-content:flex-end; margin-top:12px; flex-wrap:wrap; }
-    .stat { background:#fff; border:1px solid var(--line); border-radius:999px; padding:7px 11px; font-size:13px; }
-    .links { display:flex; gap:12px; flex-wrap:wrap; margin:22px 0 18px; }
-    .api-panel { display:grid; grid-template-columns:1fr auto; gap:14px; align-items:center; background:white; border:1px solid var(--line); border-radius:22px; padding:16px 18px; margin:0 0 28px; box-shadow:0 10px 30px rgba(15,23,42,.035); }
-    .api-panel h2 { margin:0; font-size:17px; letter-spacing:-.02em; }
-    .api-panel p { margin:4px 0 0; color:var(--muted); font-size:14px; }
-    .api-status { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
-    .pill { border:1px solid var(--line); border-radius:999px; padding:7px 10px; font-size:12px; font-weight:800; background:#f8fafc; color:#475569; }
-    .pill.ok { color:#047857; background:#ecfdf5; border-color:#bbf7d0; }
-    .pill.bad { color:#b91c1c; background:#fef2f2; border-color:#fecaca; }
-    .api-actions { margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
-    .api-actions button,.api-actions a { border:1px solid var(--line); background:white; border-radius:999px; padding:8px 11px; font-size:13px; font-weight:800; color:#111827; cursor:pointer; }
-    .api-actions button:hover,.api-actions a:hover { background:#f8fafc; text-decoration:none; }
-    a { color:var(--blue); text-decoration:none; font-weight:700; }
+    body { margin:0; font-family: ui-serif, Georgia, "Times New Roman", serif; color:var(--ink); background:radial-gradient(circle at 18% 0%, #fffaf0 0, transparent 34%), linear-gradient(180deg,var(--paper2),var(--paper)); line-height:1.55; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.23; background-image:linear-gradient(rgba(23,19,13,.035) 1px, transparent 1px),linear-gradient(90deg,rgba(23,19,13,.025) 1px,transparent 1px); background-size:32px 32px; }
+    main { max-width:1180px; margin:0 auto; padding:38px 20px 88px; position:relative; }
+    .masthead { border:1px solid var(--line); background:rgba(251,248,241,.88); box-shadow:var(--shadow); border-radius:34px; overflow:hidden; }
+    .kicker { display:flex; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); padding:13px 18px; color:var(--muted); font:700 12px/1.2 ui-sans-serif,system-ui; letter-spacing:.12em; text-transform:uppercase; }
+    .hero { display:grid; grid-template-columns:1.1fr .9fr; min-height:390px; }
+    .hero-copy { padding:44px 46px 38px; }
+    h1 { margin:0; font-size:76px; line-height:.88; letter-spacing:-.065em; max-width:650px; }
+    .lead { margin:24px 0 0; max-width:620px; font-size:21px; color:#3d3329; }
+    .hero-panel { border-left:1px solid var(--line); padding:28px; background:linear-gradient(135deg,#1f2a24,#101713); color:#f7f0df; display:flex; flex-direction:column; justify-content:space-between; }
+    .hero-panel small { display:block; color:#ccbfa9; font:800 12px/1.2 ui-sans-serif,system-ui; text-transform:uppercase; letter-spacing:.1em; }
+    .hero-panel h2 { margin:12px 0 16px; font-size:28px; line-height:1.15; letter-spacing:-.03em; }
+    .hero-question { padding:18px; border:1px solid rgba(255,255,255,.18); border-radius:22px; background:rgba(255,255,255,.07); font-size:18px; }
+    .hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:24px; }
+    .hero-stats div { border-top:1px solid rgba(255,255,255,.22); padding-top:12px; }
+    .hero-stats b { display:block; font:800 28px/1 ui-sans-serif,system-ui; }
+    .hero-stats span { color:#ccbfa9; font:700 11px/1.2 ui-sans-serif,system-ui; text-transform:uppercase; }
+    .links,.filters { display:flex; flex-wrap:wrap; gap:9px; }
+    .links { margin:22px 0 16px; }
+    a { color:var(--blue); text-decoration:none; font-weight:800; }
     a:hover { text-decoration:underline; }
-    .links a { background:white; border:1px solid var(--line); padding:10px 13px; border-radius:999px; }
+    .links a,.filters button,.controls button,.controls input,.controls select,.api-actions button,.api-actions a { font:800 13px/1.2 ui-sans-serif,system-ui; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.68); color:#2f291f; padding:10px 13px; }
+    .filters { margin:0 0 20px; }
+    .filters button,.controls button,.api-actions button { cursor:pointer; }
+    .filters button.active { background:var(--deep); color:#fff7e8; border-color:var(--deep); }
+    .api-panel { display:grid; grid-template-columns:1fr auto; gap:18px; align-items:center; border:1px solid var(--line); border-radius:24px; background:rgba(255,255,255,.58); padding:16px 18px; margin:0 0 18px; }
+    .api-panel h2 { margin:0; font-size:18px; letter-spacing:-.02em; }
+    .api-panel p { margin:4px 0 0; color:var(--muted); font-size:14px; }
+    .api-status,.api-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+    .api-actions { margin-top:10px; justify-content:flex-start; }
+    .pill { border:1px solid var(--line); border-radius:999px; padding:7px 10px; font:800 12px/1.2 ui-sans-serif,system-ui; background:#fffaf0; color:var(--muted); }
+    .pill.ok { color:var(--green); background:#edf8ef; border-color:#bfdcc7; } .pill.bad { color:#9d1c1c; background:#fff0ed; border-color:#f1beb6; }
+    .controls { display:grid; grid-template-columns:1fr 190px auto auto; gap:10px; margin:0 0 12px; }
+    .controls input,.controls select { border-radius:18px; font-weight:700; width:100%; }
+    .brief-layout { display:grid; grid-template-columns:310px 1fr; gap:18px; align-items:start; }
+    .brief-rail { position:sticky; top:16px; border:1px solid var(--line); border-radius:28px; background:rgba(255,255,255,.58); padding:20px; box-shadow:0 18px 50px rgba(52,39,22,.06); }
+    .brief-rail h2 { margin:0 0 6px; font-size:23px; letter-spacing:-.03em; }
+    .brief-rail p { margin:0 0 16px; color:var(--muted); }
+    .focus-list { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
+    .focus-list li { display:grid; grid-template-columns:26px 1fr auto; gap:9px; align-items:center; border-top:1px solid var(--line); padding-top:10px; font-family:ui-sans-serif,system-ui; }
+    .focus-list span { display:grid; place-items:center; width:24px; height:24px; border-radius:50%; background:var(--deep); color:white; font-size:12px; font-weight:900; }
+    .focus-list b { font-size:13px; } .focus-list em { grid-column:2; color:var(--muted); font-size:12px; font-style:normal; margin-top:-8px; } .focus-list strong { grid-row:1/3; grid-column:3; color:var(--accent); }
     .issues { display:grid; gap:14px; }
-    .issue { display:grid; grid-template-columns:54px 1fr; gap:16px; background:var(--card); border:1px solid var(--line); border-radius:24px; padding:18px 20px; box-shadow:0 10px 30px rgba(15,23,42,.04); }
-    .issue:hover { border-color:#cbd5e1; box-shadow:0 18px 42px rgba(15,23,42,.07); }
-    .issue-head { display:grid; grid-template-columns:1fr 108px; gap:18px; align-items:start; }
-    .score { text-align:right; border-left:1px solid var(--line); padding-left:16px; }
-    .score b { display:block; font-size:30px; letter-spacing:-.04em; }
-    .score small { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.05em; }
-    .badge { font-size:11px!important; font-weight:900; letter-spacing:.04em; }
-    .badge.new { color:#1d4ed8!important; background:#eff6ff!important; border-color:#bfdbfe!important; }
-    .badge.up { color:#b91c1c!important; background:#fef2f2!important; border-color:#fecaca!important; }
-    .badge.shift { color:#7c2d12!important; background:#fff7ed!important; border-color:#fed7aa!important; }
-    .badge.stable { color:#475569!important; background:#f8fafc!important; }
-    .rank { width:42px; height:42px; border-radius:14px; display:grid; place-items:center; background:#111827; color:white; font-weight:800; }
-    .meta { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
-    .meta span { font-size:12px; color:#374151; background:#f3f4f6; border:1px solid #e5e7eb; padding:4px 8px; border-radius:999px; }
-    .cabinet_high .meta span:last-child { color:var(--green); background:#ecfdf5; border-color:#bbf7d0; }
-    .cabinet_review .meta span:last-child { color:var(--amber); background:#fffbeb; border-color:#fde68a; }
-    h3 { font-size:20px; line-height:1.35; letter-spacing:-.02em; margin:0 0 8px; }
-    .one-line { margin:0; color:#111827; font-size:16px; font-weight:650; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-    .quick-row { display:grid; grid-template-columns:90px 1fr 1fr; gap:8px; margin:13px 0 6px; }
-    .quick-row span { background:#f8fafc; border:1px solid var(--line); border-radius:12px; padding:8px 10px; color:#475569; font-size:13px; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-    .actions { margin:10px 0 4px; }
-    .actions a,.actions button { display:inline-block; background:#111827; color:white; border-radius:999px; padding:8px 12px; font-size:13px; margin-right:6px; border:0; font-weight:800; cursor:pointer; }
-    .actions a.ghost,.actions button.pick { background:white; color:#111827; border:1px solid var(--line); }
-    .actions a:hover,.actions button:hover { text-decoration:none; background:#1f2937; color:white; }
-    .actions a.ghost:hover,.actions button.pick:hover { background:#f8fafc; color:#111827; }
-    .tray { position:fixed; right:18px; bottom:18px; width:min(420px,calc(100vw - 36px)); background:#111827; color:white; border-radius:24px; padding:16px; box-shadow:0 24px 80px rgba(15,23,42,.28); z-index:20; display:none; }
-    .tray.open { display:block; }
-    .tray h2 { font-size:16px; margin:0 0 8px; }
-    .tray ul { margin:0; padding-left:18px; max-height:220px; overflow:auto; }
-    .tray li { margin:8px 0; color:#dbeafe; }
-    .tray-actions { display:flex; gap:8px; margin-top:12px; }
-    .tray button { border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.08); color:white; border-radius:999px; padding:8px 11px; cursor:pointer; font-weight:800; }
-    details { margin-top:10px; }
-    summary { cursor:pointer; color:#1d4ed8; font-weight:800; font-size:14px; list-style:none; }
-    summary::-webkit-details-marker { display:none; }
-    summary::after { content:'+'; display:inline-grid; place-items:center; margin-left:8px; width:20px; height:20px; border-radius:999px; background:#eff6ff; }
-    details[open] summary::after { content:'−'; }
-    .qa { border-radius:18px; padding:15px 16px; margin:12px 0; }
-    .qa .label { font-size:12px; font-weight:900; letter-spacing:.06em; text-transform:uppercase; margin-bottom:8px; }
-    .question-block { background:#f8fafc; border:1px solid #e2e8f0; }
-    .question-block p { font-size:18px; margin:0; color:#111827; font-weight:650; letter-spacing:-.01em; }
-    .answer-block { background:#fffbeb; border:1px solid #fde68a; }
-    .answer-block ul { margin:0; padding-left:18px; color:#374151; }
-    .answer-block li { margin:4px 0; }
-    .facts { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
-    .facts span { font-size:13px; background:#f8fafc; border:1px solid var(--line); padding:6px 9px; border-radius:10px; color:#374151; }
-    .evidence, .delta, .article-title { margin:7px 0 0; color:var(--muted); font-size:14px; }
-    .note { margin-top:34px; color:var(--muted); font-size:14px; border-top:1px solid var(--line); padding-top:22px; }
-    @media (max-width:760px) { .top,.focus,.controls,.api-panel { grid-template-columns:1fr; } .api-status { justify-content:flex-start; } .stamp { text-align:left; } .stats { justify-content:flex-start; } h1 { font-size:42px; } .issue,.issue-head,.quick-row { grid-template-columns:1fr; } .score { text-align:left; border-left:0; padding-left:0; } }
+    .issue { display:grid; grid-template-columns:58px 1fr; gap:16px; border:1px solid var(--line); border-radius:28px; background:rgba(255,255,255,.74); padding:18px; box-shadow:0 18px 56px rgba(52,39,22,.07); }
+    .issue:hover { transform:translateY(-1px); box-shadow:0 26px 70px rgba(52,39,22,.10); }
+    .rank span { display:grid; place-items:center; width:48px; height:60px; border-radius:18px; background:var(--ink); color:#fff7e8; font:900 20px/1 ui-sans-serif,system-ui; }
+    .meta { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:10px; }
+    .meta span,.badge { font:900 11px/1.2 ui-sans-serif,system-ui; color:#4b4033; background:#f6efe2; border:1px solid var(--line); padding:5px 8px; border-radius:999px; letter-spacing:.03em; }
+    .cabinet_high .meta span:nth-child(3) { color:var(--green); background:#edf8ef; border-color:#bfdcc7; } .cabinet_review .meta span:nth-child(3) { color:var(--amber); background:#fff5df; border-color:#ead29d; }
+    .badge.new { color:#234d8f; background:#edf3ff; } .badge.up { color:#9d1c1c; background:#fff0ed; } .badge.shift { color:#8f3f23; background:#fff2e8; }
+    .issue-head { display:grid; grid-template-columns:1fr 94px; gap:18px; }
+    h3 { margin:0; font-size:22px; line-height:1.28; letter-spacing:-.025em; }
+    .score { text-align:right; border-left:1px solid var(--line); padding-left:14px; font-family:ui-sans-serif,system-ui; }
+    .score b { display:block; font-size:32px; letter-spacing:-.05em; } .score small { color:var(--muted); font-weight:900; font-size:11px; text-transform:uppercase; }
+    .first-q { margin:12px 0 14px; padding-left:14px; border-left:4px solid var(--accent); font-size:18px; font-weight:700; color:#221b13; }
+    .brief-grid { display:grid; grid-template-columns:1fr 1fr 1.2fr; gap:10px; }
+    .brief-grid div { border:1px solid var(--line); border-radius:18px; background:#fbf8f1; padding:12px; min-width:0; }
+    .brief-grid small { display:block; font:900 11px/1.2 ui-sans-serif,system-ui; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; margin-bottom:6px; }
+    .brief-grid b { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; font-size:14px; line-height:1.45; }
+    .actions { margin:13px 0 4px; display:flex; flex-wrap:wrap; gap:7px; }
+    .actions a,.actions button { border:1px solid var(--ink); background:var(--ink); color:#fff7e8; border-radius:999px; padding:9px 12px; font:900 13px/1.2 ui-sans-serif,system-ui; cursor:pointer; }
+    .actions .ghost,.actions .pick { background:transparent; color:var(--ink); border-color:var(--line); }
+    details { margin-top:12px; } summary { cursor:pointer; color:var(--blue); font:900 14px/1.2 ui-sans-serif,system-ui; list-style:none; } summary::-webkit-details-marker { display:none; }
+    .qa { border-radius:20px; padding:15px 17px; margin:12px 0; background:#fff6df; border:1px solid #ead29d; } .label { font:900 11px/1.2 ui-sans-serif,system-ui; color:#8f3f23; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; }
+    .qa ul { margin:0; padding-left:18px; } .qa li { margin:4px 0; } .delta,.article-title,.note { color:var(--muted); font-size:14px; }
+    .tray { position:fixed; right:18px; bottom:18px; width:min(420px,calc(100vw - 36px)); background:var(--deep); color:#fff7e8; border-radius:24px; padding:16px; box-shadow:0 24px 80px rgba(15,23,42,.28); z-index:20; display:none; } .tray.open { display:block; } .tray h2 { font-size:16px; margin:0 0 8px; } .tray li { margin:8px 0; color:#d8cfbd; } .tray-actions { display:flex; gap:8px; margin-top:12px; } .tray button { border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.08); color:white; border-radius:999px; padding:8px 11px; cursor:pointer; font-weight:800; }
+    .note { border-top:1px solid var(--line); margin-top:30px; padding-top:20px; }
+    @media (max-width:880px) { .hero,.brief-layout,.api-panel,.controls { grid-template-columns:1fr; } .hero-panel { border-left:0; border-top:1px solid var(--line); } h1 { font-size:54px; } .brief-rail { position:static; } .issue,.issue-head,.brief-grid { grid-template-columns:1fr; } .score { text-align:left; border-left:0; padding-left:0; } }
   </style>
 </head>
 <body>
 <main>
-  <section class="top">
-    <div>
-      <div class="eyebrow">Cabinet intelligence prototype</div>
-      <h1>Question Forecast</h1>
-      <p class="lead">매일 보도를 부처 업무와 과거 국무회의 질문 패턴에 연결해, 장관이 준비해야 할 예상 질의와 답변 근거를 정리합니다.</p>
-    </div>
-    <div class="stamp">
-      <div>Generated<br><b>2026-04-29T22:47:37.636068</b></div>
-      <div class="stats"><span class="stat">Top 5</span><span class="stat">High 3</span><span class="stat">Avg 80.1</span></div>
+  <section class="masthead">
+    <div class="kicker"><span>Cabinet intelligence prototype</span><span>Generated · 2026-04-29T22:47:37.636068</span></div>
+    <div class="hero">
+      <div class="hero-copy"><h1>Question Forecast</h1><p class="lead">매일 보도를 부처 업무, 과거 국무회의 질문 패턴, 답변 근거 통계에 연결해 장관용 예상 질의 브리핑을 만듭니다.</p></div>
+      <aside class="hero-panel"><div><small>Today’s first question</small><h2>교육부 · school_field_trip</h2><div class="hero-question">현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?</div></div><div class="hero-stats"><div><b>5</b><span>packets</span></div><div><b>3</b><span>high</span></div><div><b>80.1</b><span>avg score</span></div></div></aside>
     </div>
   </section>
-  <section class="focus">
-    <div><h2>오늘 먼저 볼 이슈</h2><p>질문 가능성이 높거나 장관 답변 준비가 급한 항목입니다.</p></div>
-    <ul><li><b>교육부</b> · school_field_trip <span>88.1</span></li><li><b>행정안전부</b> · disaster_safety <span>86.2</span></li></ul>
-  </section>
-  <nav class="links">
-    <a href="daily-digest.md">Daily digest</a>
-    <a href="briefing.md">Full briefing</a>
-    <a href="radar.md">Radar markdown</a>
-    <a href="gold-v1.md">Gold v1</a>
-    <a href="threshold.md">Calibration</a>
-    <a href="https://github.com/hosungseo/question-forecast">GitHub</a>
-  </nav>
-  <section class="api-panel" aria-label="데이터 상태">
-    <div>
-      <h2>데이터 상태</h2>
-      <p id="apiSummary">Vercel API에서 최신 레이더를 확인합니다.</p>
-      <div class="api-actions"><button id="refreshApi">API 재확인</button><button id="copyApi">API 링크 복사</button><a href="/api/latest">/api/latest</a><a href="/api/issues">/api/issues</a></div>
-    </div>
-    <div class="api-status"><span class="pill" id="apiLive">확인 전</span><span class="pill" id="apiGenerated">generated: -</span><span class="pill" id="apiCount">packets: -</span></div>
-  </section>
-  <section class="controls">
-    <input id="search" type="search" placeholder="이슈, 부처, 질문, 답변근거 검색" />
-    <select id="sort"><option value="rank">기본 순위</option><option value="score">질문 가능성 높은 순</option></select>
-    <button id="expand">모두 펼치기</button>
-    <button id="collapse">모두 접기</button>
-  </section>
+  <nav class="links"><a href="daily-digest.md">Daily digest</a><a href="briefing.md">Full briefing</a><a href="radar.md">Radar markdown</a><a href="gold-v1.md">Gold v1</a><a href="threshold.md">Calibration</a><a href="https://github.com/hosungseo/question-forecast">GitHub</a></nav>
+  <section class="api-panel" aria-label="데이터 상태"><div><h2>데이터 상태</h2><p id="apiSummary">Vercel API에서 최신 레이더를 확인합니다.</p><div class="api-actions"><button id="refreshApi">API 재확인</button><button id="copyApi">API 링크 복사</button><a href="/api/latest">/api/latest</a><a href="/api/issues">/api/issues</a></div></div><div class="api-status"><span class="pill" id="apiLive">확인 전</span><span class="pill" id="apiGenerated">generated: -</span><span class="pill" id="apiCount">packets: -</span></div></section>
+  <section class="controls"><input id="search" type="search" placeholder="이슈, 부처, 질문, 답변근거 검색" /><select id="sort"><option value="rank">기본 순위</option><option value="score">질문 가능성 높은 순</option></select><button id="expand">모두 펼치기</button><button id="collapse">모두 접기</button></section>
   <div class="filters"><button data-filter="전체">전체</button><button data-filter="교육부">교육부</button><button data-filter="금융위원회">금융위원회</button><button data-filter="기획재정부">기획재정부</button><button data-filter="법무부">법무부</button><button data-filter="행정안전부">행정안전부</button></div>
-  <section class="issues" id="issues">
-    
-    <article class="issue cabinet_high" data-ministry="교육부" data-score="88.1" data-search="교육부 school_field_trip 현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까? 학교안전, 교권보호 지역별 학교 수/학생 수/교원 수 · 학교 안전사고/교육활동 침해 관련 통계 현장체험학습 위축에…교육부 “교사 면책권 강화” 스승의 날 전후 발...">
-      <div class="rank">1</div>
+  <section class="brief-layout"><aside class="brief-rail"><h2>오늘 먼저 볼 이슈</h2><p>질문 가능성이 높거나 장관 답변 준비가 급한 순서입니다.</p><ul class="focus-list"><li><span>1</span><b>교육부</b><em>school_field_trip</em><strong>88.1</strong></li><li><span>2</span><b>행정안전부</b><em>disaster_safety</em><strong>86.2</strong></li><li><span>3</span><b>기획재정부</b><em>prices_livelihood</em><strong>78.5</strong></li><li><span>4</span><b>법무부</b><em>justice_reform</em><strong>71.5</strong></li><li><span>5</span><b>금융위원회</b><em>finance_rates</em><strong>76.2</strong></li></ul></aside><section class="issues" id="issues">
+    <article class="issue cabinet_high" data-ministry="교육부" data-score="88.1" data-search="교육부 school_field_trip 현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까? 학교안전, 교권보호 지역별 학교 수/학생 수/교원 수 · 학교 안전사고/교육활동 침해 관련 통계 2025-07-15 · 예산/재정 확인 · 또 일주일 만에 이렇게 뵙게 되었음. 의대생들이 다행스럽게 학업에 복귀하기로 했다고 함. 늦었지만 참으로 다행스러운 일임. 교육 당국이 필요한 후속 조치를 신속하게 추진해 주기 바람. 그리고 의대생 현장체험학습 위축에…교육부 “교사 면책권 강화” 스승의 날 전후 발...">
+      <div class="rank"><span>1</span></div>
       <div class="issue-main">
         <div class="meta"><span>교육부</span><span>school_field_trip</span><span>cabinet_high</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <div>
-            <h3>현장체험학습·소풍 축소 문제의 핵심 리스크는 현장 회피가 교육기회 축소로 굳어지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다.</h3>
-            <p class="one-line">현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?</p>
-          </div>
-          <div class="score"><b>88.1</b><small>question likelihood</small></div>
+          <h3>현장체험학습·소풍 축소 문제의 핵심 리스크는 현장 회피가 교육기회 축소로 굳어지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다.</h3>
+          <div class="score"><b>88.1</b><small>질문 가능성</small></div>
         </div>
-        <div class="quick-row">
-          <span>기사 25건</span>
-          <span>학교안전, 교권보호</span>
-          <span>전일 대비 큰 변화는 없습니다.</span>
+        <p class="first-q">현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?</p>
+        <div class="brief-grid">
+          <div><small>업무 연결</small><b>학교안전, 교권보호</b></div>
+          <div><small>답변 근거</small><b>지역별 학교 수/학생 수/교원 수 · 학교 안전사고/교육활동 침해 관련 통계</b></div>
+          <div><small>유사사례</small><b>2025-07-15 · 예산/재정 확인 · 또 일주일 만에 이렇게 뵙게 되었음. 의대생들이 다행스럽게 학업에 복귀하기로 했다고 함. 늦었지만 참으로 다행스러운 일임. 교육 당국이 필요한 후속 조치를 신속하게 추진해 주기 바람. 그리고 의대생</b></div>
         </div>
-        <div class="actions"><a href="issue-1-school_field_trip.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-1-school_field_trip.md">메모</a><button class="pick" data-title="교육부 · school_field_trip" data-score="88.1" data-question="현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?">검토 바구니</button></div>
+        <div class="actions"><a href="issue-1-school_field_trip.html">상세 브리핑</a><a class="ghost" href="memo-1-school_field_trip.md">메모</a><button class="pick" data-title="교육부 · school_field_trip" data-score="88.1" data-question="현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?">검토 바구니</button></div>
         <details>
-          <summary>질문·답변 준비 펼치기</summary>
-          <section class="qa question-block">
-            <div class="label">대통령 예상 질문</div>
-            <p>현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?</p>
-          </section>
-          <section class="qa answer-block">
-            <div class="label">장관 답변 준비</div>
-            <ul><li>교육부 직접 사무인지 교육청 집행 사무인지 구분</li><li>법령·예산·지침 중 실제 조치수단 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-          </section>
-          <div class="facts">
-            <span>업무: 학교안전, 교권보호</span>
-            <span>답변근거: 지역별 학교 수/학생 수/교원 수 · 학교 안전사고/교육활동 침해 관련 통계</span>
-          </div>
+          <summary>장관 답변 준비 펼치기</summary>
+          <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>교육부 직접 사무인지 교육청 집행 사무인지 구분</li><li>법령·예산·지침 중 실제 조치수단 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
+          <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
           <p class="article-title">대표 기사: 현장체험학습 위축에…교육부 “교사 면책권 강화” 스승의 날 전후 발...</p>
         </details>
       </div>
     </article>
 
-    <article class="issue cabinet_high" data-ministry="행정안전부" data-score="86.2" data-search="행정안전부 disaster_safety 재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까? 재난안전, 지방행정 화재 발생/재난 피해 통계 지하차도 침수 통제, 5월부터 지도·내비 앱에서 안내한다">
-      <div class="rank">2</div>
+    <article class="issue cabinet_high" data-ministry="행정안전부" data-score="86.2" data-search="행정안전부 disaster_safety 재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까? 재난안전, 지방행정 화재 발생/재난 피해 통계 2025-07-15 · 부처협의 확인 · 산불 조기 발견, 조기 대응이 핵심일 것 같음. 그러려면 국방부 자원을 잘 활용해서 헬기 대응 체제를 같이 하라고 했는데, 제가 국방부에도 별도로 얘기는 해놨으니 아예 장비를 미리 갖추고 일정 시기 지하차도 침수 통제, 5월부터 지도·내비 앱에서 안내한다">
+      <div class="rank"><span>2</span></div>
       <div class="issue-main">
         <div class="meta"><span>행정안전부</span><span>disaster_safety</span><span>cabinet_high</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <div>
-            <h3>재난·안전 대응 이슈의 핵심 리스크는 사후 수습은 반복되지만 사전 통제가 늦어지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 먼저 실제 현황과 추세를 분명히 확인해야 합니다.</h3>
-            <p class="one-line">재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?</p>
-          </div>
-          <div class="score"><b>86.2</b><small>question likelihood</small></div>
+          <h3>재난·안전 대응 이슈의 핵심 리스크는 사후 수습은 반복되지만 사전 통제가 늦어지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 먼저 실제 현황과 추세를 분명히 확인해야 합니다.</h3>
+          <div class="score"><b>86.2</b><small>질문 가능성</small></div>
         </div>
-        <div class="quick-row">
-          <span>기사 31건</span>
-          <span>재난안전, 지방행정</span>
-          <span>전일 대비 큰 변화는 없습니다.</span>
+        <p class="first-q">재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?</p>
+        <div class="brief-grid">
+          <div><small>업무 연결</small><b>재난안전, 지방행정</b></div>
+          <div><small>답변 근거</small><b>화재 발생/재난 피해 통계</b></div>
+          <div><small>유사사례</small><b>2025-07-15 · 부처협의 확인 · 산불 조기 발견, 조기 대응이 핵심일 것 같음. 그러려면 국방부 자원을 잘 활용해서 헬기 대응 체제를 같이 하라고 했는데, 제가 국방부에도 별도로 얘기는 해놨으니 아예 장비를 미리 갖추고 일정 시기</b></div>
         </div>
-        <div class="actions"><a href="issue-2-disaster_safety.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-2-disaster_safety.md">메모</a><button class="pick" data-title="행정안전부 · disaster_safety" data-score="86.2" data-question="재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?">검토 바구니</button></div>
+        <div class="actions"><a href="issue-2-disaster_safety.html">상세 브리핑</a><a class="ghost" href="memo-2-disaster_safety.md">메모</a><button class="pick" data-title="행정안전부 · disaster_safety" data-score="86.2" data-question="재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?">검토 바구니</button></div>
         <details>
-          <summary>질문·답변 준비 펼치기</summary>
-          <section class="qa question-block">
-            <div class="label">대통령 예상 질문</div>
-            <p>재난·안전 대응 이슈은 기사상 신호(산불, 재난, 안전, 화재)보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?</p>
-          </section>
-          <section class="qa answer-block">
-            <div class="label">장관 답변 준비</div>
-            <ul><li>중앙-지방 역할분담 확인</li><li>현장 통제와 국민안내 책임기관 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-          </section>
-          <div class="facts">
-            <span>업무: 재난안전, 지방행정</span>
-            <span>답변근거: 화재 발생/재난 피해 통계</span>
-          </div>
+          <summary>장관 답변 준비 펼치기</summary>
+          <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>중앙-지방 역할분담 확인</li><li>현장 통제와 국민안내 책임기관 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
+          <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
           <p class="article-title">대표 기사: 지하차도 침수 통제, 5월부터 지도·내비 앱에서 안내한다</p>
         </details>
       </div>
     </article>
 
-    <article class="issue cabinet_high" data-ministry="기획재정부" data-score="78.5" data-search="기획재정부 prices_livelihood 해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까? 예산, 물가 소비자물가지수/생활물가 관련 지표 · 가계동향/소득분위별 지출 하남시의회, 305억 추경 의결…민생지원 속도전">
-      <div class="rank">3</div>
+    <article class="issue cabinet_high" data-ministry="기획재정부" data-score="78.5" data-search="기획재정부 prices_livelihood 해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까? 예산, 물가 소비자물가지수/생활물가 관련 지표 · 가계동향/소득분위별 지출 2025-08-29 · 예산/재정 확인 · 국민 여러분의 아낌없는 조언이 큰 힘 되었음. 진심으로 감사드림. 팀코리아의 정신으로 현지에서 혼연일체로 함께 헌신해 주신 기업인 여러분 그리고 언론인 여러분께도 각별히 감사의 인사를 드림. 외교도 하남시의회, 305억 추경 의결…민생지원 속도전">
+      <div class="rank"><span>3</span></div>
       <div class="issue-main">
         <div class="meta"><span>기획재정부</span><span>prices_livelihood</span><span>cabinet_high</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <div>
-            <h3>물가·민생 부담의 핵심 리스크는 지원은 나가지만 체감 물가가 내려가지 않는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 예산·인력·법령·집행절차 중 무엇이 막고 있는지 밝혀야 합니다.</h3>
-            <p class="one-line">해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?</p>
-          </div>
-          <div class="score"><b>78.5</b><small>question likelihood</small></div>
+          <h3>물가·민생 부담의 핵심 리스크는 지원은 나가지만 체감 물가가 내려가지 않는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 예산·인력·법령·집행절차 중 무엇이 막고 있는지 밝혀야 합니다.</h3>
+          <div class="score"><b>78.5</b><small>질문 가능성</small></div>
         </div>
-        <div class="quick-row">
-          <span>기사 24건</span>
-          <span>예산, 물가</span>
-          <span>전일 대비 큰 변화는 없습니다.</span>
+        <p class="first-q">해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?</p>
+        <div class="brief-grid">
+          <div><small>업무 연결</small><b>예산, 물가</b></div>
+          <div><small>답변 근거</small><b>소비자물가지수/생활물가 관련 지표 · 가계동향/소득분위별 지출</b></div>
+          <div><small>유사사례</small><b>2025-08-29 · 예산/재정 확인 · 국민 여러분의 아낌없는 조언이 큰 힘 되었음. 진심으로 감사드림. 팀코리아의 정신으로 현지에서 혼연일체로 함께 헌신해 주신 기업인 여러분 그리고 언론인 여러분께도 각별히 감사의 인사를 드림. 외교도</b></div>
         </div>
-        <div class="actions"><a href="issue-3-prices_livelihood.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-3-prices_livelihood.md">메모</a><button class="pick" data-title="기획재정부 · prices_livelihood" data-score="78.5" data-question="해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?">검토 바구니</button></div>
+        <div class="actions"><a href="issue-3-prices_livelihood.html">상세 브리핑</a><a class="ghost" href="memo-3-prices_livelihood.md">메모</a><button class="pick" data-title="기획재정부 · prices_livelihood" data-score="78.5" data-question="해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?">검토 바구니</button></div>
         <details>
-          <summary>질문·답변 준비 펼치기</summary>
-          <section class="qa question-block">
-            <div class="label">대통령 예상 질문</div>
-            <p>해결을 막는 병목이 예산, 집행 속도, 지원대상 선별, 물가 전가 구조 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?</p>
-          </section>
-          <section class="qa answer-block">
-            <div class="label">장관 답변 준비</div>
-            <ul><li>지원수단별 효과와 재정소요 비교</li><li>집행속도와 대상선별 기준 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-          </section>
-          <div class="facts">
-            <span>업무: 예산, 물가</span>
-            <span>답변근거: 소비자물가지수/생활물가 관련 지표 · 가계동향/소득분위별 지출</span>
-          </div>
+          <summary>장관 답변 준비 펼치기</summary>
+          <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>지원수단별 효과와 재정소요 비교</li><li>집행속도와 대상선별 기준 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
+          <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
           <p class="article-title">대표 기사: 하남시의회, 305억 추경 의결…민생지원 속도전</p>
         </details>
       </div>
     </article>
 
-    <article class="issue cabinet_review" data-ministry="법무부" data-score="71.5" data-search="법무부 justice_reform 법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까? 검찰 범죄 발생/검거/재판 관련 통계 검찰 떠나는 &#x27;대가&#x27;(大家) 검사들… 국가 수사력도 흔들">
-      <div class="rank">4</div>
+    <article class="issue cabinet_review" data-ministry="법무부" data-score="71.5" data-search="법무부 justice_reform 법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까? 검찰 범죄 발생/검거/재판 관련 통계 2026-02-10 · 현황 질문 · 검찰, 경찰, 관세청이 마약 단속과 관계된 부처인지? 검찰 떠나는 &#x27;대가&#x27;(大家) 검사들… 국가 수사력도 흔들">
+      <div class="rank"><span>4</span></div>
       <div class="issue-main">
         <div class="meta"><span>법무부</span><span>justice_reform</span><span>cabinet_review</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <div>
-            <h3>범죄 대응·수사·검찰개혁 이슈의 핵심 리스크는 기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 관계 부처와 기관의 역할 분담을 명확히 해야 합니다.</h3>
-            <p class="one-line">법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?</p>
-          </div>
-          <div class="score"><b>71.5</b><small>question likelihood</small></div>
+          <h3>범죄 대응·수사·검찰개혁 이슈의 핵심 리스크는 기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 관계 부처와 기관의 역할 분담을 명확히 해야 합니다.</h3>
+          <div class="score"><b>71.5</b><small>질문 가능성</small></div>
         </div>
-        <div class="quick-row">
-          <span>기사 22건</span>
-          <span>검찰</span>
-          <span>전일 대비 큰 변화는 없습니다.</span>
+        <p class="first-q">법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?</p>
+        <div class="brief-grid">
+          <div><small>업무 연결</small><b>검찰</b></div>
+          <div><small>답변 근거</small><b>범죄 발생/검거/재판 관련 통계</b></div>
+          <div><small>유사사례</small><b>2026-02-10 · 현황 질문 · 검찰, 경찰, 관세청이 마약 단속과 관계된 부처인지?</b></div>
         </div>
-        <div class="actions"><a href="issue-4-justice_reform.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-4-justice_reform.md">메모</a><button class="pick" data-title="법무부 · justice_reform" data-score="71.5" data-question="법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?">검토 바구니</button></div>
+        <div class="actions"><a href="issue-4-justice_reform.html">상세 브리핑</a><a class="ghost" href="memo-4-justice_reform.md">메모</a><button class="pick" data-title="법무부 · justice_reform" data-score="71.5" data-question="법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?">검토 바구니</button></div>
         <details>
-          <summary>질문·답변 준비 펼치기</summary>
-          <section class="qa question-block">
-            <div class="label">대통령 예상 질문</div>
-            <p>법무부·검찰·경찰·외교부·재판기관가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?</p>
-          </section>
-          <section class="qa answer-block">
-            <div class="label">장관 답변 준비</div>
-            <ul><li>피해자 보호와 재판가능성 확인</li><li>법무부-검찰-경찰-외교부 역할분담 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-          </section>
-          <div class="facts">
-            <span>업무: 검찰</span>
-            <span>답변근거: 범죄 발생/검거/재판 관련 통계</span>
-          </div>
+          <summary>장관 답변 준비 펼치기</summary>
+          <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>피해자 보호와 재판가능성 확인</li><li>법무부-검찰-경찰-외교부 역할분담 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
+          <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
           <p class="article-title">대표 기사: 검찰 떠나는 &#x27;대가&#x27;(大家) 검사들… 국가 수사력도 흔들</p>
         </details>
       </div>
     </article>
 
-    <article class="issue cabinet_review" data-ministry="금융위원회" data-score="76.2" data-search="금융위원회 finance_rates 결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까? 서민금융 가계부채/대출금리 · 서민금융/취약차주 지표 [초점] 중금리 대출 숨통 트였는데···저축은행 &#x27;신중모드&#x27;, 왜?">
-      <div class="rank">5</div>
+    <article class="issue cabinet_review" data-ministry="금융위원회" data-score="76.2" data-search="금융위원회 finance_rates 결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까? 서민금융 가계부채/대출금리 · 서민금융/취약차주 지표 2025-08-12 · 현황 질문 · 산업재해 예방을 위한 대책을 구체적으로 준비한 곳이 노동부하고 국토부 둘밖에 없는지? 지난번에 금융위원회에서 이런 회사들이 사고 내면 대출 이자에 불이익을 주거나 대출 규제를 한다든지, 국민연금 같 [초점] 중금리 대출 숨통 트였는데···저축은행 &#x27;신중모드&#x27;, 왜?">
+      <div class="rank"><span>5</span></div>
       <div class="issue-main">
         <div class="meta"><span>금융위원회</span><span>finance_rates</span><span>cabinet_review</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
-          <div>
-            <h3>금리·대출 부담의 핵심 리스크는 정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 국민이 체감할 변화를 중심으로 답변을 준비해야 합니다.</h3>
-            <p class="one-line">결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?</p>
-          </div>
-          <div class="score"><b>76.2</b><small>question likelihood</small></div>
+          <h3>금리·대출 부담의 핵심 리스크는 정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, 국민이 체감할 변화를 중심으로 답변을 준비해야 합니다.</h3>
+          <div class="score"><b>76.2</b><small>질문 가능성</small></div>
         </div>
-        <div class="quick-row">
-          <span>기사 29건</span>
-          <span>서민금융</span>
-          <span>전일 대비 큰 변화는 없습니다.</span>
+        <p class="first-q">결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?</p>
+        <div class="brief-grid">
+          <div><small>업무 연결</small><b>서민금융</b></div>
+          <div><small>답변 근거</small><b>가계부채/대출금리 · 서민금융/취약차주 지표</b></div>
+          <div><small>유사사례</small><b>2025-08-12 · 현황 질문 · 산업재해 예방을 위한 대책을 구체적으로 준비한 곳이 노동부하고 국토부 둘밖에 없는지? 지난번에 금융위원회에서 이런 회사들이 사고 내면 대출 이자에 불이익을 주거나 대출 규제를 한다든지, 국민연금 같</b></div>
         </div>
-        <div class="actions"><a href="issue-5-finance_rates.html">상세 브리핑 열기 →</a><a class="ghost" href="memo-5-finance_rates.md">메모</a><button class="pick" data-title="금융위원회 · finance_rates" data-score="76.2" data-question="결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?">검토 바구니</button></div>
+        <div class="actions"><a href="issue-5-finance_rates.html">상세 브리핑</a><a class="ghost" href="memo-5-finance_rates.md">메모</a><button class="pick" data-title="금융위원회 · finance_rates" data-score="76.2" data-question="결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?">검토 바구니</button></div>
         <details>
-          <summary>질문·답변 준비 펼치기</summary>
-          <section class="qa question-block">
-            <div class="label">대통령 예상 질문</div>
-            <p>결국 국민이 체감할 변화가 있어야 합니다. 실수요자·취약차주의 상환 부담을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?</p>
-          </section>
-          <section class="qa answer-block">
-            <div class="label">장관 답변 준비</div>
-            <ul><li>정책금융 대상 적합성 확인</li><li>취약차주 지원과 금융건전성 균형 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul>
-          </section>
-          <div class="facts">
-            <span>업무: 서민금융</span>
-            <span>답변근거: 가계부채/대출금리 · 서민금융/취약차주 지표</span>
-          </div>
+          <summary>장관 답변 준비 펼치기</summary>
+          <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>정책금융 대상 적합성 확인</li><li>취약차주 지원과 금융건전성 균형 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
+          <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
           <p class="article-title">대표 기사: [초점] 중금리 대출 숨통 트였는데···저축은행 &#x27;신중모드&#x27;, 왜?</p>
         </details>
       </div>
-    </article>
-  </section>
+    </article></section></section>
   <p class="note">Note: This is a decision-support radar, not a claim about actual presidential intent. Statistics are answer evidence, not literal presidential questions.</p>
 </main>
-<aside class="tray" id="tray">
-  <h2>검토 바구니</h2>
-  <ul id="trayList"></ul>
-  <div class="tray-actions"><button id="copyTray">복사</button><button id="clearTray">비우기</button></div>
-</aside>
+<aside class="tray" id="tray"><h2>검토 바구니</h2><ul id="trayList"></ul><div class="tray-actions"><button id="copyTray">복사</button><button id="clearTray">비우기</button></div></aside>
 <script>
   const buttons = document.querySelectorAll('.filters button');
   const cards = Array.from(document.querySelectorAll('.issue'));
@@ -331,24 +221,15 @@
   const sort = document.getElementById('sort');
   let activeFilter = '전체';
   async function checkApi() {
-    const live = document.getElementById('apiLive');
-    const generated = document.getElementById('apiGenerated');
-    const count = document.getElementById('apiCount');
-    const summary = document.getElementById('apiSummary');
+    const live = document.getElementById('apiLive'), generated = document.getElementById('apiGenerated'), count = document.getElementById('apiCount'), summary = document.getElementById('apiSummary');
     live.textContent = '확인 중'; live.className = 'pill';
     try {
       const res = await fetch('/api/latest', { cache: 'no-store' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
-      const packets = data.packets || [];
-      live.textContent = 'API 정상'; live.className = 'pill ok';
-      generated.textContent = 'generated: ' + (data.generated_at || '-');
-      count.textContent = 'packets: ' + packets.length;
+      const data = await res.json(); const packets = data.packets || [];
+      live.textContent = 'API 정상'; live.className = 'pill ok'; generated.textContent = 'generated: ' + (data.generated_at || '-'); count.textContent = 'packets: ' + packets.length;
       summary.textContent = '최신 JSON API가 응답했습니다. 화면 산출물과 API 산출물을 함께 사용할 수 있습니다.';
-    } catch (err) {
-      live.textContent = 'API 점검 필요'; live.className = 'pill bad';
-      summary.textContent = 'API 확인에 실패했습니다. 정적 대시보드는 계속 볼 수 있습니다.';
-    }
+    } catch (err) { live.textContent = 'API 점검 필요'; live.className = 'pill bad'; summary.textContent = 'API 확인에 실패했습니다. 정적 대시보드는 계속 볼 수 있습니다.'; }
   }
   function apply() {
     const q = (search.value || '').trim().toLowerCase();
@@ -361,48 +242,23 @@
     ordered.forEach(card => issues.appendChild(card));
   }
   buttons[0]?.classList.add('active');
-  buttons.forEach(btn => btn.addEventListener('click', () => {
-    buttons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilter = btn.dataset.filter;
-    apply();
-  }));
-  search.addEventListener('input', apply);
-  sort.addEventListener('change', apply);
+  buttons.forEach(btn => btn.addEventListener('click', () => { buttons.forEach(b => b.classList.remove('active')); btn.classList.add('active'); activeFilter = btn.dataset.filter; apply(); }));
+  search.addEventListener('input', apply); sort.addEventListener('change', apply);
   document.getElementById('refreshApi').addEventListener('click', checkApi);
-  document.getElementById('copyApi').addEventListener('click', async () => {
-    const text = `${location.origin}/api/latest
-${location.origin}/api/issues`;
-    try { await navigator.clipboard.writeText(text); document.getElementById('copyApi').textContent = '복사됨'; setTimeout(()=>document.getElementById('copyApi').textContent='API 링크 복사',1200); } catch(e) { alert(text); }
-  });
+  document.getElementById('copyApi').addEventListener('click', async () => { const text = `${location.origin}/api/latest
+${location.origin}/api/issues`; try { await navigator.clipboard.writeText(text); document.getElementById('copyApi').textContent = '복사됨'; setTimeout(()=>document.getElementById('copyApi').textContent='API 링크 복사',1200); } catch(e) { alert(text); } });
   checkApi();
   document.getElementById('expand').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = true));
   document.getElementById('collapse').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = false));
-  const tray = document.getElementById('tray');
-  const trayList = document.getElementById('trayList');
-  const picks = [];
-  function renderTray() {
-    tray.classList.toggle('open', picks.length > 0);
-    trayList.innerHTML = picks.map(p => `<li><b>${p.title}</b> (${p.score})<br>${p.question}</li>`).join('');
-  }
-  document.querySelectorAll('.pick').forEach(btn => btn.addEventListener('click', () => {
-    const item = { title: btn.dataset.title, score: btn.dataset.score, question: btn.dataset.question };
-    if (!picks.some(p => p.title === item.title)) picks.push(item);
-    renderTray();
-  }));
+  const tray = document.getElementById('tray'), trayList = document.getElementById('trayList'), picks = [];
+  function renderTray() { tray.classList.toggle('open', picks.length > 0); trayList.innerHTML = picks.map(p => `<li><b>${p.title}</b> (${p.score})<br>${p.question}</li>`).join(''); }
+  document.querySelectorAll('.pick').forEach(btn => btn.addEventListener('click', () => { const item = { title: btn.dataset.title, score: btn.dataset.score, question: btn.dataset.question }; if (!picks.some(p => p.title === item.title)) picks.push(item); renderTray(); }));
   document.getElementById('clearTray').addEventListener('click', () => { picks.length = 0; renderTray(); });
-  document.getElementById('copyTray').addEventListener('click', async () => {
-    const text = picks.map((p,i) => `${i+1}. ${p.title} (${p.score})
+  document.getElementById('copyTray').addEventListener('click', async () => { const text = picks.map((p,i) => `${i+1}. ${p.title} (${p.score})
 - ${p.question}`).join('
 
-');
-    try { await navigator.clipboard.writeText(text); document.getElementById('copyTray').textContent = '복사됨'; setTimeout(()=>document.getElementById('copyTray').textContent='복사',1200); } catch(e) { alert(text); }
-  });
-  window.addEventListener('keydown', e => {
-    if (e.key === '/' && document.activeElement !== search) { e.preventDefault(); search.focus(); }
-    if (e.key.toLowerCase() === 'e') document.getElementById('expand').click();
-    if (e.key.toLowerCase() === 'c') document.getElementById('collapse').click();
-  });
+'); try { await navigator.clipboard.writeText(text); document.getElementById('copyTray').textContent = '복사됨'; setTimeout(()=>document.getElementById('copyTray').textContent='복사',1200); } catch(e) { alert(text); } });
+  window.addEventListener('keydown', e => { if (e.key === '/' && document.activeElement !== search) { e.preventDefault(); search.focus(); } if (e.key.toLowerCase() === 'e') document.getElementById('expand').click(); if (e.key.toLowerCase() === 'c') document.getElementById('collapse').click(); });
 </script>
 </body>
 </html>

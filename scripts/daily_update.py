@@ -94,6 +94,7 @@ def main() -> int:
     copy_docs()
     run([sys.executable, 'scripts/export_issue_memos.py'])
     run([sys.executable, 'scripts/export_daily_digest.py'])
+    run([sys.executable, 'scripts/supabase_snapshot.py'])
     run([sys.executable, 'scripts/render_dashboard.py'])
     run([sys.executable, 'scripts/render_issue_pages.py'])
     after_top = top_issues()

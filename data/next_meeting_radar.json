@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T21:27:14.740577",
+  "generated_at": "2026-04-29T21:37:09.336730",
   "since": "2026-04-22",
   "packets": [
     {
@@ -19,13 +19,13 @@
       ],
       "terms": [
         "교사",
-        "수학여행",
         "소풍",
+        "수학여행",
         "교사의",
-        "현장체험학습",
-        "교육부",
-        "학교",
         "체험학습",
+        "현장체험학습",
+        "학교",
+        "교육부",
         "책임",
         "위한"
       ],
@@ -517,8 +517,8 @@
     {
       "issue_id": "disaster_safety",
       "ministry": "행정안전부",
-      "priority": 322,
-      "count": 33,
+      "priority": 323,
+      "count": 31,
       "signals": [
         "산불",
         "재난",
@@ -534,12 +534,12 @@
         "지하차도",
         "안전",
         "침수",
-        "대응",
         "실시간",
-        "행안부",
+        "대응",
         "산불",
-        "발생",
-        "화재"
+        "화재",
+        "내비게이션",
+        "행안부"
       ],
       "items": [
         {
@@ -621,17 +621,18 @@
           ]
         },
         {
-          "query": "침수 지하차도 안전",
-          "title": "'대전 지하차도 침수 정보' 내비로 실시간 안내한다",
-          "desc": "박민범 대전시 철도건설국장은 \"지하차도 침수는 인명 피해로 이어질 수 있는 만큼 차단 정보 제공 서비스와 현장 대응 체계를 연계해 단 한 건의 인명사고도 발생하지 않도록 하겠다\"고 밝혔다. 시는 행정안전부와 협력해...",
+          "query": "산불 재난 안전",
+          "title": "흩어진 재난 정보, ‘국민안전24’서 한눈에",
+          "desc": "국민안전24에서 실시간으로 제공하는 재난 정보 유형은 기존 9종(태풍·적조·산불·감염병·가축질병·가뭄예경보·미세먼지·교통정보·화재정보)에서 26종으로 확대된다. 추가되는 정보는 홍수·호우·폭풍해일·황사...",
           "pub_date": "2026-04-29",
-          "link": "https://n.news.naver.com/mnews/article/003/0013918101?sid=102",
-          "originallink": "https://www.newsis.com/view/NISX20260429_0003611969",
+          "link": "https://n.news.naver.com/mnews/article/032/0003442992?sid=102",
+          "originallink": "https://www.khan.co.kr/article/202604292129005",
           "relevance_score": 32,
           "signal_hits": [
+            "산불",
+            "재난",
             "안전",
-            "침수",
-            "지하차도"
+            "화재"
           ]
         }
       ],
@@ -725,11 +726,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 87.1,
+        "score": 86.2,
         "band": "cabinet_high",
         "drivers": {
-          "priority": 322.0,
-          "article_count": 33.0,
+          "priority": 323.0,
+          "article_count": 31.0,
           "signal_count": 8,
           "work_signal_hits": 4,
           "question_move_hits": 3
@@ -932,7 +933,7 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.2462,
+          "score": 0.1231,
           "meeting_date": "2026-01-20",
           "question_type": "현황 질문",
           "excerpt": "화재 발생 건수는 훨씬 더 많지 않았는지?"
@@ -944,10 +945,10 @@
           "excerpt": "우리도 대응 조치를 해야 하는 것은 아닌지, 법무부에서 이에 대한 검토를 해보셨는지?"
         },
         {
-          "score": 0.0899,
-          "meeting_date": "2025-07-01",
-          "question_type": "관리 지시",
-          "excerpt": "국방부 차관님은 새로 오셔서 보고를 다 받았겠지만, 치누크 헬기를 포함한 큰 헬기들 산불 발생 시기에만 산불 진압에 동원될 수 있도록 동원 체계와 장비를 갖추고 훈련도 평소 미리 하라고 얘기했었음. 각별히 챙겨서 내년에는 산불 피해를 올해보다 확실히 줄이도록, 실적 체크를 내년 봄에 하는 것으로 하고 훈련을 미리 좀 해야 할 것임. 같이 잘 준비해 주시기 바람."
+          "score": 0.0836,
+          "meeting_date": "2025-08-12",
+          "question_type": "현황 질문",
+          "excerpt": "몇 대를 준비하고 있고? 또 내년 봄에 산불 날 때 군대에서 동원할 수 있는 헬기 최대 숫자가 얼마 정도인지?"
         }
       ],
       "question_flow": [
@@ -981,7 +982,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": 1,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -1507,7 +1508,7 @@
     {
       "issue_id": "justice_reform",
       "ministry": "법무부",
-      "priority": 229,
+      "priority": 223,
       "count": 22,
       "signals": [
         "검찰",
@@ -1525,9 +1526,9 @@
         "지난해",
         "경찰청",
         "치안",
-        "법무부",
         "한국",
-        "마약"
+        "마약",
+        "확대"
       ],
       "items": [
         {
@@ -1594,26 +1595,25 @@
         },
         {
           "query": "범죄 수사 법무부",
-          "title": "[최창호 변호사의 법조단상] 사립학교 사무직원 육아휴직, 법적 보장과...",
-          "desc": "후 법무부 국가송무과장으로 대한민국 정부 관련 국가 송무를 총괄하면서 주요 헌법재판, 행정재판 및... 미국과의 SOFA 협상에 참여한 바 있으며, 항고, 재기수사명령 등 고검 사건과 중요경제범죄 등 다수의 사건을 처리한...",
-          "pub_date": "2026-04-29",
-          "link": "https://www.gosiweek.com/article/1065591321997428",
-          "originallink": "https://www.gosiweek.com/article/1065591321997428",
-          "relevance_score": 24,
-          "signal_hits": [
-            "범죄",
-            "수사",
-            "법무부",
-            "재판"
-          ]
-        },
-        {
-          "query": "범죄 수사 법무부",
           "title": "까르띠에 후손, 무허가 코인 거래소 운영에 징역 8년형",
           "desc": "미 법무부 발표를 종합하면, 그는 미국 은행 계좌와 페이퍼컴퍼니를 동원해 범죄 수익을 콜롬비아로 보내는... 더블록은 이번 선고가 앞서 2021년 수사 과정에서 까르띠에 측 유령회사 계좌에서 약 93만7000달러를 압수한...",
           "pub_date": "2026-04-29",
           "link": "http://www.hansbiz.co.kr/news/articleView.html?idxno=836190",
           "originallink": "http://www.hansbiz.co.kr/news/articleView.html?idxno=836190",
+          "relevance_score": 19,
+          "signal_hits": [
+            "범죄",
+            "수사",
+            "법무부"
+          ]
+        },
+        {
+          "query": "범죄 수사 법무부",
+          "title": "[연합뉴스 이 시각 헤드라인] - 18:00",
+          "desc": "■ 尹 체포방해 등 2심 징역7년…\"경호처 공무원 사병같이 사용\" 자신에 대한 고위공직자범죄수사처... 29일 법무부 등에 따르면 화천대유자산관리 대주주 김만배씨와 유동규 전 성남도시개발공사 기획본부장...",
+          "pub_date": "2026-04-29",
+          "link": "https://n.news.naver.com/mnews/article/001/0016051244?sid=100",
+          "originallink": "https://www.yna.co.kr/view/AKR20260429160900011?input=1195m",
           "relevance_score": 19,
           "signal_hits": [
             "범죄",
@@ -1711,10 +1711,10 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 71.9,
+        "score": 71.5,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 229.0,
+          "priority": 223.0,
           "article_count": 22.0,
           "signal_count": 6,
           "work_signal_hits": 5,
@@ -1918,19 +1918,19 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.303,
+          "score": 0.2928,
           "meeting_date": "2026-02-10",
           "question_type": "현황 질문",
           "excerpt": "검찰, 경찰, 관세청이 마약 단속과 관계된 부처인지?"
         },
         {
-          "score": 0.1296,
+          "score": 0.1252,
           "meeting_date": "2025-11-04",
           "question_type": "현황 질문",
           "excerpt": "경찰 업무 중에 수사 업무와 일반 경찰 업무는 수준이 다름. 교통경찰 하다가 수사하고, 수사경찰 하다가 교통 정비하러 가기도 하는지?"
         },
         {
-          "score": 0.1195,
+          "score": 0.1155,
           "meeting_date": "2025-07-29",
           "question_type": "현황 질문",
           "excerpt": "수사 전에 고용노동부에서 중대재해라고 하는지?"
@@ -1967,7 +1967,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": -6,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -2489,8 +2489,8 @@
     {
       "issue_id": "labor_jobs",
       "ministry": "고용노동부",
-      "priority": 200,
-      "count": 21,
+      "priority": 202,
+      "count": 22,
       "signals": [
         "일자리",
         "청년",
@@ -2584,16 +2584,17 @@
           ]
         },
         {
-          "query": "산재 원청 책임",
-          "title": "정부 중재 극적 타결에도 남은 과제...BGF리테일 '실질 지배력' 쟁점 떠...",
-          "desc": "통상 산업재해 사망 사고는 산재보험 보상 외에 회사 차원의 위로금과 별도 합의금이 더해지는 구조를... 속에서 원청이 실질적 권한을 행사하면서도 법적 책임을 회피해 온 '위험의 외주화'를 이번 참사의 본질로 보고...",
+          "query": "청년 일자리",
+          "title": "인제대-김해고용복지플러스센터, 청년고용정책 홍보 서포터즈 협약 체결",
+          "desc": "청년고용정책 홍보 서포터즈 협약식. / 인제대 인제대 대학일자리플러스센터는 29일 고용노동부 양산지청 김해고용복지플러스센터와 '2026년 청년고용정책 홍보 강화를 위한 서포터즈 연계 협약'을 체결했다. 이번 협약은...",
           "pub_date": "2026-04-29",
-          "link": "http://www.popcornnews.net/news/articleView.html?idxno=119843",
-          "originallink": "http://www.popcornnews.net/news/articleView.html?idxno=119843",
+          "link": "http://www.gimhaenews.co.kr/news/articleView.html?idxno=53283",
+          "originallink": "http://www.gimhaenews.co.kr/news/articleView.html?idxno=53283",
           "relevance_score": 18,
           "signal_hits": [
-            "산재",
-            "원청"
+            "일자리",
+            "청년",
+            "노동"
           ]
         }
       ],
@@ -2688,11 +2689,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 71.1,
+        "score": 71.7,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 200.0,
-          "article_count": 21.0,
+          "priority": 202.0,
+          "article_count": 22.0,
           "signal_count": 7,
           "work_signal_hits": 6,
           "question_move_hits": 3
@@ -2957,7 +2958,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": 2,
         "rank_change": 0,
         "move_change": {
           "from": [

@@ -13,7 +13,9 @@ for i,p in enumerate(packets,1):
     align=p.get('ministry_work_alignment',{})
     like=p.get('cabinet_question_likelihood',{})
     delta=p.get('daily_delta',{})
-    lines += [f"## {i}. {p['ministry']} — {p['issue_id']}", '', f"**왜 올라왔나**: 기사 {p['count']}건, 핵심 신호 `{', '.join(p['signals'][:8])}`", f"**국무회의 질문 가능성**: {like.get('score','-')} / {like.get('band','-')}", f"**연결된 부처 업무**: {', '.join(align.get('function_domains',[])[:4])}", f"**전일 대비**: {delta.get('interpretation','비교 기준 없음')}", '', '**종합 판단**', synthesis.get('diagnosis',''), '', '**대통령 예상 질문: 고도화 로직 기반**']
+    stat=p.get('statistical_evidence',{})
+    stat_labels=', '.join([c.get('label','') for c in stat.get('candidates',[])[:3]])
+    lines += [f"## {i}. {p['ministry']} — {p['issue_id']}", '', f"**왜 올라왔나**: 기사 {p['count']}건, 핵심 신호 `{', '.join(p['signals'][:8])}`", f"**국무회의 질문 가능성**: {like.get('score','-')} / {like.get('band','-')}", f"**연결된 부처 업무**: {', '.join(align.get('function_domains',[])[:4])}", f"**관련 통계 후보**: {stat_labels or '미지정'}", f"**전일 대비**: {delta.get('interpretation','비교 기준 없음')}", '', '**종합 판단**', synthesis.get('diagnosis',''), '', '**대통령 예상 질문: 고도화 로직 기반**']
     for q in synthesis.get('questions', []):
         lines.append(f"- **{q['move']}**: {q['question']}")
     if synthesis.get('follow_up'):
@@ -21,6 +23,14 @@ for i,p in enumerate(packets,1):
     lines += ['', '**이슈별 보조 질문**']
     for q in p['questions']:
         lines.append(f'- {q}')
+    if stat.get('candidates'):
+        lines += ['', '**통계로 확인할 질문**']
+        for q in stat.get('stat_questions',[])[:4]:
+            lines.append(f"- **{q.get('stat','통계')}**: {q.get('question','')} / 준비값: {q.get('answer_need','')}")
+        if stat.get('live_status') != 'ok' and stat.get('live_errors'):
+            lines.append(f"- KOSIS live status: {stat.get('live_status')} ({'; '.join(stat.get('live_errors',[])[:2])})")
+        for live in stat.get('live_reference_cards',[])[:1]:
+            lines.append(f"- KOSIS live check · {live.get('label')} · latest={live.get('latest_value')} previous={live.get('previous_value')}")
     if p.get('similar_historical_cases'):
         lines += ['', '**과거 유사 질문 사례**']
         for c in p['similar_historical_cases'][:2]:

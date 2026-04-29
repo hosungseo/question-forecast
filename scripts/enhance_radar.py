@@ -23,6 +23,7 @@ RADAR = DATA / 'next_meeting_radar.json'
 PREV = DATA / 'previous_next_meeting_radar.json'
 DB = DATA / 'cabinet_question_radar.sqlite'
 DICT = DATA / 'ministry_work_dictionary.json'
+STATS = DATA / 'issue_stat_dictionary.json'
 OUT = DATA / 'next_meeting_radar_enhanced.json'
 
 
@@ -114,6 +115,38 @@ def similar_cases(packet: dict, limit: int = 3) -> list[dict]:
     return out
 
 
+def stat_evidence(packet: dict, stats_dict: dict) -> dict:
+    issue_id = packet.get('issue_id')
+    candidates = (stats_dict.get('issue_stats') or {}).get(issue_id, [])
+    smoke = stats_dict.get('kosis_live_smoke') or []
+    live_ok = [s for s in smoke if s.get('ok')]
+    live_errors = [s.get('error') for s in smoke if not s.get('ok') and s.get('error')]
+    stat_questions = []
+    for c in candidates[:3]:
+        label = c.get('label','관련 통계')
+        why = c.get('why','실제 추세 확인')
+        stat_questions.append({
+            'stat': label,
+            'question': f"{label}의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            'answer_need': why,
+            'query_hint': c.get('query_hint',''),
+        })
+    if issue_id == 'prices_livelihood':
+        stat_questions.insert(0, {'stat':'소비자물가지수·생활물가지수','question':'소비자물가지수와 생활물가지수의 최근 3개월 흐름이 서로 다릅니까? 체감물가 부담은 어느 품목에서 커졌습니까?','answer_need':'물가 부담의 체감 원인 분해','query_hint':'소비자물가지수 생활물가지수 품목별'})
+    elif issue_id == 'school_field_trip':
+        stat_questions.insert(0, {'stat':'학교 수·학생 수·교원 수·학교안전사고','question':'현장체험학습 축소가 영향을 주는 학교·학생 규모는 어느 정도이고, 안전사고 통계와 교사 책임 부담은 같은 방향으로 움직입니까?','answer_need':'정책 대상 규모와 책임부담 실증','query_hint':'초등학교 학생수 교원수 학교안전사고'})
+    elif issue_id == 'disaster_safety':
+        stat_questions.insert(0, {'stat':'화재·침수·재난피해 통계','question':'최근 재난안전 보도가 실제 발생 건수·피해액 증가와 연결됩니까, 아니면 특정 사고 이후 제도보완 국면입니까?','answer_need':'위험 추세와 제도 대응 필요성 구분','query_hint':'화재 발생 침수 자연재해 피해'})
+    return {
+        'candidates': candidates,
+        'stat_questions': stat_questions[:4],
+        'live_reference_cards': live_ok[:2],
+        'live_status': 'ok' if live_ok else 'blocked_or_unavailable',
+        'live_errors': sorted(set(live_errors))[:3],
+        'ground_truth_prompt': '아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다.' if candidates else '연결된 통계 후보가 아직 없습니다.',
+    }
+
+
 def question_flow(packet: dict, align: dict, like: dict) -> list[dict]:
     synth = packet.get('question_synthesis') or {}
     qs = synth.get('questions') or []
@@ -123,6 +156,8 @@ def question_flow(packet: dict, align: dict, like: dict) -> list[dict]:
     prep = []
     prep.extend(align.get('accountability_questions') or [])
     prep.append('최근 7일 기사량·대표기사·부처 소관 근거')
+    if packet.get('statistical_evidence', {}).get('candidates'):
+        prep.append('관련 통계 최신값과 전월·전년 대비 변화')
     prep.append('즉시 조치/법령개정/예산소요를 구분한 답변')
     return [
         {'stage': 'opening', 'question': first},
@@ -151,6 +186,7 @@ def delta(packet: dict, prev_by_issue: dict) -> dict:
 def main() -> int:
     radar = load_json(RADAR, {})
     dictionary = load_json(DICT, {'ministries': {}})
+    stats_dict = load_json(STATS, {'issue_stats': {}})
     prev = load_json(PREV, {})
     prev_packets = prev.get('packets') or []
     prev_by_issue = {p.get('issue_id'): {**p, 'rank': i + 1} for i, p in enumerate(prev_packets)}
@@ -163,6 +199,7 @@ def main() -> int:
         like = likelihood(p, align)
         p['ministry_work_alignment'] = align
         p['cabinet_question_likelihood'] = like
+        p['statistical_evidence'] = stat_evidence(p, stats_dict)
         p['similar_historical_cases'] = similar_cases(p)
         p['question_flow'] = question_flow(p, align, like)
         p['daily_delta'] = delta(p, prev_by_issue)

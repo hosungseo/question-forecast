@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-29T18:40:21.229808",
+  "generated_at": "2026-04-29T19:21:42.747777",
   "since": "2026-04-22",
   "packets": [
     {
       "issue_id": "school_field_trip",
       "ministry": "교육부",
-      "priority": 422,
-      "count": 34,
+      "priority": 411,
+      "count": 32,
       "signals": [
         "소풍",
         "수학여행",
@@ -19,15 +19,15 @@
       ],
       "terms": [
         "교사",
-        "체험학습",
-        "책임",
-        "교육부",
-        "수학여행",
-        "법령",
         "소풍",
+        "수학여행",
+        "현장체험학습",
+        "교육부",
+        "책임",
+        "체험학습",
+        "학교",
         "교사의",
-        "현장",
-        "현장체험학습"
+        "법령"
       ],
       "items": [
         {
@@ -50,19 +50,18 @@
           ]
         },
         {
-          "query": "소풍 수학여행 면책권",
-          "title": "교육부 \"현장체험학습 중 안전사고에서 교사 보호…법령 개정\"",
-          "desc": "이재명 대통령은 전날 학교에서 수학여행이 위축된 현실을 거론하며, \"소풍과 수학여행도 수업의 일부이고... 이에 최교진 교육부 장관은 \"5월 중으로 교사의 면책권 강화를 위한 법령 정비, 보조인력 배치 확대, 체험학습...",
+          "query": "현장체험학습 교사 책임",
+          "title": "교육부 \"현장체험학습 중 안전사고에서 교사 보호‥법개정 추진\"",
+          "desc": "전국교직원노동조합은 기자회견을 열고 \"현장체험학습 위축의 본질은 교사의 책임회피가 아닌 국가의 법적 보호 부재\"라며, \"교육활동 관련 사고에서 업무상 과실치사상죄를 면책하고 소송 및 소송 사무는 국가가 전적으로...",
           "pub_date": "2026-04-29",
-          "link": "https://n.news.naver.com/mnews/article/448/0000607700?sid=102",
-          "originallink": "https://news.tvchosun.com/site/data/html_dir/2026/04/29/2026042990168.html",
-          "relevance_score": 50,
+          "link": "https://n.news.naver.com/mnews/article/214/0001495989?sid=102",
+          "originallink": "https://imnews.imbc.com/news/2026/society/article/6818938_36918.html",
+          "relevance_score": 49,
           "signal_hits": [
-            "소풍",
-            "수학여행",
             "현장체험학습",
             "교사",
             "면책",
+            "책임",
             "안전사고",
             "교육부"
           ]
@@ -119,18 +118,19 @@
           ]
         },
         {
-          "query": "교육부 현장체험학습",
-          "title": "‘수학여행 위축’ 교원단체 공방 이어져…쟁점은 ‘교사 면책’ 어디까...",
-          "desc": "교육부는 이날 설명자료를 내고 “현장 체험학습 중 발생한 안전사고에서 교사를 두텁게 보호하고자 법령 개정을 추진 중”이라며 “소송 과정에서 교사가 어려움을 겪지 않도록 법률 대응 및 배상 등을 적극 지원하는...",
+          "query": "소풍 수학여행 면책권",
+          "title": "전교조, 대통령 '수학여행' 발언에 분노...\"교사 책임 전가 구조 바꿔야...",
+          "desc": "\"교사 책임 전가 구조 바꿔야\" 이재명 대통령이 학교 현장의 소풍 및 수학여행 기피 현상을 두고 \"책임지기... 교육부는 5월 중으로 교사의 면책권 강화, 보조 인력 배치 확대, 업무 경감 및 지원 확대 등을 포함한 종합...",
           "pub_date": "2026-04-29",
-          "link": "https://n.news.naver.com/mnews/article/032/0003442875?sid=102",
-          "originallink": "https://www.khan.co.kr/article/202604291652001",
+          "link": "http://www.sisunnews.co.kr/news/articleView.html?idxno=237706",
+          "originallink": "http://www.sisunnews.co.kr/news/articleView.html?idxno=237706",
           "relevance_score": 42,
           "signal_hits": [
+            "소풍",
             "수학여행",
             "교사",
             "면책",
-            "안전사고",
+            "책임",
             "교육부"
           ]
         }
@@ -210,6 +210,7 @@
           "교권보호"
         ],
         "matched_work_signals": [
+          "학교",
           "교사",
           "수학여행",
           "현장체험학습"
@@ -224,15 +225,228 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 90.8,
+        "score": 93.0,
         "band": "cabinet_high",
         "drivers": {
-          "priority": 422.0,
-          "article_count": 34.0,
+          "priority": 411.0,
+          "article_count": 32.0,
           "signal_count": 8,
-          "work_signal_hits": 3,
+          "work_signal_hits": 4,
           "question_move_hits": 3
         }
+      },
+      "statistical_evidence": {
+        "candidates": [
+          {
+            "label": "지역별 학교 수/학생 수/교원 수",
+            "source": "KOSIS/교육통계",
+            "why": "체험학습 축소가 어느 규모의 학생·학교에 영향을 주는지 추정",
+            "status": "candidate",
+            "query_hint": "초등학교 학생수 교원수 학교수"
+          },
+          {
+            "label": "학교 안전사고/교육활동 침해 관련 통계",
+            "source": "교육부/학교안전공제",
+            "why": "교사 책임·안전사고 부담의 실제 근거 확인",
+            "status": "candidate",
+            "query_hint": "학교 안전사고 교육활동 침해"
+          }
+        ],
+        "stat_questions": [
+          {
+            "stat": "학교 수·학생 수·교원 수·학교안전사고",
+            "question": "현장체험학습 축소가 영향을 주는 학교·학생 규모는 어느 정도이고, 안전사고 통계와 교사 책임 부담은 같은 방향으로 움직입니까?",
+            "answer_need": "정책 대상 규모와 책임부담 실증",
+            "query_hint": "초등학교 학생수 교원수 학교안전사고"
+          },
+          {
+            "stat": "지역별 학교 수/학생 수/교원 수",
+            "question": "지역별 학교 수/학생 수/교원 수의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "체험학습 축소가 어느 규모의 학생·학교에 영향을 주는지 추정",
+            "query_hint": "초등학교 학생수 교원수 학교수"
+          },
+          {
+            "stat": "학교 안전사고/교육활동 침해 관련 통계",
+            "question": "학교 안전사고/교육활동 침해 관련 통계의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "교사 책임·안전사고 부담의 실제 근거 확인",
+            "query_hint": "학교 안전사고 교육활동 침해"
+          }
+        ],
+        "live_reference_cards": [
+          {
+            "ok": true,
+            "label": "주민등록인구(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "391965",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "390685",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 391965.0,
+            "previous_value": 390685.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "390685",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "391965",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          },
+          {
+            "ok": true,
+            "label": "가구수(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24300087",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24118928",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 24300087.0,
+            "previous_value": 24118928.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24118928",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24300087",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          }
+        ],
+        "live_status": "ok",
+        "live_errors": [],
+        "ground_truth_prompt": "아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다."
       },
       "similar_historical_cases": [
         {
@@ -242,10 +456,10 @@
           "excerpt": "법령 개정이 필요하면 빨리하고, 자살 대책 총괄은 총리께서 맡으시는지?"
         },
         {
-          "score": 0.0913,
-          "meeting_date": "2026-02-10",
+          "score": 0.0801,
+          "meeting_date": "2026-03-17",
           "question_type": "현황 질문",
-          "excerpt": "마약 투약 현장 단속도 단속해야 함. 지금 의심되는 장소는 단속하고 있는 것인지?"
+          "excerpt": "학교 같은 교육시설과 동네에서 먹고 놀 수 있는 문화 인프라가 중요한데, 이것은 공공에서 투자해 줘야 할 것 아닌지?"
         },
         {
           "score": 0.0801,
@@ -277,6 +491,7 @@
             "교육부 직접 사무인지 교육청 집행 사무인지 구분",
             "법령·예산·지침 중 실제 조치수단 확인",
             "최근 7일 기사량·대표기사·부처 소관 근거",
+            "관련 통계 최신값과 전월·전년 대비 변화",
             "즉시 조치/법령개정/예산소요를 구분한 답변"
           ],
           "likelihood_band": "cabinet_high"
@@ -306,8 +521,8 @@
     {
       "issue_id": "disaster_safety",
       "ministry": "행정안전부",
-      "priority": 322,
-      "count": 34,
+      "priority": 319,
+      "count": 32,
       "signals": [
         "산불",
         "재난",
@@ -321,13 +536,13 @@
         "재난",
         "지하차도",
         "침수",
-        "실시간",
         "안전",
-        "발생",
-        "대응",
+        "실시간",
         "현장",
         "행안부",
-        "산불"
+        "대응",
+        "산불",
+        "내비게이션"
       ],
       "items": [
         {
@@ -514,19 +729,219 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 85.8,
+        "score": 84.7,
         "band": "cabinet_high",
         "drivers": {
-          "priority": 322.0,
-          "article_count": 34.0,
+          "priority": 319.0,
+          "article_count": 32.0,
           "signal_count": 7,
           "work_signal_hits": 4,
           "question_move_hits": 3
         }
       },
+      "statistical_evidence": {
+        "candidates": [
+          {
+            "label": "화재 발생/재난 피해 통계",
+            "source": "KOSIS/재난안전데이터",
+            "why": "재난·안전 이슈가 실제 피해 추세로 커지는지 확인",
+            "status": "candidate",
+            "query_hint": "화재 발생 자연재해 피해"
+          }
+        ],
+        "stat_questions": [
+          {
+            "stat": "화재·침수·재난피해 통계",
+            "question": "최근 재난안전 보도가 실제 발생 건수·피해액 증가와 연결됩니까, 아니면 특정 사고 이후 제도보완 국면입니까?",
+            "answer_need": "위험 추세와 제도 대응 필요성 구분",
+            "query_hint": "화재 발생 침수 자연재해 피해"
+          },
+          {
+            "stat": "화재 발생/재난 피해 통계",
+            "question": "화재 발생/재난 피해 통계의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "재난·안전 이슈가 실제 피해 추세로 커지는지 확인",
+            "query_hint": "화재 발생 자연재해 피해"
+          }
+        ],
+        "live_reference_cards": [
+          {
+            "ok": true,
+            "label": "주민등록인구(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "391965",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "390685",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 391965.0,
+            "previous_value": 390685.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "390685",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "391965",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          },
+          {
+            "ok": true,
+            "label": "가구수(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24300087",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24118928",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 24300087.0,
+            "previous_value": 24118928.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24118928",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24300087",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          }
+        ],
+        "live_status": "ok",
+        "live_errors": [],
+        "ground_truth_prompt": "아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다."
+      },
       "similar_historical_cases": [
         {
-          "score": 0.2462,
+          "score": 0.1231,
           "meeting_date": "2026-01-20",
           "question_type": "현황 질문",
           "excerpt": "화재 발생 건수는 훨씬 더 많지 않았는지?"
@@ -567,6 +982,7 @@
             "중앙-지방 역할분담 확인",
             "현장 통제와 국민안내 책임기관 확인",
             "최근 7일 기사량·대표기사·부처 소관 근거",
+            "관련 통계 최신값과 전월·전년 대비 변화",
             "즉시 조치/법령개정/예산소요를 구분한 답변"
           ],
           "likelihood_band": "cabinet_high"
@@ -822,6 +1238,219 @@
           "question_move_hits": 3
         }
       },
+      "statistical_evidence": {
+        "candidates": [
+          {
+            "label": "소비자물가지수/생활물가 관련 지표",
+            "source": "KOSIS",
+            "why": "물가·민생 부담의 실제 추세 확인",
+            "status": "candidate",
+            "query_hint": "소비자물가지수 생활물가지수 품목별 물가"
+          },
+          {
+            "label": "가계동향/소득분위별 지출",
+            "source": "KOSIS",
+            "why": "부담이 어느 계층에 집중되는지 확인",
+            "status": "candidate",
+            "query_hint": "가계동향 소득분위 지출"
+          }
+        ],
+        "stat_questions": [
+          {
+            "stat": "소비자물가지수·생활물가지수",
+            "question": "소비자물가지수와 생활물가지수의 최근 3개월 흐름이 서로 다릅니까? 체감물가 부담은 어느 품목에서 커졌습니까?",
+            "answer_need": "물가 부담의 체감 원인 분해",
+            "query_hint": "소비자물가지수 생활물가지수 품목별"
+          },
+          {
+            "stat": "소비자물가지수/생활물가 관련 지표",
+            "question": "소비자물가지수/생활물가 관련 지표의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "물가·민생 부담의 실제 추세 확인",
+            "query_hint": "소비자물가지수 생활물가지수 품목별 물가"
+          },
+          {
+            "stat": "가계동향/소득분위별 지출",
+            "question": "가계동향/소득분위별 지출의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "부담이 어느 계층에 집중되는지 확인",
+            "query_hint": "가계동향 소득분위 지출"
+          }
+        ],
+        "live_reference_cards": [
+          {
+            "ok": true,
+            "label": "주민등록인구(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "391965",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "390685",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 391965.0,
+            "previous_value": 390685.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "390685",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "391965",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          },
+          {
+            "ok": true,
+            "label": "가구수(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24300087",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24118928",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 24300087.0,
+            "previous_value": 24118928.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24118928",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24300087",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          }
+        ],
+        "live_status": "ok",
+        "live_errors": [],
+        "ground_truth_prompt": "아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다."
+      },
       "similar_historical_cases": [
         {
           "score": 0.2108,
@@ -865,6 +1494,7 @@
             "지원수단별 효과와 재정소요 비교",
             "집행속도와 대상선별 기준 확인",
             "최근 7일 기사량·대표기사·부처 소관 근거",
+            "관련 통계 최신값과 전월·전년 대비 변화",
             "즉시 조치/법령개정/예산소요를 구분한 답변"
           ],
           "likelihood_band": "cabinet_review"
@@ -1107,6 +1737,200 @@
           "question_move_hits": 3
         }
       },
+      "statistical_evidence": {
+        "candidates": [
+          {
+            "label": "범죄 발생/검거/재판 관련 통계",
+            "source": "KOSIS/경찰청/법무부",
+            "why": "범죄 대응 이슈를 실제 발생·처리 지표로 확인",
+            "status": "candidate",
+            "query_hint": "범죄 발생 검거 재판"
+          }
+        ],
+        "stat_questions": [
+          {
+            "stat": "범죄 발생/검거/재판 관련 통계",
+            "question": "범죄 발생/검거/재판 관련 통계의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "범죄 대응 이슈를 실제 발생·처리 지표로 확인",
+            "query_hint": "범죄 발생 검거 재판"
+          }
+        ],
+        "live_reference_cards": [
+          {
+            "ok": true,
+            "label": "주민등록인구(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "391965",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "390685",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 391965.0,
+            "previous_value": 390685.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "390685",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "391965",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          },
+          {
+            "ok": true,
+            "label": "가구수(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24300087",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24118928",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 24300087.0,
+            "previous_value": 24118928.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24118928",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24300087",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          }
+        ],
+        "live_status": "ok",
+        "live_errors": [],
+        "ground_truth_prompt": "아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다."
+      },
       "similar_historical_cases": [
         {
           "score": 0.202,
@@ -1150,6 +1974,7 @@
             "피해자 보호와 재판가능성 확인",
             "법무부-검찰-경찰-외교부 역할분담 확인",
             "최근 7일 기사량·대표기사·부처 소관 근거",
+            "관련 통계 최신값과 전월·전년 대비 변화",
             "즉시 조치/법령개정/예산소요를 구분한 답변"
           ],
           "likelihood_band": "cabinet_review"
@@ -1192,15 +2017,15 @@
       ],
       "terms": [
         "대출",
+        "금융",
         "KB국민카드",
         "중금리",
         "포용금융",
-        "금리",
-        "금융",
-        "지원",
-        "낮은",
         "취약계층",
-        "자금은"
+        "지원",
+        "확대와",
+        "위한",
+        "낮은"
       ],
       "items": [
         {
@@ -1221,17 +2046,18 @@
         },
         {
           "query": "금융 대출 금리",
-          "title": "[A 금융가 소식] IBK기업은행, 중소기업 근로자 비대면 대출 금리 감면제...",
-          "desc": "IBK기업은행은 중소기업 근로자 비대면 대출 금리 감면제도를 신설했다. JB금융그룹 '씨앗봉사단'은 미등록 이주아동 지원하기 위해 맞춤형 키트를 제작했다. 카카오뱅크는 수도권 초등학생을 대상으로 AI 윤리 교육...",
+          "title": "[금융 게시판] 은행권, 산업·취약계층 맞춤 금융 확장…KB·기업·농협·...",
+          "desc": "■ IBK기업은행, 중기 근로자 최대 0.6%p 금리감면 IBK기업은행은 노동절을 맞아 중소기업 재직 근로자의 금융 부담 완화를 위한 비대면 대출 금리감면 제도를 신설했다. 이번 제도는 재직기간에 따른 기본 감면(최대 0.4%p)...",
           "pub_date": "2026-04-29",
-          "link": "https://www.asiaa.co.kr/news/articleView.html?idxno=248113",
-          "originallink": "https://www.asiaa.co.kr/news/articleView.html?idxno=248113",
+          "link": "https://www.lcnews.co.kr/news/articleView.html?idxno=201534",
+          "originallink": "https://www.lcnews.co.kr/news/articleView.html?idxno=201534",
           "relevance_score": 24,
           "signal_hits": [
             "금융",
             "대출",
             "금리",
-            "은행"
+            "은행",
+            "취약계층"
           ]
         },
         {
@@ -1396,24 +2222,231 @@
           "question_move_hits": 3
         }
       },
+      "statistical_evidence": {
+        "candidates": [
+          {
+            "label": "가계부채/대출금리",
+            "source": "KOSIS/ECOS",
+            "why": "금리·대출 부담의 수치 근거 확인",
+            "status": "candidate",
+            "query_hint": "가계부채 대출금리"
+          },
+          {
+            "label": "서민금융/취약차주 지표",
+            "source": "금융위/금감원",
+            "why": "정책금융 대상 적합성 확인",
+            "status": "candidate",
+            "query_hint": "서민금융 취약차주 연체율"
+          }
+        ],
+        "stat_questions": [
+          {
+            "stat": "가계부채/대출금리",
+            "question": "가계부채/대출금리의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "금리·대출 부담의 수치 근거 확인",
+            "query_hint": "가계부채 대출금리"
+          },
+          {
+            "stat": "서민금융/취약차주 지표",
+            "question": "서민금융/취약차주 지표의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "정책금융 대상 적합성 확인",
+            "query_hint": "서민금융 취약차주 연체율"
+          }
+        ],
+        "live_reference_cards": [
+          {
+            "ok": true,
+            "label": "주민등록인구(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "391965",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "390685",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 391965.0,
+            "previous_value": 390685.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "390685",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "391965",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          },
+          {
+            "ok": true,
+            "label": "가구수(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24300087",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24118928",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 24300087.0,
+            "previous_value": 24118928.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24118928",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24300087",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          }
+        ],
+        "live_status": "ok",
+        "live_errors": [],
+        "ground_truth_prompt": "아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다."
+      },
       "similar_historical_cases": [
         {
-          "score": 0.1491,
+          "score": 0.1432,
           "meeting_date": "2025-09-09",
           "question_type": "현황 질문",
           "excerpt": "서민금융 1,145억은 명절 자금하고는 달리 서민들에게 금융 기회를 주는 것인데, 이건 이자가 훨씬 더 비싼 것인지?"
         },
         {
-          "score": 0.1291,
+          "score": 0.124,
+          "meeting_date": "2025-09-09",
+          "question_type": "현황 질문",
+          "excerpt": "민생 부담 경감을 위한 43조 2,000억 원은 통상적인 금리가 될 텐데, 서민금융이라고 하는 햇살론 유스나 불법사금융 예방 대출, 이런 것은 이자가 얼마인지?"
+        },
+        {
+          "score": 0.124,
           "meeting_date": "2025-06-19",
           "question_type": "대안 요구",
           "excerpt": "지역화폐 지원 비율은 정리가 됐는지?"
-        },
-        {
-          "score": 0.1132,
-          "meeting_date": "2025-09-16",
-          "question_type": "대안 요구",
-          "excerpt": "지방 금융을 지원해서 활성화하고 성장시키는 방법, 지역 산업이나 기업들에게 금융상의 지원 혜택을 줄 수 있는 방법, 이런 것들도 금융 측면에서 안을 만들어 보시면 좋을 것 같음. 다른 의견 없으시면 의안심의로 넘어가겠음."
         }
       ],
       "question_flow": [
@@ -1439,6 +2472,7 @@
             "정책금융 대상 적합성 확인",
             "취약차주 지원과 금융건전성 균형 확인",
             "최근 7일 기사량·대표기사·부처 소관 근거",
+            "관련 통계 최신값과 전월·전년 대비 변화",
             "즉시 조치/법령개정/예산소요를 구분한 답변"
           ],
           "likelihood_band": "cabinet_review"
@@ -1468,8 +2502,8 @@
     {
       "issue_id": "labor_jobs",
       "ministry": "고용노동부",
-      "priority": 200,
-      "count": 21,
+      "priority": 204,
+      "count": 22,
       "signals": [
         "일자리",
         "청년",
@@ -1483,13 +2517,13 @@
         "임금",
         "책임",
         "하도급",
+        "일자리",
         "노동자",
         "원청의",
         "산재",
         "체불",
         "지난해",
-        "현장",
-        "부산"
+        "현장"
       ],
       "items": [
         {
@@ -1535,6 +2569,20 @@
           ]
         },
         {
+          "query": "청년 일자리",
+          "title": "정읍시, 일자리 공모 ‘기초이음 프로젝트’ 선정. “바이오산업 거점 ...",
+          "desc": "정읍시가 고용노동부가 주관한 2026년 지역산업맞춤형 일자리 지원 사업인 ‘기초이음 프로젝트’... 것”이라며 “이번 사업을 통해 청년과 근로자들이 머물고 싶은 활력 넘치는 도시가 되길 바란다”고 했다./정읍=",
+          "pub_date": "2026-04-29",
+          "link": "https://sjbnews.com/news/news.php?number=877443",
+          "originallink": "https://sjbnews.com/news/news.php?number=877443",
+          "relevance_score": 20,
+          "signal_hits": [
+            "일자리",
+            "청년",
+            "노동"
+          ]
+        },
+        {
           "query": "산재 원청 책임",
           "title": "HJ중공업, 부산 노동계 선정 '올해 최악의 기업'",
           "desc": "중대재해 없는 세상만들기 운동본부는 산재사망 노동자 추모의 날을 맞아, 최악의 살인기업 선정식을 열고, 하청노동자에 대한 원청 책임을 강화해야 한다고 강조했습니다. HJ중공업은 지난해 울산화력발전소 철거...",
@@ -1560,19 +2608,6 @@
             "산재",
             "원청",
             "노동"
-          ]
-        },
-        {
-          "query": "산재 원청 책임",
-          "title": "정부 중재 극적 타결에도 남은 과제...BGF리테일 '실질 지배력' 쟁점 떠...",
-          "desc": "통상 산업재해 사망 사고는 산재보험 보상 외에 회사 차원의 위로금과 별도 합의금이 더해지는 구조를... 속에서 원청이 실질적 권한을 행사하면서도 법적 책임을 회피해 온 '위험의 외주화'를 이번 참사의 본질로 보고...",
-          "pub_date": "2026-04-29",
-          "link": "http://www.popcornnews.net/news/articleView.html?idxno=119843",
-          "originallink": "http://www.popcornnews.net/news/articleView.html?idxno=119843",
-          "relevance_score": 18,
-          "signal_hits": [
-            "산재",
-            "원청"
           ]
         }
       ],
@@ -1667,31 +2702,238 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 71.1,
+        "score": 71.9,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 200.0,
-          "article_count": 21.0,
+          "priority": 204.0,
+          "article_count": 22.0,
           "signal_count": 7,
           "work_signal_hits": 6,
           "question_move_hits": 3
         }
       },
+      "statistical_evidence": {
+        "candidates": [
+          {
+            "label": "고용률/실업률/청년고용률",
+            "source": "KOSIS",
+            "why": "일자리 지표와 현장 체감 괴리 확인",
+            "status": "candidate",
+            "query_hint": "고용률 실업률 청년고용률"
+          },
+          {
+            "label": "산업재해/임금체불 행정통계",
+            "source": "KOSIS/고용부",
+            "why": "산재·임금체불 이슈의 규모 확인",
+            "status": "candidate",
+            "query_hint": "산업재해 임금체불"
+          }
+        ],
+        "stat_questions": [
+          {
+            "stat": "고용률/실업률/청년고용률",
+            "question": "고용률/실업률/청년고용률의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "일자리 지표와 현장 체감 괴리 확인",
+            "query_hint": "고용률 실업률 청년고용률"
+          },
+          {
+            "stat": "산업재해/임금체불 행정통계",
+            "question": "산업재해/임금체불 행정통계의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "산재·임금체불 이슈의 규모 확인",
+            "query_hint": "산업재해 임금체불"
+          }
+        ],
+        "live_reference_cards": [
+          {
+            "ok": true,
+            "label": "주민등록인구(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "391965",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "390685",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 391965.0,
+            "previous_value": 390685.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "390685",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "391965",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          },
+          {
+            "ok": true,
+            "label": "가구수(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24300087",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24118928",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 24300087.0,
+            "previous_value": 24118928.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24118928",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24300087",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          }
+        ],
+        "live_status": "ok",
+        "live_errors": [],
+        "ground_truth_prompt": "아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다."
+      },
       "similar_historical_cases": [
         {
-          "score": 0.1936,
+          "score": 0.2004,
           "meeting_date": "2025-09-02",
           "question_type": "검토결과 확인",
           "excerpt": "규정 개정을 한번 검토해 보시기 바람. 그다음에 하도급의 부실 공사, 산재, 임금체불 등 모든 문제는 원청 아닌지?"
         },
         {
-          "score": 0.1333,
+          "score": 0.138,
           "meeting_date": "2025-08-12",
           "question_type": "검토결과 확인",
           "excerpt": "너무 오래 검토하고 있으면 안 됨. 원청 책임 강화라는 내용이 있어야 한다는 얘기임. 다음 준비된 것 있으면 보고 바람."
         },
         {
-          "score": 0.1291,
+          "score": 0.1336,
           "meeting_date": "2026-01-27",
           "question_type": "예산/재정 확인",
           "excerpt": "일자리 사업 예산이 있는지?"
@@ -1720,6 +2962,7 @@
             "원청-하청 책임구조 확인",
             "감독·처벌·예방수단의 실효성 확인",
             "최근 7일 기사량·대표기사·부처 소관 근거",
+            "관련 통계 최신값과 전월·전년 대비 변화",
             "즉시 조치/법령개정/예산소요를 구분한 답변"
           ],
           "likelihood_band": "cabinet_review"
@@ -1749,7 +2992,7 @@
     {
       "issue_id": "real_estate",
       "ministry": "국토교통부",
-      "priority": 174,
+      "priority": 176,
       "count": 26,
       "signals": [
         "부동산",
@@ -1762,15 +3005,15 @@
       ],
       "terms": [
         "부동산",
-        "정원오",
         "공급",
+        "시장",
         "오세훈",
+        "서울",
         "있다",
         "전월세",
-        "시장",
-        "재개발",
-        "정책",
-        "재건축"
+        "정원오",
+        "주택",
+        "전세"
       ],
       "items": [
         {
@@ -1847,16 +3090,16 @@
           ]
         },
         {
-          "query": "부동산 공급 전세",
-          "title": "내 집 팔 때 세금 수억원 뛴다? '장기보유특별공제 폐지' 논란 총정리",
-          "desc": "부동산 시장이 장기보유특별공제(장특공제) 폐지 논란으로 들썩이고 있다. 이재명 대통령이 비거주... 전문가들은 양도세 부담을 느낀 집주인들이 매물을 거둬들이거나 실거주 요건을 채우려 하면서 전세 공급이 더...",
+          "query": "주택 공급 대책",
+          "title": "정원오, 吳에 \"시간 더 준다고 못푼 문제 풀겠나\"…부동산 반격(종합)",
+          "desc": "특히 이재명 정부의 공급 대책에 따른 서울 도심 내 3만2천가구의 주택 공급 사업을 조기에 시행하겠다고 했다. 이를 위해 국공유지·군부대 부지 등에서의 공사를 조기 착공하고, 노후 영구임대주택·공공청사·철도부지...",
           "pub_date": "2026-04-29",
-          "link": "http://www.dailypop.kr/news/articleView.html?idxno=98387",
-          "originallink": "http://www.dailypop.kr/news/articleView.html?idxno=98387",
-          "relevance_score": 14,
+          "link": "https://n.news.naver.com/mnews/article/001/0016051289?sid=100",
+          "originallink": "https://www.yna.co.kr/view/AKR20260429083351001?input=1195m",
+          "relevance_score": 16,
           "signal_hits": [
             "부동산",
-            "전세",
+            "주택",
             "공급"
           ]
         }
@@ -1952,34 +3195,241 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 71.6,
+        "score": 71.7,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 174.0,
+          "priority": 176.0,
           "article_count": 26.0,
           "signal_count": 7,
           "work_signal_hits": 6,
           "question_move_hits": 3
         }
       },
+      "statistical_evidence": {
+        "candidates": [
+          {
+            "label": "주택보급/가구/인구 관련 지표",
+            "source": "KOSIS",
+            "why": "공급 대책과 실수요 기반 비교",
+            "status": "candidate",
+            "query_hint": "주택 가구 인구"
+          },
+          {
+            "label": "전월세/주택가격 지표",
+            "source": "KOSIS/부동산원",
+            "why": "전월세 시장 불안의 실제 추세 확인",
+            "status": "candidate",
+            "query_hint": "전세 월세 주택가격"
+          }
+        ],
+        "stat_questions": [
+          {
+            "stat": "주택보급/가구/인구 관련 지표",
+            "question": "주택보급/가구/인구 관련 지표의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "공급 대책과 실수요 기반 비교",
+            "query_hint": "주택 가구 인구"
+          },
+          {
+            "stat": "전월세/주택가격 지표",
+            "question": "전월세/주택가격 지표의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "전월세 시장 불안의 실제 추세 확인",
+            "query_hint": "전세 월세 주택가격"
+          }
+        ],
+        "live_reference_cards": [
+          {
+            "ok": true,
+            "label": "주민등록인구(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "391965",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "390685",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 391965.0,
+            "previous_value": 390685.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "390685",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "391965",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          },
+          {
+            "ok": true,
+            "label": "가구수(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24300087",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24118928",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 24300087.0,
+            "previous_value": 24118928.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24118928",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24300087",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          }
+        ],
+        "live_status": "ok",
+        "live_errors": [],
+        "ground_truth_prompt": "아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다."
+      },
       "similar_historical_cases": [
         {
-          "score": 0.1328,
-          "meeting_date": "2025-06-05",
-          "question_type": "현황 질문",
-          "excerpt": "지역주택조합 사고가 대형으로 발생했는데 그 문제가 심각하다고 알고 있음. 주택 조합원 모집할 때 조건을 어긴다거나 조합원들에 대해서 부당이득을 취하고 있는 걸로 알고 있는데, 이런 부분에 대해서 전국적으로 실태조사를 조속히 해야 함. 그리고 재건축·재개발 법령 문제에 대해서도 별도로 보고를 해 주시기 바람."
-        },
-        {
-          "score": 0.1155,
+          "score": 0.124,
           "meeting_date": "2025-07-15",
           "question_type": "예산/재정 확인",
           "excerpt": "산림 정비사업 1년 예산은 얼마인지?"
         },
         {
-          "score": 0.0976,
+          "score": 0.1048,
           "meeting_date": "2025-09-02",
           "question_type": "현황 질문",
           "excerpt": "역직구 시장 넓히는 것은 어느 부처가 담당하는지?"
+        },
+        {
+          "score": 0.1048,
+          "meeting_date": "2025-07-15",
+          "question_type": "현황 질문",
+          "excerpt": "독거노인이나 이런 데는 공급 사업을 하고 있는지?"
         }
       ],
       "question_flow": [
@@ -2005,6 +3455,7 @@
             "발표 물량과 실제 입주 물량 구분",
             "인허가·착공·입주 병목 확인",
             "최근 7일 기사량·대표기사·부처 소관 근거",
+            "관련 통계 최신값과 전월·전년 대비 변화",
             "즉시 조치/법령개정/예산소요를 구분한 답변"
           ],
           "likelihood_band": "cabinet_review"
@@ -2234,6 +3685,200 @@
           "question_move_hits": 3
         }
       },
+      "statistical_evidence": {
+        "candidates": [
+          {
+            "label": "의료기관/의사/전공의/응급의료 지표",
+            "source": "KOSIS/복지부",
+            "why": "의료 공백과 지역 접근성의 실제 규모 확인",
+            "status": "candidate",
+            "query_hint": "의료기관 의사 전공의 응급의료"
+          }
+        ],
+        "stat_questions": [
+          {
+            "stat": "의료기관/의사/전공의/응급의료 지표",
+            "question": "의료기관/의사/전공의/응급의료 지표의 최신값과 전월·전년 대비 변화를 보면, 현재 기사 신호가 일시적 보도인지 실제 추세인지 어떻게 판단됩니까?",
+            "answer_need": "의료 공백과 지역 접근성의 실제 규모 확인",
+            "query_hint": "의료기관 의사 전공의 응급의료"
+          }
+        ],
+        "live_reference_cards": [
+          {
+            "ok": true,
+            "label": "주민등록인구(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "391965",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "390685",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 391965.0,
+            "previous_value": 390685.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "390685",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "391965",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          },
+          {
+            "ok": true,
+            "label": "가구수(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24300087",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24118928",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 24300087.0,
+            "previous_value": 24118928.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24118928",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24300087",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          }
+        ],
+        "live_status": "ok",
+        "live_errors": [],
+        "ground_truth_prompt": "아래 통계 후보 중 최신값/전월·전년 대비를 확인해 기사 신호가 실제 추세인지 검증해야 합니다."
+      },
       "similar_historical_cases": [
         {
           "score": 0.0861,
@@ -2277,6 +3922,7 @@
             "환자 불편 지표 확인",
             "의료인력·재정·수련 병목 구분",
             "최근 7일 기사량·대표기사·부처 소관 근거",
+            "관련 통계 최신값과 전월·전년 대비 변화",
             "즉시 조치/법령개정/예산소요를 구분한 답변"
           ],
           "likelihood_band": "cabinet_review"

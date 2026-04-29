@@ -63,7 +63,7 @@ li {{ margin:6px 0; }}
 .article {{ border-top:1px solid var(--line); padding-top:10px; margin-top:10px; color:#334155; }}
 @media (max-width:760px) {{ .grid {{ grid-template-columns:1fr; }} h1 {{ font-size:28px; }} }}
 </style></head><body><main>
-<a class="back" href="index.html">← Dashboard</a>
+<a class="back" href="index.html">← Dashboard</a> · <a class="back" href="memo-{rank}-{issue}.md">Copy-ready memo</a>
 <section class="hero">
   <div class="meta"><span>#{rank}</span><span>{esc(p.get('ministry'))}</span><span>{esc(p.get('issue_id'))}</span><span>{esc(like.get('band'))}</span></div>
   <h1>{esc(synth.get('diagnosis'))}</h1>

@@ -1,0 +1,228 @@
+{
+  "source_note": "Seeded ministry work dictionary with hooks for MOLEG organization decrees and Public Data Portal central agency function classification.",
+  "official_source_hooks": {
+    "moleg": "law.go.kr DRF lawSearch/lawService; set LAW_OC or MOLEG_OC to refresh law metadata",
+    "public_data_portal": "central administrative agency function classification API; endpoint/key to be wired as env-backed adapter"
+  },
+  "ministries": {
+    "교육부": {
+      "org_decree_queries": [
+        "교육부와 그 소속기관 직제",
+        "교육부와 그 소속기관 직제 시행규칙"
+      ],
+      "function_domains": [
+        "학교안전",
+        "교권보호",
+        "교육과정",
+        "학생지원",
+        "지방교육재정",
+        "대학·의대",
+        "교육격차"
+      ],
+      "work_signals": [
+        "학교",
+        "교사",
+        "학생",
+        "교육청",
+        "수학여행",
+        "현장체험학습",
+        "교권",
+        "의대"
+      ],
+      "accountability_questions": [
+        "교육부 직접 사무인지 교육청 집행 사무인지 구분",
+        "법령·예산·지침 중 실제 조치수단 확인"
+      ]
+    },
+    "행정안전부": {
+      "org_decree_queries": [
+        "행정안전부와 그 소속기관 직제",
+        "행정안전부와 그 소속기관 직제 시행규칙"
+      ],
+      "function_domains": [
+        "재난안전",
+        "지방행정",
+        "지자체 역량",
+        "국민안전 서비스",
+        "공무원·조직관리",
+        "디지털정부"
+      ],
+      "work_signals": [
+        "재난",
+        "안전",
+        "지자체",
+        "소방",
+        "경찰",
+        "침수",
+        "산불",
+        "재난문자"
+      ],
+      "accountability_questions": [
+        "중앙-지방 역할분담 확인",
+        "현장 통제와 국민안내 책임기관 확인"
+      ]
+    },
+    "기획재정부": {
+      "org_decree_queries": [
+        "기획재정부와 그 소속기관 직제",
+        "기획재정부와 그 소속기관 직제 시행규칙"
+      ],
+      "function_domains": [
+        "예산",
+        "재정집행",
+        "물가",
+        "세제",
+        "경제정책",
+        "민생지원",
+        "국고"
+      ],
+      "work_signals": [
+        "예산",
+        "추경",
+        "물가",
+        "세제",
+        "재정",
+        "지원금",
+        "경제"
+      ],
+      "accountability_questions": [
+        "지원수단별 효과와 재정소요 비교",
+        "집행속도와 대상선별 기준 확인"
+      ]
+    },
+    "국토교통부": {
+      "org_decree_queries": [
+        "국토교통부와 그 소속기관 직제",
+        "국토교통부와 그 소속기관 직제 시행규칙"
+      ],
+      "function_domains": [
+        "주택공급",
+        "주거복지",
+        "전월세",
+        "도시정비",
+        "건설안전",
+        "교통물류"
+      ],
+      "work_signals": [
+        "주택",
+        "부동산",
+        "전세",
+        "월세",
+        "공급",
+        "정비사업",
+        "건설"
+      ],
+      "accountability_questions": [
+        "발표 물량과 실제 입주 물량 구분",
+        "인허가·착공·입주 병목 확인"
+      ]
+    },
+    "금융위원회": {
+      "org_decree_queries": [
+        "금융위원회와 그 소속기관 직제"
+      ],
+      "function_domains": [
+        "금융정책",
+        "서민금융",
+        "가계부채",
+        "금융시장",
+        "금융소비자 보호"
+      ],
+      "work_signals": [
+        "금융",
+        "대출",
+        "금리",
+        "은행",
+        "중금리",
+        "서민금융",
+        "취약차주"
+      ],
+      "accountability_questions": [
+        "정책금융 대상 적합성 확인",
+        "취약차주 지원과 금융건전성 균형 확인"
+      ]
+    },
+    "고용노동부": {
+      "org_decree_queries": [
+        "고용노동부와 그 소속기관 직제",
+        "고용노동부와 그 소속기관 직제 시행규칙"
+      ],
+      "function_domains": [
+        "고용정책",
+        "산업안전",
+        "근로감독",
+        "임금체불",
+        "하도급·원청책임",
+        "청년일자리"
+      ],
+      "work_signals": [
+        "고용",
+        "일자리",
+        "산재",
+        "임금체불",
+        "하도급",
+        "원청",
+        "노동"
+      ],
+      "accountability_questions": [
+        "원청-하청 책임구조 확인",
+        "감독·처벌·예방수단의 실효성 확인"
+      ]
+    },
+    "법무부": {
+      "org_decree_queries": [
+        "법무부와 그 소속기관 직제",
+        "법무부와 그 소속기관 직제 시행규칙"
+      ],
+      "function_domains": [
+        "형사사법",
+        "검찰",
+        "범죄대응",
+        "인권",
+        "출입국",
+        "전자증거",
+        "국제공조"
+      ],
+      "work_signals": [
+        "법무",
+        "검찰",
+        "수사",
+        "범죄",
+        "재판",
+        "증거",
+        "국제공조"
+      ],
+      "accountability_questions": [
+        "피해자 보호와 재판가능성 확인",
+        "법무부-검찰-경찰-외교부 역할분담 확인"
+      ]
+    },
+    "보건복지부": {
+      "org_decree_queries": [
+        "보건복지부와 그 소속기관 직제",
+        "보건복지부와 그 소속기관 직제 시행규칙"
+      ],
+      "function_domains": [
+        "의료정책",
+        "필수의료",
+        "건강보험",
+        "복지",
+        "응급·비상진료",
+        "의료인력"
+      ],
+      "work_signals": [
+        "의료",
+        "병원",
+        "환자",
+        "전공의",
+        "건강보험",
+        "복지",
+        "비상진료"
+      ],
+      "accountability_questions": [
+        "환자 불편 지표 확인",
+        "의료인력·재정·수련 병목 구분"
+      ]
+    }
+  }
+}

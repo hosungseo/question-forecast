@@ -8,6 +8,8 @@
 
 - GitHub Pages: <https://hosungseo.github.io/question-forecast/>
 - Vercel: <https://question-forecast.vercel.app>
+- API latest: <https://question-forecast.vercel.app/api/latest>
+- API issues: <https://question-forecast.vercel.app/api/issues>
 - Next meeting briefing: [`docs/briefing.md`](docs/briefing.md)
 - Full issue radar: [`docs/radar.md`](docs/radar.md)
 - Gold v1 labels: [`docs/gold-v1.md`](docs/gold-v1.md)

@@ -92,13 +92,14 @@ def main() -> int:
     run([sys.executable, 'scripts/enhance_radar.py'])
     run([sys.executable, 'scripts/export_briefing.py'])
     copy_docs()
+    run([sys.executable, 'scripts/render_dashboard.py'])
     after_top = top_issues()
 
     changed = git_changed()
     commit_hash = None
     pushed = False
     if changed:
-        run(['git', 'add', 'data/ministry_work_dictionary.json', 'data/issue_stat_dictionary.json', 'data/historical_question_priors.json', 'data/next_meeting_radar_enhanced.json', 'data/next_meeting_radar.json', 'data/next_meeting_radar.md', 'data/next_meeting_briefing.md', 'docs/briefing.md', 'docs/radar.md'])
+        run(['git', 'add', 'data/ministry_work_dictionary.json', 'data/issue_stat_dictionary.json', 'data/historical_question_priors.json', 'data/next_meeting_radar_enhanced.json', 'data/next_meeting_radar.json', 'data/next_meeting_radar.md', 'data/next_meeting_briefing.md', 'docs/index.html', 'docs/briefing.md', 'docs/radar.md'])
         stamp = dt.datetime.now().strftime('%Y-%m-%d %H:%M KST')
         run(['git', 'commit', '-m', f'Daily forecast update ({stamp})'])
         run(['git', 'push'])

@@ -36,6 +36,7 @@ def render_issue(p: dict, rank: int, generated: str) -> None:
     flow = p.get('question_flow') or []
     articles = p.get('items') or []
     questions = synth.get('questions') or []
+    oral = p.get('oral_brief') or {}
     prep = next((f.get('items') for f in flow if f.get('stage') == 'minister_prep'), []) or []
     evidence = stat.get('answer_evidence_cards') or []
     html_doc = f'''<!doctype html>
@@ -72,7 +73,9 @@ li {{ margin:6px 0; }}
   <div class="card"><div class="label">Question likelihood</div><div class="score">{esc(like.get('score'))}</div><p>{esc(like.get('band'))}</p></div>
   <div class="card"><div class="label">Connected work</div><h2>{esc(', '.join((align.get('function_domains') or [])[:4]))}</h2><p>{esc(', '.join((align.get('matched_work_signals') or [])[:8]))}</p></div>
 </section>
+<section class="card"><h2>30초 구두보고</h2><p class="bigq">{esc(oral.get('thirty_second'))}</p></section>
 <section class="card"><div class="label">대통령 예상 질문</div><p class="bigq">{esc((questions[0] or {}).get('question') if questions else '')}</p></section>
+<section class="card"><h2>예상 답변 골격</h2><ul>{li(oral.get('answer_skeleton') or [])}</ul><p class="article"><b>부족한 근거:</b> {esc(oral.get('evidence_gap'))}</p></section>
 <section class="card"><h2>예상 질의 흐름</h2><ul>{''.join(f'<li><b>{esc(f.get("stage"))}</b>: {esc(f.get("question") or ", ".join(f.get("items",[])))}</li>' for f in flow[:5])}</ul></section>
 <section class="card"><h2>장관 답변 준비 체크리스트</h2><ul>{li(prep)}</ul></section>
 <section class="card"><h2>답변에 써야 할 통계 근거</h2><p>{esc(stat.get('answer_frame'))}</p><ul>{''.join(f'<li><b>{esc(e.get("stat"))}</b>: {esc(e.get("use_in_answer"))}</li>' for e in evidence[:4])}</ul></section>

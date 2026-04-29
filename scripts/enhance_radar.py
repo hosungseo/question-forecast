@@ -147,6 +147,28 @@ def stat_evidence(packet: dict, stats_dict: dict) -> dict:
     }
 
 
+def oral_brief(packet: dict, align: dict, like: dict) -> dict:
+    ministry = packet.get('ministry')
+    issue_id = packet.get('issue_id')
+    synth = packet.get('question_synthesis') or {}
+    stat = packet.get('statistical_evidence') or {}
+    q = (synth.get('questions') or [{}])[0].get('question','')
+    work = ', '.join((align.get('function_domains') or [])[:2])
+    evidence = ', '.join(c.get('stat','') for c in (stat.get('answer_evidence_cards') or [])[:2])
+    score = like.get('score')
+    return {
+        'thirty_second': f"{ministry} 소관 {issue_id}는 질문 가능성 {score}점입니다. 핵심은 {work or '소관 업무'}와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 {evidence or '관련 통계'}로 규모와 추세를 뒷받침해야 합니다.",
+        'answer_skeleton': [
+            '현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인',
+            '원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리',
+            '조치 계획: 즉시 조치와 법령·예산이 필요한 과제를 구분',
+            '후속 보고: 점검 일정과 책임 부처·기관을 명확히 제시',
+        ],
+        'likely_first_question': q,
+        'evidence_gap': '실제 live 통계값이 없는 항목은 최신값·전년 대비·지역/계층별 비교를 보강해야 합니다.'
+    }
+
+
 def question_flow(packet: dict, align: dict, like: dict) -> list[dict]:
     synth = packet.get('question_synthesis') or {}
     qs = synth.get('questions') or []
@@ -201,6 +223,7 @@ def main() -> int:
         p['cabinet_question_likelihood'] = like
         p['statistical_evidence'] = stat_evidence(p, stats_dict)
         p['similar_historical_cases'] = similar_cases(p)
+        p['oral_brief'] = oral_brief(p, align, like)
         p['question_flow'] = question_flow(p, align, like)
         p['daily_delta'] = delta(p, prev_by_issue)
         enhanced.append(p)

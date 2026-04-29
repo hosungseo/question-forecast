@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T21:22:54.993155",
+  "generated_at": "2026-04-29T21:27:14.740577",
   "since": "2026-04-22",
   "packets": [
     {
@@ -495,7 +495,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 6,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -981,7 +981,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 3,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -1485,7 +1485,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -2,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -2467,7 +2467,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -3,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -2957,7 +2957,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -5,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -3451,7 +3451,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -5,
+        "priority_change": 0,
         "rank_change": 0,
         "move_change": {
           "from": [

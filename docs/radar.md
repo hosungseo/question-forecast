@@ -1,6 +1,6 @@
 # Next Cabinet Meeting Radar v2
 
-- generated_at: 2026-04-29T21:22:54.999577
+- generated_at: 2026-04-29T21:27:14.745671
 - purpose: 최근 뉴스 기반 대통령 예상 질문 후보 패킷
 - warning: 실제 의중 예측이 아니라 회의 전 검토용 이슈 레이더
 - algorithm: canonical issue grouping + noise filter + signal/recency/volume priority

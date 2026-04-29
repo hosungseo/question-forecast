@@ -219,6 +219,7 @@ def main() -> int:
     <ul>{today_focus}</ul>
   </section>
   <nav class="links">
+    <a href="daily-digest.md">Daily digest</a>
     <a href="briefing.md">Full briefing</a>
     <a href="radar.md">Radar markdown</a>
     <a href="gold-v1.md">Gold v1</a>

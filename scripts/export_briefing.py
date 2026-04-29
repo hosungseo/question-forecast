@@ -9,9 +9,12 @@ data=json.loads(SRC.read_text())
 packets=data['packets'][:5]
 lines=['# 다음 국무회의 예상 질문 브리핑','',f"_생성: {data['generated_at']} / 기준일: 최근 7일 뉴스_",'', '> 실제 의중 예측이 아니라, 국무회의 전 장관 답변 준비용 이슈 레이더입니다.','']
 for i,p in enumerate(packets,1):
-    lines += [f"## {i}. {p['ministry']} — {p['issue_id']}", '', f"**왜 올라왔나**: 기사 {p['count']}건, 핵심 신호 `{', '.join(p['signals'][:8])}`", '', '**대통령 예상 질문: 과거 국무회의 패턴 기반**']
-    for q in p.get('pattern_questions', []):
-        lines.append(f"- **{q['pattern']}**: {q['question']}")
+    synthesis=p.get('question_synthesis',{})
+    lines += [f"## {i}. {p['ministry']} — {p['issue_id']}", '', f"**왜 올라왔나**: 기사 {p['count']}건, 핵심 신호 `{', '.join(p['signals'][:8])}`", '', '**종합 판단**', synthesis.get('diagnosis',''), '', '**대통령 예상 질문: 고도화 로직 기반**']
+    for q in synthesis.get('questions', []):
+        lines.append(f"- **{q['move']}**: {q['question']}")
+    if synthesis.get('follow_up'):
+        lines += ['', '**후속 지시 후보**', f"- {synthesis['follow_up']}"]
     lines += ['', '**이슈별 보조 질문**']
     for q in p['questions']:
         lines.append(f'- {q}')

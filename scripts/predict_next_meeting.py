@@ -11,7 +11,7 @@ from __future__ import annotations
 import datetime as dt, html, json, os, re, time, urllib.parse, urllib.request
 from collections import defaultdict, Counter
 from pathlib import Path
-from question_patterns import pattern_questions
+from question_patterns import synthesize_questions
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'next_meeting_radar.md'
 JSON_OUT=ROOT/'data'/'next_meeting_radar.json'
@@ -144,16 +144,16 @@ def main():
         signal_hits=[s for s in cfg['signals'] if s in blob]
         severity=sum(2 for s in signal_hits if s in ['소풍','수학여행','현장체험학습','면책','산불','침수','전세','물가','의료대란','전공의','산재','범죄'])
         priority=sum(max(0,r.get('relevance_score',0)) for r in rows[:8]) + len(rows) + len(signal_hits)*2 + severity
-        layered_questions=pattern_questions(issue_id, signal_hits)
-        packets.append({'issue_id':issue_id,'ministry':cfg['ministry'],'priority':priority,'count':len(rows),'signals':signal_hits,'terms':key_terms(blob),'items':rows[:6],'questions':cfg['questions'],'pattern_questions':layered_questions})
+        synthesis=synthesize_questions(issue_id, signal_hits, priority=priority, count=len(rows))
+        packets.append({'issue_id':issue_id,'ministry':cfg['ministry'],'priority':priority,'count':len(rows),'signals':signal_hits,'terms':key_terms(blob),'items':rows[:6],'questions':cfg['questions'],'question_synthesis':synthesis,'pattern_questions':synthesis['questions']})
     packets=[p for p in packets if p['count']>0]
     packets.sort(key=lambda x:(x['priority'],x['count']),reverse=True)
     JSON_OUT.write_text(json.dumps({'generated_at':dt.datetime.now().isoformat(),'since':since.isoformat(),'packets':packets},ensure_ascii=False,indent=2))
     lines=['# Next Cabinet Meeting Radar v2','',f'- generated_at: {dt.datetime.now().isoformat()}','- purpose: 최근 뉴스 기반 대통령 예상 질문 후보 패킷','- warning: 실제 의중 예측이 아니라 회의 전 검토용 이슈 레이더','- algorithm: canonical issue grouping + noise filter + signal/recency/volume priority','']
     for i,p in enumerate(packets[:10],1):
-        lines += [f"## {i}. {p['ministry']} — {p['issue_id']}",f"- priority: {p['priority']} / recent articles: {p['count']}",f"- signal hits: {', '.join(p['signals'])}",f"- key terms: {', '.join(p['terms'])}",'','### 예상 질문']
-        for q in p.get('pattern_questions',[]): lines.append(f"- **{q['pattern']}**: {q['question']}")
-        lines += ['','### 이슈별 보조 질문']
+        lines += [f"## {i}. {p['ministry']} — {p['issue_id']}",f"- priority: {p['priority']} / recent articles: {p['count']}",f"- signal hits: {', '.join(p['signals'])}",f"- key terms: {', '.join(p['terms'])}",'',f"### 종합 판단",p.get('question_synthesis',{}).get('diagnosis',''),'','### 예상 질문']
+        for q in p.get('question_synthesis',{}).get('questions',[]): lines.append(f"- **{q['move']}**: {q['question']}")
+        lines += ['','### 후속 지시 후보',f"- {p.get('question_synthesis',{}).get('follow_up','')}",'','### 이슈별 보조 질문']
         for q in p['questions']: lines.append(f'- {q}')
         lines += ['','### 대표 기사']
         for it in p['items'][:6]: lines.append(f"- {it['pub_date']} · score {it.get('relevance_score',0)} · {it['title']}")

@@ -206,28 +206,30 @@ def _score_moves(issue_id: str, signals: list[str] | None, priority: int | float
 
 
 def _sentence(move: str, f: dict, signals: list[str] | None) -> str:
-    sig = ', '.join((signals or [])[:4])
-    subject = f['subject']; actors = f['actors']; bottlenecks = ', '.join(f['bottlenecks']); public = f['public']; risk = f['risk']
+    subject = f['subject']; actors = f['actors']; public = f['public']; risk = f['risk']
+    # Presidential questions should stay macro-level: direction, responsibility,
+    # coordination, public impact, and priority. Statistics/laws belong in the
+    # minister's answer evidence layer, not in the literal question wording.
     if move == 'ground_truth':
-        return f"{subject}은 기사상 신호({sig})보다 실제 현장 지표가 중요합니다. 현재 규모·추세·피해 범위를 어느 자료로 확인했습니까?"
+        return f"이 사안이 일시적 보도 이슈가 아니라 국민 생활과 국정 운영에 영향을 주는 구조적 문제라면, 정부는 무엇을 우선순위로 보고 있습니까?"
     if move == 'causal_split':
-        return f"이 사안을 단순 사건으로 볼 것인지 구조 문제로 볼 것인지 먼저 갈라야 합니다. 원인을 제도·현장 관행·이해관계자 부담으로 나누면 무엇이 핵심입니까?"
+        return f"이 사안을 개별 사건으로 볼 것인지, 제도와 현장의 구조 문제로 볼 것인지 정부의 판단은 무엇입니까?"
     if move == 'coordination':
-        return f"{actors}가 각각 무엇을 맡는지 불분명하면 대책이 흩어집니다. 협의가 끝난 쟁점과 아직 조정이 필요한 쟁점은 무엇입니까?"
+        return f"{actors}의 책임과 역할이 흩어지지 않도록 정부 전체 차원에서 어떻게 조정하고 있습니까?"
     if move == 'bottleneck':
-        return f"해결을 막는 병목이 {bottlenecks} 중 어디에 있습니까? 바로 조치할 것과 법령·예산이 필요한 것을 구분해 보고했습니까?"
+        return f"대책이 발표에 그치지 않고 실제 변화로 이어지려면 가장 먼저 풀어야 할 제도적·현장적 병목은 무엇입니까?"
     if move == 'field_burden':
-        return f"현장에 책임만 내려보내는 방식이면 다시 회피가 생깁니다. 현장 담당자에게 권한·보호장치·자원을 같이 주는 설계가 있습니까?"
+        return f"현장에 책임만 내려가는 방식이 반복되지 않도록 정부가 권한과 보호장치를 어떻게 함께 설계하겠습니까?"
     if move == 'public_outcome':
-        return f"결국 국민이 체감할 변화가 있어야 합니다. {public}을 언제까지 어떤 지표로 개선하겠다고 설명할 수 있습니까?"
+        return f"국민이 실제 변화를 체감하려면 정부가 {public}과 관련해 어떤 변화를 약속해야 합니까?"
     if move == 'instruction':
-        return f"{risk}을 막기 위해 {f['owner']}가 이번 주 안에 점검·보완해서 다시 보고할 항목은 무엇입니까?"
-    return f"{subject}에 대해 추가 검토가 필요한 쟁점은 무엇입니까?"
+        return f"{risk}을 막기 위해 {f['owner']}가 관계부처와 함께 우선 조치할 과제는 무엇입니까?"
+    return f"{subject}에 대해 정부가 우선 정리해야 할 국정 쟁점은 무엇입니까?"
 
 
 MOVE_KO = {
-    'ground_truth': '실제 현황 확인',
-    'causal_split': '원인 분해',
+    'ground_truth': '국정 우선순위',
+    'causal_split': '구조 판단',
     'coordination': '부처 간 조정',
     'bottleneck': '병목 해소',
     'field_burden': '현장 부담 완화',
@@ -236,10 +238,10 @@ MOVE_KO = {
 }
 
 MOVE_DIAGNOSIS = {
-    'ground_truth': '먼저 실제 현황과 추세를 분명히 확인해야 합니다',
-    'causal_split': '원인을 제도·현장·이해관계자 부담으로 나누어 설명해야 합니다',
+    'ground_truth': '국정 운영상 무엇을 우선순위로 둘지 분명히 해야 합니다',
+    'causal_split': '개별 사건인지 구조 문제인지 정부 판단을 설명해야 합니다',
     'coordination': '관계 부처와 기관의 역할 분담을 명확히 해야 합니다',
-    'bottleneck': '예산·인력·법령·집행절차 중 무엇이 막고 있는지 밝혀야 합니다',
+    'bottleneck': '발표가 실제 변화로 이어지도록 병목을 설명해야 합니다',
     'field_burden': '현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다',
     'public_outcome': '국민이 체감할 변화를 중심으로 답변을 준비해야 합니다',
     'instruction': '단기 점검과 후속 보고 일정을 분명히 해야 합니다',

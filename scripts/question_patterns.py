@@ -131,6 +131,57 @@ SIGNAL_TO_MOVES = {
     '의료': ['ground_truth', 'public_outcome'],
 }
 
+PRESIDENTIAL_STYLE = {
+    'school_field_trip': [
+        '소풍이나 수학여행도 수업의 일부인데, 안전사고가 걱정된다고 아예 안 가는 식으로 굳어지면 교육 기회를 줄이는 것 아닌지?',
+        '현장에서는 교사가 책임질까 봐 못 움직이고, 학부모는 아이가 못 가서 불만이면 결국 제도 설계가 현장을 막고 있는 것 아닌지?',
+        '교사에게 책임만 묻고 권한과 보호장치는 안 주면 학교가 당연히 몸을 사릴 텐데, 이 구조를 그대로 둘 것인지?',
+        '아이들이 학교에 따라 어떤 곳은 가고 어떤 곳은 못 가면, 이것도 교육 격차가 되는 것 아닌지?'
+    ],
+    'disaster_safety': [
+        '침수나 산불 같은 것은 일이 터진 뒤 수습하는 것보다, 국민이 미리 피하게 만드는 게 국가의 역할 아닌지?',
+        '지자체가 현장을 제일 잘 안다고 하지만, 역량이 부족한 곳에서 사고가 반복되면 중앙정부가 그냥 지켜볼 수는 없는 것 아닌지?',
+        '위험 정보가 있는데도 국민 휴대전화와 내비게이션까지 제때 가지 않으면, 시스템이 있어도 없는 것과 같은 것 아닌지?',
+        '재난 때마다 매뉴얼은 있다고 하는데 현장에서 안 움직이면, 매뉴얼 문제가 아니라 책임 구조 문제 아닌지?'
+    ],
+    'real_estate': [
+        '공급 대책을 발표해도 실제 입주까지 시간이 오래 걸리면, 국민 입장에서는 대책이 없는 것처럼 느끼는 것 아닌지?',
+        '집값과 전월세 문제는 숫자보다 불안 심리가 먼저 움직이는데, 정부가 시장의 기대를 어떻게 잡을 것인지?',
+        '수도권과 지방 문제가 전혀 다른데 하나의 처방으로 해결하려고 하면 효과가 떨어지는 것 아닌지?',
+        '공급을 늘린다고 했는데 국민이 들어가 살 집으로 이어지지 않으면 결국 행정 절차만 돈 것 아닌지?'
+    ],
+    'prices_livelihood': [
+        '국민은 평균 물가가 아니라 장바구니와 기름값으로 고통을 느끼는데, 정부 대책도 그 체감 지점에서 출발해야 하는 것 아닌지?',
+        '지원은 했다고 하는데 실제 부담이 그대로면, 정책이 국민에게 도착하지 못한 것 아닌지?',
+        '어려울 때 쓰려고 재정이라는 제도가 있는 것인데, 지금 무엇을 아끼고 무엇은 과감히 써야 하는지 정리해야 하는 것 아닌지?',
+        '대책이 부처별로 흩어지면 국민은 아무도 책임지지 않는다고 느낄 텐데, 민생 대응의 중심을 어디에 둘 것인지?'
+    ],
+    'finance_rates': [
+        '금융이 필요한 사람에게는 안 가고 안전한 사람에게만 가면, 정책금융이라는 이름이 무색한 것 아닌지?',
+        '서민금융을 늘린다고 해도 실제로 부담이 줄지 않으면 은행권 관리만 한 것이지 국민을 도운 것은 아닌 것 아닌지?',
+        '금융 지원이 투기 쪽으로 흐르지 않고 생산과 민생으로 가게 하는 장치가 핵심 아닌지?',
+        '돈이 필요한 곳은 막히고 돈이 넘치는 곳에는 더 몰리면, 금융정책이 불평등을 키우는 것 아닌지?'
+    ],
+    'labor_jobs': [
+        '현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?',
+        '원청은 이익을 가져가고 책임은 하청과 노동자에게 내려가면, 그 구조를 그냥 시장 문제라고 볼 수는 없는 것 아닌지?',
+        '제재를 받아도 계속하는 게 이익이면, 제도가 오히려 위반을 허용하는 것 아닌지?',
+        '일하는 사람이 제일 약한 고리로 남아 있으면, 정부가 말하는 노동 보호가 현장에서는 빈말이 되는 것 아닌지?'
+    ],
+    'justice_reform': [
+        '기관 권한을 어떻게 나눌지가 아니라, 국민 입장에서 범죄 피해를 막고 재판까지 가게 하는 힘이 약해지면 안 되는 것 아닌지?',
+        '수사체계를 고친다고 하면서 실제 범죄 대응력이 떨어지면, 제도개혁의 목적을 놓치는 것 아닌지?',
+        '피해자 보호보다 기관 논쟁이 앞서면 국민은 국가가 누구 편인지 묻게 되는 것 아닌지?',
+        '권한을 나누는 문제보다 나쁜 사람이 빠져나가지 못하게 하는 것이 먼저 아닌지?'
+    ],
+    'medical': [
+        '의료 문제는 제도 논쟁도 중요하지만, 국민 입장에서는 지금 아플 때 치료받을 수 있느냐가 먼저 아닌지?',
+        '비상진료가 오래가면 비상이 아니라 일상이 되는 것인데, 그렇게 두면 지역과 필수의료가 더 약해지는 것 아닌지?',
+        '의료인력 문제를 서로 책임 공방으로만 끌고 가면 환자 불편은 누가 책임지는 것인지?',
+        '지역에서는 병원을 찾아다니는 것 자체가 고통인데, 이걸 단순한 의료계 갈등으로만 볼 수는 없는 것 아닌지?'
+    ],
+}
+
 ISSUE_PRIOR_MOVES = {
     'school_field_trip': ['causal_split', 'field_burden', 'bottleneck', 'public_outcome'],
     'disaster_safety': ['ground_truth', 'coordination', 'instruction', 'public_outcome'],
@@ -248,6 +299,33 @@ MOVE_DIAGNOSIS = {
 }
 
 
+def _persona_questions(issue_id: str, moves: list[str], scores: dict[str, float], signals: list[str] | None) -> list[dict]:
+    style = PRESIDENTIAL_STYLE.get(issue_id, [])
+    questions: list[dict] = []
+    for i, text in enumerate(style):
+        move = moves[i % len(moves)] if moves else 'ground_truth'
+        questions.append({
+            'move': move,
+            'move_label': MOVE_KO.get(move, move),
+            'question': text,
+            'score': scores.get(move),
+            'style': 'presidential_tail_wags_head',
+        })
+    # Add one generic macro follow-up if the issue-specific bank is short.
+    if len(questions) < 4:
+        for move in moves:
+            questions.append({
+                'move': move,
+                'move_label': MOVE_KO.get(move, move),
+                'question': _sentence(move, _focus(issue_id), signals),
+                'score': scores.get(move),
+                'style': 'macro_follow_up',
+            })
+            if len(questions) >= 4:
+                break
+    return questions[:5]
+
+
 def synthesize_questions(issue_id: str, signals: list[str] | None = None, *, priority: int | float = 0, count: int = 0) -> dict:
     """Return a compact, weighted question packet.
 
@@ -255,9 +333,9 @@ def synthesize_questions(issue_id: str, signals: list[str] | None = None, *, pri
     """
     f = _focus(issue_id)
     moves, scores = _score_moves(issue_id, signals, priority, count)
-    questions = [{'move': m, 'move_label': MOVE_KO.get(m, m), 'question': _sentence(m, f, signals), 'score': scores.get(m)} for m in moves]
+    questions = _persona_questions(issue_id, moves, scores, signals)
     top_move = moves[0] if moves else 'ground_truth'
-    diagnosis = f"{f['subject']}의 핵심 리스크는 {f['risk']}입니다. 오늘 보도 흐름과 과거 국무회의 질문 패턴을 함께 보면, {MOVE_DIAGNOSIS.get(top_move, '핵심 쟁점을 정리해야 합니다')} ."
+    diagnosis = f"{f['subject']}의 핵심 리스크는 {f['risk']}입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, {MOVE_DIAGNOSIS.get(top_move, '핵심 쟁점을 정리해야 합니다')} ."
     diagnosis = diagnosis.replace(' .', '.')
     follow_up = _sentence('instruction', f, signals)
     return {
@@ -267,6 +345,7 @@ def synthesize_questions(issue_id: str, signals: list[str] | None = None, *, pri
         'move_scores': scores,
         'questions': questions,
         'follow_up': follow_up,
+        'style_note': '과거 대통령 질문 데이터의 말맛을 반영해, 작은 사례로 제도 전체를 흔드는 tail-wags-head형 질문을 우선 생성합니다. 통계·법령은 질문 문구가 아니라 장관 답변 근거로 둡니다.',
     }
 
 # Backward-compatible alias used by older generated JSON readers.

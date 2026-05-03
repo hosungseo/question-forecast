@@ -104,119 +104,159 @@
 <body>
 <main>
   <section class="masthead">
-    <div class="kicker"><span>Cabinet intelligence prototype</span><span>Generated · 2026-05-03T07:30:41.029249</span></div>
+    <div class="kicker"><span>Cabinet intelligence prototype</span><span>Generated · 2026-05-04T07:30:40.447806</span></div>
     <div class="hero">
       <div class="hero-copy"><h1>Question Forecast</h1><p class="lead">매일 보도를 부처 업무, 과거 국무회의 질문 패턴, 답변 근거 통계에 연결해 장관용 예상 질의 브리핑을 만듭니다.</p></div>
-      <aside class="hero-panel"><div><small>오늘의 최근 이슈</small><h2>&#x27;교사 독박책임&#x27; 부담에 현장 체험학습 위축…면책 논의 착수</h2><div class="hero-issue">&#x27;교사 독박책임&#x27; 부담에 현장 체험학습 위축…면책 논의 착수 — 최근 학교에서 소풍이나 수학여행이 크게 줄어든 것을 두고, 안전사고에 대한 부담을 온전히 교사가 져야... [기자] 19년 차 초등학교 교사인 안영주 씨. 언제부턴가 학생과 학부모들 모두 현장 체험학습 가는 걸 꺼리기...</div><div class="hero-signals">2026-05-01 · 기사 23건 · 소풍, 수학여행, 현장체험학습, 교사, 면책</div><small class="question-kicker">Today’s first question</small><div class="hero-question">소풍이나 수학여행도 수업의 일부인데, 안전사고가 걱정된다고 아예 안 가는 식으로 굳어지면 교육 기회를 줄이는 것 아닌지?</div></div><div class="hero-stats"><div><b>5</b><span>packets</span></div><div><b>2</b><span>high</span></div><div><b>76.9</b><span>avg score</span></div></div></aside>
+      <aside class="hero-panel"><div><small>오늘의 최근 이슈</small><h2>소풍 기피에…교육부 “교사 면책권 강화”</h2><div class="hero-issue">소풍 기피에…교육부 “교사 면책권 강화” — 현장체험학습 중 사고 발생 시 관련 법적 책임을 교사가 짊어져야 할 수 있다는 이유로 수학여행이나 소풍 등을 기피하는 학교가 늘어나자 내놓은 정부의 특단 조치다. 3일 교육계에 따르면 교육부는 이달 중...</div><div class="hero-signals">2026-05-04 · 기사 24건 · 소풍, 수학여행, 현장체험학습, 교사, 면책</div><small class="question-kicker">Today’s first question</small><div class="hero-question">소풍이나 수학여행도 수업의 일부인데, 안전사고가 걱정된다고 아예 안 가는 식으로 굳어지면 교육 기회를 줄이는 것 아닌지?</div></div><div class="hero-stats"><div><b>5</b><span>packets</span></div><div><b>2</b><span>high</span></div><div><b>78.2</b><span>avg score</span></div></div></aside>
     </div>
   </section>
   <nav class="links"><a href="daily-digest.md">Daily digest</a><a href="briefing.md">Full briefing</a><a href="radar.md">Radar markdown</a><a href="gold-v1.md">Gold v1</a><a href="threshold.md">Calibration</a><a href="https://github.com/hosungseo/question-forecast">GitHub</a></nav>
   <section class="api-panel" aria-label="데이터 상태"><div><h2>데이터 상태</h2><p id="apiSummary">Vercel API에서 최신 레이더를 확인합니다.</p><div class="api-actions"><button id="refreshApi">API 재확인</button><button id="copyApi">API 링크 복사</button><a href="/api/latest">/api/latest</a><a href="/api/issues">/api/issues</a></div></div><div class="api-status"><span class="pill" id="apiLive">확인 전</span><span class="pill" id="apiGenerated">generated: -</span><span class="pill" id="apiCount">packets: -</span></div></section>
   <section class="controls"><input id="search" type="search" placeholder="이슈, 부처, 질문, 답변근거 검색" /><select id="sort"><option value="rank">기본 순위</option><option value="score">질문 가능성 높은 순</option></select><button id="expand">모두 펼치기</button><button id="collapse">모두 접기</button></section>
-  <div class="filters"><button data-filter="전체">전체</button><button data-filter="고용노동부">고용노동부</button><button data-filter="교육부">교육부</button><button data-filter="금융위원회">금융위원회</button><button data-filter="법무부">법무부</button><button data-filter="행정안전부">행정안전부</button></div>
-  <section class="brief-layout"><aside class="brief-rail"><h2>오늘 먼저 볼 이슈</h2><p>질문 가능성이 높거나 장관 답변 준비가 급한 순서입니다.</p><ul class="focus-list"><li><span>1</span><b>교육부</b><em>school_field_trip</em><strong>78.5</strong></li><li><span>2</span><b>행정안전부</b><em>disaster_safety</em><strong>85.6</strong></li><li><span>3</span><b>금융위원회</b><em>finance_rates</em><strong>75.3</strong></li><li><span>4</span><b>법무부</b><em>justice_reform</em><strong>74.5</strong></li><li><span>5</span><b>고용노동부</b><em>labor_jobs</em><strong>70.4</strong></li></ul></aside><section class="issues" id="issues">
-    <article class="issue cabinet_high" data-ministry="교육부" data-score="78.5" data-search="교육부 school_field_trip 소풍이나 수학여행도 수업의 일부인데, 안전사고가 걱정된다고 아예 안 가는 식으로 굳어지면 교육 기회를 줄이는 것 아닌지? 학교안전, 교권보호 지역별 학교 수/학생 수/교원 수 · 학교 안전사고/교육활동 침해 관련 통계 2025-07-15 · 예산/재정 확인 · 또 일주일 만에 이렇게 뵙게 되었음. 의대생들이 다행스럽게 학업에 복귀하기로 했다고 함. 늦었지만 참으로 다행스러운 일임. 교육 당국이 필요한 후속 조치를 신속하게 추진해 주기 바람. 그리고 의대생 &#x27;교사 독박책임&#x27; 부담에 현장 체험학습 위축…면책 논의 착수 — 최근 학교에서 소풍이나 수학여행이 크게 줄어든 것을 두고, 안전사고에 대한 부담을 온전히 교사가 져야... [기자] 19년 차 초등학교 교사인 안영주 씨. 언제부턴가 학생과 학부모들 모두 현장 체험학습 가는 걸 꺼리기... 소풍, 수학여행, 현장체험학습, 교사, 면책">
+  <div class="filters"><button data-filter="전체">전체</button><button data-filter="고용노동부">고용노동부</button><button data-filter="교육부">교육부</button><button data-filter="금융위원회">금융위원회</button><button data-filter="기획재정부">기획재정부</button><button data-filter="행정안전부">행정안전부</button></div>
+  <section class="brief-layout"><aside class="brief-rail"><h2>오늘 먼저 볼 이슈</h2><p>질문 가능성이 높거나 장관 답변 준비가 급한 순서입니다.</p><ul class="focus-list"><li><span>1</span><b>교육부</b><em>school_field_trip</em><strong>80.9</strong></li><li><span>2</span><b>행정안전부</b><em>disaster_safety</em><strong>85.4</strong></li><li><span>3</span><b>기획재정부</b><em>prices_livelihood</em><strong>77.8</strong></li><li><span>4</span><b>금융위원회</b><em>finance_rates</em><strong>75.1</strong></li><li><span>5</span><b>고용노동부</b><em>labor_jobs</em><strong>71.7</strong></li></ul></aside><section class="issues" id="issues">
+    <article class="issue cabinet_high" data-ministry="교육부" data-score="80.9" data-search="교육부 school_field_trip 소풍이나 수학여행도 수업의 일부인데, 안전사고가 걱정된다고 아예 안 가는 식으로 굳어지면 교육 기회를 줄이는 것 아닌지? 학교안전, 교권보호 지역별 학교 수/학생 수/교원 수 · 학교 안전사고/교육활동 침해 관련 통계 2025-06-10 · 현황 질문 · 수도권과 비수도권 대학의 경쟁력 해소를 위한 거점대학은 국립대 중에서 지역별로 고르는 것인지? 소풍 기피에…교육부 “교사 면책권 강화” — 현장체험학습 중 사고 발생 시 관련 법적 책임을 교사가 짊어져야 할 수 있다는 이유로 수학여행이나 소풍 등을 기피하는 학교가 늘어나자 내놓은 정부의 특단 조치다. 3일 교육계에 따르면 교육부는 이달 중... 소풍, 수학여행, 현장체험학습, 교사, 면책">
       <div class="rank"><span>1</span></div>
       <div class="issue-main">
-        <div class="meta"><span>교육부</span><span>school_field_trip</span><span>cabinet_high</span><span class="badge stable">STABLE</span></div>
+        <div class="meta"><span>교육부</span><span>school_field_trip</span><span>cabinet_high</span><span class="badge up">RISING</span></div>
         <div class="issue-head">
           <div>
             <div class="recent-label">최근 이슈</div>
-            <h3 class="issue-title">&#x27;교사 독박책임&#x27; 부담에 현장 체험학습 위축…면책 논의 착수</h3>
+            <h3 class="issue-title">소풍 기피에…교육부 “교사 면책권 강화”</h3>
           </div>
-          <div class="score"><b>78.5</b><small>질문 가능성</small></div>
+          <div class="score"><b>80.9</b><small>질문 가능성</small></div>
         </div>
-        <p class="issue-summary">&#x27;교사 독박책임&#x27; 부담에 현장 체험학습 위축…면책 논의 착수 — 최근 학교에서 소풍이나 수학여행이 크게 줄어든 것을 두고, 안전사고에 대한 부담을 온전히 교사가 져야... [기자] 19년 차 초등학교 교사인 안영주 씨. 언제부턴가 학생과 학부모들 모두 현장 체험학습 가는 걸 꺼리기...</p>
-        <div class="signal-strip"><span>2026-05-01</span><span>기사 23건</span><span>소풍, 수학여행, 현장체험학습, 교사, 면책</span></div>
+        <p class="issue-summary">소풍 기피에…교육부 “교사 면책권 강화” — 현장체험학습 중 사고 발생 시 관련 법적 책임을 교사가 짊어져야 할 수 있다는 이유로 수학여행이나 소풍 등을 기피하는 학교가 늘어나자 내놓은 정부의 특단 조치다. 3일 교육계에 따르면 교육부는 이달 중...</p>
+        <div class="signal-strip"><span>2026-05-04</span><span>기사 24건</span><span>소풍, 수학여행, 현장체험학습, 교사, 면책</span></div>
         <section class="trend-box"><div class="trend-head"><b>최근 트렌드 기사</b><span>최신성·관련도 기준 대표 흐름</span></div><ol class="trend-list"><li>
-          <div class="trend-date">2026-05-01<span>35점</span></div>
-          <div class="trend-copy"><b><a href="https://www.usmbc.co.kr/NewsArticle/838365">대통령도 나섰지만‥올해도 &quot;소풍 안 가요&quot;</a></b><p>도중 초등학생이 숨진 사고. 법원은 학생을 인솔한 담임교사에게 안전사고의 책임이 있다며 유죄를 판결했습니다. 이후 학교 현장에서 소풍과 수학여행 등 현장체험학습이 급격히 줄었습니다. 사고 책임을 모두 떠넘기는...</p><em>소풍, 수학여행, 현장체험학습, 교사</em></div>
+          <div class="trend-date">2026-05-04<span>39점</span></div>
+          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/437/0000489947?sid=102">&quot;자녀 걱정된다며 따라오기도&quot;…교사 96% 현장체험학습 &#x27;부정적&#x27;</a></b><p>특히 응답자의 92.5%는 현장체험학습 운영을 위해 필요한 지원으로 &#x27;사고 발생 시 교사의 면책권을 보장하는 법적 제도 장치 마련&#x27;을 꼽았습니다. 이런 가운데 올해 소풍, 수학여행을 가는 학교는 더 줄고 있습니다.…</p><em>소풍, 수학여행, 현장체험학습, 교사</em></div>
         </li><li>
-          <div class="trend-date">2026-04-30<span>42점</span></div>
-          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/422/0000860540?sid=102">&#x27;교사 독박책임&#x27; 부담에 현장 체험학습 위축…면책 논의 착수</a></b><p>최근 학교에서 소풍이나 수학여행이 크게 줄어든 것을 두고, 안전사고에 대한 부담을 온전히 교사가 져야... [기자] 19년 차 초등학교 교사인 안영주 씨. 언제부턴가 학생과 학부모들 모두 현장 체험학습 가는 걸 꺼…</p><em>소풍, 수학여행, 교사, 면책</em></div>
+          <div class="trend-date">2026-05-03<span>44점</span></div>
+          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/011/0004617038?sid=102">소풍 기피에…교육부 “교사 면책권 강화”</a></b><p>현장체험학습 중 사고 발생 시 관련 법적 책임을 교사가 짊어져야 할 수 있다는 이유로 수학여행이나 소풍 등을 기피하는 학교가 늘어나자 내놓은 정부의 특단 조치다. 3일 교육계에 따르면 교육부는 이달 중...</p><em>소풍, 수학여행, 현장체험학습, 교사</em></div>
         </li><li>
-          <div class="trend-date">2026-04-30<span>38점</span></div>
-          <div class="trend-copy"><b><a href="https://www.bigtanews.co.kr/article/view/big202604300020">“선생님 책임으로 몰고가니 이런 상황이 발생”</a></b><p>최근 소풍·수학여행 기피 현상에 대해 언급했다. 이 대통령은 안전사고 관리 책임에 대한 우려로 교사들이... 29일자 소풍 안 간다&quot; 대통령 발언에…&quot;교사 면책권 강화&quot; 교육부 나선다&gt;로 댓글 589개, 반응 67…</p><em>소풍, 수학여행, 교사, 면책</em></div>
+          <div class="trend-date">2026-05-03<span>39점</span></div>
+          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/138/0002226736?sid=103">초·중·고교 소풍·수학여행 급감…교육계 &quot;사고나면 교사 책임&quot; 제도 ...</a></b><p>초·중·고등학교에서 소풍과 수학여행 등 현장체험학습이 빠르게 줄고 있다는 조사결과가 나왔다. 앞서... 이 사건 이후 교사들이 현장체험학습 중 사고 발생 시 형사책임까지 질 수 있다는 부담을 크게 느끼게 됐다는...</p><em>소풍, 수학여행, 현장체험학습, 교사</em></div>
         </li></ol></section>
         <div class="forecast-note"><b>질문 프레임</b><span>현장체험학습·소풍 축소 문제의 핵심 리스크는 현장 회피가 교육기회 축소로 굳어지는 것입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, 현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다.</span></div>
         <p class="first-q">소풍이나 수학여행도 수업의 일부인데, 안전사고가 걱정된다고 아예 안 가는 식으로 굳어지면 교육 기회를 줄이는 것 아닌지?</p>
         <div class="brief-grid">
           <div><small>업무 연결</small><b>학교안전, 교권보호</b></div>
           <div><small>답변 근거</small><b>지역별 학교 수/학생 수/교원 수 · 학교 안전사고/교육활동 침해 관련 통계</b></div>
-          <div><small>유사사례</small><b>2025-07-15 · 예산/재정 확인 · 또 일주일 만에 이렇게 뵙게 되었음. 의대생들이 다행스럽게 학업에 복귀하기로 했다고 함. 늦었지만 참으로 다행스러운 일임. 교육 당국이 필요한 후속 조치를 신속하게 추진해 주기 바람. 그리고 의대생</b></div>
+          <div><small>유사사례</small><b>2025-06-10 · 현황 질문 · 수도권과 비수도권 대학의 경쟁력 해소를 위한 거점대학은 국립대 중에서 지역별로 고르는 것인지?</b></div>
         </div>
-        <div class="actions"><a href="issue-1-school_field_trip.html">상세 브리핑</a><a class="ghost" href="memo-1-school_field_trip.md">메모</a><button class="pick" data-title="교육부 · school_field_trip" data-score="78.5" data-question="소풍이나 수학여행도 수업의 일부인데, 안전사고가 걱정된다고 아예 안 가는 식으로 굳어지면 교육 기회를 줄이는 것 아닌지?">검토 바구니</button></div>
+        <div class="actions"><a href="issue-1-school_field_trip.html">상세 브리핑</a><a class="ghost" href="memo-1-school_field_trip.md">메모</a><button class="pick" data-title="교육부 · school_field_trip" data-score="80.9" data-question="소풍이나 수학여행도 수업의 일부인데, 안전사고가 걱정된다고 아예 안 가는 식으로 굳어지면 교육 기회를 줄이는 것 아닌지?">검토 바구니</button></div>
         <details>
           <summary>장관 답변 준비 펼치기</summary>
           <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>교육부 직접 사무인지 교육청 집행 사무인지 구분</li><li>법령·예산·지침 중 실제 조치수단 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
           <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
-          <p class="article-title">대표 기사: &#x27;교사 독박책임&#x27; 부담에 현장 체험학습 위축…면책 논의 착수</p>
+          <p class="article-title">대표 기사: 소풍 기피에…교육부 “교사 면책권 강화”</p>
         </details>
       </div>
     </article>
 
-    <article class="issue cabinet_high" data-ministry="행정안전부" data-score="85.6" data-search="행정안전부 disaster_safety 침수나 산불 같은 것은 일이 터진 뒤 수습하는 것보다, 국민이 미리 피하게 만드는 게 국가의 역할 아닌지? 재난안전, 지방행정 화재 발생/재난 피해 통계 2025-06-05 · 현황 질문 · 산불이 갈수록 빈발하고 있고, 산불 때문에 마을이 불타는 등 그 피해가 대형화되고 있음. 그리고 올해는 산불이 서른 몇 군데가 동시에 일어나 피해가 아주 컸지만, 이에 대응하는 산림청과 소방청의 협 침수 지하차도, 내비게이션으로 미리 알고 피해 가세요 — 행정안전부가 지하차도의 통제 정보를 내비게이션 앱에 실시간 제공하기로 했는데요. 지난 오송 지하차도 참사 이후 &#x27;진입 차단시설&#x27; 설치는 확대됐지만, 운전자가 가까이 접근하기 전까지 통제 여부를 알기 어렵다는... 산불, 재난, 안전, 화재, 침수">
+    <article class="issue cabinet_high" data-ministry="행정안전부" data-score="85.4" data-search="행정안전부 disaster_safety 침수나 산불 같은 것은 일이 터진 뒤 수습하는 것보다, 국민이 미리 피하게 만드는 게 국가의 역할 아닌지? 재난안전 화재 발생/재난 피해 통계 2026-03-17 · 예산/재정 확인 · 중동 상황으로 급등했던 기름값이 석유 최고가격제 시행 후에 다소 안정되고 있음. 국민들께서 최고가격제 시행 효과를 보다 충분히 체감하실 수 있도록 현장 점검 강화 등 가용 수단을 총동원해 주시기 바 밀양시, 여름철 재해취약지역 현장점검 — 현장 점검에는 이정곤 부시장을 비롯해 안전재난과, 건설과, 산림녹지과 관계자와 해당 읍·면·동 직원 등... 또한, 침수 피해 방지를 위한 송지지하차도 차단시설 및 비상 대응체계를 확인하고, 산사태 우려지역과 용평... 산불, 재난, 안전, 화재, 침수">
       <div class="rank"><span>2</span></div>
       <div class="issue-main">
         <div class="meta"><span>행정안전부</span><span>disaster_safety</span><span>cabinet_high</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
           <div>
             <div class="recent-label">최근 이슈</div>
-            <h3 class="issue-title">침수 지하차도, 내비게이션으로 미리 알고 피해 가세요</h3>
+            <h3 class="issue-title">밀양시, 여름철 재해취약지역 현장점검</h3>
           </div>
-          <div class="score"><b>85.6</b><small>질문 가능성</small></div>
+          <div class="score"><b>85.4</b><small>질문 가능성</small></div>
         </div>
-        <p class="issue-summary">침수 지하차도, 내비게이션으로 미리 알고 피해 가세요 — 행정안전부가 지하차도의 통제 정보를 내비게이션 앱에 실시간 제공하기로 했는데요. 지난 오송 지하차도 참사 이후 &#x27;진입 차단시설&#x27; 설치는 확대됐지만, 운전자가 가까이 접근하기 전까지 통제 여부를 알기 어렵다는...</p>
-        <div class="signal-strip"><span>2026-05-03</span><span>기사 39건</span><span>산불, 재난, 안전, 화재, 침수</span></div>
+        <p class="issue-summary">밀양시, 여름철 재해취약지역 현장점검 — 현장 점검에는 이정곤 부시장을 비롯해 안전재난과, 건설과, 산림녹지과 관계자와 해당 읍·면·동 직원 등... 또한, 침수 피해 방지를 위한 송지지하차도 차단시설 및 비상 대응체계를 확인하고, 산사태 우려지역과 용평...</p>
+        <div class="signal-strip"><span>2026-05-04</span><span>기사 37건</span><span>산불, 재난, 안전, 화재, 침수</span></div>
         <section class="trend-box"><div class="trend-head"><b>최근 트렌드 기사</b><span>최신성·관련도 기준 대표 흐름</span></div><ol class="trend-list"><li>
-          <div class="trend-date">2026-05-03<span>28점</span></div>
-          <div class="trend-copy"><b><a href="https://www.ccreview.co.kr/news/articleView.html?idxno=347611">세종조치원읍 아파트 화재 …&#x27;인명 피해는 없어&#x27;</a></b><p>다만, 이번 화재로 이 아파트 1천429세대의 전기를 공급하는 전기실 케이블이 소실되면서 단지 전체에 정전이 발생했으며, 복구에 상당 시일이 걸릴 것으로 예상된다. 시는 사고 발생 직후 재난안전대책본부를 가동하고.…</p><em>재난, 안전, 화재</em></div>
+          <div class="trend-date">2026-05-04<span>29점</span></div>
+          <div class="trend-copy"><b><a href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202605030935236210397">[부산 브리핑 모음(5월4일)] 부산항만공사, 외부강의신고 매뉴얼 자체 제...</a></b><p>점검, 재난 감시, 대외 지원 등 다양한 분야에 드론을 적극 활용하고 있다. 실제로 드론 활용 실적은 전년도 대비 62.5% 증가하며 공단의 안전관리 방식이 빠르게 변화하고 있음을 보여주고 있다. 앞서 공단은 산불…</p><em>산불, 재난, 안전</em></div>
         </li><li>
-          <div class="trend-date">2026-05-01<span>28점</span></div>
-          <div class="trend-copy"><b><a href="https://www.naeil.com/news/read/587408?ref=naver">침수위험 지하차도 차단정보 실시간 제공</a></b><p>한국도로교통공단, 서울·대전 83개소 시범 운영 … 민간 내비와 연계 확대 한국도로교통공단은 행정안전부와 경찰청, 서울시, 대전시 등과 협력해 침수위험 지하차도 차단 상태 정보를 민간 지도·내비게이션 서비스와...</p><em>안전, 침수, 지하차도</em></div>
+          <div class="trend-date">2026-05-04<span>28점</span></div>
+          <div class="trend-copy"><b><a href="https://www.tournews21.com/news/articleView.html?idxno=134576">세종시, 조치원 아파트 화재·정전 총력 대응 … &quot;복구 속도전 돌입&quot;</a></b><p>시는 김하균 시장 권한대행을 중심으로 재난피해자지원센터를 가동하고, 전 부서 인력을 투입해 복구와 지원을 병행하고 있다. 시 관계자는 &quot;6일 안전성 검사를 목표로 전력 복구에 총력을 다하고 있다&quot;며 &quot;주민 불편을.…</p><em>재난, 안전, 화재</em></div>
         </li><li>
-          <div class="trend-date">2026-05-01<span>28점</span></div>
-          <div class="trend-copy"><b><a href="https://www.ppss.kr/news/articleView.html?idxno=294780">고양시, 자유로 현천육갑문 시험가동…침수 대응 체계 이상무</a></b><p>작동과 지하차도 자동차단 시설 모두 정상 상태로 확인됐다. 시설 전반에 특이사항은 없었다. 교통 통제도 관계기관과 시민 협조 속에 원활하게 이뤄졌다. 고양시 관계자는 &quot;시험가동으로 시설 안전성과 신뢰성을...</p><em>안전, 침수, 지하차도</em></div>
+          <div class="trend-date">2026-05-03<span>31점</span></div>
+          <div class="trend-copy"><b><a href="https://www.ulsanpress.net/news/articleView.html?idxno=574389">밀양시, 여름철 재해취약지역 현장점검</a></b><p>현장 점검에는 이정곤 부시장을 비롯해 안전재난과, 건설과, 산림녹지과 관계자와 해당 읍·면·동 직원 등... 또한, 침수 피해 방지를 위한 송지지하차도 차단시설 및 비상 대응체계를 확인하고, 산사태 우려지역과 용평…</p><em>재난, 안전, 침수, 지하차도</em></div>
         </li></ol></section>
         <div class="forecast-note"><b>질문 프레임</b><span>재난·안전 대응 이슈의 핵심 리스크는 사후 수습은 반복되지만 사전 통제가 늦어지는 것입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, 국정 운영상 무엇을 우선순위로 둘지 분명히 해야 합니다.</span></div>
         <p class="first-q">침수나 산불 같은 것은 일이 터진 뒤 수습하는 것보다, 국민이 미리 피하게 만드는 게 국가의 역할 아닌지?</p>
         <div class="brief-grid">
-          <div><small>업무 연결</small><b>재난안전, 지방행정</b></div>
+          <div><small>업무 연결</small><b>재난안전</b></div>
           <div><small>답변 근거</small><b>화재 발생/재난 피해 통계</b></div>
-          <div><small>유사사례</small><b>2025-06-05 · 현황 질문 · 산불이 갈수록 빈발하고 있고, 산불 때문에 마을이 불타는 등 그 피해가 대형화되고 있음. 그리고 올해는 산불이 서른 몇 군데가 동시에 일어나 피해가 아주 컸지만, 이에 대응하는 산림청과 소방청의 협</b></div>
+          <div><small>유사사례</small><b>2026-03-17 · 예산/재정 확인 · 중동 상황으로 급등했던 기름값이 석유 최고가격제 시행 후에 다소 안정되고 있음. 국민들께서 최고가격제 시행 효과를 보다 충분히 체감하실 수 있도록 현장 점검 강화 등 가용 수단을 총동원해 주시기 바</b></div>
         </div>
-        <div class="actions"><a href="issue-2-disaster_safety.html">상세 브리핑</a><a class="ghost" href="memo-2-disaster_safety.md">메모</a><button class="pick" data-title="행정안전부 · disaster_safety" data-score="85.6" data-question="침수나 산불 같은 것은 일이 터진 뒤 수습하는 것보다, 국민이 미리 피하게 만드는 게 국가의 역할 아닌지?">검토 바구니</button></div>
+        <div class="actions"><a href="issue-2-disaster_safety.html">상세 브리핑</a><a class="ghost" href="memo-2-disaster_safety.md">메모</a><button class="pick" data-title="행정안전부 · disaster_safety" data-score="85.4" data-question="침수나 산불 같은 것은 일이 터진 뒤 수습하는 것보다, 국민이 미리 피하게 만드는 게 국가의 역할 아닌지?">검토 바구니</button></div>
         <details>
           <summary>장관 답변 준비 펼치기</summary>
           <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>중앙-지방 역할분담 확인</li><li>현장 통제와 국민안내 책임기관 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
           <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
-          <p class="article-title">대표 기사: 침수 지하차도, 내비게이션으로 미리 알고 피해 가세요</p>
+          <p class="article-title">대표 기사: 밀양시, 여름철 재해취약지역 현장점검</p>
         </details>
       </div>
     </article>
 
-    <article class="issue cabinet_review" data-ministry="금융위원회" data-score="75.3" data-search="금융위원회 finance_rates 금융이 필요한 사람에게는 안 가고 안전한 사람에게만 가면, 정책금융이라는 이름이 무색한 것 아닌지? 서민금융 가계부채/대출금리 · 서민금융/취약차주 지표 2025-08-12 · 현황 질문 · 산업재해 예방을 위한 대책을 구체적으로 준비한 곳이 노동부하고 국토부 둘밖에 없는지? 지난번에 금융위원회에서 이런 회사들이 사고 내면 대출 이자에 불이익을 주거나 대출 규제를 한다든지, 국민연금 같 정부 애쓰지만 저축은행 중금리대출 37% 급감···서민금융 여전히 경색 — 실제로 익명을 요구한 한 저축은행 관계자는 여성경제신문과의 통화에서 &quot;중금리대출 확대 기반이 생긴 것은 좋으나 지금 당장 대출을 실행하기에는 현실적인 한계가 있다&quot;라며 &quot;중금리대출 1을 얼마나 공급할 수... 금융, 대출, 금리, 은행, 중금리">
+    <article class="issue cabinet_review" data-ministry="기획재정부" data-score="77.8" data-search="기획재정부 prices_livelihood 국민은 평균 물가가 아니라 장바구니와 기름값으로 고통을 느끼는데, 정부 대책도 그 체감 지점에서 출발해야 하는 것 아닌지? 예산, 물가 소비자물가지수/생활물가 관련 지표 · 가계동향/소득분위별 지출 2025-09-09 · 현황 질문 · 민생 부담 경감을 위한 43조 2,000억 원은 통상적인 금리가 될 텐데, 서민금융이라고 하는 햇살론 유스나 불법사금융 예방 대출, 이런 것은 이자가 얼마인지? [브브스뉴스] 고유가 직격탄에 피해지원금 지급…민생 숨통 트일까 — 특히 이번주부터 국민들에게 손에 잡히는 민생대책으로 고유가 피해지원금 지급에 나서면서 서민물가 부담이 완화될 지 기대되고 있습니다. 박은수 기자가 보도합니다. 고유가 대응을 위해 초고속으로 마련된 &#x27;원포인트... 물가, 민생, 지원, 고유가, 경제">
       <div class="rank"><span>3</span></div>
+      <div class="issue-main">
+        <div class="meta"><span>기획재정부</span><span>prices_livelihood</span><span>cabinet_review</span><span class="badge up">RISING</span></div>
+        <div class="issue-head">
+          <div>
+            <div class="recent-label">최근 이슈</div>
+            <h3 class="issue-title">[브브스뉴스] 고유가 직격탄에 피해지원금 지급…민생 숨통 트일까</h3>
+          </div>
+          <div class="score"><b>77.8</b><small>질문 가능성</small></div>
+        </div>
+        <p class="issue-summary">[브브스뉴스] 고유가 직격탄에 피해지원금 지급…민생 숨통 트일까 — 특히 이번주부터 국민들에게 손에 잡히는 민생대책으로 고유가 피해지원금 지급에 나서면서 서민물가 부담이 완화될 지 기대되고 있습니다. 박은수 기자가 보도합니다. 고유가 대응을 위해 초고속으로 마련된 &#x27;원포인트...</p>
+        <div class="signal-strip"><span>2026-05-04</span><span>기사 26건</span><span>물가, 민생, 지원, 고유가, 경제</span></div>
+        <section class="trend-box"><div class="trend-head"><b>최근 트렌드 기사</b><span>최신성·관련도 기준 대표 흐름</span></div><ol class="trend-list"><li>
+          <div class="trend-date">2026-05-04<span>26점</span></div>
+          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/421/0008924757?sid=101">&#x27;고유가 부담&#x27; 곧 다가올 물가 상승…주식시장 드리운 &#x27;신중론&#x27;</a></b><p>지난달 27일 지급이 시작된 &#x27;고유가 피해지원금&#x27;도 유동성 공급인 만큼 향후 물가 상승 압력으로 작용할 가능성이 높다. 정부는 국비 4조 8000억 원, 지방비 1조 3000억 원 등 총 6조 1000억 원 규모의…</p><em>물가, 지원, 고유가, 부담</em></div>
+        </li><li>
+          <div class="trend-date">2026-05-03<span>27점</span></div>
+          <div class="trend-copy"><b><a href="https://www.hidomin.com/news/articleView.html?idxno=703830">울진군, 제2회 추가경정예산안 7307억원 편성</a></b><p>울진군은 중동전쟁 장기화로 인한 유가 급등과 고물가로 어려움을 겪고 있는 군민들의 민생 부담을... 에너지 물가 안정을 이번 추경의 최우선 과제로 삼고 △고유가 피해지원금 70억5000만원 △어업경영비(유류비)...</p><em>물가, 민생, 지원, 고유가</em></div>
+        </li><li>
+          <div class="trend-date">2026-05-03<span>23점</span></div>
+          <div class="trend-copy"><b><a href="http://www.newstown.co.kr/news/articleView.html?idxno=702398">화성특례시의회 &quot;민생 회복 마중물 되길&quot;</a></b><p>주요 반영 사업은 고유가 피해지원금 615억 2,900만 원, THE 경기패스 73억 4,200만 원, 긴급복지 3억 1,700만 원... 화성특례시의회는 이번 추경 의결을 통해 고유가와 물가 상승으로 인한 시민…</p><em>물가, 민생, 지원, 고유가</em></div>
+        </li></ol></section>
+        <div class="forecast-note"><b>질문 프레임</b><span>물가·민생 부담의 핵심 리스크는 지원은 나가지만 체감 물가가 내려가지 않는 것입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, 발표가 실제 변화로 이어지도록 병목을 설명해야 합니다.</span></div>
+        <p class="first-q">국민은 평균 물가가 아니라 장바구니와 기름값으로 고통을 느끼는데, 정부 대책도 그 체감 지점에서 출발해야 하는 것 아닌지?</p>
+        <div class="brief-grid">
+          <div><small>업무 연결</small><b>예산, 물가</b></div>
+          <div><small>답변 근거</small><b>소비자물가지수/생활물가 관련 지표 · 가계동향/소득분위별 지출</b></div>
+          <div><small>유사사례</small><b>2025-09-09 · 현황 질문 · 민생 부담 경감을 위한 43조 2,000억 원은 통상적인 금리가 될 텐데, 서민금융이라고 하는 햇살론 유스나 불법사금융 예방 대출, 이런 것은 이자가 얼마인지?</b></div>
+        </div>
+        <div class="actions"><a href="issue-3-prices_livelihood.html">상세 브리핑</a><a class="ghost" href="memo-3-prices_livelihood.md">메모</a><button class="pick" data-title="기획재정부 · prices_livelihood" data-score="77.8" data-question="국민은 평균 물가가 아니라 장바구니와 기름값으로 고통을 느끼는데, 정부 대책도 그 체감 지점에서 출발해야 하는 것 아닌지?">검토 바구니</button></div>
+        <details>
+          <summary>장관 답변 준비 펼치기</summary>
+          <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>지원수단별 효과와 재정소요 비교</li><li>집행속도와 대상선별 기준 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
+          <p class="delta">전일 대비: 기사 신호와 정책 관련성이 빠르게 커졌습니다.</p>
+          <p class="article-title">대표 기사: [브브스뉴스] 고유가 직격탄에 피해지원금 지급…민생 숨통 트일까</p>
+        </details>
+      </div>
+    </article>
+
+    <article class="issue cabinet_review" data-ministry="금융위원회" data-score="75.1" data-search="금융위원회 finance_rates 금융이 필요한 사람에게는 안 가고 안전한 사람에게만 가면, 정책금융이라는 이름이 무색한 것 아닌지? 서민금융 가계부채/대출금리 · 서민금융/취약차주 지표 2025-08-12 · 현황 질문 · 산업재해 예방을 위한 대책을 구체적으로 준비한 곳이 노동부하고 국토부 둘밖에 없는지? 지난번에 금융위원회에서 이런 회사들이 사고 내면 대출 이자에 불이익을 주거나 대출 규제를 한다든지, 국민연금 같 김용범의 &quot;잔인한 금융&quot; 화두, 은행권 중금리 대출 압박 커지나 — 포용 금융과 중금리 대출 확대는 이미 추진 중이지만, 당국의 정책에 따라 은행권의 대응도 한층 분주해질 것으로 보인다. 김용범 대통령비서실 정책실장이 금융 구조에 관해 개인 sns에 올린 글에 시장의 시선이 쏠리고... 금융, 대출, 금리, 은행, 중금리">
+      <div class="rank"><span>4</span></div>
       <div class="issue-main">
         <div class="meta"><span>금융위원회</span><span>finance_rates</span><span>cabinet_review</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
           <div>
             <div class="recent-label">최근 이슈</div>
-            <h3 class="issue-title">정부 애쓰지만 저축은행 중금리대출 37% 급감···서민금융 여전히 경색</h3>
+            <h3 class="issue-title">김용범의 &quot;잔인한 금융&quot; 화두, 은행권 중금리 대출 압박 커지나</h3>
           </div>
-          <div class="score"><b>75.3</b><small>질문 가능성</small></div>
+          <div class="score"><b>75.1</b><small>질문 가능성</small></div>
         </div>
-        <p class="issue-summary">정부 애쓰지만 저축은행 중금리대출 37% 급감···서민금융 여전히 경색 — 실제로 익명을 요구한 한 저축은행 관계자는 여성경제신문과의 통화에서 &quot;중금리대출 확대 기반이 생긴 것은 좋으나 지금 당장 대출을 실행하기에는 현실적인 한계가 있다&quot;라며 &quot;중금리대출 1을 얼마나 공급할 수...</p>
-        <div class="signal-strip"><span>2026-05-02</span><span>기사 28건</span><span>금융, 대출, 금리, 은행, 중금리</span></div>
+        <p class="issue-summary">김용범의 &quot;잔인한 금융&quot; 화두, 은행권 중금리 대출 압박 커지나 — 포용 금융과 중금리 대출 확대는 이미 추진 중이지만, 당국의 정책에 따라 은행권의 대응도 한층 분주해질 것으로 보인다. 김용범 대통령비서실 정책실장이 금융 구조에 관해 개인 SNS에 올린 글에 시장의 시선이 쏠리고...</p>
+        <div class="signal-strip"><span>2026-05-04</span><span>기사 26건</span><span>금융, 대출, 금리, 은행, 중금리</span></div>
         <section class="trend-box"><div class="trend-head"><b>최근 트렌드 기사</b><span>최신성·관련도 기준 대표 흐름</span></div><ol class="trend-list"><li>
-          <div class="trend-date">2026-05-02<span>19점</span></div>
-          <div class="trend-copy"><b><a href="https://www.mediawatch.kr/news/article.html?no=259472">[금주의 금융 톡톡] KB금융·하나금융, ‘벤처투자 활성화’ 대규모 금...</a></b><p>IBK기업은행, 중소기업 근로자 비대면 대출 금리 감면 IBK기업은행이 중소기업 재직 근로자의 주거 안정과... 비용 부담이 커진 상황”이라며, “앞으로도 금융 취약계층과 서민·소상공인을 위한 실질적인 지원을...</p><em>금융, 대출, 금리, 은행</em></div>
+          <div class="trend-date">2026-05-04<span>28점</span></div>
+          <div class="trend-copy"><b><a href="https://www.mhns.co.kr/news/articleView.html?idxno=746464">[박근종 칼럼] 이자율 평균 1,417% 불법 사채 근절하려면 서민금융 안전...</a></b><p>캐피털사까지로 확대한다. 적격 공급 요건도 신용 하위 20∼50%에서 70% 이상으로 개편하고, 개인사업자 전용 사잇돌대출을 신설한다. 민간 중금리대출 제도도 개선한다. 그간 금리요건 산정 시 반영되지 않았던 대출…</p><em>금융, 대출, 금리, 중금리</em></div>
         </li><li>
-          <div class="trend-date">2026-05-02<span>19점</span></div>
-          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/003/0013922165?sid=101">대출 조이자 뛰는 금리…이자 부담 커진다[규제의 역설②]</a></b><p>자금을 유치해야 할 유인도 줄어들면서 예금금리는 낮게 설정해 금융 소비자들의 이자 상환 부담은... 5대 은행의 정책서민금융 제외 가계대출금리는 지난달 평균 4.302%로 나타났다. 전월 평균 4.272%에서 0.…</p><em>금융, 대출, 금리, 은행</em></div>
+          <div class="trend-date">2026-05-04<span>22점</span></div>
+          <div class="trend-copy"><b><a href="https://www.news2day.co.kr/article/20260504500005">[투데이 Pick] 은행권, 대출금리 오르자 예대금리차 꿈틀…확대 흐름 이...</a></b><p>지난 3월 기준 5대 은행의 정책서민금융 제외 가계대출금리 평균치는 4.302%로 전월(4.272%) 대비 0.03%p 오른 것으로 집계됐다. 반면 같은 기간 저축성 수신금리 평균은 2.802%에서 2.790%로…</p><em>금융, 대출, 금리, 은행</em></div>
         </li><li>
-          <div class="trend-date">2026-04-30<span>29점</span></div>
-          <div class="trend-copy"><b><a href="https://www.womaneconomy.co.kr/news/articleView.html?idxno=253243">정부 애쓰지만 저축은행 중금리대출 37% 급감···서민금융 여전히 경색</a></b><p>실제로 익명을 요구한 한 저축은행 관계자는 여성경제신문과의 통화에서 &quot;중금리대출 확대 기반이 생긴 것은 좋으나 지금 당장 대출을 실행하기에는 현실적인 한계가 있다&quot;라며 &quot;중금리대출 1을 얼마나 공급할 수...</p><em>금융, 대출, 금리, 은행</em></div>
+          <div class="trend-date">2026-05-03<span>29점</span></div>
+          <div class="trend-copy"><b><a href="https://www.bizhankook.com/bk/article/32168">김용범의 &quot;잔인한 금융&quot; 화두, 은행권 중금리 대출 압박 커지나</a></b><p>포용 금융과 중금리 대출 확대는 이미 추진 중이지만, 당국의 정책에 따라 은행권의 대응도 한층 분주해질 것으로 보인다. 김용범 대통령비서실 정책실장이 금융 구조에 관해 개인 SNS에 올린 글에 시장의 시선이 쏠리고…</p><em>금융, 대출, 금리, 은행</em></div>
         </li></ol></section>
         <div class="forecast-note"><b>질문 프레임</b><span>금리·대출 부담의 핵심 리스크는 정책금융이 필요한 사람보다 안전한 차주에게만 흐르는 것입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, 국민이 체감할 변화를 중심으로 답변을 준비해야 합니다.</span></div>
         <p class="first-q">금융이 필요한 사람에게는 안 가고 안전한 사람에게만 가면, 정책금융이라는 이름이 무색한 것 아닌지?</p>
@@ -225,78 +265,38 @@
           <div><small>답변 근거</small><b>가계부채/대출금리 · 서민금융/취약차주 지표</b></div>
           <div><small>유사사례</small><b>2025-08-12 · 현황 질문 · 산업재해 예방을 위한 대책을 구체적으로 준비한 곳이 노동부하고 국토부 둘밖에 없는지? 지난번에 금융위원회에서 이런 회사들이 사고 내면 대출 이자에 불이익을 주거나 대출 규제를 한다든지, 국민연금 같</b></div>
         </div>
-        <div class="actions"><a href="issue-3-finance_rates.html">상세 브리핑</a><a class="ghost" href="memo-3-finance_rates.md">메모</a><button class="pick" data-title="금융위원회 · finance_rates" data-score="75.3" data-question="금융이 필요한 사람에게는 안 가고 안전한 사람에게만 가면, 정책금융이라는 이름이 무색한 것 아닌지?">검토 바구니</button></div>
+        <div class="actions"><a href="issue-4-finance_rates.html">상세 브리핑</a><a class="ghost" href="memo-4-finance_rates.md">메모</a><button class="pick" data-title="금융위원회 · finance_rates" data-score="75.1" data-question="금융이 필요한 사람에게는 안 가고 안전한 사람에게만 가면, 정책금융이라는 이름이 무색한 것 아닌지?">검토 바구니</button></div>
         <details>
           <summary>장관 답변 준비 펼치기</summary>
           <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>정책금융 대상 적합성 확인</li><li>취약차주 지원과 금융건전성 균형 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
           <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
-          <p class="article-title">대표 기사: 정부 애쓰지만 저축은행 중금리대출 37% 급감···서민금융 여전히 경색</p>
+          <p class="article-title">대표 기사: 김용범의 &quot;잔인한 금융&quot; 화두, 은행권 중금리 대출 압박 커지나</p>
         </details>
       </div>
     </article>
 
-    <article class="issue cabinet_review" data-ministry="법무부" data-score="74.5" data-search="법무부 justice_reform 기관 권한을 어떻게 나눌지가 아니라, 국민 입장에서 범죄 피해를 막고 재판까지 가게 하는 힘이 약해지면 안 되는 것 아닌지? 검찰 범죄 발생/검거/재판 관련 통계 2025-10-14 · 현황 질문 · 대한민국 국민 중에 캄보디아에 가서 이런 범죄 행위에 가담하고 있는 사람이 자의든, 타의든 대략 얼마쯤 되는지? 유죄로 뒤집힌 ‘김건희 주가조작’…무혐의 판단한 검사들, 지금은 — 지난달엔 박성재 전 법무부 장관의 내란 중요임무 종사 혐의 재판에 증인으로 출석했다. 서울중앙지검 수사... 중요경제범죄조사단 부장검사로 좌천돼 있다. 이들은 2차 종합특검팀(특별검사 권창영) 수사 대상에도... 검찰, 개혁, 범죄, 수사, 법무부">
-      <div class="rank"><span>4</span></div>
-      <div class="issue-main">
-        <div class="meta"><span>법무부</span><span>justice_reform</span><span>cabinet_review</span><span class="badge stable">STABLE</span></div>
-        <div class="issue-head">
-          <div>
-            <div class="recent-label">최근 이슈</div>
-            <h3 class="issue-title">유죄로 뒤집힌 ‘김건희 주가조작’…무혐의 판단한 검사들, 지금은</h3>
-          </div>
-          <div class="score"><b>74.5</b><small>질문 가능성</small></div>
-        </div>
-        <p class="issue-summary">유죄로 뒤집힌 ‘김건희 주가조작’…무혐의 판단한 검사들, 지금은 — 지난달엔 박성재 전 법무부 장관의 내란 중요임무 종사 혐의 재판에 증인으로 출석했다. 서울중앙지검 수사... 중요경제범죄조사단 부장검사로 좌천돼 있다. 이들은 2차 종합특검팀(특별검사 권창영) 수사 대상에도...</p>
-        <div class="signal-strip"><span>2026-05-03</span><span>기사 27건</span><span>검찰, 개혁, 범죄, 수사, 법무부</span></div>
-        <section class="trend-box"><div class="trend-head"><b>최근 트렌드 기사</b><span>최신성·관련도 기준 대표 흐름</span></div><ol class="trend-list"><li>
-          <div class="trend-date">2026-05-03<span>24점</span></div>
-          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/025/0003520639?sid=102">유죄로 뒤집힌 ‘김건희 주가조작’…무혐의 판단한 검사들, 지금은</a></b><p>지난달엔 박성재 전 법무부 장관의 내란 중요임무 종사 혐의 재판에 증인으로 출석했다. 서울중앙지검 수사... 중요경제범죄조사단 부장검사로 좌천돼 있다. 이들은 2차 종합특검팀(특별검사 권창영) 수사 대상에도...</p><em>범죄, 수사, 법무부, 재판</em></div>
-        </li><li>
-          <div class="trend-date">2026-05-03<span>24점</span></div>
-          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/001/0016055559?sid=104">美서 기소된 &#x27;마약 카르텔 연루의혹&#x27; 멕시코 주지사 직무 물러나</a></b><p>美법무부, 지난주 주지사 등 10명 기소…루벤 주지사는 혐의 부인 이지헌 특파원 = 마약 밀매에 관여한... 셰인바움 대통령은 미국 측으로부터 명백한 증거를 받거나 자체 수사 과정에서 범죄 사실이 발견될 경우 멕시…</p><em>범죄, 수사, 법무부, 증거</em></div>
-        </li><li>
-          <div class="trend-date">2026-05-02<span>21점</span></div>
-          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/586/0000128261?sid=102">&quot;모르는 것도 죄가 되나요?&quot;…&#x27;형벌 과잉&#x27;이 낳은 일상 속 범죄자들</a></b><p>원인…법무부 &#x27;비범죄화&#x27; 개편 시동 #2020년 1인 기획사를 설립해 활동해온 가수 김완선이 지난 3월 검찰에... 법무부가 추진 중인 형사법 개혁은 배임이나 직권남용과 같이 정치적으로 예민한 항목부터 사실적시...</p><em>검찰, 개혁, 범죄, 법무부</em></div>
-        </li></ol></section>
-        <div class="forecast-note"><b>질문 프레임</b><span>범죄 대응·수사·검찰개혁 이슈의 핵심 리스크는 기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, 관계 부처와 기관의 역할 분담을 명확히 해야 합니다.</span></div>
-        <p class="first-q">기관 권한을 어떻게 나눌지가 아니라, 국민 입장에서 범죄 피해를 막고 재판까지 가게 하는 힘이 약해지면 안 되는 것 아닌지?</p>
-        <div class="brief-grid">
-          <div><small>업무 연결</small><b>검찰</b></div>
-          <div><small>답변 근거</small><b>범죄 발생/검거/재판 관련 통계</b></div>
-          <div><small>유사사례</small><b>2025-10-14 · 현황 질문 · 대한민국 국민 중에 캄보디아에 가서 이런 범죄 행위에 가담하고 있는 사람이 자의든, 타의든 대략 얼마쯤 되는지?</b></div>
-        </div>
-        <div class="actions"><a href="issue-4-justice_reform.html">상세 브리핑</a><a class="ghost" href="memo-4-justice_reform.md">메모</a><button class="pick" data-title="법무부 · justice_reform" data-score="74.5" data-question="기관 권한을 어떻게 나눌지가 아니라, 국민 입장에서 범죄 피해를 막고 재판까지 가게 하는 힘이 약해지면 안 되는 것 아닌지?">검토 바구니</button></div>
-        <details>
-          <summary>장관 답변 준비 펼치기</summary>
-          <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>피해자 보호와 재판가능성 확인</li><li>법무부-검찰-경찰-외교부 역할분담 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
-          <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
-          <p class="article-title">대표 기사: 유죄로 뒤집힌 ‘김건희 주가조작’…무혐의 판단한 검사들, 지금은</p>
-        </details>
-      </div>
-    </article>
-
-    <article class="issue cabinet_review" data-ministry="고용노동부" data-score="70.4" data-search="고용노동부 labor_jobs 현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지? 임금체불, 하도급·원청책임 고용률/실업률/청년고용률 · 산업재해/임금체불 행정통계 2025-09-02 · 검토결과 확인 · 규정 개정을 한번 검토해 보시기 바람. 그다음에 하도급의 부실 공사, 산재, 임금체불 등 모든 문제는 원청 아닌지? 김형미, 노동절 맞아 현장 행보…&quot;노동자 안전이 곧 주민 안전&quot; — 원청 책임 강화를 통한 구조 개선, 노동절 불평등 해소, 과로·심야노동 근절, 산재·과로사 방지, 양질의 일자리 확대 등이 주요 내용이다. 특히 &#x27;오승용 방지 조례&#x27; 제정과 버스 완전공영제 추진 등을 통해 노동 환경 개선과... 일자리, 청년, 산재, 원청, 임금체불">
+    <article class="issue cabinet_review" data-ministry="고용노동부" data-score="71.7" data-search="고용노동부 labor_jobs 현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지? 임금체불, 하도급·원청책임 고용률/실업률/청년고용률 · 산업재해/임금체불 행정통계 2025-09-02 · 검토결과 확인 · 규정 개정을 한번 검토해 보시기 바람. 그다음에 하도급의 부실 공사, 산재, 임금체불 등 모든 문제는 원청 아닌지? [쿠팡 산재 불기소 이유서 4년 만 입수] 조리노동자 사망사고, 노동부 &quot;... — 실제로 노동부와 검찰 처분에 앞서 근로복지공단이 산재를 인정한 사유와 산업안전보건연구원의 역학조사 결과를 보면, 원청 책임이 인정될 여지는 더욱 컸다. 고인이 방역·청소 업무에 과도하게 노출된 배경에는 사망... 일자리, 청년, 산재, 원청, 임금체불">
       <div class="rank"><span>5</span></div>
       <div class="issue-main">
         <div class="meta"><span>고용노동부</span><span>labor_jobs</span><span>cabinet_review</span><span class="badge stable">STABLE</span></div>
         <div class="issue-head">
           <div>
             <div class="recent-label">최근 이슈</div>
-            <h3 class="issue-title">김형미, 노동절 맞아 현장 행보…&quot;노동자 안전이 곧 주민 안전&quot;</h3>
+            <h3 class="issue-title">[쿠팡 산재 불기소 이유서 4년 만 입수] 조리노동자 사망사고, 노동부 &quot;...</h3>
           </div>
-          <div class="score"><b>70.4</b><small>질문 가능성</small></div>
+          <div class="score"><b>71.7</b><small>질문 가능성</small></div>
         </div>
-        <p class="issue-summary">김형미, 노동절 맞아 현장 행보…&quot;노동자 안전이 곧 주민 안전&quot; — 원청 책임 강화를 통한 구조 개선, 노동절 불평등 해소, 과로·심야노동 근절, 산재·과로사 방지, 양질의 일자리 확대 등이 주요 내용이다. 특히 &#x27;오승용 방지 조례&#x27; 제정과 버스 완전공영제 추진 등을 통해 노동 환경 개선과...</p>
-        <div class="signal-strip"><span>2026-05-01</span><span>기사 18건</span><span>일자리, 청년, 산재, 원청, 임금체불</span></div>
+        <p class="issue-summary">[쿠팡 산재 불기소 이유서 4년 만 입수] 조리노동자 사망사고, 노동부 &quot;... — 실제로 노동부와 검찰 처분에 앞서 근로복지공단이 산재를 인정한 사유와 산업안전보건연구원의 역학조사 결과를 보면, 원청 책임이 인정될 여지는 더욱 컸다. 고인이 방역·청소 업무에 과도하게 노출된 배경에는 사망...</p>
+        <div class="signal-strip"><span>2026-05-04</span><span>기사 21건</span><span>일자리, 청년, 산재, 원청, 임금체불</span></div>
         <section class="trend-box"><div class="trend-head"><b>최근 트렌드 기사</b><span>최신성·관련도 기준 대표 흐름</span></div><ol class="trend-list"><li>
-          <div class="trend-date">2026-05-01<span>28점</span></div>
+          <div class="trend-date">2026-05-04<span>27점</span></div>
+          <div class="trend-copy"><b><a href="https://www.labortoday.co.kr/news/articleView.html?idxno=234105">[쿠팡 산재 불기소 이유서 4년 만 입수] 조리노동자 사망사고, 노동부 &quot;...</a></b><p>실제로 노동부와 검찰 처분에 앞서 근로복지공단이 산재를 인정한 사유와 산업안전보건연구원의 역학조사 결과를 보면, 원청 책임이 인정될 여지는 더욱 컸다. 고인이 방역·청소 업무에 과도하게 노출된 배경에는 사망...</p><em>산재, 원청, 노동</em></div>
+        </li><li>
+          <div class="trend-date">2026-05-03<span>19점</span></div>
+          <div class="trend-copy"><b><a href="https://www.ulsanpress.net/news/articleView.html?idxno=574456">울산 국회의원 의정활동</a></b><p>이를 통해 자재비, 하도급대금 체불, 건설노동자 임금체불 문제를 제도적으로 차단하려는 취지다. 개정안이 국회 본회의를 통과하면 공사대금 지급의 투명성 제고 뿐만 아니라, 불법하도급과 임금착취 구조 개선에도...</p><em>임금체불, 하도급, 노동</em></div>
+        </li><li>
+          <div class="trend-date">2026-05-01<span>27점</span></div>
           <div class="trend-copy"><b><a href="https://www.newsjeju.net/news/articleView.html?idxno=420386">김형미, 노동절 맞아 현장 행보…&quot;노동자 안전이 곧 주민 안전&quot;</a></b><p>원청 책임 강화를 통한 구조 개선, 노동절 불평등 해소, 과로·심야노동 근절, 산재·과로사 방지, 양질의 일자리 확대 등이 주요 내용이다. 특히 &#x27;오승용 방지 조례&#x27; 제정과 버스 완전공영제 추진 등을 통해 노동 환…</p><em>일자리, 산재, 원청, 노동</em></div>
-        </li><li>
-          <div class="trend-date">2026-05-01<span>24점</span></div>
-          <div class="trend-copy"><b><a href="https://www.asiatoday.co.kr/kn/view.php?key=20260501010000040">노동절 맞아 서울 도심서 대규모 집회…“모두의 노동절, 이제는 원청교...</a></b><p>대회 참석자들은 노동기본권 보장 사회를 위한 투쟁, 노동시간 단축·산업안전 강화·산재예방 대책 마련을... 양 위원장은 이어 &quot;우리는 원청이 교섭에 나오라 요구하나, 원청은 여전히 책임을 회피하고 있다&quot;며 &quot;7월.…</p><em>산재, 원청, 노동</em></div>
-        </li><li>
-          <div class="trend-date">2026-05-01<span>20점</span></div>
-          <div class="trend-copy"><b><a href="https://n.news.naver.com/mnews/article/047/0002514185?sid=102">되찾은 노동절... 대구 노동자들 &quot;노동기본권 쟁취하자&quot;</a></b><p>깃발&quot;이라며 &quot;원청 책임을 회피하는 자본의 오만을 꺾고 노동기본권을 짓밟는 권력에 맞서 노동자가... 그러면서 &quot;대구는 전국 최저 수준의 임금과 높은 산재 위험이라는 이중고를 겪고 있어 청년들이 떠나는 구조적이고.…</p><em>청년, 산재, 원청, 노동</em></div>
         </li></ol></section>
         <div class="forecast-note"><b>질문 프레임</b><span>일자리·산재·임금체불 문제의 핵심 리스크는 책임 소재가 하청·현장 노동자에게만 내려가는 것입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, 현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다.</span></div>
         <p class="first-q">현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?</p>
@@ -305,12 +305,12 @@
           <div><small>답변 근거</small><b>고용률/실업률/청년고용률 · 산업재해/임금체불 행정통계</b></div>
           <div><small>유사사례</small><b>2025-09-02 · 검토결과 확인 · 규정 개정을 한번 검토해 보시기 바람. 그다음에 하도급의 부실 공사, 산재, 임금체불 등 모든 문제는 원청 아닌지?</b></div>
         </div>
-        <div class="actions"><a href="issue-5-labor_jobs.html">상세 브리핑</a><a class="ghost" href="memo-5-labor_jobs.md">메모</a><button class="pick" data-title="고용노동부 · labor_jobs" data-score="70.4" data-question="현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?">검토 바구니</button></div>
+        <div class="actions"><a href="issue-5-labor_jobs.html">상세 브리핑</a><a class="ghost" href="memo-5-labor_jobs.md">메모</a><button class="pick" data-title="고용노동부 · labor_jobs" data-score="71.7" data-question="현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?">검토 바구니</button></div>
         <details>
           <summary>장관 답변 준비 펼치기</summary>
           <section class="qa answer-block"><div class="label">Minister answer prep</div><ul><li>원청-하청 책임구조 확인</li><li>감독·처벌·예방수단의 실효성 확인</li><li>최근 7일 기사량·대표기사·부처 소관 근거</li><li>관련 통계 최신값과 전월·전년 대비 변화</li></ul></section>
           <p class="delta">전일 대비: 전일 대비 큰 변화는 없습니다.</p>
-          <p class="article-title">대표 기사: 김형미, 노동절 맞아 현장 행보…&quot;노동자 안전이 곧 주민 안전&quot;</p>
+          <p class="article-title">대표 기사: [쿠팡 산재 불기소 이유서 4년 만 입수] 조리노동자 사망사고, 노동부 &quot;...</p>
         </details>
       </div>
     </article></section></section>

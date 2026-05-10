@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-10T07:30:22.414757",
-  "since": "2026-05-03",
+  "generated_at": "2026-05-11T07:30:22.114129",
+  "since": "2026-05-04",
   "packets": [
     {
       "issue_id": "school_field_trip",
       "ministry": "교육부",
-      "priority": 363,
-      "count": 23,
+      "priority": 360,
+      "count": 27,
       "signals": [
         "소풍",
         "수학여행",
@@ -19,15 +19,15 @@
       ],
       "terms": [
         "소풍",
-        "교사",
         "수학여행",
         "현장체험학습",
+        "교사",
+        "교사의",
+        "현장",
         "체험학습",
         "학교",
-        "교사의",
         "책임",
-        "사고",
-        "대통령이"
+        "사고"
       ],
       "items": [
         {
@@ -37,7 +37,7 @@
           "pub_date": "2026-05-09",
           "link": "https://n.news.naver.com/mnews/article/003/0013934605?sid=102",
           "originallink": "https://www.newsis.com/view/NISX20260508_0003622389",
-          "relevance_score": 45,
+          "relevance_score": 44,
           "signal_hits": [
             "소풍",
             "수학여행",
@@ -55,7 +55,7 @@
           "pub_date": "2026-05-09",
           "link": "https://n.news.naver.com/mnews/article/138/0002227304?sid=101",
           "originallink": "https://www.ddaily.co.kr/page/view/2026050816173987143",
-          "relevance_score": 43,
+          "relevance_score": 42,
           "signal_hits": [
             "수학여행",
             "교사",
@@ -72,7 +72,7 @@
           "pub_date": "2026-05-07",
           "link": "https://n.news.naver.com/mnews/article/020/0003717780?sid=102",
           "originallink": "https://www.donga.com/news/Society/article/all/20260506/133874255/2",
-          "relevance_score": 42,
+          "relevance_score": 41,
           "signal_hits": [
             "소풍",
             "수학여행",
@@ -106,7 +106,7 @@
           "pub_date": "2026-05-07",
           "link": "https://n.news.naver.com/mnews/article/011/0004618442?sid=102",
           "originallink": "https://www.sedaily.com/article/20041394?ref=naver",
-          "relevance_score": 40,
+          "relevance_score": 39,
           "signal_hits": [
             "소풍",
             "수학여행",
@@ -123,7 +123,7 @@
           "pub_date": "2026-05-08",
           "link": "https://n.news.naver.com/mnews/article/016/0002640671?sid=102",
           "originallink": "https://biz.heraldcorp.com/article/10733671?ref=naver",
-          "relevance_score": 37,
+          "relevance_score": 36,
           "signal_hits": [
             "소풍",
             "수학여행",
@@ -248,11 +248,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 85.4,
+        "score": 87.1,
         "band": "cabinet_high",
         "drivers": {
-          "priority": 363.0,
-          "article_count": 23.0,
+          "priority": 360.0,
+          "article_count": 27.0,
           "signal_count": 8,
           "work_signal_hits": 4,
           "question_move_hits": 3
@@ -483,6 +483,21 @@
           "excerpt": "또 일주일 만에 이렇게 뵙게 되었음. 의대생들이 다행스럽게 학업에 복귀하기로 했다고 함. 늦었지만 참으로 다행스러운 일임. 교육 당국이 필요한 후속 조치를 신속하게 추진해 주기 바람. 그리고 의대생 여러분도 우리 국민들의 건강과 생명을 책임지는 예비 의료인으로서의 사회적 책임이 무엇인가에 대해서 좀 더 깊이 생각해 주시기를 당부드림. 관련 부서들은 공공재인 지역의료, 필수의료, 응급의료 공백을 면밀하게 점검하고 보완 대책을 서둘러서 마련해 주기 바람. 언제나 중요한데, 우리 사회에는 참으로 대화가 많이 부족함. 누구의 탓이라고 할 "
         },
         {
+          "score": 0.1478,
+          "components": {
+            "lexical": 0.0534,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.0,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-09-02",
+          "meeting_code": "250902",
+          "question_type": "예산/재정 확인",
+          "inferred_ministry": "기획재정부",
+          "excerpt": "7월 산업생산‧소비‧설비투자가 나란히 증가세로 전환됐다고 함. 현장 민생과 직결된 소매 판매의 경우에는 소비쿠폰 지급에 힘입어서 29개월 만에 가장 큰 폭으로 증가했음. 적절한 재정 투입이 국민 경제 성장에 미치는 긍정적 효과가 현장에서 증명됐음. 하지만 1%대까지 추락한 잠재성장률을 다시 끌어올리지 않으면 어떤 정책도 결국은 반짝 효과에 그칠 것이 분명함. 그동안 정부가 바뀔 때마다 잠재성장률은 계속해서 떨어져 왔음. 대개 1개 정권당 1% 정도씩 추세적으로 떨어져 왔음. 우리 정부는 이런 하락 흐름을 반전시키는 첫 정부가 되어야"
+        },
+        {
           "score": 0.1473,
           "components": {
             "lexical": 0.0524,
@@ -496,25 +511,10 @@
           "question_type": "현황 질문",
           "inferred_ministry": "교육부",
           "excerpt": "학교 같은 교육시설과 동네에서 먹고 놀 수 있는 문화 인프라가 중요한데, 이것은 공공에서 투자해 줘야 할 것 아닌지?"
-        },
-        {
-          "score": 0.145,
-          "components": {
-            "lexical": 0.0423,
-            "fuzzy_chargram": 0.0127,
-            "same_ministry_boost": 0.12,
-            "question_move_boost": 0.0
-          },
-          "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-06-24",
-          "meeting_code": "250624",
-          "question_type": "검토결과 확인",
-          "inferred_ministry": "교육부",
-          "excerpt": "교육부 개편 논란이 있었는데 그 검토 결과는 어땠는지? 국가교육위원회를 강화하고 초·중·고, 유치원은 지방교육청으로 보내고, 대학 관리는 어떻게 하자 이런 얘기들을 하지 않았는지?"
         }
       ],
       "oral_brief": {
-        "thirty_second": "교육부 소관 school_field_trip는 질문 가능성 85.4점입니다. 핵심은 학교안전, 교권보호와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 지역별 학교 수/학생 수/교원 수, 학교 안전사고/교육활동 침해 관련 통계로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "교육부 소관 school_field_trip는 질문 가능성 87.1점입니다. 핵심은 학교안전, 교권보호와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 지역별 학교 수/학생 수/교원 수, 학교 안전사고/교육활동 침해 관련 통계로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -555,7 +555,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -4,
+        "priority_change": -3,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -577,8 +577,8 @@
     {
       "issue_id": "disaster_safety",
       "ministry": "행정안전부",
-      "priority": 319,
-      "count": 38,
+      "priority": 276,
+      "count": 37,
       "signals": [
         "산불",
         "재난",
@@ -590,95 +590,18 @@
         "행안부"
       ],
       "terms": [
-        "화재",
-        "안전공업",
-        "행안부",
-        "대전",
-        "침수",
-        "지하차도",
-        "자연재난",
         "재난",
-        "산불",
-        "여름철"
+        "대응",
+        "재난대응",
+        "지하차도",
+        "침수",
+        "훈련",
+        "위해",
+        "화재",
+        "한다",
+        "행안부"
       ],
       "items": [
-        {
-          "query": "침수 지하차도 안전",
-          "title": "행안부, 여름철 자연재난 대비 점검…산사태·지하공간 침수 인명피해 ...",
-          "desc": "행정안전부가 올여름 태풍과 호우, 폭염 등 자연재난에 따른 인명피해를 줄이기 위해 산사태와 지하공간... 지하공간 침수 사고 예방을 위해서는 지하차도 통제 기준을 기존 최대 침수심 15㎝에서 5㎝로 강화한다. 아울러...",
-          "pub_date": "2026-05-07",
-          "link": "https://www.newspim.com/news/view/20260507000711",
-          "originallink": "https://www.newspim.com/news/view/20260507000711",
-          "relevance_score": 38,
-          "signal_hits": [
-            "재난",
-            "안전",
-            "침수",
-            "지하차도",
-            "행안부"
-          ]
-        },
-        {
-          "query": "침수 지하차도 안전",
-          "title": "“인명피해 획기적으로 줄이자”… 행안부, 여름철 자연재난 대비 회의",
-          "desc": "= 행정안전부(장관 윤호중, 이하 행안부)는 7일 ‘여름철 자연재난(태풍ㆍ호우ㆍ폭염) 사전대비 점검 TF’ 4차... 또 지하공간 침수 사고를 막기 위해 지하차도 통제 기준을 최대 침수심 15㎝에서 5㎝로 강화한다. 지하차도...",
-          "pub_date": "2026-05-07",
-          "link": "http://fpn119.co.kr/250800",
-          "originallink": "http://fpn119.co.kr/250800",
-          "relevance_score": 36,
-          "signal_hits": [
-            "재난",
-            "안전",
-            "침수",
-            "지하차도",
-            "행안부"
-          ]
-        },
-        {
-          "query": "침수 지하차도 안전",
-          "title": "여름철 자연재난 대비 점검 TF 개최…지하차도 침수 대응 강화",
-          "desc": "행정안전부는 7일 '여름철 자연재난 사전대비 점검 TF' 4차 회의를 열고 산사태와 지하공간 침수 등 주요... 또 지하차도 침수 사고 예방을 위해 통제 기준을 기존 최대 침수심 15㎝에서 5㎝로 강화하고, 진입 차단·대피 유도...",
-          "pub_date": "2026-05-07",
-          "link": "https://n.news.naver.com/mnews/article/001/0016064245?sid=102",
-          "originallink": "https://www.yna.co.kr/view/AKR20260507113600530?input=1195m",
-          "relevance_score": 36,
-          "signal_hits": [
-            "재난",
-            "안전",
-            "침수",
-            "지하차도"
-          ]
-        },
-        {
-          "query": "침수 지하차도 안전",
-          "title": "천안시, 자연재난 대비 총력 \"시민 안전 최우선\"",
-          "desc": "재난안전상황실에서 '2026 여름철 자연재난 대비 추진 보고회'를 열고, 부서별 대응 계획과 협업 체계를... 시는 산사태 위험지역과 하천 범람 우려 구간, 반지하·지하차도 등 침수 가능성이 높은 지하공간을 중점 관리...",
-          "pub_date": "2026-05-07",
-          "link": "https://www.gukjenews.com/news/articleView.html?idxno=3575346",
-          "originallink": "https://www.gukjenews.com/news/articleView.html?idxno=3575346",
-          "relevance_score": 31,
-          "signal_hits": [
-            "재난",
-            "안전",
-            "침수",
-            "지하차도"
-          ]
-        },
-        {
-          "query": "행안부 재난 안전",
-          "title": "김광용 재난안전관리본부장, 대전 화재 희생자 마지막 조문",
-          "desc": "정부는 사고 발생 직후 중앙재난안전대책본부를 가동하고 중앙합동재난피해자지원센터를 운영해 수습과 지원에 나섰다. 현장에는 행안부 재난현장지원관과 1대1 전담 공무원이 배치돼 장례·심리·생계 지원 등을 맡았다....",
-          "pub_date": "2026-05-08",
-          "link": "https://n.news.naver.com/mnews/article/014/0005519078?sid=100",
-          "originallink": "http://www.fnnews.com/news/202605081954328616",
-          "relevance_score": 30,
-          "signal_hits": [
-            "재난",
-            "안전",
-            "화재",
-            "행안부"
-          ]
-        },
         {
           "query": "침수 지하차도 안전",
           "title": "김포시, 재난대응 골든타임 신속 대응체제 구축",
@@ -686,12 +609,85 @@
           "pub_date": "2026-05-08",
           "link": "https://ic.newdaily.co.kr/site/data/html/2026/05/07/2026050700318.html",
           "originallink": "https://ic.newdaily.co.kr/site/data/html/2026/05/07/2026050700318.html",
-          "relevance_score": 30,
+          "relevance_score": 29,
           "signal_hits": [
             "재난",
             "안전",
             "침수",
             "지하차도"
+          ]
+        },
+        {
+          "query": "침수 지하차도 안전",
+          "title": "우기 앞두고 지하차도 침수 막는다…청주 용암지하차도 현장 점검",
+          "desc": "이번 점검은 지하차도 침수 사고를 예방하기 위해 추진됐으며 김종선 구청장과 관계 공무원들이 배수펌프... 시민 안전 확보에 나설 계획이다. 김 구청장은 \"배수시설과 비상대피시설을 철저히 관리해 시민들이 안심할 수...",
+          "pub_date": "2026-05-10",
+          "link": "http://www.dynews.co.kr/news/articleView.html?idxno=849569",
+          "originallink": "http://www.dynews.co.kr/news/articleView.html?idxno=849569",
+          "relevance_score": 28,
+          "signal_hits": [
+            "안전",
+            "침수",
+            "지하차도"
+          ]
+        },
+        {
+          "query": "침수 지하차도 안전",
+          "title": "호남대 강웅일/김용철 교수팀 소방청 국가연구개발사업(R&D) 과제 수주",
+          "desc": "이번 연구과제는 22년 포항 아파트 침수와 23년 오송 지하차도 침수 등 기후 위기로 인한 극한 강우 발생에... 한편, 강웅일, 김용철 교수 연구팀은 2019년부터 4년간 행정안전부의 '재난안전로봇 현장 활용성 증진을 위한...",
+          "pub_date": "2026-05-08",
+          "link": "https://www.veritas-a.com/news/articleView.html?idxno=608966",
+          "originallink": "https://www.veritas-a.com/news/articleView.html?idxno=608966",
+          "relevance_score": 28,
+          "signal_hits": [
+            "재난",
+            "안전",
+            "침수",
+            "지하차도",
+            "오송"
+          ]
+        },
+        {
+          "query": "산불 재난 안전",
+          "title": "[발언대]만물이 소생하는 춘천의 봄, 화재 예방은 ‘작은 실천’부터",
+          "desc": "대형 산불이나 시설물 재난으로 이어질 위험이 매우 크다. 우리의 일상을 위협하는 봄철 부주의 화재를... 농업 부산물은 지자체에서 운영하는 파쇄기나 영농폐기물 수거 제도를 적극 활용해 안전하게 처리해야 한다. 둘째...",
+          "pub_date": "2026-05-11",
+          "link": "https://n.news.naver.com/mnews/article/087/0001192138?sid=102",
+          "originallink": "https://www.kwnews.co.kr/page/view/2026051050020800000",
+          "relevance_score": 27,
+          "signal_hits": [
+            "산불",
+            "재난",
+            "안전",
+            "화재"
+          ]
+        },
+        {
+          "query": "행안부 재난 안전",
+          "title": "행안부, 11일부터 '안전한국훈련' 실시…지진 등 재난 대응 점검",
+          "desc": "김광용 행안부 재난안전관리본부장은 \"국가 재난대응 체계는 어떤 위기 상황에서도 흔들림 없이 작동해야 한다\"며 \"훈련 과정에서 드러난 미비점은 신속히 보완해 재난 대응 역량을 강화하겠다\"고 말했다.",
+          "pub_date": "2026-05-10",
+          "link": "https://n.news.naver.com/mnews/article/008/0005355217?sid=102",
+          "originallink": "https://www.mt.co.kr/policy/2026/05/10/2026051010335598567",
+          "relevance_score": 27,
+          "signal_hits": [
+            "재난",
+            "안전",
+            "행안부"
+          ]
+        },
+        {
+          "query": "행안부 재난 안전",
+          "title": "행안부, 상반기 안전한국훈련 실시…풍수해 등 재난 대비 점검",
+          "desc": "행정안전부는 오는 11일부터 22일까지 지방자치단체와 공공기관이 참여하는 '2026년 상반기 재난 대응 안전한... 행안부는 민간 전문가 평가단을 통해 훈련 기획 단계부터 위험 요소 발굴 등 사전 자문을 진행했으며, 훈련...",
+          "pub_date": "2026-05-10",
+          "link": "https://n.news.naver.com/mnews/article/001/0016067790?sid=102",
+          "originallink": "https://www.yna.co.kr/view/AKR20260508166200530?input=1195m",
+          "relevance_score": 27,
+          "signal_hits": [
+            "재난",
+            "안전",
+            "행안부"
           ]
         }
       ],
@@ -808,11 +804,11 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 87.8,
+        "score": 84.7,
         "band": "cabinet_high",
         "drivers": {
-          "priority": 319.0,
-          "article_count": 38.0,
+          "priority": 276.0,
+          "article_count": 37.0,
           "signal_count": 8,
           "work_signal_hits": 4,
           "question_move_hits": 3
@@ -1015,25 +1011,10 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.2767,
+          "score": 0.2696,
           "components": {
-            "lexical": 0.0592,
-            "fuzzy_chargram": 0.0244,
-            "same_ministry_boost": 0.12,
-            "question_move_boost": 0.12
-          },
-          "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-06-05",
-          "meeting_code": "250605",
-          "question_type": "현황 질문",
-          "inferred_ministry": "행정안전부",
-          "excerpt": "산불이 갈수록 빈발하고 있고, 산불 때문에 마을이 불타는 등 그 피해가 대형화되고 있음. 그리고 올해는 산불이 서른 몇 군데가 동시에 일어나 피해가 아주 컸지만, 이에 대응하는 산림청과 소방청의 협력이 잘 안되었다고 생각함. 행안부나 관계 부처에서 그에 대한 대책들을 논의해 보셨는지?"
-        },
-        {
-          "score": 0.2751,
-          "components": {
-            "lexical": 0.0623,
-            "fuzzy_chargram": 0.0112,
+            "lexical": 0.0516,
+            "fuzzy_chargram": 0.0115,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.12
           },
@@ -1045,23 +1026,38 @@
           "excerpt": "중동 상황으로 급등했던 기름값이 석유 최고가격제 시행 후에 다소 안정되고 있음. 국민들께서 최고가격제 시행 효과를 보다 충분히 체감하실 수 있도록 현장 점검 강화 등 가용 수단을 총동원해 주시기 바람. 중동 상황이 당초 예상을 뛰어넘는 방향으로 확대되고 있음. 현재와 같은 양상이라면 잠시 진정됐던 석유 가격이 다시 불안정해지고, 민생 전반에 가해질 충격도 커지게 될 것 같음. 이제는 상황 장기화를 전제로 최악의 시나리오까지 염두에 둔 대책을 마련해야 되겠음. 우선 UAE에서 추가 원유를 확보했던 것처럼 우리의 외교 역량과 자산을 총"
         },
         {
-          "score": 0.2707,
+          "score": 0.262,
           "components": {
-            "lexical": 0.1168,
-            "fuzzy_chargram": 0.0,
+            "lexical": 0.0307,
+            "fuzzy_chargram": 0.0251,
             "same_ministry_boost": 0.12,
-            "question_move_boost": 0.09
+            "question_move_boost": 0.12
           },
           "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-07-15",
-          "meeting_code": "250715",
-          "question_type": "부처협의 확인",
+          "meeting_date": "2025-06-05",
+          "meeting_code": "250605",
+          "question_type": "현황 질문",
           "inferred_ministry": "행정안전부",
-          "excerpt": "산불 조기 발견, 조기 대응이 핵심일 것 같음. 그러려면 국방부 자원을 잘 활용해서 헬기 대응 체제를 같이 하라고 했는데, 제가 국방부에도 별도로 얘기는 해놨으니 아예 장비를 미리 갖추고 일정 시기에는 일정 규모의 군 헬기를 아예 산불 진압용으로 대기시키고 즉시 출동해서 진압할 수 있게 훈련도 미리 좀 하는 시스템을 국무조정실에서 해야 할 것임. 이것을 어떻게 하면 될지, 뭐든 권한은 다 부여할 테니 필요한 시스템과 장비를 갖추도록 해서 산불 대책을 아예 종합적으로 만들어서 합동 회의를 한번 하도록 하겠음."
+          "excerpt": "산불이 갈수록 빈발하고 있고, 산불 때문에 마을이 불타는 등 그 피해가 대형화되고 있음. 그리고 올해는 산불이 서른 몇 군데가 동시에 일어나 피해가 아주 컸지만, 이에 대응하는 산림청과 소방청의 협력이 잘 안되었다고 생각함. 행안부나 관계 부처에서 그에 대한 대책들을 논의해 보셨는지?"
+        },
+        {
+          "score": 0.26,
+          "components": {
+            "lexical": 0.0384,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-07-22",
+          "meeting_code": "250722",
+          "question_type": "예산/재정 확인",
+          "inferred_ministry": "행정안전부",
+          "excerpt": "신임 국무위원 여러분, 환영함. 우리 국민들께서 지금 매우 어려운 국면을 힘겹게 넘어가고 계심. 여러분이 하는 일 하나하나가 5,200만 국민들의 삶에 치명적 영향을 미친다는 사실 또 이 나라 미래에 시금석이 된다는 사실을 꼭 기억해 주시기 바람. 지금 폭우 재난 상황이 계속되고 있음. 다행히 비는 그쳤지만, 현장에서 본 우리 국민들의 안타까운 상황들이 지금도 눈앞을 떠나지 않음. 망연자실하게 무너진 집, 떠나간 가족들을 생각하면서 아무 표정도 짓지 못하는 그분들, 복구도 제대로 되지 못하는 그런 상황에서 발만 동동 구르는 그분들이"
         }
       ],
       "oral_brief": {
-        "thirty_second": "행정안전부 소관 disaster_safety는 질문 가능성 87.8점입니다. 핵심은 재난안전, 지방행정와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 화재 발생/재난 피해 통계로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "행정안전부 소관 disaster_safety는 질문 가능성 84.7점입니다. 핵심은 재난안전, 지방행정와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 화재 발생/재난 피해 통계로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -1102,7 +1098,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -6,
+        "priority_change": -43,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -1118,14 +1114,14 @@
             "public_outcome"
           ]
         },
-        "interpretation": "전일 대비 큰 변화는 없습니다."
+        "interpretation": "이슈 강도가 낮아지고 있습니다."
       }
     },
     {
       "issue_id": "prices_livelihood",
       "ministry": "기획재정부",
-      "priority": 236,
-      "count": 25,
+      "priority": 232,
+      "count": 22,
       "signals": [
         "물가",
         "민생",
@@ -1137,62 +1133,26 @@
         "예산"
       ],
       "terms": [
-        "고유가",
         "물가",
+        "고유가",
+        "2차",
         "민생",
-        "1차",
-        "피해지원금",
+        "추경",
+        "위해",
+        "박찬대",
+        "후보는",
         "대응",
-        "중동",
-        "부담을",
-        "따른",
         "있다"
       ],
       "items": [
         {
           "query": "고유가 지원금 물가",
-          "title": "전주시의회 추경 심사…민생예산 쟁점",
-          "desc": "전주시는 최근 국제 정세 불안과 중동전쟁 위기 여파에 따른 고유가·고물가 부담 완화를 이번 추경 편성의 주요 배경으로 설명하고 있다. 정부 추가경정예산과 연계한 고유가 피해지원금과 대중교통비 환급 지원 등...",
-          "pub_date": "2026-05-09",
-          "link": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=688792",
-          "originallink": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=688792",
-          "relevance_score": 31,
-          "signal_hits": [
-            "물가",
-            "민생",
-            "지원",
-            "고유가",
-            "부담",
-            "추경",
-            "예산"
-          ]
-        },
-        {
-          "query": "민생경제 물가 부담",
-          "title": "이천시의회, 2차 추경 259억원 증액 통과…\"고유가·고물가 총력 대응\"",
-          "desc": "이번 추가경정예산안은 최근 중동 지역의 정세 불안에 따른 고유가·고물가 상황 속에서 시민들의 경제적 부담을 덜고 민생 경제의 안정을 도모하기 위해 편성됐다. 이날 확정된 제2회 추경예산의 총 규모는 기정...",
-          "pub_date": "2026-05-08",
-          "link": "https://n.news.naver.com/mnews/article/031/0001027376?sid=102",
-          "originallink": "http://www.inews24.com/view/1966818",
-          "relevance_score": 28,
-          "signal_hits": [
-            "물가",
-            "민생",
-            "고유가",
-            "경제",
-            "부담",
-            "추경",
-            "예산"
-          ]
-        },
-        {
-          "query": "물가 민생 지원",
-          "title": "[박근종 칼럼] 이달부터 본격화하는 중동발 고물가 쇼크, 경각심을 갖고...",
-          "desc": "고물가의 고삐를 단단히 조이지 않으면 경제도 민생도 크게 흔들릴 수 있다. 국제유가 급등처럼 공급... 물가가 들썩이는 와중에 지난달 취약 계층을 대상으로 시작한 1차 고유가 피해지원금 지급에 이어 오는...",
+          "title": "인천시, 고유가 추가지원금·지역건설 활성화로 민생경제 대응",
+          "desc": "인천e음 주유비 환급은 인천사랑상품권 가맹 주유소 이용 시 20% 캐시백을 적용하는 방식으로 운영되며 고유가 피해지원금과 함께 시민 체감형 물가 대응 사업으로 추진되고 있다.",
           "pub_date": "2026-05-10",
-          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=746986",
-          "originallink": "https://www.mhns.co.kr/news/articleView.html?idxno=746986",
-          "relevance_score": 24,
+          "link": "https://www.ajunews.com/view/20260510161759108",
+          "originallink": "https://www.ajunews.com/view/20260510161759108",
+          "relevance_score": 29,
           "signal_hits": [
             "물가",
             "민생",
@@ -1202,49 +1162,83 @@
           ]
         },
         {
+          "query": "고유가 지원금 물가",
+          "title": "오산시, 비상경제 대응 TF 점검회의",
+          "desc": "물가관리반과 기업지원반, 에너지관리반 등 6개 대응반이 참석해 1차 회의에서 마련한 대책의 추진 상황과 보완 방안을 점검했다. 이날 회의에서는 주요 생필품과 원자재 가격 동향 점검을 비롯해 고유가 피해지원금...",
+          "pub_date": "2026-05-10",
+          "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1254881",
+          "originallink": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1254881",
+          "relevance_score": 25,
+          "signal_hits": [
+            "물가",
+            "지원",
+            "고유가",
+            "경제"
+          ]
+        },
+        {
           "query": "민생경제 물가 부담",
-          "title": "강릉시, 중동발 고유가·고물가 비상… 2차 비상경제대책 점검회의",
-          "desc": "8일 강릉시청 8층 상황실에서 김상영 부시장 주재로 '제2차 강릉시 비상경제대책 점검회의'가 열리고 있다.... 체감 부담을 완화하기 위한 실효성 있는 대책을 논의하기 위해 마련됐다.이날 회의에서는 ▲물가 및 민생 안정...",
-          "pub_date": "2026-05-08",
-          "link": "https://news.mtn.co.kr/news-detail/2026050816414660395",
-          "originallink": "https://news.mtn.co.kr/news-detail/2026050816414660395",
+          "title": "[박근종 칼럼] 이달부터 본격화하는 중동발 고물가 쇼크, 경각심을 갖고...",
+          "desc": "고물가의 고삐를 단단히 조이지 않으면 경제도 민생도 크게 흔들릴 수 있다. 국제유가 급등처럼 공급... 추가경정예산이 고물가 시대 지역민의 생계 부담을 줄이는 데 쓰이는지 정부는 꼼꼼히 점검해야만 한다....",
+          "pub_date": "2026-05-10",
+          "link": "https://www.mhns.co.kr/news/articleView.html?idxno=746986",
+          "originallink": "https://www.mhns.co.kr/news/articleView.html?idxno=746986",
+          "relevance_score": 25,
+          "signal_hits": [
+            "물가",
+            "민생",
+            "경제",
+            "부담",
+            "예산"
+          ]
+        },
+        {
+          "query": "물가 민생 지원",
+          "title": "\"고유가지원금, 소상공인 효과 긍정적…지급 시점·정책 설계 중요\"",
+          "desc": "이재명 대통령은 지난해 6월 내수 부양을 위해 '민생회복 소비쿠폰' 정책을 추진한 바 있다. 당시 정부는 13조... 물가 상승·재정 부담 우려도…지급 시점과 정책 설계 고민해야 다만 고유가지원금이 물가 상승과 재정...",
+          "pub_date": "2026-05-11",
+          "link": "https://n.news.naver.com/mnews/article/421/0008936297?sid=101",
+          "originallink": "https://www.news1.kr/industry/sb-founded/6160792",
           "relevance_score": 24,
           "signal_hits": [
             "물가",
             "민생",
-            "고유가",
-            "경제",
-            "부담"
-          ]
-        },
-        {
-          "query": "고유가 지원금 물가",
-          "title": "고유가 피해지원금 1차 신청률 91% 돌파… 294만명 신청",
-          "desc": "유가 피해지원금 1차 지급 신청 마감 결과 전체 지급 대상자의 91% 이상이 신청을 완료한 것으로 나타났다.... 정부는 고유가와 물가 상승에 따른 취약계층의 생활 부담을 완화하기 위해 이번 지원 정책을 추진하고...",
-          "pub_date": "2026-05-08",
-          "link": "https://www.ppss.kr/news/articleView.html?idxno=295448",
-          "originallink": "https://www.ppss.kr/news/articleView.html?idxno=295448",
-          "relevance_score": 22,
-          "signal_hits": [
-            "물가",
             "지원",
             "고유가",
             "부담"
           ]
         },
         {
-          "query": "민생경제 물가 부담",
-          "title": "강릉시, 중동 사태 장기화 대응 민생경제 안정 총력",
-          "desc": "비상경제대책 점검회의를 개최했다. 이번 회의에서는 지난 1차 회의에 이어 분야별 대응 현황을 점검하고 시민·소상공인·기업이 체감하는 부담을 덜기 위한 실질적인 대책을 마련했다. 이날에는 물가와 민생 안정 대책을...",
-          "pub_date": "2026-05-08",
-          "link": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2427572",
-          "originallink": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2427572",
-          "relevance_score": 22,
+          "query": "물가 민생 지원",
+          "title": "유가·환율 상승에 '피벗' 전망… 재정운용 부담 커질 듯",
+          "desc": "유 부총재는 중동전쟁에도 우리나라 경제가 크게 성장한 반면 물가는 예상보다 더 높아지고 있다는 점을... 정부는 경기 대응과 민생 지원, 고유가 대응 등을 위해 확장 재정 기조를 유지해왔다. 특히 지난해...",
+          "pub_date": "2026-05-10",
+          "link": "https://www.newscj.com/news/articleView.html?idxno=3399695",
+          "originallink": "https://www.newscj.com/news/articleView.html?idxno=3399695",
+          "relevance_score": 23,
           "signal_hits": [
             "물가",
             "민생",
+            "지원",
+            "고유가",
             "경제",
             "부담"
+          ]
+        },
+        {
+          "query": "물가 민생 지원",
+          "title": "강릉시 비상경제대책 나서",
+          "desc": "강릉시가 중동전쟁 장기화에 따른 고유가 및 물가상승에 대응하기 위해 비상경제대책을 마련하는 등... 대해 종합 점검을 펼치고 있다\"며 \"현장 중심의 지원을 강화해 민생 안정이 이뤄질 수 있도록 최선을 다하겠다\"고 말했다.",
+          "pub_date": "2026-05-10",
+          "link": "https://n.news.naver.com/mnews/article/654/0000179708?sid=102",
+          "originallink": "https://www.kado.net/news/articleView.html?idxno=2049215",
+          "relevance_score": 23,
+          "signal_hits": [
+            "물가",
+            "민생",
+            "지원",
+            "고유가",
+            "경제"
           ]
         }
       ],
@@ -1271,11 +1265,11 @@
         "move_scores": {
           "bottleneck": 4.721,
           "public_outcome": 4.077,
-          "instruction": 3.0,
+          "instruction": 2.5,
           "ground_truth": 2.378,
-          "coordination": 1.181,
           "causal_split": 1.119,
-          "field_burden": 0.905
+          "field_burden": 0.905,
+          "coordination": 0.881
         },
         "questions": [
           {
@@ -1296,7 +1290,7 @@
             "move": "instruction",
             "move_label": "후속 조치 지시",
             "question": "어려울 때 쓰려고 재정이라는 제도가 있는 것인데, 지금 무엇을 아끼고 무엇은 과감히 써야 하는지 정리해야 하는 것 아닌지?",
-            "score": 3.0,
+            "score": 2.5,
             "style": "presidential_tail_wags_head"
           },
           {
@@ -1329,7 +1323,7 @@
           "move": "instruction",
           "move_label": "후속 조치 지시",
           "question": "어려울 때 쓰려고 재정이라는 제도가 있는 것인데, 지금 무엇을 아끼고 무엇은 과감히 써야 하는지 정리해야 하는 것 아닌지?",
-          "score": 3.0,
+          "score": 2.5,
           "style": "presidential_tail_wags_head"
         },
         {
@@ -1350,7 +1344,6 @@
           "예산",
           "추경",
           "물가",
-          "지원금",
           "경제"
         ],
         "accountability_questions": [
@@ -1363,13 +1356,13 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 77.3,
+        "score": 75.6,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 236.0,
-          "article_count": 25.0,
+          "priority": 232.0,
+          "article_count": 22.0,
           "signal_count": 8,
-          "work_signal_hits": 5,
+          "work_signal_hits": 4,
           "question_move_hits": 3
         }
       },
@@ -1583,9 +1576,24 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.276,
+          "score": 0.2759,
           "components": {
-            "lexical": 0.0692,
+            "lexical": 0.069,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.12
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-08-29",
+          "meeting_code": "250829",
+          "question_type": "예산/재정 확인",
+          "inferred_ministry": "기획재정부",
+          "excerpt": "국민 여러분의 아낌없는 조언이 큰 힘 되었음. 진심으로 감사드림. 팀코리아의 정신으로 현지에서 혼연일체로 함께 헌신해 주신 기업인 여러분 그리고 언론인 여러분께도 각별히 감사의 인사를 드림. 외교도 결국 사람이 하는 일이고 국익을 지키려면 마음을 얻어야 함. 이번 순방에서 형성된 따뜻한 신뢰 관계를 바탕으로 우리의 국익을 지키고 다른 주변 국가의 협력도 보다 확대해 나가도록 하겠음. 순방 성과를 이어가기 위해서는 초당적인 협력이 뒷받침되어야 함. 외교 문제나 국익에 관해서는 최소한 다른 목소리가 없었으면 좋겠음. 여야 지도부에게 순"
+        },
+        {
+          "score": 0.2746,
+          "components": {
+            "lexical": 0.0665,
             "fuzzy_chargram": 0.0,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.12
@@ -1598,38 +1606,23 @@
           "excerpt": "7월 산업생산‧소비‧설비투자가 나란히 증가세로 전환됐다고 함. 현장 민생과 직결된 소매 판매의 경우에는 소비쿠폰 지급에 힘입어서 29개월 만에 가장 큰 폭으로 증가했음. 적절한 재정 투입이 국민 경제 성장에 미치는 긍정적 효과가 현장에서 증명됐음. 하지만 1%대까지 추락한 잠재성장률을 다시 끌어올리지 않으면 어떤 정책도 결국은 반짝 효과에 그칠 것이 분명함. 그동안 정부가 바뀔 때마다 잠재성장률은 계속해서 떨어져 왔음. 대개 1개 정권당 1% 정도씩 추세적으로 떨어져 왔음. 우리 정부는 이런 하락 흐름을 반전시키는 첫 정부가 되어야"
         },
         {
-          "score": 0.2728,
+          "score": 0.2737,
           "components": {
-            "lexical": 0.063,
-            "fuzzy_chargram": 0.0,
+            "lexical": 0.1482,
+            "fuzzy_chargram": 0.069,
             "same_ministry_boost": 0.12,
-            "question_move_boost": 0.12
+            "question_move_boost": 0.06
           },
           "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-12-09",
-          "meeting_code": "251209",
+          "meeting_date": "2025-09-02",
+          "meeting_code": "250902",
           "question_type": "예산/재정 확인",
           "inferred_ministry": "기획재정부",
-          "excerpt": "정말 요란하고 일도 많았던 ‘25년이 저물어가고 있음. 앞으로 남은 3주 정도의 짧은 시간, 또 길지 않은 시간이지만 정부의 1시간은 5,200만 시간의 가치가 있다는 생각으로 다시 한번 신발 끈을 매주시기 바람. 11일 모레부터 300개에 가까운 정부의 전 부처, 산하 공공·유관 기관 등에 대한 업무보고가 진행될 것임. 이 업무보고를 통해서 민생 경제 회복, 또 국가 정상화에 속도를 내고 대한민국 대전환을 한 걸음이라도 더 앞당겨야 하겠음. 특히 국민의 알권리 존중, 또 투명한 국정운영 실현 원칙에 따라서 보안을 지켜야 할 사안을"
-        },
-        {
-          "score": 0.272,
-          "components": {
-            "lexical": 0.0615,
-            "fuzzy_chargram": 0.0,
-            "same_ministry_boost": 0.12,
-            "question_move_boost": 0.12
-          },
-          "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-08-29",
-          "meeting_code": "250829",
-          "question_type": "예산/재정 확인",
-          "inferred_ministry": "기획재정부",
-          "excerpt": "국민 여러분의 아낌없는 조언이 큰 힘 되었음. 진심으로 감사드림. 팀코리아의 정신으로 현지에서 혼연일체로 함께 헌신해 주신 기업인 여러분 그리고 언론인 여러분께도 각별히 감사의 인사를 드림. 외교도 결국 사람이 하는 일이고 국익을 지키려면 마음을 얻어야 함. 이번 순방에서 형성된 따뜻한 신뢰 관계를 바탕으로 우리의 국익을 지키고 다른 주변 국가의 협력도 보다 확대해 나가도록 하겠음. 순방 성과를 이어가기 위해서는 초당적인 협력이 뒷받침되어야 함. 외교 문제나 국익에 관해서는 최소한 다른 목소리가 없었으면 좋겠음. 여야 지도부에게 순"
+          "excerpt": "올해 추경 예산으로 GPU를 구매하기로 되어 있는지?"
         }
       ],
       "oral_brief": {
-        "thirty_second": "기획재정부 소관 prices_livelihood는 질문 가능성 77.3점입니다. 핵심은 예산, 물가와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 소비자물가지수/생활물가 관련 지표, 가계동향/소득분위별 지출로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "기획재정부 소관 prices_livelihood는 질문 가능성 75.6점입니다. 핵심은 예산, 물가와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 소비자물가지수/생활물가 관련 지표, 가계동향/소득분위별 지출로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -1670,7 +1663,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -18,
+        "priority_change": -4,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -1692,53 +1685,81 @@
     {
       "issue_id": "justice_reform",
       "ministry": "법무부",
-      "priority": 226,
-      "count": 27,
+      "priority": 229,
+      "count": 26,
       "signals": [
         "검찰",
         "개혁",
         "범죄",
         "수사",
-        "법무부",
-        "재판",
-        "증거"
+        "법무부"
       ],
       "terms": [
-        "캄보디아",
-        "법무부",
-        "태국",
         "한국인",
-        "범죄",
-        "동남아",
-        "대응",
-        "외교부",
-        "초국가범죄",
-        "넘긴"
+        "건들면",
+        "패가망신",
+        "법무부",
+        "이재명",
+        "대상",
+        "나무호",
+        "중국계",
+        "검찰",
+        "캄보디아어로"
       ],
       "items": [
         {
-          "query": "범죄 수사 법무부",
-          "title": "'동남아 마약 총책' 박왕열 한국에서 재판...수감 생활은 어디서?",
-          "desc": "[기자] 살인 사건으로 필리핀에서 장기 징역 60년을 선고받고 복역 중이던 박왕열은, 양국 간 범죄인 인도... [이지연 / 법무부 국제형사과장 (3월 25일) : 본 사건의 경우 수사·재판 경과에 비춰보아 필요하다면 필리핀...",
+          "query": "검찰개혁 법무부",
+          "title": "검찰 인력 유출 가속화…'경력 법관' 지원 검사 역대 최대",
+          "desc": "김민석 국무총리가 최근 검찰개혁추진단에 보완수사권 폐지를 전제로 형사소송법 개정 논의를 지시한... 법무부에 따르면 올해 들어 지난달까지 퇴직한 검사는 총 69명이다. 지난해부터 약 1년 4개월 동안 검찰을...",
           "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/052/0002350960?sid=102",
-          "originallink": "https://www.ytn.co.kr/_ln/0103_202605100611137267",
+          "link": "https://n.news.naver.com/mnews/article/629/0000497861?sid=102",
+          "originallink": "https://news.tf.co.kr/read/life/2321032.htm",
           "relevance_score": 26,
           "signal_hits": [
-            "범죄",
+            "검찰",
+            "개혁",
             "수사",
-            "법무부",
-            "재판"
+            "법무부"
           ]
         },
         {
-          "query": "범죄 수사 법무부",
-          "title": "'검찰 엑소더스'…올해 '경력판사' 지원 300명 육박해 역대 최대",
-          "desc": "이처럼 지원자가 급등한 배경에는 올해 10월로 예정된 검찰청 폐지 및 중대범죄수사청·공소청 출범이 주된... 법무부 등에 따르면 지난달까지 퇴직한 검사는 총 69명으로 집계됐다. 지난해부터 1년 4개월 동안 무려...",
+          "query": "검찰개혁 법무부",
+          "title": "경력법관 지원 검사 역대 최대…'검찰 엑소더스' 가속화",
+          "desc": "김민석 국무총리는 이달 검찰개혁추진단에 보완수사권 폐지를 전제로 형사소송법 개정 등을 논의하라고... 법무부에 따르면 올 들어 지난달까지 69명의 검사가 퇴직했다. 작년부터 1년4개월 동안 244명의 검사가 검찰을...",
           "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/001/0016067411?sid=102",
-          "originallink": "https://www.yna.co.kr/view/AKR20260508164600004?input=1195m",
-          "relevance_score": 25,
+          "link": "https://n.news.naver.com/mnews/article/015/0005285029?sid=102",
+          "originallink": "https://www.hankyung.com/article/202605106330i",
+          "relevance_score": 26,
+          "signal_hits": [
+            "검찰",
+            "개혁",
+            "수사",
+            "법무부"
+          ]
+        },
+        {
+          "query": "검찰개혁 법무부",
+          "title": "보이스피싱 잡자고 ‘감형 카드’ 꺼냈지만…피해 회복 빠진 수사협조 ...",
+          "desc": "대검찰청은 범정부 보이스피싱 근절 종합대책에서 ‘사법협조자 형벌감면제’ 도입 계획을 밝혔고, 법무부... 이어 “검찰 개혁이 진행되는 상황을 고려하면 시기상조로 볼 여지도 있다”고 했다.",
+          "pub_date": "2026-05-11",
+          "link": "https://www.kukinews.com/article/view/kuk202605070128",
+          "originallink": "https://www.kukinews.com/article/view/kuk202605070128",
+          "relevance_score": 24,
+          "signal_hits": [
+            "검찰",
+            "개혁",
+            "수사",
+            "법무부"
+          ]
+        },
+        {
+          "query": "범죄 수사 법무부",
+          "title": "검찰청 폐지 앞두고…검찰 인력 대규모 유출",
+          "desc": "이처럼 지원자가 급등한 배경에는 올해 10월로 예정된 검찰청 폐지 및 중대범죄수사청·공소청 출범이 주된... 법무부 등에 따르면 지난달까지 퇴직한 검사는 총 69명으로 집계됐습니다. 작년부터 1년 4개월 동안 무려...",
+          "pub_date": "2026-05-10",
+          "link": "https://n.news.naver.com/mnews/article/057/0001948426?sid=102",
+          "originallink": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5192924",
+          "relevance_score": 24,
           "signal_hits": [
             "검찰",
             "범죄",
@@ -1748,60 +1769,30 @@
         },
         {
           "query": "검찰개혁 법무부",
-          "title": "\"아마추어가 스케치북 위에 설계한 집 멀쩡할까\"",
-          "desc": "이날 정성호 법무부 장관은 축사를 통해 \"검찰 개혁은 그 자체가 목적이 아니라 국민의 편익을 증진시키고 국민들이 범죄로부터 안전한 나라를 만드는 것이 목표다. 1차 수사기관의 신속한 수사와 법률 전문가인 검사의...",
-          "pub_date": "2026-05-09",
-          "link": "https://www.lawtimes.co.kr/news/articleView.html?idxno=220495",
-          "originallink": "https://www.lawtimes.co.kr/news/articleView.html?idxno=220495",
-          "relevance_score": 24,
+          "title": "[단독] 공룡 경찰도 막는다…보완수사권 대신 전건송치 급부상 [세상&]",
+          "desc": "7일 정부과천청사 법무부에서 열린 신임 검사 임관식에서 신임 검사들이 정성호 법무장관으로부터 임명장을 받기 위해 차례를 기다리고 있다. [연합] “검찰개혁이 경찰개혁 될라” 불안한 경찰 정부 여당 줄다리기 관망...",
+          "pub_date": "2026-05-11",
+          "link": "https://n.news.naver.com/mnews/article/016/0002641326?sid=102",
+          "originallink": "https://biz.heraldcorp.com/article/10734215?ref=naver",
+          "relevance_score": 23,
           "signal_hits": [
             "검찰",
             "개혁",
-            "범죄",
             "수사",
             "법무부"
           ]
         },
         {
           "query": "범죄 수사 법무부",
-          "title": "미 검찰, 한국산 '물뽕' 밀매 국제범죄조직 검거",
-          "desc": "미국 법무부 산하 워싱턴 D.C. 연방검찰청은 7일(현지시간) 초국가적 마약 밀매 조직을 적발해 총 11명을... 이번 수사에는 마약단속국, 국토안보수사국, 국세청 범죄수사국, 미국 세관국경보호국 등 다수 기관이...",
-          "pub_date": "2026-05-09",
-          "link": "https://m.skyedaily.com/news_view.html?ID=303723",
-          "originallink": "https://m.skyedaily.com/news_view.html?ID=303723",
-          "relevance_score": 24,
+          "title": "[단독] 현직 검사 230여 명 “판사 되겠다”… 검찰 엑소더스, 이번엔 법...",
+          "desc": "검찰청이 폐지되고 대신 공소청·중대범죄수사청이 출범하면서 수사를 주로 하던 검사 직무가 기소와 공소... 법무부 등에 따르면 올해 들어 지난달까지 퇴직한 검사는 총 69명으로 집계됐다. 지난해 퇴직한 검사까지...",
+          "pub_date": "2026-05-11",
+          "link": "https://n.news.naver.com/mnews/article/023/0003975689?sid=102",
+          "originallink": "https://www.chosun.com/national/court_law/2026/05/11/3BIGEJ255VGCZGV7PRLDEEKSWI/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+          "relevance_score": 23,
           "signal_hits": [
             "검찰",
             "범죄",
-            "수사",
-            "법무부"
-          ]
-        },
-        {
-          "query": "범죄 수사 법무부",
-          "title": "동남아 스캠범죄 '풍선효과' 비상…태국·캄보디아·베트남과 공조",
-          "desc": "공유해 범죄조직 이동에 공동 대응할 필요성을 강조했다. 캄보디아 측도 이에 공감하며 수사 경험과 대응... 외교부는 향후에도 법무부·경찰청 등과 협력해 범정부 차원의 초국가범죄 대응을 지속 강화하겠다고 밝혔다.",
-          "pub_date": "2026-05-09",
-          "link": "https://www.dongponews.net/news/articleView.html?idxno=57926",
-          "originallink": "https://www.dongponews.net/news/articleView.html?idxno=57926",
-          "relevance_score": 22,
-          "signal_hits": [
-            "범죄",
-            "수사",
-            "법무부"
-          ]
-        },
-        {
-          "query": "검찰개혁 법무부",
-          "title": "검찰 ‘호위무사’ 정성호? 법무부가 검찰 산하기관인가 [논썰]",
-          "desc": "이 모든 절차가 수사·기소 분리를 전제로 한 개혁 논의입니다. 그런데 검찰과 법무부가 검사의 수사권만은 절대 놓지 못하겠다고 몽니를 부리고 있는 겁니다. 더구나 당·정·청 합의 하에 형사소송법 개정은 6월 지방선거...",
-          "pub_date": "2026-05-09",
-          "link": "https://n.news.naver.com/mnews/article/028/0002804334?sid=100",
-          "originallink": "https://www.hani.co.kr/arti/politics/politics_general/1257872.html",
-          "relevance_score": 21,
-          "signal_hits": [
-            "검찰",
-            "개혁",
             "수사",
             "법무부"
           ]
@@ -1817,22 +1808,22 @@
         "diagnosis": "범죄 대응·수사·검찰개혁 이슈의 핵심 리스크는 기관 논쟁은 커지지만 피해자 보호와 재판 가능성이 흐려지는 것입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, 관계 부처와 기관의 역할 분담을 명확히 해야 합니다.",
         "moves": [
           "coordination",
-          "bottleneck",
           "ground_truth",
+          "bottleneck",
           "public_outcome"
         ],
         "move_labels": [
           "부처 간 조정",
-          "병목 해소",
           "국정 우선순위",
+          "병목 해소",
           "국민 체감 성과"
         ],
         "move_scores": {
           "coordination": 3.82,
-          "bottleneck": 3.611,
           "ground_truth": 3.375,
-          "instruction": 2.251,
+          "bottleneck": 2.911,
           "public_outcome": 2.151,
+          "instruction": 1.551,
           "causal_split": 1.257,
           "field_burden": 0.916
         },
@@ -1845,17 +1836,17 @@
             "style": "presidential_tail_wags_head"
           },
           {
-            "move": "bottleneck",
-            "move_label": "병목 해소",
+            "move": "ground_truth",
+            "move_label": "국정 우선순위",
             "question": "수사체계를 고친다고 하면서 실제 범죄 대응력이 떨어지면, 제도개혁의 목적을 놓치는 것 아닌지?",
-            "score": 3.611,
+            "score": 3.375,
             "style": "presidential_tail_wags_head"
           },
           {
-            "move": "ground_truth",
-            "move_label": "국정 우선순위",
+            "move": "bottleneck",
+            "move_label": "병목 해소",
             "question": "피해자 보호보다 기관 논쟁이 앞서면 국민은 국가가 누구 편인지 묻게 되는 것 아닌지?",
-            "score": 3.375,
+            "score": 2.911,
             "style": "presidential_tail_wags_head"
           },
           {
@@ -1878,17 +1869,17 @@
           "style": "presidential_tail_wags_head"
         },
         {
-          "move": "bottleneck",
-          "move_label": "병목 해소",
+          "move": "ground_truth",
+          "move_label": "국정 우선순위",
           "question": "수사체계를 고친다고 하면서 실제 범죄 대응력이 떨어지면, 제도개혁의 목적을 놓치는 것 아닌지?",
-          "score": 3.611,
+          "score": 3.375,
           "style": "presidential_tail_wags_head"
         },
         {
-          "move": "ground_truth",
-          "move_label": "국정 우선순위",
+          "move": "bottleneck",
+          "move_label": "병목 해소",
           "question": "피해자 보호보다 기관 논쟁이 앞서면 국민은 국가가 누구 편인지 묻게 되는 것 아닌지?",
-          "score": 3.375,
+          "score": 2.911,
           "style": "presidential_tail_wags_head"
         },
         {
@@ -1908,9 +1899,7 @@
           "법무",
           "검찰",
           "수사",
-          "범죄",
-          "재판",
-          "증거"
+          "범죄"
         ],
         "accountability_questions": [
           "피해자 보호와 재판가능성 확인",
@@ -1922,13 +1911,13 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 75.7,
+        "score": 72.0,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 226.0,
-          "article_count": 27.0,
-          "signal_count": 7,
-          "work_signal_hits": 6,
+          "priority": 229.0,
+          "article_count": 26.0,
+          "signal_count": 5,
+          "work_signal_hits": 4,
           "question_move_hits": 3
         }
       },
@@ -2129,10 +2118,25 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.2494,
+          "score": 0.2402,
           "components": {
-            "lexical": 0.1127,
-            "fuzzy_chargram": 0.0449,
+            "lexical": 0.1734,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.03
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2026-02-10",
+          "meeting_code": "260210",
+          "question_type": "현황 질문",
+          "inferred_ministry": "법무부",
+          "excerpt": "검찰, 경찰, 관세청이 마약 단속과 관계된 부처인지?"
+        },
+        {
+          "score": 0.2217,
+          "components": {
+            "lexical": 0.0592,
+            "fuzzy_chargram": 0.0455,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.06
           },
@@ -2144,38 +2148,23 @@
           "excerpt": "대한민국 국민 중에 캄보디아에 가서 이런 범죄 행위에 가담하고 있는 사람이 자의든, 타의든 대략 얼마쯤 되는지?"
         },
         {
-          "score": 0.2218,
+          "score": 0.2194,
           "components": {
-            "lexical": 0.138,
-            "fuzzy_chargram": 0.0,
+            "lexical": 0.1147,
+            "fuzzy_chargram": 0.0408,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.03
           },
           "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-10-14",
-          "meeting_code": "251014",
-          "question_type": "현황 질문",
+          "meeting_date": "2026-01-27",
+          "meeting_code": "260127",
+          "question_type": "검토결과 확인",
           "inferred_ministry": "법무부",
-          "excerpt": "63명은 구금 시설에 들어가 있는데, 이 사람들은 범죄 현장에서 체포된 사람들인지?"
-        },
-        {
-          "score": 0.2218,
-          "components": {
-            "lexical": 0.138,
-            "fuzzy_chargram": 0.0,
-            "same_ministry_boost": 0.12,
-            "question_move_boost": 0.03
-          },
-          "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-10-14",
-          "meeting_code": "251014",
-          "question_type": "현황 질문",
-          "inferred_ministry": "법무부",
-          "excerpt": "강제로 했냐, 자발적으로 했냐의 차이는 있겠지만 범죄 행위에 가담한 사람들인지?"
+          "excerpt": "업무 범위나 수사 대상, 권한 부분은 법무부하고 관련 부처에서 검토를 해보시고, 지금은 준비가 안 되어 있는 것 같으니 따로 이야기하겠음."
         }
       ],
       "oral_brief": {
-        "thirty_second": "법무부 소관 justice_reform는 질문 가능성 75.7점입니다. 핵심은 검찰와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 범죄 발생/검거/재판 관련 통계로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "법무부 소관 justice_reform는 질문 가능성 72.0점입니다. 핵심은 검찰와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 범죄 발생/검거/재판 관련 통계로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -2216,7 +2205,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -11,
+        "priority_change": 3,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -2236,607 +2225,54 @@
       }
     },
     {
-      "issue_id": "labor_jobs",
-      "ministry": "고용노동부",
-      "priority": 214,
-      "count": 22,
-      "signals": [
-        "일자리",
-        "청년",
-        "산재",
-        "원청",
-        "임금체불",
-        "하도급",
-        "노동"
-      ],
-      "terms": [
-        "건설현장",
-        "체불",
-        "불법하도급",
-        "수도권",
-        "산재",
-        "임금체불",
-        "현장",
-        "하도급",
-        "불법하도급과",
-        "임금"
-      ],
-      "items": [
-        {
-          "query": "임금체불 하도급",
-          "title": "도급대금 안줘 임금체불·고공농성…노동부, 부영주택 시정지시",
-          "desc": "자금 사정이 어려워진 하도급 업체는 임금을 체불했고, 생계가 어려워진 소속 노동자들은 지난해 12월 나주와 원주 지역에서 연달아 고공 농성을 벌였다. 노동부는 근로기준법에 따라 도급인으로서 연대책임이 큰...",
-          "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/001/0016067439?sid=102",
-          "originallink": "https://www.yna.co.kr/view/AKR20260508142700530?input=1195m",
-          "relevance_score": 27,
-          "signal_hits": [
-            "임금체불",
-            "하도급",
-            "노동"
-          ]
-        },
-        {
-          "query": "임금체불 하도급",
-          "title": "건설현장 체불·불법하도급 합동 점검…수도권 108곳 대상",
-          "desc": "권창준 고용노동부 차관은 \"불법하도급은 건설노동자의 임금체불과 산업안전 문제로 직결되는 중대한 사안인 만큼, 반드시 근절돼야 한다\"고 강조하며 \"이번 합동감독을 통해 일하러 나간 현장에서 사고로 다치거나...",
-          "pub_date": "2026-05-07",
-          "link": "https://www.korea.kr/news/policyNewsView.do?newsId=148963984&call_from=naver_news",
-          "originallink": "https://www.korea.kr/news/policyNewsView.do?newsId=148963984&call_from=naver_news",
-          "relevance_score": 25,
-          "signal_hits": [
-            "임금체불",
-            "하도급",
-            "노동"
-          ]
-        },
-        {
-          "query": "임금체불 하도급",
-          "title": "고용노동부·국토교통부, 건설현장 불법하도급과 임금·대금 체불 근절...",
-          "desc": "정부가 건설현장 내 불법하도급과 임금·장비대금 체불 문제를 뿌리뽑기 위한 현장 점검에 나선다. 고용노동부와 국토교통부는 오는 11일부터 수도권 내 불법하도급 의심 현장 96곳과 대금 체불 신고 현장 12곳 등 총 108곳을...",
-          "pub_date": "2026-05-09",
-          "link": "http://www.econonews.co.kr/news/articleView.html?idxno=437844",
-          "originallink": "http://www.econonews.co.kr/news/articleView.html?idxno=437844",
-          "relevance_score": 22,
-          "signal_hits": [
-            "하도급",
-            "노동"
-          ]
-        },
-        {
-          "query": "산재 원청 책임",
-          "title": "하도급 규제 피하려고 공사를 '납품계약' 둔갑",
-          "desc": "서류상 '자재 납품 직원'이 시공하다 다친 것으로 둔갑해 원청의 건설 산재보험 적용이 거부될 수 있기 때문이다. 이 경우 하청 대표가 민·형사상 모든 손해배상 책임을 '독박' 써야 한다. 나아가 실제로는 인건비가...",
-          "pub_date": "2026-05-08",
-          "link": "https://www.koscaj.com/news/articleView.html?idxno=324011",
-          "originallink": "https://www.koscaj.com/news/articleView.html?idxno=324011",
-          "relevance_score": 21,
-          "signal_hits": [
-            "산재",
-            "원청",
-            "하도급"
-          ]
-        },
-        {
-          "query": "임금체불 하도급",
-          "title": "수도권 건설현장 108곳, 임금체불 없나…정부합동 점검 나선다",
-          "desc": "노동부는 임금뿐 아니라 공사대금이나 장비대금의 체불, 불법 하도급 등을 종합적으로 점검할 예정이라고 밝혔습니다. 정부는 위법사항 적발시엔 영업정지나 과태료 부과 등 행정조치 외에도 사안의 경중에 따라...",
-          "pub_date": "2026-05-08",
-          "link": "https://n.news.naver.com/mnews/article/437/0000490566?sid=102",
-          "originallink": "https://news.jtbc.co.kr/article/NB12297448?influxDiv=NAVER",
-          "relevance_score": 21,
-          "signal_hits": [
-            "임금체불",
-            "하도급",
-            "노동"
-          ]
-        },
-        {
-          "query": "청년 일자리",
-          "title": "서경대, 지역청년까지 참여 직무매칭 경진대회",
-          "desc": "서경대 대학일자리플러스본부는 고용노동부 대학일자리플러스센터 사업 수행기관으로 청년 취업 지원 프로그램과 고용서비스를 운영하고 있다. 인스타그램과 카카오채널을 통해 진로·취업 상담도 진행 중이다.",
-          "pub_date": "2026-05-10",
-          "link": "https://www.naeil.com/news/read/588088?ref=naver",
-          "originallink": "https://www.naeil.com/news/read/588088?ref=naver",
-          "relevance_score": 20,
-          "signal_hits": [
-            "일자리",
-            "청년",
-            "노동"
-          ]
-        }
-      ],
-      "questions": [
-        "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?",
-        "원청은 이익을 가져가고 책임은 하청과 노동자에게 내려가면, 그 구조를 그냥 시장 문제라고 볼 수는 없는 것 아닌지?",
-        "제재를 받아도 계속하는 게 이익이면, 제도가 오히려 위반을 허용하는 것 아닌지?",
-        "일하는 사람이 제일 약한 고리로 남아 있으면, 정부가 말하는 노동 보호가 현장에서는 빈말이 되는 것 아닌지?"
-      ],
-      "question_synthesis": {
-        "diagnosis": "일자리·산재·임금체불 문제의 핵심 리스크는 책임 소재가 하청·현장 노동자에게만 내려가는 것입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, 현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다.",
-        "moves": [
-          "field_burden",
-          "causal_split",
-          "instruction",
-          "public_outcome"
-        ],
-        "move_labels": [
-          "현장 부담 완화",
-          "구조 판단",
-          "후속 조치 지시",
-          "국민 체감 성과"
-        ],
-        "move_scores": {
-          "field_burden": 4.257,
-          "causal_split": 2.961,
-          "instruction": 2.615,
-          "coordination": 2.553,
-          "ground_truth": 1.588,
-          "public_outcome": 1.412,
-          "bottleneck": 1.194
-        },
-        "questions": [
-          {
-            "move": "field_burden",
-            "move_label": "현장 부담 완화",
-            "question": "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?",
-            "score": 4.257,
-            "style": "presidential_tail_wags_head"
-          },
-          {
-            "move": "causal_split",
-            "move_label": "구조 판단",
-            "question": "원청은 이익을 가져가고 책임은 하청과 노동자에게 내려가면, 그 구조를 그냥 시장 문제라고 볼 수는 없는 것 아닌지?",
-            "score": 2.961,
-            "style": "presidential_tail_wags_head"
-          },
-          {
-            "move": "instruction",
-            "move_label": "후속 조치 지시",
-            "question": "제재를 받아도 계속하는 게 이익이면, 제도가 오히려 위반을 허용하는 것 아닌지?",
-            "score": 2.615,
-            "style": "presidential_tail_wags_head"
-          },
-          {
-            "move": "public_outcome",
-            "move_label": "국민 체감 성과",
-            "question": "일하는 사람이 제일 약한 고리로 남아 있으면, 정부가 말하는 노동 보호가 현장에서는 빈말이 되는 것 아닌지?",
-            "score": 1.412,
-            "style": "presidential_tail_wags_head"
-          }
-        ],
-        "follow_up": "책임 소재가 하청·현장 노동자에게만 내려가는 것을 막기 위해 고용노동부가 관계부처와 함께 우선 조치할 과제는 무엇입니까?",
-        "style_note": "과거 대통령 질문 데이터의 말맛을 반영해, 작은 사례로 제도 전체를 흔드는 tail-wags-head형 질문을 우선 생성합니다. 통계·법령은 질문 문구가 아니라 장관 답변 근거로 둡니다."
-      },
-      "pattern_questions": [
-        {
-          "move": "field_burden",
-          "move_label": "현장 부담 완화",
-          "question": "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?",
-          "score": 4.257,
-          "style": "presidential_tail_wags_head"
-        },
-        {
-          "move": "causal_split",
-          "move_label": "구조 판단",
-          "question": "원청은 이익을 가져가고 책임은 하청과 노동자에게 내려가면, 그 구조를 그냥 시장 문제라고 볼 수는 없는 것 아닌지?",
-          "score": 2.961,
-          "style": "presidential_tail_wags_head"
-        },
-        {
-          "move": "instruction",
-          "move_label": "후속 조치 지시",
-          "question": "제재를 받아도 계속하는 게 이익이면, 제도가 오히려 위반을 허용하는 것 아닌지?",
-          "score": 2.615,
-          "style": "presidential_tail_wags_head"
-        },
-        {
-          "move": "public_outcome",
-          "move_label": "국민 체감 성과",
-          "question": "일하는 사람이 제일 약한 고리로 남아 있으면, 정부가 말하는 노동 보호가 현장에서는 빈말이 되는 것 아닌지?",
-          "score": 1.412,
-          "style": "presidential_tail_wags_head"
-        }
-      ],
-      "rank": 5,
-      "ministry_work_alignment": {
-        "function_domains": [
-          "임금체불",
-          "하도급·원청책임"
-        ],
-        "matched_work_signals": [
-          "일자리",
-          "산재",
-          "임금체불",
-          "하도급",
-          "원청",
-          "노동"
-        ],
-        "accountability_questions": [
-          "원청-하청 책임구조 확인",
-          "감독·처벌·예방수단의 실효성 확인"
-        ],
-        "source_hooks": [
-          "고용노동부와 그 소속기관 직제",
-          "고용노동부와 그 소속기관 직제 시행규칙"
-        ]
-      },
-      "cabinet_question_likelihood": {
-        "score": 72.6,
-        "band": "cabinet_review",
-        "drivers": {
-          "priority": 214.0,
-          "article_count": 22.0,
-          "signal_count": 7,
-          "work_signal_hits": 6,
-          "question_move_hits": 3
-        }
-      },
-      "statistical_evidence": {
-        "candidates": [
-          {
-            "label": "고용률/실업률/청년고용률",
-            "source": "KOSIS",
-            "why": "일자리 지표와 현장 체감 괴리 확인",
-            "status": "candidate",
-            "query_hint": "고용률 실업률 청년고용률"
-          },
-          {
-            "label": "산업재해/임금체불 행정통계",
-            "source": "KOSIS/고용부",
-            "why": "산재·임금체불 이슈의 규모 확인",
-            "status": "candidate",
-            "query_hint": "산업재해 임금체불"
-          }
-        ],
-        "answer_evidence_cards": [
-          {
-            "stat": "고용률/실업률/청년고용률",
-            "use_in_answer": "일자리 지표와 현장 체감 괴리 확인",
-            "how_to_phrase": "통계명 자체를 질문에 넣지 말고, 답변에서 규모·추세·비교 근거로 사용",
-            "query_hint": "고용률 실업률 청년고용률"
-          },
-          {
-            "stat": "산업재해/임금체불 행정통계",
-            "use_in_answer": "산재·임금체불 이슈의 규모 확인",
-            "how_to_phrase": "통계명 자체를 질문에 넣지 말고, 답변에서 규모·추세·비교 근거로 사용",
-            "query_hint": "산업재해 임금체불"
-          }
-        ],
-        "answer_frame": "최신 통계로 규모·추세·대상집단을 확인한 뒤, 즉시 조치와 제도 개선을 구분해 답변해야 합니다.",
-        "live_reference_cards": [
-          {
-            "ok": true,
-            "label": "주민등록인구(예시)",
-            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
-            "latest": {
-              "C1_OBJ_NM": "행정구역(시군구)별",
-              "DT": "391965",
-              "C1": "36",
-              "PRD_SE": "A",
-              "UNIT_NM_ENG": "Person",
-              "ITM_ID": "T20",
-              "TBL_ID": "DT_1B040A3",
-              "ITM_NM": "총인구수",
-              "TBL_NM": "행정구역(시군구)별 성별 인구수",
-              "PRD_DE": "2025",
-              "LST_CHN_DE": "2026-01-05",
-              "C1_NM_ENG": "Sejong_si",
-              "C1_NM": "세종특별자치시",
-              "UNIT_NM": "명",
-              "ITM_NM_ENG": "Koreans (Total)",
-              "ORG_ID": "101",
-              "C1_OBJ_NM_ENG": "By Administrative District"
-            },
-            "previous": {
-              "C1_OBJ_NM": "행정구역(시군구)별",
-              "DT": "390685",
-              "C1": "36",
-              "PRD_SE": "A",
-              "UNIT_NM_ENG": "Person",
-              "ITM_ID": "T20",
-              "TBL_ID": "DT_1B040A3",
-              "ITM_NM": "총인구수",
-              "TBL_NM": "행정구역(시군구)별 성별 인구수",
-              "PRD_DE": "2024",
-              "LST_CHN_DE": "2025-03-12",
-              "C1_NM_ENG": "Sejong_si",
-              "C1_NM": "세종특별자치시",
-              "UNIT_NM": "명",
-              "ITM_NM_ENG": "Koreans (Total)",
-              "ORG_ID": "101",
-              "C1_OBJ_NM_ENG": "By Administrative District"
-            },
-            "latest_value": 391965.0,
-            "previous_value": 390685.0,
-            "rows": [
-              {
-                "C1_OBJ_NM": "행정구역(시군구)별",
-                "DT": "390685",
-                "C1": "36",
-                "PRD_SE": "A",
-                "UNIT_NM_ENG": "Person",
-                "ITM_ID": "T20",
-                "TBL_ID": "DT_1B040A3",
-                "ITM_NM": "총인구수",
-                "TBL_NM": "행정구역(시군구)별 성별 인구수",
-                "PRD_DE": "2024",
-                "LST_CHN_DE": "2025-03-12",
-                "C1_NM_ENG": "Sejong_si",
-                "C1_NM": "세종특별자치시",
-                "UNIT_NM": "명",
-                "ITM_NM_ENG": "Koreans (Total)",
-                "ORG_ID": "101",
-                "C1_OBJ_NM_ENG": "By Administrative District"
-              },
-              {
-                "C1_OBJ_NM": "행정구역(시군구)별",
-                "DT": "391965",
-                "C1": "36",
-                "PRD_SE": "A",
-                "UNIT_NM_ENG": "Person",
-                "ITM_ID": "T20",
-                "TBL_ID": "DT_1B040A3",
-                "ITM_NM": "총인구수",
-                "TBL_NM": "행정구역(시군구)별 성별 인구수",
-                "PRD_DE": "2025",
-                "LST_CHN_DE": "2026-01-05",
-                "C1_NM_ENG": "Sejong_si",
-                "C1_NM": "세종특별자치시",
-                "UNIT_NM": "명",
-                "ITM_NM_ENG": "Koreans (Total)",
-                "ORG_ID": "101",
-                "C1_OBJ_NM_ENG": "By Administrative District"
-              }
-            ]
-          },
-          {
-            "ok": true,
-            "label": "가구수(예시)",
-            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
-            "latest": {
-              "C1_OBJ_NM": "행정구역(시군구)별",
-              "DT": "24300087",
-              "C1": "00",
-              "PRD_SE": "A",
-              "UNIT_NM_ENG": "Household",
-              "ITM_ID": "T1",
-              "TBL_ID": "DT_1B040B3",
-              "ITM_NM": "세대수",
-              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
-              "PRD_DE": "2025",
-              "LST_CHN_DE": "2026-01-05",
-              "C1_NM_ENG": "Whole country",
-              "C1_NM": "전국",
-              "UNIT_NM": "세대",
-              "ITM_NM_ENG": "Household",
-              "ORG_ID": "101",
-              "C1_OBJ_NM_ENG": "By Administrative District"
-            },
-            "previous": {
-              "C1_OBJ_NM": "행정구역(시군구)별",
-              "DT": "24118928",
-              "C1": "00",
-              "PRD_SE": "A",
-              "UNIT_NM_ENG": "Household",
-              "ITM_ID": "T1",
-              "TBL_ID": "DT_1B040B3",
-              "ITM_NM": "세대수",
-              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
-              "PRD_DE": "2024",
-              "LST_CHN_DE": "2025-03-12",
-              "C1_NM_ENG": "Whole country",
-              "C1_NM": "전국",
-              "UNIT_NM": "세대",
-              "ITM_NM_ENG": "Household",
-              "ORG_ID": "101",
-              "C1_OBJ_NM_ENG": "By Administrative District"
-            },
-            "latest_value": 24300087.0,
-            "previous_value": 24118928.0,
-            "rows": [
-              {
-                "C1_OBJ_NM": "행정구역(시군구)별",
-                "DT": "24118928",
-                "C1": "00",
-                "PRD_SE": "A",
-                "UNIT_NM_ENG": "Household",
-                "ITM_ID": "T1",
-                "TBL_ID": "DT_1B040B3",
-                "ITM_NM": "세대수",
-                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
-                "PRD_DE": "2024",
-                "LST_CHN_DE": "2025-03-12",
-                "C1_NM_ENG": "Whole country",
-                "C1_NM": "전국",
-                "UNIT_NM": "세대",
-                "ITM_NM_ENG": "Household",
-                "ORG_ID": "101",
-                "C1_OBJ_NM_ENG": "By Administrative District"
-              },
-              {
-                "C1_OBJ_NM": "행정구역(시군구)별",
-                "DT": "24300087",
-                "C1": "00",
-                "PRD_SE": "A",
-                "UNIT_NM_ENG": "Household",
-                "ITM_ID": "T1",
-                "TBL_ID": "DT_1B040B3",
-                "ITM_NM": "세대수",
-                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
-                "PRD_DE": "2025",
-                "LST_CHN_DE": "2026-01-05",
-                "C1_NM_ENG": "Whole country",
-                "C1_NM": "전국",
-                "UNIT_NM": "세대",
-                "ITM_NM_ENG": "Household",
-                "ORG_ID": "101",
-                "C1_OBJ_NM_ENG": "By Administrative District"
-              }
-            ]
-          }
-        ],
-        "live_status": "ok",
-        "live_errors": [],
-        "ground_truth_prompt": "통계는 대통령 질문 문구가 아니라 장관 답변의 근거로 사용합니다."
-      },
-      "similar_historical_cases": [
-        {
-          "score": 0.3196,
-          "components": {
-            "lexical": 0.2606,
-            "fuzzy_chargram": 0.142,
-            "same_ministry_boost": 0.12,
-            "question_move_boost": 0.03
-          },
-          "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-09-02",
-          "meeting_code": "250902",
-          "question_type": "검토결과 확인",
-          "inferred_ministry": "고용노동부",
-          "excerpt": "규정 개정을 한번 검토해 보시기 바람. 그다음에 하도급의 부실 공사, 산재, 임금체불 등 모든 문제는 원청 아닌지?"
-        },
-        {
-          "score": 0.2356,
-          "components": {
-            "lexical": 0.0491,
-            "fuzzy_chargram": 0.0,
-            "same_ministry_boost": 0.12,
-            "question_move_boost": 0.09
-          },
-          "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-08-12",
-          "meeting_code": "250812",
-          "question_type": "검토결과 확인",
-          "inferred_ministry": "고용노동부",
-          "excerpt": "너무 오래 검토하고 있으면 안 됨. 원청 책임 강화라는 내용이 있어야 한다는 얘기임. 다음 준비된 것 있으면 보고 바람."
-        },
-        {
-          "score": 0.1997,
-          "components": {
-            "lexical": 0.0957,
-            "fuzzy_chargram": 0.0,
-            "same_ministry_boost": 0.12,
-            "question_move_boost": 0.03
-          },
-          "retrieval_method": "hybrid_token_chargram_ministry_move",
-          "meeting_date": "2025-09-30",
-          "meeting_code": "250930",
-          "question_type": "현황 질문",
-          "inferred_ministry": "고용노동부",
-          "excerpt": "국정자원 관련 보고 전에 부처에 물어 볼 게 있음. 고용노동부는 지금 산업 재해율, 산재 사망, 특히 추락사고를 줄이기 위한 정책들을 준비하고 발표했는지?"
-        }
-      ],
-      "oral_brief": {
-        "thirty_second": "고용노동부 소관 labor_jobs는 질문 가능성 72.6점입니다. 핵심은 임금체불, 하도급·원청책임와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 고용률/실업률/청년고용률, 산업재해/임금체불 행정통계로 규모와 추세를 뒷받침해야 합니다.",
-        "answer_skeleton": [
-          "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
-          "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
-          "조치 계획: 즉시 조치와 법령·예산이 필요한 과제를 구분",
-          "후속 보고: 점검 일정과 책임 부처·기관을 명확히 제시"
-        ],
-        "likely_first_question": "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?",
-        "evidence_gap": "실제 live 통계값이 없는 항목은 최신값·전년 대비·지역/계층별 비교를 보강해야 합니다."
-      },
-      "question_flow": [
-        {
-          "stage": "첫 질문",
-          "question": "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?"
-        },
-        {
-          "stage": "후속 압박",
-          "question": "원청은 이익을 가져가고 책임은 하청과 노동자에게 내려가면, 그 구조를 그냥 시장 문제라고 볼 수는 없는 것 아닌지?"
-        },
-        {
-          "stage": "병목 확인",
-          "question": "제재를 받아도 계속하는 게 이익이면, 제도가 오히려 위반을 허용하는 것 아닌지?"
-        },
-        {
-          "stage": "지시 전환",
-          "question": "책임 소재가 하청·현장 노동자에게만 내려가는 것을 막기 위해 고용노동부가 관계부처와 함께 우선 조치할 과제는 무엇입니까?"
-        },
-        {
-          "stage": "장관 준비",
-          "items": [
-            "원청-하청 책임구조 확인",
-            "감독·처벌·예방수단의 실효성 확인",
-            "최근 7일 기사량·대표기사·부처 소관 근거",
-            "관련 통계 최신값과 전월·전년 대비 변화",
-            "즉시 조치/법령개정/예산소요를 구분한 답변"
-          ],
-          "likelihood_band": "cabinet_review"
-        }
-      ],
-      "daily_delta": {
-        "status": "compared",
-        "priority_change": 5,
-        "rank_change": -1,
-        "move_change": {
-          "from": [
-            "causal_split",
-            "field_burden",
-            "instruction",
-            "public_outcome"
-          ],
-          "to": [
-            "causal_split",
-            "field_burden",
-            "instruction",
-            "public_outcome"
-          ]
-        },
-        "interpretation": "전일 대비 큰 변화는 없습니다."
-      }
-    },
-    {
       "issue_id": "finance_rates",
       "ministry": "금융위원회",
-      "priority": 203,
-      "count": 21,
+      "priority": 214,
+      "count": 23,
       "signals": [
         "금융",
         "대출",
         "금리",
         "은행",
         "중금리",
-        "서민금융",
-        "취약계층"
+        "서민금융"
       ],
       "terms": [
-        "금융",
         "대출",
-        "있다",
-        "중금리대출",
         "금리",
         "중금리",
         "포용금융",
-        "대출을",
-        "지원",
-        "위한"
+        "신용평가",
+        "금융",
+        "부담",
+        "은행",
+        "은행이",
+        "것으로"
       ],
       "items": [
         {
-          "query": "금융 대출 금리",
-          "title": "이재명 정부, 포용금융 추진에 은행장들 '지속 가능성' 강조",
-          "desc": "고금리 비제도권 대출을 제도권 금융으로 옮기는 대환 지원, 연체 채무를 성실히 갚는 고객을 위한 재기형 상품, 고령층과 연금 수급자를 위한 패키지 상품처럼 현장 수요를 반영한 접근도 함께 거론됐다. 이는 포용금융을...",
+          "query": "서민금융 대출 부담",
+          "title": "1분기 사잇돌대출 11배 급증… 5대 금융, 포용금융 속도전",
+          "desc": "우리금융은 정책상품 공급을 넘어 △신용평가 체계 개선 △서민금융 공급 확대 △금리 부담 완화 △채무조정 및 재기지원까지 연결한 종합지원체계를 구축했다. 우리은행은 업계 최초로 가계신용대출 연 7% 금리...",
           "pub_date": "2026-05-10",
-          "link": "https://www.tokenpost.kr/news/economy/358044",
-          "originallink": "https://www.tokenpost.kr/news/economy/358044",
-          "relevance_score": 24,
+          "link": "https://n.news.naver.com/mnews/article/014/0005519369?sid=101",
+          "originallink": "http://www.fnnews.com/news/202605101826394352",
+          "relevance_score": 27,
           "signal_hits": [
             "금융",
             "대출",
             "금리",
-            "은행"
+            "은행",
+            "서민금융"
           ]
         },
         {
           "query": "금융 대출 금리",
-          "title": "금융위, 포용금융추진단 출범으로 중저신용자 지원 강화",
-          "desc": "금융위에 따르면 지난해 은행·저축은행·상호금융·여신전문금융업권이 공급한 중금리대출은 27조8천100억원으로 2024년 30조9천100억원보다 3조1천억원 감소했다. 특히 은행권 공급액은 8조6천900억원으로 1년 전보다 12.7...",
-          "pub_date": "2026-05-10",
-          "link": "https://www.tokenpost.kr/news/economy/358040",
-          "originallink": "https://www.tokenpost.kr/news/economy/358040",
+          "title": "금융위, 포용금융추진단 이달 출범",
+          "desc": "추진단에는 금융위 여러 부서와 시민단체, 사회활동가 등이 참여해 중저신용자 대출 확대와 신용평가 체계 개편 등을 논의할 예정입니다. 지난해 은행권 중금리대출 공급 규모는 27조8,100억원으로 전년보다 3조1천억원...",
+          "pub_date": "2026-05-11",
+          "link": "https://n.news.naver.com/mnews/article/422/0000863383?sid=101",
+          "originallink": "http://www.yonhapnewstv.co.kr/news/MYH202605110654032CH",
           "relevance_score": 22,
           "signal_hits": [
             "금융",
@@ -2847,57 +2283,63 @@
           ]
         },
         {
-          "query": "금융 대출 금리",
-          "title": "5대 은행장 \"금융 역할 재정립 공감…건전성 챙겨야 지속 가능\"",
-          "desc": "한 행장은 \"획일적인 포용금융 공급 확대로 대출 규모나 금리 수준만으로 평가되면 금융회사들이 무분별한 외형 증대에만 치중하는 등 장기적으로 오히려 실물 경제에 부담이 되는 지속 가능하지 않은 방식으로 취약...",
-          "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/001/0016067407?sid=101",
-          "originallink": "https://www.yna.co.kr/view/AKR20260509037800002?input=1195m",
+          "query": "중금리대출 확대",
+          "title": "김용범 정책실장 \"잔인한 금융\" 정조준…은행 구조 개혁론 확산",
+          "desc": "대통령실 정책실장이 직접 금융 시스템 재설계를 거론하면서 향후 중금리 대출 확대나 인터넷은행 역할 재조정, 서민금융 개편 논의로 이어질 가능성이 거론된다. 특히 김 실장이 \"은행이 특정 구간을 비워두고서는...",
+          "pub_date": "2026-05-11",
+          "link": "https://www.topstarnews.net/news/articleView.html?idxno=16056909",
+          "originallink": "https://www.topstarnews.net/news/articleView.html?idxno=16056909",
           "relevance_score": 22,
           "signal_hits": [
             "금융",
             "대출",
             "금리",
-            "은행"
-          ]
-        },
-        {
-          "query": "서민금융 대출 부담",
-          "title": "\"대출부터 교육까지\"…금융권, 서민·소상공인 지원 '포용금융' 강화",
-          "desc": "강화하며 서민금융기관 역할을 확대하고 있다. 재해와 재난 피해 고객 대상 긴급자금대출과 상환유예... 15차례 금융지원을 실시하며 상생 금융 행보를 이어왔다. 새마을금고는 지역밀착 금융기관으로서 금융부담...",
-          "pub_date": "2026-05-09",
-          "link": "http://www.kdfnews.com/news/articleView.html?idxno=183040",
-          "originallink": "http://www.kdfnews.com/news/articleView.html?idxno=183040",
-          "relevance_score": 21,
-          "signal_hits": [
-            "금융",
-            "대출",
+            "은행",
+            "중금리",
             "서민금융"
           ]
         },
         {
-          "query": "금융 대출 금리",
-          "title": "여신업계 사잇돌대출 하반기 나올 듯…중금리대출엔 속내 복잡",
-          "desc": "발언을 내놓는 만큼 금융당국에서도 속도감 있게 추진할 것으로 보인다. 금융당국 관계자는 \"지난번 발표한 중금리대출 활성화 방안을 순차적으로 구체화할 계획\"이라며 \"우선 순위가 정해지면 빨리 추진할 것\"이라고 말했다.",
-          "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/001/0016067406?sid=101",
-          "originallink": "https://www.yna.co.kr/view/AKR20260509031700002?input=1195m",
-          "relevance_score": 20,
+          "query": "중금리대출 확대",
+          "title": "5대 은행 가계대출, 1분기부터 '마이너스'",
+          "desc": "2026년 가계부채 관리방안에는 정책서민금융과 민간 중금리 대출 취급분에 대해 총량 관리상 예외 인정 물량을 확대하겠다는 내용이 담겼다. 총량은 조이되 서민·취약차주의 자금길까지 막히지 않도록 하겠다는...",
+          "pub_date": "2026-05-11",
+          "link": "https://www.straightnews.co.kr/news/articleView.html?idxno=302035",
+          "originallink": "https://www.straightnews.co.kr/news/articleView.html?idxno=302035",
+          "relevance_score": 22,
           "signal_hits": [
             "금융",
             "대출",
             "금리",
+            "은행",
+            "중금리",
+            "서민금융"
+          ]
+        },
+        {
+          "query": "중금리대출 확대",
+          "title": "이재명 정부가 띄운 '잔인한 금융'...도대체 뭔가",
+          "desc": "10일 금융위원회에 따르면 정부는 이달 중 '포용금융추진단'(가칭)을 출범시켜 신용평가 체계와 중금리대출... 은행권은 중·저신용자 대출 확대가 획일적으로 추진될 경우 연체율 상승과 충당금 부담 증가로 이어질 수...",
+          "pub_date": "2026-05-11",
+          "link": "https://www.dongponews.net/news/articleView.html?idxno=57935",
+          "originallink": "https://www.dongponews.net/news/articleView.html?idxno=57935",
+          "relevance_score": 22,
+          "signal_hits": [
+            "금융",
+            "대출",
+            "금리",
+            "은행",
             "중금리"
           ]
         },
         {
-          "query": "금융 대출 금리",
-          "title": "외연 넓힌 포용금융추진단 이달 출범…금융 공공성 공론화 착수",
-          "desc": "금융위에 따르면 지난해 은행·저축은행·상호금융·여신전문금융업권이 공급한 중금리대출 규모는 27조8천100억원으로 전년(30조9천100억원)보다 3조1천억원 감소했다. 특히 은행권의 공급 규모가 총 8조6천900억원으로...",
-          "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/001/0016067405?sid=101",
-          "originallink": "https://www.yna.co.kr/view/AKR20260509044700002?input=1195m",
-          "relevance_score": 20,
+          "query": "중금리대출 확대",
+          "title": "포용금융 추진단 뜬다, 신용평가 개편도 검토",
+          "desc": "등의 중금리 대출 잔액은 27조8100억원으로, 전년보다 3조1000억원 줄었다. 금융위는 중·저신용자 대출 공급 과정에 인터넷은행과 상호금융·저축은행 등 제2금융권의 역할을 확대하는 방안을 논의할 계획이다. 현행...",
+          "pub_date": "2026-05-11",
+          "link": "https://n.news.naver.com/mnews/article/025/0003522214?sid=101",
+          "originallink": "https://www.joongang.co.kr/article/25427133",
+          "relevance_score": 22,
           "signal_hits": [
             "금융",
             "대출",
@@ -2999,7 +2441,7 @@
           "style": "presidential_tail_wags_head"
         }
       ],
-      "rank": 6,
+      "rank": 5,
       "ministry_work_alignment": {
         "function_domains": [
           "서민금융"
@@ -3024,9 +2466,9 @@
         "score": 66.3,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 203.0,
-          "article_count": 21.0,
-          "signal_count": 7,
+          "priority": 214.0,
+          "article_count": 23.0,
+          "signal_count": 6,
           "work_signal_hits": 6,
           "question_move_hits": 2
         }
@@ -3241,9 +2683,9 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.2633,
+          "score": 0.2453,
           "components": {
-            "lexical": 0.1601,
+            "lexical": 0.1256,
             "fuzzy_chargram": 0.0,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.06
@@ -3256,10 +2698,10 @@
           "excerpt": "산업재해 예방을 위한 대책을 구체적으로 준비한 곳이 노동부하고 국토부 둘밖에 없는지? 지난번에 금융위원회에서 이런 회사들이 사고 내면 대출 이자에 불이익을 주거나 대출 규제를 한다든지, 국민연금 같은 곳에서는 그런 회사 주식은 아예 안 사준다든지, 이것이 진짜 실제 대책이 아닌지?"
         },
         {
-          "score": 0.2434,
+          "score": 0.2437,
           "components": {
-            "lexical": 0.1549,
-            "fuzzy_chargram": 0.0533,
+            "lexical": 0.1519,
+            "fuzzy_chargram": 0.0612,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.03
           },
@@ -3271,9 +2713,9 @@
           "excerpt": "서민금융 1,145억은 명절 자금하고는 달리 서민들에게 금융 기회를 주는 것인데, 이건 이자가 훨씬 더 비싼 것인지?"
         },
         {
-          "score": 0.2394,
+          "score": 0.2383,
           "components": {
-            "lexical": 0.1143,
+            "lexical": 0.1121,
             "fuzzy_chargram": 0.0,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.06
@@ -3328,13 +2770,13 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -6,
-        "rank_change": 1,
+        "priority_change": 11,
+        "rank_change": -1,
         "move_change": {
           "from": [
             "bottleneck",
+            "causal_split",
             "ground_truth",
-            "instruction",
             "public_outcome"
           ],
           "to": [
@@ -3344,91 +2786,610 @@
             "public_outcome"
           ]
         },
-        "interpretation": "순위보다 질문 프레임이 바뀐 이슈입니다."
+        "interpretation": "전일 대비 큰 변화는 없습니다."
+      }
+    },
+    {
+      "issue_id": "labor_jobs",
+      "ministry": "고용노동부",
+      "priority": 194,
+      "count": 20,
+      "signals": [
+        "산재",
+        "원청",
+        "임금체불",
+        "하도급",
+        "노동"
+      ],
+      "terms": [
+        "하도급",
+        "대금",
+        "노동부는",
+        "따라",
+        "산재",
+        "노동부",
+        "임금을",
+        "노동자들은",
+        "지난해",
+        "12월"
+      ],
+      "items": [
+        {
+          "query": "임금체불 하도급",
+          "title": "도급대금 안줘 임금체불·고공농성…노동부, 부영주택 시정지시",
+          "desc": "자금 사정이 어려워진 하도급 업체는 임금을 체불했고, 생계가 어려워진 소속 노동자들은 지난해 12월 나주와 원주 지역에서 연달아 고공 농성을 벌였다. 노동부는 근로기준법에 따라 도급인으로서 연대책임이 큰...",
+          "pub_date": "2026-05-10",
+          "link": "https://n.news.naver.com/mnews/article/001/0016067439?sid=102",
+          "originallink": "https://www.yna.co.kr/view/AKR20260508142700530?input=1195m",
+          "relevance_score": 26,
+          "signal_hits": [
+            "임금체불",
+            "하도급",
+            "노동"
+          ]
+        },
+        {
+          "query": "임금체불 하도급",
+          "title": "하도급 대금 미지급·수당 떼먹기…노동부, 부영주택 시정지시",
+          "desc": "자금난에 빠진 하도급 업체가 임금을 체불하자, 생계가 막힌 노동자들은 지난해 12월 나주와 원주에서 잇따라 고공 농성에 나섰다. 노동부는 근로기준법 제44조에 따라 도급인으로서 연대책임이 있는 부영주택에 대금...",
+          "pub_date": "2026-05-10",
+          "link": "https://n.news.naver.com/mnews/article/079/0004145138?sid=102",
+          "originallink": "https://www.nocutnews.co.kr/news/6514609?utm_source=naver&utm_medium=article&utm_campaign=20260510092740",
+          "relevance_score": 21,
+          "signal_hits": [
+            "하도급",
+            "노동"
+          ]
+        },
+        {
+          "query": "임금체불 하도급",
+          "title": "고용노동부·국토교통부, 건설현장 불법하도급과 임금·대금 체불 근절...",
+          "desc": "정부가 건설현장 내 불법하도급과 임금·장비대금 체불 문제를 뿌리뽑기 위한 현장 점검에 나선다. 고용노동부와 국토교통부는 오는 11일부터 수도권 내 불법하도급 의심 현장 96곳과 대금 체불 신고 현장 12곳 등 총 108곳을...",
+          "pub_date": "2026-05-09",
+          "link": "http://www.econonews.co.kr/news/articleView.html?idxno=437844",
+          "originallink": "http://www.econonews.co.kr/news/articleView.html?idxno=437844",
+          "relevance_score": 21,
+          "signal_hits": [
+            "하도급",
+            "노동"
+          ]
+        },
+        {
+          "query": "산재 원청 책임",
+          "title": "하도급 규제 피하려고 공사를 '납품계약' 둔갑",
+          "desc": "서류상 '자재 납품 직원'이 시공하다 다친 것으로 둔갑해 원청의 건설 산재보험 적용이 거부될 수 있기 때문이다. 이 경우 하청 대표가 민·형사상 모든 손해배상 책임을 '독박' 써야 한다. 나아가 실제로는 인건비가...",
+          "pub_date": "2026-05-08",
+          "link": "https://www.koscaj.com/news/articleView.html?idxno=324011",
+          "originallink": "https://www.koscaj.com/news/articleView.html?idxno=324011",
+          "relevance_score": 20,
+          "signal_hits": [
+            "산재",
+            "원청",
+            "하도급"
+          ]
+        },
+        {
+          "query": "임금체불 하도급",
+          "title": "수도권 건설현장 108곳, 임금체불 없나…정부합동 점검 나선다",
+          "desc": "노동부는 임금뿐 아니라 공사대금이나 장비대금의 체불, 불법 하도급 등을 종합적으로 점검할 예정이라고 밝혔습니다. 정부는 위법사항 적발시엔 영업정지나 과태료 부과 등 행정조치 외에도 사안의 경중에 따라...",
+          "pub_date": "2026-05-08",
+          "link": "https://n.news.naver.com/mnews/article/437/0000490566?sid=102",
+          "originallink": "https://news.jtbc.co.kr/article/NB12297448?influxDiv=NAVER",
+          "relevance_score": 20,
+          "signal_hits": [
+            "임금체불",
+            "하도급",
+            "노동"
+          ]
+        },
+        {
+          "query": "임금체불 하도급",
+          "title": "\"플랜트건설노동자 생존권 보장과 안전한 일터 조성\"",
+          "desc": "다단계 하도급 및 임금체불 근절 △혹서기·혹한기 유급휴가 확대와 편의시설 의무화 △지자체·노동조합·사업주가 참여하는 노사정 협의체 상설화 등이다. 전국플랜트건설노동조합 충남지부는 이번 정책제안서를 통해...",
+          "pub_date": "2026-05-08",
+          "link": "http://www.djtimes.co.kr/news/articleView.html?idxno=111828",
+          "originallink": "http://www.djtimes.co.kr/news/articleView.html?idxno=111828",
+          "relevance_score": 19,
+          "signal_hits": [
+            "임금체불",
+            "하도급",
+            "노동"
+          ]
+        }
+      ],
+      "questions": [
+        "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?",
+        "원청은 이익을 가져가고 책임은 하청과 노동자에게 내려가면, 그 구조를 그냥 시장 문제라고 볼 수는 없는 것 아닌지?",
+        "제재를 받아도 계속하는 게 이익이면, 제도가 오히려 위반을 허용하는 것 아닌지?",
+        "일하는 사람이 제일 약한 고리로 남아 있으면, 정부가 말하는 노동 보호가 현장에서는 빈말이 되는 것 아닌지?"
+      ],
+      "question_synthesis": {
+        "diagnosis": "일자리·산재·임금체불 문제의 핵심 리스크는 책임 소재가 하청·현장 노동자에게만 내려가는 것입니다. 과거 국무회의 질문 패턴상 작은 사례에서 제도 전체의 허점을 묻는 방식으로, 현장에 책임만 전가되지 않도록 권한과 보호장치를 함께 제시해야 합니다.",
+        "moves": [
+          "field_burden",
+          "causal_split",
+          "instruction",
+          "public_outcome"
+        ],
+        "move_labels": [
+          "현장 부담 완화",
+          "구조 판단",
+          "후속 조치 지시",
+          "국민 체감 성과"
+        ],
+        "move_scores": {
+          "field_burden": 4.257,
+          "causal_split": 2.961,
+          "instruction": 2.615,
+          "coordination": 2.553,
+          "ground_truth": 1.588,
+          "public_outcome": 1.412,
+          "bottleneck": 1.194
+        },
+        "questions": [
+          {
+            "move": "field_burden",
+            "move_label": "현장 부담 완화",
+            "question": "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?",
+            "score": 4.257,
+            "style": "presidential_tail_wags_head"
+          },
+          {
+            "move": "causal_split",
+            "move_label": "구조 판단",
+            "question": "원청은 이익을 가져가고 책임은 하청과 노동자에게 내려가면, 그 구조를 그냥 시장 문제라고 볼 수는 없는 것 아닌지?",
+            "score": 2.961,
+            "style": "presidential_tail_wags_head"
+          },
+          {
+            "move": "instruction",
+            "move_label": "후속 조치 지시",
+            "question": "제재를 받아도 계속하는 게 이익이면, 제도가 오히려 위반을 허용하는 것 아닌지?",
+            "score": 2.615,
+            "style": "presidential_tail_wags_head"
+          },
+          {
+            "move": "public_outcome",
+            "move_label": "국민 체감 성과",
+            "question": "일하는 사람이 제일 약한 고리로 남아 있으면, 정부가 말하는 노동 보호가 현장에서는 빈말이 되는 것 아닌지?",
+            "score": 1.412,
+            "style": "presidential_tail_wags_head"
+          }
+        ],
+        "follow_up": "책임 소재가 하청·현장 노동자에게만 내려가는 것을 막기 위해 고용노동부가 관계부처와 함께 우선 조치할 과제는 무엇입니까?",
+        "style_note": "과거 대통령 질문 데이터의 말맛을 반영해, 작은 사례로 제도 전체를 흔드는 tail-wags-head형 질문을 우선 생성합니다. 통계·법령은 질문 문구가 아니라 장관 답변 근거로 둡니다."
+      },
+      "pattern_questions": [
+        {
+          "move": "field_burden",
+          "move_label": "현장 부담 완화",
+          "question": "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?",
+          "score": 4.257,
+          "style": "presidential_tail_wags_head"
+        },
+        {
+          "move": "causal_split",
+          "move_label": "구조 판단",
+          "question": "원청은 이익을 가져가고 책임은 하청과 노동자에게 내려가면, 그 구조를 그냥 시장 문제라고 볼 수는 없는 것 아닌지?",
+          "score": 2.961,
+          "style": "presidential_tail_wags_head"
+        },
+        {
+          "move": "instruction",
+          "move_label": "후속 조치 지시",
+          "question": "제재를 받아도 계속하는 게 이익이면, 제도가 오히려 위반을 허용하는 것 아닌지?",
+          "score": 2.615,
+          "style": "presidential_tail_wags_head"
+        },
+        {
+          "move": "public_outcome",
+          "move_label": "국민 체감 성과",
+          "question": "일하는 사람이 제일 약한 고리로 남아 있으면, 정부가 말하는 노동 보호가 현장에서는 빈말이 되는 것 아닌지?",
+          "score": 1.412,
+          "style": "presidential_tail_wags_head"
+        }
+      ],
+      "rank": 6,
+      "ministry_work_alignment": {
+        "function_domains": [
+          "임금체불",
+          "하도급·원청책임"
+        ],
+        "matched_work_signals": [
+          "산재",
+          "임금체불",
+          "하도급",
+          "원청",
+          "노동"
+        ],
+        "accountability_questions": [
+          "원청-하청 책임구조 확인",
+          "감독·처벌·예방수단의 실효성 확인"
+        ],
+        "source_hooks": [
+          "고용노동부와 그 소속기관 직제",
+          "고용노동부와 그 소속기관 직제 시행규칙"
+        ]
+      },
+      "cabinet_question_likelihood": {
+        "score": 66.8,
+        "band": "cabinet_review",
+        "drivers": {
+          "priority": 194.0,
+          "article_count": 20.0,
+          "signal_count": 5,
+          "work_signal_hits": 5,
+          "question_move_hits": 3
+        }
+      },
+      "statistical_evidence": {
+        "candidates": [
+          {
+            "label": "고용률/실업률/청년고용률",
+            "source": "KOSIS",
+            "why": "일자리 지표와 현장 체감 괴리 확인",
+            "status": "candidate",
+            "query_hint": "고용률 실업률 청년고용률"
+          },
+          {
+            "label": "산업재해/임금체불 행정통계",
+            "source": "KOSIS/고용부",
+            "why": "산재·임금체불 이슈의 규모 확인",
+            "status": "candidate",
+            "query_hint": "산업재해 임금체불"
+          }
+        ],
+        "answer_evidence_cards": [
+          {
+            "stat": "고용률/실업률/청년고용률",
+            "use_in_answer": "일자리 지표와 현장 체감 괴리 확인",
+            "how_to_phrase": "통계명 자체를 질문에 넣지 말고, 답변에서 규모·추세·비교 근거로 사용",
+            "query_hint": "고용률 실업률 청년고용률"
+          },
+          {
+            "stat": "산업재해/임금체불 행정통계",
+            "use_in_answer": "산재·임금체불 이슈의 규모 확인",
+            "how_to_phrase": "통계명 자체를 질문에 넣지 말고, 답변에서 규모·추세·비교 근거로 사용",
+            "query_hint": "산업재해 임금체불"
+          }
+        ],
+        "answer_frame": "최신 통계로 규모·추세·대상집단을 확인한 뒤, 즉시 조치와 제도 개선을 구분해 답변해야 합니다.",
+        "live_reference_cards": [
+          {
+            "ok": true,
+            "label": "주민등록인구(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040A3&itmId=T20&objL1=36&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "391965",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "390685",
+              "C1": "36",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Person",
+              "ITM_ID": "T20",
+              "TBL_ID": "DT_1B040A3",
+              "ITM_NM": "총인구수",
+              "TBL_NM": "행정구역(시군구)별 성별 인구수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Sejong_si",
+              "C1_NM": "세종특별자치시",
+              "UNIT_NM": "명",
+              "ITM_NM_ENG": "Koreans (Total)",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 391965.0,
+            "previous_value": 390685.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "390685",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "391965",
+                "C1": "36",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Person",
+                "ITM_ID": "T20",
+                "TBL_ID": "DT_1B040A3",
+                "ITM_NM": "총인구수",
+                "TBL_NM": "행정구역(시군구)별 성별 인구수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Sejong_si",
+                "C1_NM": "세종특별자치시",
+                "UNIT_NM": "명",
+                "ITM_NM_ENG": "Koreans (Total)",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          },
+          {
+            "ok": true,
+            "label": "가구수(예시)",
+            "url": "https://kosis.kr/openapi/Param/statisticsParameterData.do?method=getList&apiKey=***&format=json&jsonVD=Y&orgId=101&tblId=DT_1B040B3&itmId=T1&objL1=00&startPrdDe=2024&endPrdDe=2026&prdSe=Y&loadGubun=2",
+            "latest": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24300087",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2025",
+              "LST_CHN_DE": "2026-01-05",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "previous": {
+              "C1_OBJ_NM": "행정구역(시군구)별",
+              "DT": "24118928",
+              "C1": "00",
+              "PRD_SE": "A",
+              "UNIT_NM_ENG": "Household",
+              "ITM_ID": "T1",
+              "TBL_ID": "DT_1B040B3",
+              "ITM_NM": "세대수",
+              "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+              "PRD_DE": "2024",
+              "LST_CHN_DE": "2025-03-12",
+              "C1_NM_ENG": "Whole country",
+              "C1_NM": "전국",
+              "UNIT_NM": "세대",
+              "ITM_NM_ENG": "Household",
+              "ORG_ID": "101",
+              "C1_OBJ_NM_ENG": "By Administrative District"
+            },
+            "latest_value": 24300087.0,
+            "previous_value": 24118928.0,
+            "rows": [
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24118928",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2024",
+                "LST_CHN_DE": "2025-03-12",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              },
+              {
+                "C1_OBJ_NM": "행정구역(시군구)별",
+                "DT": "24300087",
+                "C1": "00",
+                "PRD_SE": "A",
+                "UNIT_NM_ENG": "Household",
+                "ITM_ID": "T1",
+                "TBL_ID": "DT_1B040B3",
+                "ITM_NM": "세대수",
+                "TBL_NM": "행정구역(시군구)별 주민등록세대수",
+                "PRD_DE": "2025",
+                "LST_CHN_DE": "2026-01-05",
+                "C1_NM_ENG": "Whole country",
+                "C1_NM": "전국",
+                "UNIT_NM": "세대",
+                "ITM_NM_ENG": "Household",
+                "ORG_ID": "101",
+                "C1_OBJ_NM_ENG": "By Administrative District"
+              }
+            ]
+          }
+        ],
+        "live_status": "ok",
+        "live_errors": [],
+        "ground_truth_prompt": "통계는 대통령 질문 문구가 아니라 장관 답변의 근거로 사용합니다."
+      },
+      "similar_historical_cases": [
+        {
+          "score": 0.2904,
+          "components": {
+            "lexical": 0.2294,
+            "fuzzy_chargram": 0.0879,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.03
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-09-02",
+          "meeting_code": "250902",
+          "question_type": "검토결과 확인",
+          "inferred_ministry": "고용노동부",
+          "excerpt": "규정 개정을 한번 검토해 보시기 바람. 그다음에 하도급의 부실 공사, 산재, 임금체불 등 모든 문제는 원청 아닌지?"
+        },
+        {
+          "score": 0.2381,
+          "components": {
+            "lexical": 0.0541,
+            "fuzzy_chargram": 0.0,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.09
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-08-12",
+          "meeting_code": "250812",
+          "question_type": "검토결과 확인",
+          "inferred_ministry": "고용노동부",
+          "excerpt": "너무 오래 검토하고 있으면 안 됨. 원청 책임 강화라는 내용이 있어야 한다는 얘기임. 다음 준비된 것 있으면 보고 바람."
+        },
+        {
+          "score": 0.2183,
+          "components": {
+            "lexical": 0.1053,
+            "fuzzy_chargram": 0.0563,
+            "same_ministry_boost": 0.12,
+            "question_move_boost": 0.03
+          },
+          "retrieval_method": "hybrid_token_chargram_ministry_move",
+          "meeting_date": "2025-09-30",
+          "meeting_code": "250930",
+          "question_type": "현황 질문",
+          "inferred_ministry": "고용노동부",
+          "excerpt": "국정자원 관련 보고 전에 부처에 물어 볼 게 있음. 고용노동부는 지금 산업 재해율, 산재 사망, 특히 추락사고를 줄이기 위한 정책들을 준비하고 발표했는지?"
+        }
+      ],
+      "oral_brief": {
+        "thirty_second": "고용노동부 소관 labor_jobs는 질문 가능성 66.8점입니다. 핵심은 임금체불, 하도급·원청책임와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 고용률/실업률/청년고용률, 산업재해/임금체불 행정통계로 규모와 추세를 뒷받침해야 합니다.",
+        "answer_skeleton": [
+          "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
+          "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
+          "조치 계획: 즉시 조치와 법령·예산이 필요한 과제를 구분",
+          "후속 보고: 점검 일정과 책임 부처·기관을 명확히 제시"
+        ],
+        "likely_first_question": "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?",
+        "evidence_gap": "실제 live 통계값이 없는 항목은 최신값·전년 대비·지역/계층별 비교를 보강해야 합니다."
+      },
+      "question_flow": [
+        {
+          "stage": "첫 질문",
+          "question": "현장에서 다치고 임금을 못 받는 사람이 계속 나오면, 숫자가 좋아도 국민은 좋아졌다고 느끼기 어려운 것 아닌지?"
+        },
+        {
+          "stage": "후속 압박",
+          "question": "원청은 이익을 가져가고 책임은 하청과 노동자에게 내려가면, 그 구조를 그냥 시장 문제라고 볼 수는 없는 것 아닌지?"
+        },
+        {
+          "stage": "병목 확인",
+          "question": "제재를 받아도 계속하는 게 이익이면, 제도가 오히려 위반을 허용하는 것 아닌지?"
+        },
+        {
+          "stage": "지시 전환",
+          "question": "책임 소재가 하청·현장 노동자에게만 내려가는 것을 막기 위해 고용노동부가 관계부처와 함께 우선 조치할 과제는 무엇입니까?"
+        },
+        {
+          "stage": "장관 준비",
+          "items": [
+            "원청-하청 책임구조 확인",
+            "감독·처벌·예방수단의 실효성 확인",
+            "최근 7일 기사량·대표기사·부처 소관 근거",
+            "관련 통계 최신값과 전월·전년 대비 변화",
+            "즉시 조치/법령개정/예산소요를 구분한 답변"
+          ],
+          "likelihood_band": "cabinet_review"
+        }
+      ],
+      "daily_delta": {
+        "status": "compared",
+        "priority_change": -20,
+        "rank_change": 1,
+        "move_change": {
+          "from": [
+            "causal_split",
+            "field_burden",
+            "instruction",
+            "public_outcome"
+          ],
+          "to": [
+            "causal_split",
+            "field_burden",
+            "instruction",
+            "public_outcome"
+          ]
+        },
+        "interpretation": "전일 대비 큰 변화는 없습니다."
       }
     },
     {
       "issue_id": "real_estate",
       "ministry": "국토교통부",
-      "priority": 180,
-      "count": 24,
+      "priority": 185,
+      "count": 23,
       "signals": [
         "부동산",
         "주택",
         "전세",
         "월세",
         "공급",
-        "정비사업",
         "아파트"
       ],
       "terms": [
-        "부동산",
-        "서울",
+        "전세",
         "공급",
-        "있다",
-        "양도세",
-        "중과",
+        "서울",
+        "부동산",
         "시장",
-        "정원오",
-        "오세훈",
-        "주택"
+        "매물",
+        "아파트",
+        "월세",
+        "전월세",
+        "양도세"
       ],
       "items": [
         {
-          "query": "부동산 공급 전세",
-          "title": "\"집값 그대로 전·월세는 품귀\"...양도세 중과 부활에 무주택자 부담 커...",
-          "desc": "다주택자 양도소득세 중과 유예가 지난 9일 종료되면서 부동산 시장의 관망세가 한층 짙어질 것이란 전망이... 세 부담이 확대되기 전 다주택자들의 매도를 유도해 시장 공급을 늘리고 집값을 안정화시키겠다는 취지였다....",
-          "pub_date": "2026-05-10",
-          "link": "https://www.newspim.com/news/view/20260508000992",
-          "originallink": "https://www.newspim.com/news/view/20260508000992",
+          "query": "전월세 시장 불안",
+          "title": "'대단지 전세 0건', '월세 250만원' 최악이라는 전월세 시장",
+          "desc": "박합수 건국대학교 부동산대학원 겸임교수는 “전월세 시장은 가구 분화와 이동 수요까지 더해져 수요가... 않으면 시장 불안은 지속될 수밖에 없다”고 지적했다. 특히 “신도시 등 신규 주택 공급 확대가 병행되지...",
+          "pub_date": "2026-05-11",
+          "link": "https://realty.chosun.com/site/data/html_dir/2026/05/08/2026050802340.html",
+          "originallink": "https://realty.chosun.com/site/data/html_dir/2026/05/08/2026050802340.html",
           "relevance_score": 22,
           "signal_hits": [
             "부동산",
             "주택",
+            "전세",
             "월세",
             "공급"
           ]
         },
         {
           "query": "부동산 공급 전세",
-          "title": "서울 부동산 다주택 중과 시행 앞두고 '꿈틀', 성북 등 외곽 '가격 키맞...",
-          "desc": "한국부동산원에 따르면 서울 전세수급지수는 5월 첫쨰주 기준 수요가 공급을 2021년 3월 이후 가장 큰 폭으로 웃도는 상황이 나타나고 있다. 큰 틀에서 앞으로 시장의 오름세에 큰 변화가 일어나지 않을 것이란 전망도...",
-          "pub_date": "2026-05-10",
-          "link": "https://www.businesspost.co.kr/BP?command=article_view&num=437374",
-          "originallink": "https://www.businesspost.co.kr/BP?command=article_view&num=437374",
+          "title": "고강도 규제 속 전세 매물 '실종' ... 서울 전세 매물 29% 급감",
+          "desc": "실거주 중심으로 시장 구조가 재편될 경우 다주택자와 비거주 1주택자의 임대 매물이 감소해 전세 공급 부족이 심화할 수 있다는 지적이다. 신규 아파트 공급 감소 역시 부담 요인이다. KB부동산에 따르면 올해 서울...",
+          "pub_date": "2026-05-11",
+          "link": "http://www.queen.co.kr/news/articleView.html?idxno=456579",
+          "originallink": "http://www.queen.co.kr/news/articleView.html?idxno=456579",
           "relevance_score": 20,
           "signal_hits": [
             "부동산",
-            "주택",
-            "전세",
-            "공급"
-          ]
-        },
-        {
-          "query": "부동산 공급 전세",
-          "title": "비싼 아파트 월세, 그마저도 없다…서울 임차시장 ‘가뭄’",
-          "desc": "전세와 월세 모두 공급이 줄어드는 상황에서는 임차 수요가 제한된 물량에 몰리며 가격 상승 압력이 계속 커질 가능성이 있다는 설명이다. 박합수 건국대 부동산대학원 겸임교수는 “수요는 유지되거나 늘어나는데...",
-          "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/018/0006277273?sid=101",
-          "originallink": "http://www.edaily.co.kr/news/newspath.asp?newsid=01088966645447608",
-          "relevance_score": 20,
-          "signal_hits": [
-            "부동산",
-            "전세",
-            "월세",
-            "공급",
-            "아파트"
-          ]
-        },
-        {
-          "query": "부동산 공급 전세",
-          "title": "양도세 중과 부활에 다주택자 버티기…서울 매물 잠김 다시 오나",
-          "desc": "새 아파트 공급이 충분하다면 세제 강화가 일정 부분 매물 출회를 유도할 수 있지만, 이미 입주 물량이 낮은 구간에 들어선 상황에서는 양도세 부담을 의식한 보유 전략이 전세·매매 동시 품귀로 이어질 가능성이...",
-          "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/421/0008935106?sid=101",
-          "originallink": "https://www.news1.kr/realestate/general/6161162",
-          "relevance_score": 18,
-          "signal_hits": [
             "주택",
             "전세",
             "공급",
@@ -3437,29 +3398,62 @@
         },
         {
           "query": "부동산 공급 전세",
-          "title": "\"팔지도 못하고 전세도 없다\"…양도세 중과 후 집값은 '이중시장' 구조",
-          "desc": "이어 \"다만 당시에는 금리가 낮고 입주 물량도 많았지만 지금은 공급 부족이 훨씬 심하다\"며 \"매물까지... 남혁우 우리은행 WM영업전략부 부동산연구원은 \"전월세 물건이 부족한 상황에서 전세와 매매 가격 차이가 크지...",
-          "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/008/0005355123?sid=101",
-          "originallink": "https://www.mt.co.kr/estate/2026/05/10/2026050815074038261",
-          "relevance_score": 16,
+          "title": "“매매보다 더 오른다”…전세 물량 부족에 아파트 전셋값 상승 가속",
+          "desc": "특히 서울 아파트 입주물량 감소가 올해부터 본격화하면서 전세 공급 부족 현상이 더 심화할 수 있다는 전망도 나온다. 한국부동산원과 부동산R114가 지난 2월 발표한 공동주택 입주 예정 물량 자료에 따르면 올해...",
+          "pub_date": "2026-05-11",
+          "link": "https://n.news.naver.com/mnews/article/025/0003522262?sid=101",
+          "originallink": "https://www.joongang.co.kr/article/25427182",
+          "relevance_score": 20,
           "signal_hits": [
             "부동산",
+            "주택",
             "전세",
-            "월세",
-            "공급"
+            "공급",
+            "아파트"
           ]
         },
         {
           "query": "주택 공급 대책",
-          "title": "공사비 급등에 공기 지연까지…주택공급 곳곳서 '병목' 경고",
-          "desc": "정부가 9·7 대책과 1·29 대책을 통해 총 135만 가구 규모의 주택공급과 관련 법안의 신속 처리를 약속했지만 시장에선 단순한 공급 물량 확보가 아닌 '착공과 입주의 병목 현상'을 더 심각한 문제로 인식하고 있다....",
-          "pub_date": "2026-05-10",
-          "link": "https://n.news.naver.com/mnews/article/629/0000497792?sid=101",
-          "originallink": "https://news.tf.co.kr/read/economy/2320588.htm",
+          "title": "\"부동산 불로소득 대전환\" 선언한 국토부…금융·세제·공급 전면 재설...",
+          "desc": "김 장관은 \"정부는 출범 3개월 만에 수도권 135만호 공급대책을 발표했고, 지난 1월 29일에는 그 후속으로 우량 입지 중심 6만호 공급방안을 발표했다\"며 \"과천, 태릉 등 주택공급도 그 어느 때보다 빠르게 추진될 수 있도록...",
+          "pub_date": "2026-05-11",
+          "link": "http://www.newsroad.co.kr/news/articleView.html?idxno=59150",
+          "originallink": "http://www.newsroad.co.kr/news/articleView.html?idxno=59150",
+          "relevance_score": 20,
+          "signal_hits": [
+            "부동산",
+            "주택",
+            "공급"
+          ]
+        },
+        {
+          "query": "부동산 공급 전세",
+          "title": "[오늘의 사설] \"양도세 중과 재개...공급책 절실하다\"",
+          "desc": "한국부동산원에 따르면 올해 전국 아파트 전세가격 누적 상승률은 5월 첫째 주 기준 1.56%로 매매 상승률(0.98... 이에 따라 다주택자 중과유예 종료조치 이후 시장의 상승세를 잠재울 공급책이 필요하다는 지적들이다....",
+          "pub_date": "2026-05-11",
+          "link": "http://www.nongaek.com/news/articleView.html?idxno=95328",
+          "originallink": "http://www.nongaek.com/news/articleView.html?idxno=95328",
+          "relevance_score": 18,
+          "signal_hits": [
+            "부동산",
+            "주택",
+            "전세",
+            "공급",
+            "아파트"
+          ]
+        },
+        {
+          "query": "부동산 공급 전세",
+          "title": "강북 외곽에도 월세 300만원 속출…세입자 한숨",
+          "desc": "서울 외곽까지 월세가 오르는 가장 큰 이유는 공급 부족입니다. 부동산 플랫폼 집계에 따르면 올해 서울... 전문가들은 공급 부족과 전세의 월세화 현상이 이어질 경우 임대차 시장 불안이 장기화할 가능성이 크다고...",
+          "pub_date": "2026-05-11",
+          "link": "https://n.news.naver.com/mnews/article/374/0000509185?sid=101",
+          "originallink": "https://biz.sbs.co.kr/article_hub/20000309344?division=NAVER",
           "relevance_score": 16,
           "signal_hits": [
-            "주택",
+            "부동산",
+            "전세",
+            "월세",
             "공급"
           ]
         }
@@ -3559,16 +3553,14 @@
       "rank": 7,
       "ministry_work_alignment": {
         "function_domains": [
-          "주택공급",
-          "주거복지"
+          "전월세"
         ],
         "matched_work_signals": [
           "주택",
           "부동산",
           "전세",
           "월세",
-          "공급",
-          "정비사업"
+          "공급"
         ],
         "accountability_questions": [
           "발표 물량과 실제 입주 물량 구분",
@@ -3580,13 +3572,13 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 71.1,
+        "score": 69.2,
         "band": "cabinet_review",
         "drivers": {
-          "priority": 180.0,
-          "article_count": 24.0,
-          "signal_count": 7,
-          "work_signal_hits": 6,
+          "priority": 185.0,
+          "article_count": 23.0,
+          "signal_count": 6,
+          "work_signal_hits": 5,
           "question_move_hits": 3
         }
       },
@@ -3800,9 +3792,9 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.2501,
+          "score": 0.2368,
           "components": {
-            "lexical": 0.0685,
+            "lexical": 0.0429,
             "fuzzy_chargram": 0.0186,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.09
@@ -3815,9 +3807,9 @@
           "excerpt": "우선 제가 이 말씀을 먼저 드려야 될 것 같음. 대한민국은 국민주권 국가임. 이 나라의 모든 권력은 국민으로부터 나오는 것임. 그 국민주권은 첫째로 직접 선출된 권력에 의해서 국민주권이 발현됨. 그리고 그 선출 권력으로부터 다시 임명 권력이 주어짐. 임명 권력의 정당성이 부여되는 것임. 대한민국의 선출 권력은 대통령, 국회의원 또는 자치단체장, 기초광역의원 이렇게 구성이 됨. 모든 권력은 국민으로부터 그리고 1차적으로는 선출 권력으로부터 국민주권이 실현됨. 아무리 우리가 외형적으로 높은 자리, 높은 권한을 가지고 있다고 할지라도 임"
         },
         {
-          "score": 0.232,
+          "score": 0.2271,
           "components": {
-            "lexical": 0.1576,
+            "lexical": 0.1482,
             "fuzzy_chargram": 0.0,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.03
@@ -3830,9 +3822,9 @@
           "excerpt": "독거노인이나 이런 데는 공급 사업을 하고 있는지?"
         },
         {
-          "score": 0.2154,
+          "score": 0.2115,
           "components": {
-            "lexical": 0.1257,
+            "lexical": 0.1183,
             "fuzzy_chargram": 0.0,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.03
@@ -3846,7 +3838,7 @@
         }
       ],
       "oral_brief": {
-        "thirty_second": "국토교통부 소관 real_estate는 질문 가능성 71.1점입니다. 핵심은 주택공급, 주거복지와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 주택보급/가구/인구 관련 지표, 전월세/주택가격 지표로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "국토교통부 소관 real_estate는 질문 가능성 69.2점입니다. 핵심은 전월세와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 주택보급/가구/인구 관련 지표, 전월세/주택가격 지표로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -3887,7 +3879,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": -8,
+        "priority_change": 5,
         "rank_change": 0,
         "move_change": {
           "from": [
@@ -3909,7 +3901,7 @@
     {
       "issue_id": "medical",
       "ministry": "보건복지부",
-      "priority": 112,
+      "priority": 101,
       "count": 12,
       "signals": [
         "의료",
@@ -3920,16 +3912,16 @@
         "병원"
       ],
       "terms": [
-        "전공의",
         "감염병",
-        "이후",
+        "고창군",
+        "수인성",
+        "9월까지",
+        "대응을",
         "병원",
-        "재정",
         "의대",
         "교육",
-        "인건비",
-        "확대",
-        "체계"
+        "식품매개",
+        "비상방역체계를"
       ],
       "items": [
         {
@@ -3939,7 +3931,7 @@
           "pub_date": "2026-05-08",
           "link": "http://www.jeollailbo.com/news/articleView.html?idxno=799570",
           "originallink": "http://www.jeollailbo.com/news/articleView.html?idxno=799570",
-          "relevance_score": 14,
+          "relevance_score": 13,
           "signal_hits": [
             "의료",
             "환자"
@@ -3952,24 +3944,10 @@
           "pub_date": "2026-05-09",
           "link": "https://www.kukinews.com/article/view/kuk202605080147",
           "originallink": "https://www.kukinews.com/article/view/kuk202605080147",
-          "relevance_score": 13,
+          "relevance_score": 12,
           "signal_hits": [
             "의료",
             "전공의",
-            "병원"
-          ]
-        },
-        {
-          "query": "비상진료체계",
-          "title": "고령화·통합돌봄·초고가약 부담까지…건보 재정 ‘지속 가능성’ 시험...",
-          "desc": "수가 체계의 현실화가 반드시 필요하다”고 말했다. 초고령사회 진입…재정 압박 가중 올해 수가 협상은... 지난해 보험급여비는 수가 인상(1.96%), 전공의 이탈에 따른 비상진료 지원, 상급종합병원 구조전환 등으로...",
-          "pub_date": "2026-05-08",
-          "link": "https://www.kukinews.com/article/view/kuk202605070149",
-          "originallink": "https://www.kukinews.com/article/view/kuk202605070149",
-          "relevance_score": 12,
-          "signal_hits": [
-            "전공의",
-            "비상진료",
             "병원"
           ]
         },
@@ -3988,13 +3966,27 @@
           ]
         },
         {
+          "query": "의대 전공의 복귀",
+          "title": "\"초음파 가이드라인 제정…비전문가 사용 국민 건강 위협\"",
+          "desc": "이날 간담회에는 이재영 이사장(서울의대), 한부경 회장(성균관의대), 조정연 부회장(차기회장·서울의대)... 실제로 전공의들은 핸즈온 교육과 실습 중심 프로그램에 대해 높은 관심을 보였다. 또 병원 복귀 후...",
+          "pub_date": "2026-05-10",
+          "link": "http://www.doctorsnews.co.kr/news/articleView.html?idxno=164494",
+          "originallink": "http://www.doctorsnews.co.kr/news/articleView.html?idxno=164494",
+          "relevance_score": 9,
+          "signal_hits": [
+            "전공의",
+            "의대",
+            "병원"
+          ]
+        },
+        {
           "query": "비상진료체계",
           "title": "[위클리이슈] '흑자 곳간' 문턱 여전히 높아…약국 수가협상, 험로 예고",
           "desc": "전공의 이탈 사태 이후 비상진료체계 운영과 선지급 영향 등이 이어지며 지출 구조 자체가 확대 국면에 들어갔다는 분석도 나온다. 적립금 역시 규모 자체는 유지되고 있지만 급여비 기준 적립 수준은 3.8개월에서 3....",
           "pub_date": "2026-05-09",
           "link": "https://www.kpanews.co.kr/news/articleView.html?idxno=534463",
           "originallink": "https://www.kpanews.co.kr/news/articleView.html?idxno=534463",
-          "relevance_score": 9,
+          "relevance_score": 8,
           "signal_hits": [
             "전공의",
             "비상진료"
@@ -4002,15 +3994,14 @@
         },
         {
           "query": "비상진료체계",
-          "title": "\"24시간 멈출 수 없는 병원\"…보건의료 탈석유화 논의 본격",
-          "desc": "분석 체계 마련 △태양광 자가발전 △재생에너지 전력구매계약(PPA) △열히트펌프·전기보일러 활용 △ESS 기반 비상전원 구축 △경유 발전기 대체 등을 제안했다. 전문위원회는 향후 전문가 자문과 추가 논의를 거쳐 중장기...",
-          "pub_date": "2026-05-07",
-          "link": "https://www.kpanews.co.kr/news/articleView.html?idxno=534346",
-          "originallink": "https://www.kpanews.co.kr/news/articleView.html?idxno=534346",
-          "relevance_score": 9,
+          "title": "고창군, 9월까지 감염병 대응 비상방역체계",
+          "desc": "전북 고창군이 오는 9월까지 수인성·식품매개 감염병 대응을 위한 비상방역체계를 운영한다. 10일 고창군에... 고창군 보건소는 설사, 구토, 발열 등 감염병 의심 증상이 있을 경우 즉시 의료기관을 방문해 진료를 받을 것을...",
+          "pub_date": "2026-05-10",
+          "link": "https://www.newstnt.com/news/articleView.html?idxno=701705",
+          "originallink": "https://www.newstnt.com/news/articleView.html?idxno=701705",
+          "relevance_score": 7,
           "signal_hits": [
-            "의료",
-            "병원"
+            "의료"
           ]
         }
       ],
@@ -4128,10 +4119,10 @@
         ]
       },
       "cabinet_question_likelihood": {
-        "score": 59.0,
+        "score": 58.2,
         "band": "monitor",
         "drivers": {
-          "priority": 112.0,
+          "priority": 101.0,
           "article_count": 12.0,
           "signal_count": 6,
           "work_signal_hits": 5,
@@ -4335,9 +4326,9 @@
       },
       "similar_historical_cases": [
         {
-          "score": 0.187,
+          "score": 0.1888,
           "components": {
-            "lexical": 0.0711,
+            "lexical": 0.0745,
             "fuzzy_chargram": 0.0,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.03
@@ -4350,9 +4341,9 @@
           "excerpt": "알겠음. 다음 복지부는 의료 개혁 시스템을 어떻게 진행하고 있는지?"
         },
         {
-          "score": 0.1786,
+          "score": 0.18,
           "components": {
-            "lexical": 0.055,
+            "lexical": 0.0577,
             "fuzzy_chargram": 0.0,
             "same_ministry_boost": 0.12,
             "question_move_boost": 0.03
@@ -4365,10 +4356,10 @@
           "excerpt": "점검하고 신경을 쓰면 일선에서 관심이 좀 올라갈 것임. 이번에 온열 환자 사망자 수가 예년에 비하면 어떤지?"
         },
         {
-          "score": 0.1489,
+          "score": 0.1501,
           "components": {
-            "lexical": 0.0514,
-            "fuzzy_chargram": 0.0092,
+            "lexical": 0.0539,
+            "fuzzy_chargram": 0.0084,
             "same_ministry_boost": 0.0,
             "question_move_boost": 0.12
           },
@@ -4381,7 +4372,7 @@
         }
       ],
       "oral_brief": {
-        "thirty_second": "보건복지부 소관 medical는 질문 가능성 59.0점입니다. 핵심은 응급·비상진료와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 의료기관/의사/전공의/응급의료 지표로 규모와 추세를 뒷받침해야 합니다.",
+        "thirty_second": "보건복지부 소관 medical는 질문 가능성 58.2점입니다. 핵심은 응급·비상진료와 연결된 현장 부담·병목을 어떻게 풀 것인지이며, 답변은 의료기관/의사/전공의/응급의료 지표로 규모와 추세를 뒷받침해야 합니다.",
         "answer_skeleton": [
           "현재 상황: 기사 신호가 실제 현장 문제인지 규모와 추세로 확인",
           "원인 구분: 제도 문제, 현장 관행, 예산·인력 병목을 분리",
@@ -4422,7 +4413,7 @@
       ],
       "daily_delta": {
         "status": "compared",
-        "priority_change": 0,
+        "priority_change": -11,
         "rank_change": 0,
         "move_change": {
           "from": [
